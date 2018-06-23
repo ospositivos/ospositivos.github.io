@@ -1,0 +1,14 @@
+---
+layout: default
+---
+{%- include header.html -%}
+
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+  </header>
+
+    {{ content }}
+
+  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+</article>

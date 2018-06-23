@@ -1,0 +1,22 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "pt" }}">
+  {%- include head.html -%}
+  <body id="facebuuukit">
+    <header>
+        <a href="{{ "/" | relative_url }}">
+        <img src="{{ "/assets/x-inverted-200.png" | absolute_url }}" alt="OS POSITIVOS" width="200" />
+        </a>
+    </header>
+    <article class="post">
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">facebuuukit</h1>
+      </header>
+      {{ content }}
+    </article>
+  {%- include footer.html -%}
+  </body>
+</html>
