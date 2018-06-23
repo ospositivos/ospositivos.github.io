@@ -57,10 +57,14 @@ html {
       color: $cinzaEscuro;
       border-left: 1px dashed $cinzaEscuro;
 
-      & > p:first-of-type {
+      & > h3:first-of-type,
+      & > p:first-of-type,
+      & > ul:first-of-type  {
         margin-top: 0;
       }
-      & > p:last-of-type {
+      & > h3:last-of-type,
+      & > p:last-of-type,
+      & > ul:last-of-type {
         margin-bottom: 0;
       }
       small {
@@ -122,6 +126,10 @@ html {
       max-width: 100%;
     }
 
+    sup {
+      font-weight: bold;
+    }
+
     // tags
     // ----------------------
 
@@ -136,6 +144,10 @@ html {
     }
     .espaco {
       margin: 100px auto !important;
+    }
+
+    .imagemComplementar {
+      margin-top:$a/2;
     }
 
     .moldura {
@@ -699,10 +711,6 @@ html {
       cursor: pointer;
       white-space: nowrap;
       -webkit-touch-callout: none;
-      -webkit-user-select: none;
-      -khtml-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
       user-select: none
     }
     @media(min-width:620px) {
@@ -864,7 +872,11 @@ html {
         text-align: center;
         line-height: 1.5em;
 
-        @media screen and (max-width: $mobileM) {
+        @media (min-width: $tablet) {
+        max-width: 510px;
+        }
+
+        @media (max-width: $mobileM) {
             margin-top: $a*2;
             font-size: 2em;
           }
