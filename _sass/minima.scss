@@ -329,29 +329,30 @@ ul.lista {
 }
 
 // video
-.video-responsive {
-    border: 10px solid $preto;
-    background: $preto;
-    margin: auto;
-    max-width: 820px;
-    overflow: hidden;
-    padding-bottom: 56.25%;
-    position: relative;
-    height: 0px;
+.video-container {
+  margin: auto;
+  max-width: 820px;
 
-    &.wide {
-        max-width: 1200px;
-    }
-        
-    iframe {
-        left: 0px;
-        top: 0px;
-        height: 100%;
-        width: 100%;
-        position: absolute;
-    }
+  &.wide {
+      max-width: 1200px;
+  }
 
+  .video-responsive {
+      border: 10px solid $preto;
+      background: $preto;
+      overflow: hidden;
+      padding-bottom: 56.25%;
+      position: relative;
+      height: 0px;
 
+      iframe {
+          left: 0px;
+          top: 0px;
+          height: 100%;
+          width: 100%;
+          position: absolute;
+      }
+  }
 }
 
 //prancha
