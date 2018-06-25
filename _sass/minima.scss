@@ -329,6 +329,7 @@ ul.lista {
 }
 
 // video
+<<<<<<< HEAD
 .video-responsive {
     border: 10px solid $preto;
     background: $preto;
@@ -350,6 +351,32 @@ ul.lista {
         width: 100%;
         position: absolute;
     }
+=======
+.video-container {
+  margin: auto;
+  max-width: 820px;
+
+  &.wide {
+      max-width: 1200px;
+  }
+
+  .video-responsive {
+      border: 10px solid $preto;
+      background: $preto;
+      overflow: hidden;
+      padding-bottom: 56.25%;
+      position: relative;
+      height: 0px;
+
+      iframe {
+          left: 0px;
+          top: 0px;
+          height: 100%;
+          width: 100%;
+          position: absolute;
+      }
+  }
+>>>>>>> 6e75e82c2aeac471036b87e3070d85ce0e95adac
 }
 
 //prancha
