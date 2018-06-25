@@ -334,24 +334,24 @@ ul.lista {
     background: $preto;
     margin: auto;
     max-width: 820px;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0px;
+
     &.wide {
         max-width: 1200px;
     }
-
-    @media(max-width: $tablet) {
-        overflow: hidden;
-        padding-bottom: 56.25%;
-        position: relative;
-        height: 0px;
-
-        iframe {
-            left: 0px;
-            top: 0px;
-            height: 100%;
-            width: 100%;
-            position: absolute;
-        }
+        
+    iframe {
+        left: 0px;
+        top: 0px;
+        height: 100%;
+        width: 100%;
+        position: absolute;
     }
+
+
 }
 
 //prancha
