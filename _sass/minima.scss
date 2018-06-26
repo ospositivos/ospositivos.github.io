@@ -447,22 +447,6 @@ ul.lista {
     }
 }
 
-// script
-.script {
-    background: url('https://1.bp.blogspot.com/-8v3NAkKlZho/V__kCKNkz2I/AAAAAAAAJtA/z-Oe26FWoPkPIWEGwHZen83Xcx8DnNkMwCPcB/s1600/notepad.gif') repeat #ffffe3;
-    padding: $b*2 $b*4 !important;
-    font-size: 13px;
-    font-family: Courier;
-    font-style: normal;
-    box-sizing: border-box;
-    li {
-        padding-bottom: $b*2;
-        &:last-child {
-            padding-bottom: 0;
-        }
-    }
-}
-
 // uk-grid
 .uk-grid > * {
     @media(max-width: $mobileL) {
@@ -963,6 +947,27 @@ article.post {
 
                 @media (max-width: $mobileL) {
                     max-width: 100%;
+                }
+            }
+        }
+
+        // script
+        ul.script {
+            background: url('https://1.bp.blogspot.com/-8v3NAkKlZho/V__kCKNkz2I/AAAAAAAAJtA/z-Oe26FWoPkPIWEGwHZen83Xcx8DnNkMwCPcB/s1600/notepad.gif') repeat #ffffe3;
+            padding: $b*2 $b*4 !important;
+            font-size: 13px;
+            font-family: Courier;
+            font-style: normal;
+            box-sizing: border-box;
+            max-width:650px;
+            li {
+                padding-bottom: $b*2;
+
+                @media(min-width:$tablet){
+                  margin-left:$a*2;
+                }
+                &:last-child {
+                    padding-bottom: 0;
                 }
             }
         }
