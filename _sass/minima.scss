@@ -282,9 +282,14 @@ table.mytabela {
     margin: auto;
     padding-left: $a;
     padding-right: $a;
+
+    @media(max-width: $tablet) {
+      .uk-grid {
+        margin-left: 0;
+      }
+
     .spread {
         border: 0;
-        @media(max-width: $tablet) {
             display: none;
         }
     }
@@ -374,7 +379,8 @@ ul.lista {
         border-bottom: 2px dotted darkgray;
         margin-bottom: 6px;
         padding-bottom: 0;
-        @media (min-width: $tablet) {
+
+        @media (min-width: $mobileM) {
             content: '2) comix tablet';
         }
         @media (min-width: $desktopS) {
@@ -392,7 +398,7 @@ ul.lista {
         width: 150px;
         &:nth-of-type(1) {
             order: 1;
-            @media (min-width: $tablet) {
+            @media (min-width: $mobileM) {
                 order: 4;
             }
             @media (min-width: $desktopS) {
@@ -401,7 +407,7 @@ ul.lista {
         }
         &:nth-of-type(2) {
             order: 2;
-            @media (min-width: $tablet) {
+            @media (min-width: $mobileM) {
                 order: 1;
             }
             @media (min-width: $desktopS) {
@@ -410,7 +416,7 @@ ul.lista {
         }
         &:nth-of-type(3) {
             order: 3;
-            @media (min-width: $tablet) {
+            @media (min-width: $mobileM) {
                 order: 4;
             }
             @media (min-width: $desktopS) {
@@ -419,7 +425,7 @@ ul.lista {
         }
         &:nth-of-type(4) {
             order: 4;
-            @media (min-width: $tablet) {
+            @media (min-width: $mobileM) {
                 order: 2;
             }
             @media (min-width: $desktopS) {
@@ -428,7 +434,7 @@ ul.lista {
         }
         &:nth-of-type(5) {
             order: 6;
-            @media (min-width: $tablet) {
+            @media (min-width: $mobileM) {
                 order: 3;
             }
             @media (min-width: $desktopS) {
@@ -437,7 +443,7 @@ ul.lista {
         }
         &:nth-of-type(6) {
             order: 5;
-            @media (min-width: $tablet) {
+            @media (min-width: $mobileM) {
                 order: 4;
             }
             @media (min-width: $desktopS) {
