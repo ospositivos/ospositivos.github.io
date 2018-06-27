@@ -1,4 +1,4 @@
 ---
 layout: homepage
 ---
-<a style="text-align:center;" href="indice.html">all</a>      
+<a style="text-align:center;" href="indice.html">*</a>      
