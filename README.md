@@ -2,4 +2,4 @@
 
 # www.ospositivos.pt
 
-Demasiado hardcore para leres os **P+rendidos** no *browser?* Estás no sítio certo: aqui podes ler directamente o código.
+Demasiado hardcore para leres os **P+** rendidos no *browser?* Estás no sítio certo: aqui podes ler directamente o código.
