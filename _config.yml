@@ -30,7 +30,6 @@ google_analytics: UA-8547796-14
 markdown: kramdown
 theme: minima
 livereload: true
-paginate: 5
 
 #plugins:
 #  - jekyll-feed
@@ -38,7 +37,7 @@ paginate: 5
 # compress_html
 compress_html:
   clippings: all
-  comments: [""]
+  comments: ["<!-- ", " -->"]
   endings: [html, head, body, li, dt, dd, rt, rp, optgroup, option, colgroup, caption, thead, tbody, tfoot, tr, td, th]
   profile: false
   blanklines: false
