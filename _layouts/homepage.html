@@ -7,8 +7,45 @@ layout: compress
   {%- include head.html -%}
   <body id="homepage">
     <header>
-      {{ content }}
     </header>
+    <article class="post">
+      <div class="coluna">
+
+      <h2 class="subtitle">As mais recentes:</h2>
+      <!-- featured -->
+      {% for post in site.posts limit:1 %}
+      <ul>
+        <li>
+        <small>{{ post.date | date: '%d/%m/%Y' }}</small>
+          <a href="{{ post.url | relative_url }}">
+            <b>{{ post.title | escape }}</b>
+          </a>
+          </li>
+      </ul>
+        {% if post.sumario %}
+          <div class="info coluna">
+          <blockquote>
+           {{ post.sumario | strip_html | truncatewords:75 }}
+          </blockquote>
+          </div>
+        {% endif %}
+      {% endfor %}
+
+      <!-- latest -->
+      {% for post in site.posts offset:1 limit:4 %}
+      <ul>
+            <li>
+              <small>{{ post.date | date: '%d/%m/%Y' }}</small>
+
+              <a href="{{ post.url | relative_url }}">
+               <b>{{ post.title | escape }}</b>
+              </a>
+          </li>
+        </ul>
+      {% endfor %}
+
+      </div>
+    </article>
   {%- include footer.html -%}
   </body>
 </html>

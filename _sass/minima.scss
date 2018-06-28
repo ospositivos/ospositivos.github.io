@@ -49,9 +49,45 @@ html {
 
             header {
                 position: relative;
-                height: calc(100%);
+                height: calc(74%);
                 background: url(/assets/x_large.png) no-repeat 50% 45% $preto;
                 background-size: cover;
+            }
+
+            article.post {
+              .coluna {
+                color: $branco;
+                //max-width: 860px;
+                margin: auto;
+
+                .subtitle {
+                  color: $branco;
+                }
+                .info {
+                  border-radius: 0;
+                  background: $branco;
+                }
+                ul {
+                  li {
+                    color: $branco;
+                    a {
+                      color: $vermelho;
+                      text-transform: uppercase;
+                      font-style: normal;
+                      border-bottom: none;
+                      &:hover {
+                        border-bottom: 1px solid $vermelho;
+                      }
+                      b {
+                        letter-spacing: 2px;
+                      }
+                    }
+                    small {
+                      float: right;
+                    }
+                  }
+                }
+              }
             }
 
             input[type="button"],
@@ -1064,6 +1100,8 @@ footer {
             padding: 8px 10px;
             text-decoration: none;
             text-transform: uppercase;
+            -webkit-appearance: none;
+            border-radius: 0;
         }
 
         @media screen and (max-width: $mobileS) {
