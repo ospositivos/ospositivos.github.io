@@ -49,7 +49,7 @@ html {
 
             header {
                 position: relative;
-                height: calc(74%);
+                height: calc(100%);
                 background: url(/assets/x_large.png) no-repeat 50% 45% $preto;
                 background-size: cover;
             }
@@ -119,7 +119,7 @@ html {
                       }
                     a {
                       font-size:$b;
-                      font-weight: 400;
+                      font-weight: bold;
                       color: $vermelho;
                       text-transform: uppercase;
                       border-bottom: 1px dotted $branco;
@@ -1132,7 +1132,7 @@ footer {
 
         #mce-EMAIL {
             width: 150px;
-            padding: 2px 0 4px 0;
+            padding: 6px 0;
             border-radius: 0;
         }
 
