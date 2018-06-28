@@ -58,6 +58,25 @@ html {
               .coluna {
                 color: $branco;
 
+                .recentes {
+                  max-width: 510px;
+                  margin-left: auto;
+                  margin-right: auto;
+                  margin-bottom: 0;
+                  padding-bottom: 0;
+                  color:$cinza;
+                  text-align: left;
+                  padding-left:$c;
+                  @media(min-width: $mobileM) {
+                    text-align: right;
+                  }
+                  small {
+                    display: inline-block;
+                    letter-spacing: -1px;
+                    border-bottom: 1px solid $cinzaEscuro;
+                  }
+                }
+
               .info {
                 border-radius: 0;
                 background: $vermelho;
@@ -71,20 +90,26 @@ html {
                   &::before{
                     font-family:serif;
                     content: "“";
-                    font-size: 5em;
+                    font-size: 7em;
                     position: absolute;
                     left: 0;
                     top: 0;
-                    line-height: $a*2;
+                    line-height: 60px;
                     }
                   }
                 }
                 ul {
+                  margin:$b/2 auto;
+                  padding: 0;
                   list-style: none;
                   li {
                     color: $branco;
                     text-indent: -.7em;
                     font-style: normal;
+                    @media(max-width: $mobileM) {
+                      padding-left: $a;
+                      padding-left: $a;
+                    }
                     &:nth-child(n+2){
                       padding-top: $a/2;
                     }
@@ -95,15 +120,18 @@ html {
                     a {
                       color: $vermelho;
                       text-transform: uppercase;
+                      border-bottom: 1px dotted $vermelho;
                       font-style: normal;
-                      border-bottom: none;
                       letter-spacing: 2px;
                       &:hover {
-                        border-bottom: 1px solid $vermelho;
+                        color: $branco;
+                        border-bottom-color: $branco;
                       }
                     }
                     small {
-                      float: right;
+                      @media(min-width: $mobileM) {
+                        float: right;
+                      }
                     }
                   }
                 }
