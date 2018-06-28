@@ -118,14 +118,16 @@ html {
                       color: $vermelho;
                       }
                     a {
+                      font-size:$b;
+                      font-weight: 400;
                       color: $vermelho;
                       text-transform: uppercase;
-                      border-bottom: 1px dotted $vermelho;
+                      border-bottom: 1px dotted $branco;
                       font-style: normal;
                       letter-spacing: 2px;
                       &:hover {
-                        color: $branco;
-                        border-bottom-color: $branco;
+                        color: $vermelho;
+                        border-bottom-color: $vermelho;
                       }
                     }
                     small {
@@ -1107,7 +1109,7 @@ footer {
     margin-right: auto;
     font-family: 'Sedgwick Ave Display', cursive;
     text-align: center;
-    font-size: 15px;
+    font-size: $a;
 
     @media (min-width: $mobileL) {
         width: 520px;

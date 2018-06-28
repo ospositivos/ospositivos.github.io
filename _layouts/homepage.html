@@ -3,7 +3,7 @@ layout: compress
 ---
 
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: " pt " }}">
+<html lang="{{ page.lang | default: site.lang | default: "pt" }}">
 {%- include head.html -%}
 
 <body id="homepage">
@@ -11,12 +11,14 @@ layout: compress
   </header>
   <article class="post">
     <div class="coluna">
-      <div class="centre recentes"><small>mais recentes</small></div>
+      <div class="centre recentes"><small>as mais recentes</small></div>
       <!-- featured -->
       {% for post in site.posts limit:1 %}
       <ul>
         <li>
-          <small>{{ post.date | date: '%d/%m/%Y' }}</small>
+          <small>
+            {{ post.date | date: '%d %b %Y' }}
+          </small>
           <a href="{{ post.url | relative_url }}">
             {{ post.title }}
           </a>
@@ -35,7 +37,7 @@ layout: compress
     <ul>
       {% for post in site.posts offset:1 limit:4 %}
       <li>
-          <small>{{ post.date | date: '%d/%m/%Y' }}</small>
+          <small>{{ post.date | date: '%d %b %Y' }}</small>
           <a href="{{ post.url | relative_url }}">
             {{ post.title | escape }}
           </a>
