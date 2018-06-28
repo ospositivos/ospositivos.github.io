@@ -3,49 +3,47 @@ layout: compress
 ---
 
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "pt" }}">
-  {%- include head.html -%}
-  <body id="homepage">
-    <header>
-    </header>
-    <article class="post">
-      <div class="coluna">
+<html lang="{{ page.lang | default: site.lang | default: " pt " }}">
+{%- include head.html -%}
 
-      <h2 class="subtitle">As mais recentes:</h2>
+<body id="homepage">
+  <header>
+  </header>
+  <article class="post">
+    <div class="coluna">
       <!-- featured -->
       {% for post in site.posts limit:1 %}
       <ul>
         <li>
-        <small>{{ post.date | date: '%d/%m/%Y' }}</small>
+          <small>{{ post.date | date: '%d/%m/%Y' }}</small>
           <a href="{{ post.url | relative_url }}">
-            <b>{{ post.title | escape }}</b>
+            {{ post.title }}
           </a>
-          </li>
+        </li>
       </ul>
-        {% if post.sumario %}
-          <div class="info coluna">
-          <blockquote>
-           {{ post.sumario | strip_html | truncatewords:75 }}
-          </blockquote>
-          </div>
-        {% endif %}
-      {% endfor %}
-
-      <!-- latest -->
-      {% for post in site.posts offset:1 limit:4 %}
-      <ul>
-            <li>
-              <small>{{ post.date | date: '%d/%m/%Y' }}</small>
-
-              <a href="{{ post.url | relative_url }}">
-               <b>{{ post.title | escape }}</b>
-              </a>
-          </li>
-        </ul>
-      {% endfor %}
-
+      {% if post.sumario %}
+      <div class="info coluna">
+        <blockquote>
+          {{ post.sumario | strip_html | truncatewords:75 }}
+        </blockquote>
       </div>
-    </article>
-  {%- include footer.html -%}
-  </body>
+      {% endif %}
+    {% endfor %}
+
+    <!-- latest -->
+    <ul>
+      {% for post in site.posts offset:1 limit:4 %}
+      <li>
+          <small>{{ post.date | date: '%d/%m/%Y' }}</small>
+          <a href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+          </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</article>
+{%- include footer.html -%}
+</body>
+
 </html>
