@@ -1081,6 +1081,8 @@ article.post {
 
         a {
             font-family: 'Permanent Marker';
+            padding-left: $c;
+            padding-right: $c;
         }
 
         &::before {
