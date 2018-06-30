@@ -649,6 +649,7 @@ ul.lista {
 .thumb {
     background: khaki;
     padding: $a;
+    text-align: center;
     @media(min-width: $tablet) {
         margin-left: $a*4;
         margin-right: $a*4;
