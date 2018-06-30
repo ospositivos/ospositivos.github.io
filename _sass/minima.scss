@@ -99,6 +99,7 @@ html {
                   }
                 }
                 ul {
+                  max-width: 480px;
                   margin:$b/2 auto;
                   padding: 0;
                   list-style: none;
@@ -127,7 +128,7 @@ html {
                       letter-spacing: 2px;
                       &:hover {
                         color: $vermelho;
-                        border-bottom-color: $vermelho;
+                        border-bottom:1px dotted $vermelho;
                       }
                     }
                     small {
@@ -144,8 +145,15 @@ html {
             input[type="submit"] {
                 border: 1px solid $branco !important;
             }
+
+            footer a {
+              border-bottom: 1px dotted #FFF;
+              &:hover {
+                border-bottom:1px dotted $vermelho;
+              }
+            }
         }
-        // homepage
+        // fim homepage
         // ----------------------
 
         // ----------------------
