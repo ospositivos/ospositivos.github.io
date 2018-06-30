@@ -409,6 +409,13 @@ table.mytabela {
     }
 }
 
+code {
+    display: block;
+    padding: $a;
+    background: repeating-linear-gradient(-45deg, #fff, #fff $a/2, cornsilk $a/2, cornsilk $a);
+    border-left: 2px solid bisque;
+}
+
 // lista
 ul.lista {
     margin: $a;
