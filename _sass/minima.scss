@@ -59,7 +59,7 @@ html {
                 color: $branco;
 
                 .recentes {
-                  max-width: 510px;
+                  max-width: 480px;
                   margin-left: auto;
                   margin-right: auto;
                   margin-bottom: 0;
@@ -134,6 +134,9 @@ html {
                     small {
                       @media(min-width: $mobileM) {
                         float: right;
+                      }
+                      @media(max-width:$mobileM){
+                        padding-right: $c/2;
                       }
                     }
                   }
