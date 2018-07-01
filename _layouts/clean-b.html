@@ -1,0 +1,12 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "pt" }}">
+  {%- include head.html -%}
+  <body id="clean-b">
+  {{ content }}
+  {%- include footer.html -%}
+  </body>
+</html>

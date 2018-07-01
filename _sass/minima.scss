@@ -223,6 +223,23 @@ html {
         // ----------------------
 
         // ----------------------
+        // clean-b
+        &#clean-b {
+          background: $preto;
+          color:$branco;
+
+          * {
+            color:$branco;
+          }
+
+          input[type='button'],
+          input[type='submit'] {
+              border: 1px solid $branco;
+          }
+        }
+          // ----------------------
+
+        // ----------------------
         // fim body
     }
 }
