@@ -67,9 +67,10 @@ html {
                   color:$cinza;
                   text-align: left;
                   padding-left:$c;
-                  @media(min-width: $mobileM) {
+                  //@media(min-width: $mobileM) {
                     text-align: right;
-                  }
+                    padding-right: $b/2;
+                  //}
                   small {
                     display: inline-block;
                     letter-spacing: -1px;
@@ -168,6 +169,11 @@ html {
             max-width: 90%;
             margin-left: auto;
             margin-right: auto;
+
+            .subtitle {
+              color:$branco;
+            }
+
             a {
                 border: none;
                 &:hover {
@@ -1001,8 +1007,10 @@ article.post {
         text-align: center;
         line-height: 1em;
         margin-top: -$a*2;
-        @media screen and (max-width: $mobileM) {
+        @media (max-width: $mobileM) {
             margin-top: -$b*2;
+            padding-left:$b;
+            padding-rigth:$b;
         }
 
         &.clear {
