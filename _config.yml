@@ -31,7 +31,8 @@ markdown: kramdown
 theme: minima
 livereload: true
 
-#plugins:
+plugins:
+  - jekyll-sitemap
 #  - jekyll-feed
 
 # compress_html

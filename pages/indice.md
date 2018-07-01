@@ -1,6 +1,7 @@
 ---
 layout: page
 permalink: indice.html
+sitemap: false
 ---
 
 <div class="coluna">
