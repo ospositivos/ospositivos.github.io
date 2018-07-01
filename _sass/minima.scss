@@ -132,12 +132,13 @@ html {
                       }
                     }
                     small {
-                      @media(min-width: $mobileM) {
+                      //@media(min-width: $mobileM) {
                         float: right;
                         margin-left: $a;
-                      }
+                        padding-left: $c/2;
+                      //}
                       @media(max-width:$mobileM){
-                        padding-right: $c/2;
+                        padding-right: $b/2;
                       }
                     }
                   }

@@ -10,7 +10,7 @@ sitemap: false
   <ul class="lista">
       {%- for post in site.posts -%}
         <li>
-          <small style="float:right;">{{ post.date | date: '%d/%m/%Y' }}</small>
+          <small style="float:right;">{{ post.date | date: '%d-%m-%Y' }}</small>
 
             <a href="{{ post.url | relative_url }}" style="text-transform:uppercase;font-style:normal;border-bottom:none;">
                 <b style="letter-spacing:2px;">{{ post.title | escape }}</b>
