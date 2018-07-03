@@ -127,6 +127,10 @@ html {
                       border-bottom: 1px dotted $branco;
                       font-style: normal;
                       letter-spacing: 2px;
+                      &:visited{
+                        color: $cinza;
+                        border-bottom: 1px dotted $cinza;
+                      }
                       &:hover {
                         color: $vermelho;
                         border-bottom:1px dotted $vermelho;
