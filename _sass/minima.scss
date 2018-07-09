@@ -334,6 +334,12 @@ img {
 sup {
     font-weight: bold;
 }
+
+hr {
+  border: 0;
+  height: 1px;
+  background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+}
 // tags
 // ----------------------
 
@@ -694,24 +700,98 @@ ul.lista {
 // ----------------------
 // artigo.clip
 .thumb {
-    background: khaki;
+    position: relative;
+    background: floralwhite;
     padding: $a;
     text-align: center;
     @media(min-width: $desktopS) {
         margin-left: $a*4;
         margin-right: $a*4;
     }
+    .canto {
+      width: 150px;
+      height: 150px;
+      overflow: hidden;
+      position: absolute;
+      top: -10px;
+      left: -10px;
+
+      &::before,
+      &::after {
+        position: absolute;
+        z-index: -1;
+        content: '';
+        display: block;
+        border: 5px solid #2980b9;
+        border-top-color: transparent;
+        border-left-color: transparent;
+      }
+      &::before {
+        top: 0;
+        right: 0;
+      }
+      &::after {
+        bottom: 0;
+        left: 0;
+      }
+      span {
+        position: absolute;
+        z-index: 999;
+        display: block;
+        width: 225px;
+        padding: 15px 0;
+        background-color: #3498db;
+        box-shadow: 0 5px 10px rgba(0,0,0,.1);
+        color: #fff;
+        text-shadow: 0 1px 1px rgba(0,0,0,.2);
+        text-transform: uppercase;
+        text-align: center;
+        right: -25px;
+        top: 30px;
+        transform: rotate(-45deg);
+      }
+    }
 }
 
 article.clip {
-    background: khaki;
-    font-family: monospace;
-    color: #111;
-    padding: $a/2 $a*4 $a*2 $a*4;
+  position: relative;
+  background: floralwhite;
+  font-family: serif;
+  color: #111;
+  padding: $a/2 $a*4 $a*2 $a*4;
+  font-size: $c;
+
+    &::before,
+    &::after {
+      background: none;
+      bottom: 12px;
+      box-shadow: 0 10px 12px rgba(0, 0, 0, 0.5);
+      content: "";
+      height: 10px;
+      left: 12px;
+      position: absolute;
+      width: 40%;
+      z-index: -1;
+      transform: skew(-4deg) rotate(-4deg);
+      top: auto;
+      bottom: 21px;
+      box-shadow: 0 10px 12px rgba(0, 0, 0, 0.5);
+    }
+    &::after {
+      transform: skew(4deg) rotate(4deg);
+      left: auto;
+      right: 12px;
+    }
 
     h1 {
         color: $preto;
         margin-top: 0;
+        padding-bottom: $a*2;
+        font-size: 1.5em;
+
+        &.centre{
+          width: auto;
+        }
 
         a:hover {
             color: $preto;
@@ -723,12 +803,18 @@ article.clip {
         }
     }
 
+    blockquote {
+      font-style: italic;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
     a {
         color: $cinzaEscuro;
-        border-bottom: 1px solid $cinzaEscuro;
+        border-bottom: 1px dotted $cinzaEscuro;
         &:hover {
-            color: darkgrey;
-            border-bottom: 1px dotted $preto;
+            color: brown;
+            border-bottom: 1px dotted brown;
         }
     }
     strong {
@@ -739,9 +825,29 @@ article.clip {
         margin-top: 50px !important;
     }
 
+    .info {
+      background: gold;
+
+      p {
+        padding-left: $a;
+        padding-right: $a;
+      }
+    }
+
     @media(min-width:$desktopS) {
         margin-left: $a*4;
         margin-right: $a*4;
+
+        h3,p {
+            max-width: 780px;
+            margin-left: auto;
+            margin-right:auto;
+        }
+        blockquote {
+            max-width: 760px;
+            margin-left: auto;
+            margin-right:auto;
+        }
     }
     @media(max-width:$tablet) {
         padding: $a*2;
@@ -751,10 +857,33 @@ article.clip {
 // ----------------------
 // artigo.yomomma
 #artigo {
-    background-color: #f5efeb;
-    margin: 20px auto;
-    font: normal 15px/150% Georgia, serif;
-    color: $cinzaEscuro;
+  position: relative;
+  background-color: floralwhite;
+  margin: 20px auto;
+  font: normal 15px/150% Georgia, serif;
+  color: $cinzaEscuro;
+
+    &::before,
+    &::after {
+      background: none;
+      bottom: 12px;
+      box-shadow: 0 10px 12px rgba(0, 0, 0, 0.5);
+      content: "";
+      height: 10px;
+      left: 12px;
+      position: absolute;
+      width: 40%;
+      z-index: -1;
+      transform: skew(-4deg) rotate(-4deg);
+      top: auto;
+      bottom: 21px;
+      box-shadow: 0 10px 12px rgba(0, 0, 0, 0.5);
+    }
+    &::after {
+      transform: skew(4deg) rotate(4deg);
+      left: auto;
+      right: 12px;
+    }
 
     @media (min-width: $tablet) {
         max-width: 650px;
@@ -826,7 +955,6 @@ article.clip {
     }
 
     small {
-        color: $cinza;
         line-height: $b;
     }
     blockquote {
@@ -1159,12 +1287,13 @@ footer {
     padding: 0 0 1em 0;
     margin-left: auto;
     margin-right: auto;
-    font-family: 'Sedgwick Ave Display', cursive;
+    //font-family: 'Sedgwick Ave Display', cursive;
+    font-family: 'Permanent Marker', cursive;
     text-align: center;
     font-size: $a;
 
     @media (min-width: $mobileL) {
-        width: 520px;
+        width: 550px;
     }
 
     a {
