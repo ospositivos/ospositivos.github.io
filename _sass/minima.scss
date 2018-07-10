@@ -1057,7 +1057,15 @@ div.fanzines img {
     cursor: pointer;
     white-space: nowrap;
     -webkit-touch-callout: none;
-    user-select: none
+    user-select: none;
+
+    &.mini {
+      padding: 28px $b*2;
+	  
+	  @media(max-width:$mobileM) {
+		  padding: $b $b/2;
+		  }
+    }
 }
 
 @media(min-width:620px) {
@@ -1093,6 +1101,11 @@ div.fanzines img {
     color: #fff !important;
     background-color: #000 !important
 }
+
+.w3-red,.w3-hover-red:hover{
+		color:#fff!important;
+		background-color:#f44336!important
+		}
 
 .w3-display-left {
     position: absolute;
