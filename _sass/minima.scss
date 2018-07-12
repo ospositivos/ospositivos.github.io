@@ -81,6 +81,7 @@ html {
               .info {
                 border-radius: 0;
                 background: $vermelho;
+
                 blockquote {
                   position: relative;
                   box-sizing: border-box;
@@ -145,6 +146,13 @@ html {
                       @media(max-width:$mobileM){
                         padding-right: $b/2;
                       }
+                    }
+
+                    & > blockquote {
+                      color: $cinza;
+                      font-style: italic;
+                      margin: 0;
+                      text-indent: 0;
                     }
                   }
                 }
@@ -1061,7 +1069,7 @@ div.fanzines img {
 
     &.mini {
       padding: 28px $b*2;
-	  
+
 	  @media(max-width:$mobileM) {
 		  padding: $b $b/2;
 		  }

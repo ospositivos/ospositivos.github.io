@@ -41,6 +41,11 @@ layout: compress
           <a href="{{ post.url | relative_url }}">
             {{ post.title | escape }}
           </a>
+          {% if post.sumario %}
+          <blockquote>
+              {{ post.sumario | strip_html | truncatewords:75 }}
+          </blockquote>
+          {% endif %}
       </li>
       {% endfor %}
     </ul>
