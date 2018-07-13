@@ -1281,8 +1281,10 @@ article.post {
 
         a {
             font-family: 'Permanent Marker';
-            padding-left: $c;
-            padding-right: $c;
+            @media (max-width: $mobileM) {
+              padding-left: $c;
+              padding-right: $c;
+            }
         }
 
         &::before {
