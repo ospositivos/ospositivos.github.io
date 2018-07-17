@@ -58,6 +58,7 @@ html {
               .coluna {
                 color: $branco;
 
+                /*
                 .recentes {
                   max-width: 480px;
                   margin-left: auto;
@@ -77,6 +78,7 @@ html {
                     border-bottom: 1px solid $cinzaEscuro;
                   }
                 }
+                */
 
               .info {
                 border-radius: 0;
@@ -1021,24 +1023,32 @@ div.fanzines img {
 // ----------------------
 // pesquis
 #search-container {
-    max-width: 480px;
+    max-width: 520px;
     margin-left: auto;
     margin-right: auto;
+
     input {
       text-transform: uppercase;
+      background: $cinza;
+      color:$branco;
       letter-spacing: 1px;
       font-size: 11px;
       border-style:none;
-      border-bottom-style:dotted;
-      border-color: $cinzaEscuro;
-      background: $preto;
       padding: $a/2;
-      color: $branco;
       width: 98%;
-      @media(max-width:$mobileS) {
+      border-radius: 26px;
+      text-align: center;
+      box-shadow: inset 0px 3px 10px #414141;
+
+      @media(max-width:$mobileM) {
         width: 90%;
         margin-left:$a/2;
       }
+
+      &::placeholder{
+          color:$cinzaEscuro;
+      }
+
       &:focus {
         outline: -webkit-focus-ring-color auto 5px;
         outline-color: $cinza;
@@ -1049,11 +1059,13 @@ div.fanzines img {
 
     #results-container {
       font-size: 11px;
-      padding-left: $a/2;
+      margin-bottom: $a*2;
       color: $cinza;
+      text-align: center;
       li {
         text-align: left;
         a {
+          font-size: 10px;
           color:$branco;
         }
       }
