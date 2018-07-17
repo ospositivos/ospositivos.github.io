@@ -1053,6 +1053,9 @@ div.fanzines img {
       color: $cinza;
       li {
         text-align: left;
+        a {
+          color:$branco;
+        }
       }
     }
 }
