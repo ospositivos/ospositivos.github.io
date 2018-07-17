@@ -11,8 +11,27 @@ layout: compress
   </header>
   <article class="post">
     <div class="coluna">
-      <div class="centre recentes"><small>as mais recentes</small></div>
+
+      <!-- Html Elements for Search -->
+      <div id="search-container">
+      <input type="text" id="search-input" placeholder="pesquisa por título...">
+      <ul id="results-container"></ul>
+      </div>
+
+      <!-- Script pointing to search-script.js -->
+      <script src="/assets/search-script.js"></script>
+
+      <!-- Configuration -->
+      <script>
+      SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('results-container'),
+        json: '/search.json'
+      })
+      </script>
+
       <!-- featured -->
+      <div class="centre recentes"><small>as mais recentes</small></div>
       {% for post in site.posts limit:1 %}
       <ul>
         <li>

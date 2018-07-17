@@ -1019,6 +1019,45 @@ div.fanzines img {
 }
 
 // ----------------------
+// pesquis
+#search-container {
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    input {
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 11px;
+      border-style:none;
+      border-bottom-style:dotted;
+      border-color: $cinzaEscuro;
+      background: $preto;
+      padding: $a/2;
+      color: $branco;
+      width: 98%;
+      @media(max-width:$mobileS) {
+        width: 90%;
+        margin-left:$a/2;
+      }
+      &:focus {
+        outline: -webkit-focus-ring-color auto 5px;
+        outline-color: $cinza;
+        outline-style: none;
+        outline-width: 0;
+      }
+    }
+
+    #results-container {
+      font-size: 11px;
+      padding-left: $a/2;
+      color: $cinza;
+      li {
+        text-align: left;
+      }
+    }
+}
+
+// ----------------------
 // W3C SLIDESHOW
 /* exemplo: https://www.ospositivos.com/2017/06/cidades.html */
 
