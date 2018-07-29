@@ -364,9 +364,18 @@ hr {
     margin-bottom: 100px !important;
 }
 
+.sem-espaco-base {
+    margin-bottom: 0 !important;
+    & + * {
+    margin-top: 0 !important;
+    }
+}
+
 .espaco {
     margin: 100px auto !important;
 }
+
+
 
 .imagemComplementar {
     margin-top: $a/2;
