@@ -7,6 +7,7 @@ $a:16px;
 $b:12px;
 $c:18px;
 
+$desktopM: 1200px;
 $desktopS: 1024px;
 $tablet: 960px;
 $mobileL: 760px;
@@ -627,6 +628,7 @@ ul.lista {
 .blurb {
     padding: $a*2;
     margin: 1em auto;
+    box-sizing: border-box;
     max-width: 100%;
     background: $cinzaEscuro;
     background: linear-gradient(45deg, #000000 0%, #3a311f 100%);
@@ -639,6 +641,15 @@ ul.lista {
     @media (min-width: $desktopS) {
         width:60%;
         border-radius: 4px;
+        text-align: left;
+    }
+    @media (min-width: $desktopM) {
+        padding: $a*2 12%;
+        text-align: left;
+    }
+    @media (max-width: $desktopM) and  (min-width: $tablet){
+        padding: $a*2 5%;
+        text-align: left;
     }
 
     &:after {
