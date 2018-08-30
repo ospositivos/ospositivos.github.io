@@ -120,7 +120,8 @@ html {
                       padding-top: $a/2;
                     }
                     &::before {
-                      content: "⨯ ";
+                      // content: "⨯ ";
+                      content: "★ ";
                       color: $vermelho;
                       }
                     a {
