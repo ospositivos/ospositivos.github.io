@@ -631,8 +631,8 @@ ul.lista {
     margin: 1em auto;
     box-sizing: border-box;
     max-width: 100%;
-    background: $cinzaEscuro;
-    background: linear-gradient(45deg, #000000 0%, #3a311f 100%);
+    background: crimson;
+    //background: linear-gradient(45deg, #000000 0%, #3a311f 100%);
     position: relative;
     color: $branco;
     font-style: italic;
@@ -659,7 +659,7 @@ ul.lista {
         position: absolute;
         left: 5%;
         border-style: solid;
-        border-color: #111 rgba(0, 0, 0, 0);
+        border-color: crimson rgba(0, 0, 0, 0);
         display: block;
         width: 0;
         bottom: -14px;
@@ -667,6 +667,9 @@ ul.lista {
     }
     & blockquote {
         border: none;
+    }
+    & + & {
+      margin-top:$a;
     }
 }
 
