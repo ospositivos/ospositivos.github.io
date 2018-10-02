@@ -640,17 +640,18 @@ ul.lista {
     text-align: center;
 
     @media (min-width: $desktopS) {
-        width:60%;
+        //width:60%;
+        margin: 0 $a*3;
         border-radius: 4px;
-        text-align: left;
+        //text-align: left;
     }
     @media (min-width: $desktopM) {
         padding: $a*2 12%;
-        text-align: left;
+        //text-align: center;
     }
     @media (max-width: $desktopM) and  (min-width: $tablet){
         padding: $a*2 5%;
-        text-align: left;
+        //text-align: left;
     }
 
     &:after {
