@@ -628,10 +628,10 @@ ul.lista {
 
 // blurb
 .blurb {
-    padding: $a*2;
+    padding: $a*2 74px;
     margin: 1em auto;
     box-sizing: border-box;
-    max-width: 100%;
+    width: 710px;
     background: crimson;
     //background: linear-gradient(45deg, #000000 0%, #3a311f 100%);
     position: relative;
@@ -639,18 +639,11 @@ ul.lista {
     font-style: italic;
     font-weight: 700;
     text-align: left;
+    border-radius: 4px;
 
-    @media (min-width: $desktopS) {
-        width:63%;
-        //margin: 0 $a*3;
-        border-radius: 4px;
-    }
-    @media (min-width: $desktopM) {
-        padding: $a*2 12%;
-    }
-    @media (max-width: $desktopM) and  (min-width: $tablet){
+    @media (max-width: $tablet){
         padding: $a*2 5%;
-        width:58%;
+        width:100%;
     }
 
     &:after {
