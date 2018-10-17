@@ -52,6 +52,11 @@ uikit 2 Grid
 .uk-grid > * > :last-child {
   margin-bottom: 0;
 }
+
+.uk-container-center {
+    margin-left: auto;
+    margin-right: auto;
+}
 /* Grid gutter
  ========================================================================== */
 /*
