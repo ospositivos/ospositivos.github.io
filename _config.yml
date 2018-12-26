@@ -30,6 +30,7 @@ google_analytics: UA-8547796-14
 markdown: kramdown
 theme: minima
 livereload: true
+incremental: true
 
 plugins:
   - jekyll-sitemap
