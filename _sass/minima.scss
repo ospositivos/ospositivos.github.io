@@ -1329,6 +1329,7 @@ article.post {
         }
 
         & > iframe,
+        & > div:not([class]) > iframe,
         & > div[class=""] > iframe {
             display: block;
             max-width: 90%;
