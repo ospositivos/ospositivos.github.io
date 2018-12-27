@@ -1328,7 +1328,8 @@ article.post {
           }
         }
 
-        & > iframe {
+        & > iframe,
+        & > div[class=""] > iframe {
             display: block;
             max-width: 90%;
             margin: auto;
