@@ -31,6 +31,7 @@ markdown: kramdown
 theme: minima
 livereload: true
 incremental: true
+drafts: true
 
 plugins:
   - jekyll-sitemap
