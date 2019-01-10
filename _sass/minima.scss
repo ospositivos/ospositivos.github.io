@@ -1374,6 +1374,41 @@ article.post {
                 }
             }
         }
+
+
+        // interview
+        .interview {
+          & > div {
+            box-shadow: 0px 4px 5px -1px rgba(0,0,0,0.27);
+            p, ul {
+              max-width: 90%;
+              &:last-of-type {
+                margin-bottom: $a;
+                }
+              @media (max-width:$tablet){
+                margin: $b*2 auto;
+                }
+              }
+            &.question {
+              background:lightslategray;
+              border-top-left-radius: 5px;
+              border-top-right-radius: 5px;
+              text-transform: uppercase;
+              font-size: 13px;
+              & * {
+                color:$branco;
+                }
+              }
+            &.reply {
+              background:$branco;
+              margin-top: 0;
+              border-bottom-right-radius: 5px;
+              border-bottom-left-radius: 5px;
+              border-top: none;
+              font-family: Tahoma;
+              }
+            }
+        }
     }
 
     #next {
