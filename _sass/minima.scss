@@ -1407,6 +1407,20 @@ article.post {
               border-top: none;
               font-family: Tahoma;
               }
+
+            .profile {
+                img {
+                  border-radius: 50%;
+                  box-sizing: border-box;
+                  border: $a solid $preto;
+                  margin-top: $a;
+                  @media (max-width:$tablet) {
+                    border-width: $b*2;
+                    max-width:90%;
+                    margin: auto;
+                  }
+                }
+              }
             }
         }
     }
