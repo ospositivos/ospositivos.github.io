@@ -1409,16 +1409,23 @@ article.post {
               }
 
             .profile {
+              position: sticky;
+              top: 0;
                 img {
+
                   border-radius: 50%;
                   box-sizing: border-box;
-                  border: $a solid $preto;
+                  border: $a/2 solid $preto;
                   margin-top: $a;
                   @media (max-width:$tablet) {
-                    border-width: $b*2;
                     max-width:90%;
-                    margin: auto;
+                    margin: $a*2 auto 0 auto;
                   }
+                }
+                small {
+                  display: inline-block;
+                  line-height: $a;
+                  margin-bottom: $c;
                 }
               }
             }
