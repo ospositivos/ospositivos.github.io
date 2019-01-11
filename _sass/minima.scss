@@ -1433,6 +1433,9 @@ article.post {
 
         table {
           max-width:95%;
+          @media (max-width:$mobileL){
+            width: 92%;
+            }
           }
         }
       }
