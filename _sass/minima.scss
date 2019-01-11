@@ -378,7 +378,43 @@ hr {
     margin: 100px auto !important;
 }
 
+.sucesso {
+  color:green;
+}
+.insucesso {
+  color:red;
+}
+.aviso{
+  color:yellow;
+}
 
+// hide & reveal v2 //
+.expande {
+  .trigger {
+    input[type="checkbox"] {
+
+      // Hide content via default
+      & + div {
+        visibility: hidden;
+        opacity: 0;
+        height:0;
+        transition: visibility 0s linear 0.33s, opacity 0.33s linear;
+      }
+
+      // Show if checkbox is clicked
+      &:checked + * {
+        visibility: visible;
+        opacity: 1;
+        height:auto;
+        transition-delay: 0s;
+      }
+    }
+  }
+}
+// fim hide & reveal v2 //
+
+
+// Simple styling for message.
 
 .imagemComplementar {
     margin-top: $a/2;
@@ -1301,6 +1337,7 @@ article.post {
             margin: 1em auto;
             padding: 0px 1em;
         }
+
         & > ul,
         & > ol,
         & > blockquote,
@@ -1316,6 +1353,35 @@ article.post {
                 margin-right: $a/2;
               }
             }
+
+        table {
+          max-width: 550px;
+          margin: 1em auto;
+          padding: 0px 1em;
+          box-sizing: content-box;
+          border:1px solid $cinza;
+          @media (min-width: $mobileM) {
+            width: 100%;
+          }
+
+          &.borderless {
+            border:none;
+          }
+
+          th {
+            text-align: left;
+            border-bottom: 3px solid $preto;
+          }
+          tr {
+            td {
+              border-bottom: 1px dotted $cinza;
+            }
+          }
+        }
+
+        .table-container {
+          overflow: auto;
+        }
 
         .uk-grid:not(.full) {
             max-width: 820px;
