@@ -1530,7 +1530,10 @@ article.post {
               border-bottom-left-radius: 5px;
               border-top: none;
               font-family: Tahoma;
-              font-size:15px;
+              font-size:14px;
+              @media(max-width:$tablet){
+                font-size:$a;
+                }
               }
 
             .profile {
