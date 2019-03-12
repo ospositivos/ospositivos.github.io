@@ -1,6 +1,7 @@
 ---
 layout: compress
 permalink: indice-home.html
+sitemap: false
 ---
 
 <!DOCTYPE html>
