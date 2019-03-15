@@ -660,6 +660,8 @@ ul.lista {
     line-height: 1em;
     text-transform: uppercase;
     letter-spacing: 2px;
+    text-align: justify;
+    text-justify: distribute;
 
     @media (max-width: $tablet){
         padding: $a*2 5%;
