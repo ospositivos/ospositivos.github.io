@@ -648,14 +648,18 @@ ul.lista {
     margin: 1em auto;
     box-sizing: border-box;
     width: 710px;
-    background: crimson;
+    //background: crimson;
     //background: linear-gradient(45deg, #000000 0%, #3a311f 100%);
     position: relative;
-    color: $branco;
+    color: $preto;
     font-style: italic;
     font-weight: 700;
     text-align: left;
     border-radius: 4px;
+    font-size: 3em;
+    line-height: 1em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 
     @media (max-width: $tablet){
         padding: $a*2 5%;
@@ -664,15 +668,15 @@ ul.lista {
     }
 
     &:after {
-        content: '';
+        /*content: '';
         position: absolute;
         left: 5%;
         border-style: solid;
-        border-color: crimson rgba(0, 0, 0, 0);
+        border-color: $preto rgba(0, 0, 0, 0);
         display: block;
         width: 0;
         bottom: -14px;
-        border-width: 14px 14px 0 0;
+        border-width: 14px 14px 0 0;*/
     }
     & blockquote {
         border: none;
@@ -720,7 +724,7 @@ ul.lista {
     position: relative;
     width: 20px;
     height: 13px;
-    background: white;
+    background: $preto;
     border-radius: 1px;
     margin: -3px 8px 0 0;
     display: inline-block;
@@ -734,7 +738,7 @@ ul.lista {
         position: absolute;
         left: 45%;
         border-style: solid;
-        border-color: white rgba(0, 0, 0, 0);
+        border-color: $preto rgba(0, 0, 0, 0);
         display: block;
         width: 0;
         bottom: -4px;
