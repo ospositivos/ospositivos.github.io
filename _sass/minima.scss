@@ -648,8 +648,6 @@ ul.lista {
     margin: 1em auto;
     box-sizing: border-box;
     width: 710px;
-    //background: crimson;
-    //background: linear-gradient(45deg, #000000 0%, #3a311f 100%);
     position: relative;
     color: $preto;
     font-style: italic;
@@ -660,8 +658,6 @@ ul.lista {
     line-height: 1em;
     text-transform: uppercase;
     letter-spacing: 2px;
-    //text-align: justify;
-    //text-justify: distribute;
 
     @media (max-width: $tablet){
         padding: $a*2 5%;
