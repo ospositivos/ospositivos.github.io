@@ -724,13 +724,14 @@ ul.lista {
     position: relative;
     width: 20px;
     height: 13px;
-    background: $preto;
+    background: red;
     border-radius: 1px;
     margin: -3px 8px 0 0;
     display: inline-block;
     line-height: 0;
     vertical-align: middle;
     font-style: italic;
+    margin-top: -44px;
 
     &:after,
     &:after {
@@ -738,7 +739,7 @@ ul.lista {
         position: absolute;
         left: 45%;
         border-style: solid;
-        border-color: $preto rgba(0, 0, 0, 0);
+        border-color: red rgba(0, 0, 0, 0);
         display: block;
         width: 0;
         bottom: -4px;
