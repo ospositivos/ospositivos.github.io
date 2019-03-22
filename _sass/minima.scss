@@ -650,14 +650,15 @@ ul.lista {
     width: 710px;
     position: relative;
     color: $preto;
-    font-style: italic;
+    font-family: 'Sedgwick Ave Display', cursive;
     font-weight: 700;
     text-align: left;
     border-radius: 4px;
     font-size: 3.5em;
-    line-height: 1em;
+    line-height: 1.1em;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    //letter-spacing: 2px;
+    //font-style: italic;
 
     @media (max-width: $tablet){
         padding: $a*2 5%;
