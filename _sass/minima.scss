@@ -365,45 +365,39 @@ hr {
 // class
 .espaco-topo {
     margin-top: 100px !important;
-}
-
+  }
 .espaco-base {
     margin-bottom: 100px !important;
-}
-
+  }
 .sem-espaco-base {
     margin-bottom: 0 !important;
     & + * {
     margin-top: 0 !important;
     }
-}
-
+  }
 .espaco {
     margin: 100px auto !important;
-}
+  }
 
 .sucesso {
   color:$verde;
-}
+  }
 .insucesso {
   color:$vermelho;
-}
+  }
 .aviso{
   color:$amarelo;
-}
-
-
-// Simple styling for message.
+  }
 
 .imagemComplementar {
+    // remendo imagens recortadas.
     margin-top: $a/2;
-}
+  }
 
 .moldura {
     background: $preto;
     padding: $c;
     box-sizing: border-box;
-
     &.mini {
         padding: 2px;
     }
@@ -420,11 +414,19 @@ hr {
         padding: 1em 0;
     }
     @media (max-width: $tablet) {
-        h3 small &,
-        .uk-grid {
-            padding-left: $a;
-            padding-right: $a;
+      .uk-grid {
+        padding-left: $a;
+        padding-right: $a;
         }
+    }
+    h3 small & {
+      display: block;
+      background: url(/assets/info-header.png) no-repeat 50% 0 $branco;
+      min-height: 54px;
+      color:$branco;
+      font-size: 2em;
+      font-family: 'Permanent Marker';
+      letter-spacing: 4px;
     }
 }
 
@@ -660,7 +662,7 @@ ul.lista {
     //letter-spacing: 2px;
     //font-style: italic;
 
-    @media (max-width: $tablet){
+    @media (max-width: $mobileL){
         padding: $a*2 5%;
         width:100%;
         border-radius: 0;
