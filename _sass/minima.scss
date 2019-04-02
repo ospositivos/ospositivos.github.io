@@ -293,7 +293,11 @@ blockquote {
     }
     small {
         font-style: normal;
-    }
+        // remove highlightlink
+        a {
+            box-shadow: none !important;
+          }
+        }
     .voice {
         font-style: normal;
     }
@@ -338,7 +342,9 @@ a[href^="http://www.ospositivos.pt"] {
     &:hover {
         color: $vermelho;
     }
-} // temp
+}
+
+// temp
 a[href^="http://www.ospositivos.com"] {
     background: $vermelho;
 }
@@ -363,6 +369,31 @@ hr {
 
 // ----------------------
 // class
+@mixin highlightlink {
+  a:not(.link) {
+    box-shadow: inset 0 -.6em 0 lightgreen;
+    text-decoration: none;
+    transition: box-shadow .2s ease-in-out;
+    color:$preto;
+
+    &:hover {
+        box-shadow: inset 0 -1.2em 0 lightgreen;
+      }
+
+    &[href^="http://localhost:4000"],
+    &[href^="http://www.ospositivos.pt"],
+    &[href^="http://www.ospositivos.com"] {
+        box-shadow: inset 0 -.6em 0 fuchsia;
+        text-decoration: none;
+        transition: box-shadow .2s ease-in-out;
+        color:$preto;
+        &:hover {
+          box-shadow: inset 0 -1.2em 0 fuchsia;
+        }
+      }
+    }
+  }
+
 .espaco-topo {
     margin-top: 100px !important;
   }
@@ -1059,7 +1090,7 @@ div.fanzines img {
 }
 
 // ----------------------
-// pesquis
+// pesquisa
 #search-container {
     max-width: 520px;
     margin-left: auto;
@@ -1225,6 +1256,7 @@ div.fanzines img {
 }
 // fim W3C SLIDESHOW
 // ----------------------
+
 // ----------------------
 /** LIGHTBOX MARKUP **/
 .lightbox {
@@ -1321,7 +1353,7 @@ article.post {
             max-width: 550px;
             margin: 1em auto;
             padding: 0px 1em;
-        }
+            }
 
         & > ul,
         & > ol,
@@ -1564,7 +1596,11 @@ article.post {
               }
             }
         }
-    }
+
+      // highlightlink
+      @include highlightlink;
+
+    } // fim coluna
 
     #next {
         margin: $a*4 auto $b*4 auto;
