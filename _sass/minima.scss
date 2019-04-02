@@ -380,9 +380,9 @@ hr {
         box-shadow: inset 0 -1.2em 0 lightgreen;
       }
 
-    &[href^="http://localhost:4000"],
-    &[href^="http://www.ospositivos.pt"],
-    &[href^="http://www.ospositivos.com"] {
+    &[href*="localhost:4000"],
+    &[href*="www.ospositivos.pt"],
+    &[href*="www.ospositivos.com"] {
         box-shadow: inset 0 -.6em 0 fuchsia;
         text-decoration: none;
         transition: box-shadow .2s ease-in-out;
