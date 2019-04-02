@@ -23,7 +23,7 @@ $spacing-unit: 30px;
 
 $branco: #FFF;
 $preto: #000;
-$vermelho: red;
+$vermelho: crimson;
 $verde: green;
 $amarelo: yellow;
 $cinza: #828282;
@@ -747,6 +747,7 @@ ul.lista {
                 font-size: 11px;
             }
         }
+        @include highlightlink;
     }
 }
 
