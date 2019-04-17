@@ -232,7 +232,7 @@ html {
             }
             h2#next a {
                 color: $branco;
-                border-bottom: 1px solid $vermelho;
+                //border-bottom: 1px solid $vermelho;
                 &:hover {
                     color: $vermelho;
                 }
@@ -1643,10 +1643,10 @@ article.post {
             width: 100%;
             font-size: 12px;
             font-weight: normal;
-            margin-bottom: -8px;
+            //margin-bottom: -8px;
             padding-bottom: 0;
             letter-spacing: 2px;
-            background: $branco;
+            //background: $branco;
         }
     }
 }
