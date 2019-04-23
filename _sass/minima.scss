@@ -54,9 +54,10 @@ html {
 
             header {
                 position: relative;
-                height: calc(100%);
+                height: calc(35%);
                 background: url(/assets/x_large.png) no-repeat 50% 45% $preto;
-                background-size: cover;
+                background-size: 550px;
+                //overflow: hidden;
             }
 
             article.post {
@@ -1106,11 +1107,15 @@ div.fanzines img {
       letter-spacing: 1px;
       font-size: 11px;
       border-style:none;
+      border: 1px solid $cinzaEscuro;
       padding: $a/2;
       width: 98%;
       border-radius: 26px;
       text-align: center;
-      box-shadow: inset 0px 3px 10px #414141;
+      box-shadow: inset 0px 3px 3px #414141;
+
+      outline: none;
+      transition: all 0.20s ease-in-out;
 
       @media(max-width:$mobileM) {
         width: 90%;
@@ -1122,7 +1127,9 @@ div.fanzines img {
       }
 
       &:focus {
-        outline: -webkit-focus-ring-color auto 5px;
+        box-shadow: 0 0 5px rgba(220, 20, 60, 1);
+        border: 1px solid rgba(220, 20, 60, 1);
+
         outline-color: $cinza;
         outline-style: none;
         outline-width: 0;
