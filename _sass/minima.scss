@@ -55,6 +55,7 @@ html {
             header {
                 position: relative;
                 height: calc(40%);
+                min-height: 400px;
                 background: url(/assets/x_large.png) no-repeat 50% 45% $preto;
                 background-size: 850px;
                 //overflow: hidden;
