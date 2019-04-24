@@ -1145,6 +1145,13 @@ div.fanzines img {
           &:hover {
             color:$vermelho;
           }
+          span {
+            display: inline-block;
+            float: right;
+            color:$cinzaMetal;
+            text-decoration: none;
+            letter-spacing: -1px;
+          }
         }
       }
     }
