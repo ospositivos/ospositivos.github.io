@@ -1103,7 +1103,7 @@ div.fanzines img {
 
     input {
       text-transform: uppercase;
-      background: $cinza;
+      background: #252525;
       color:$branco;
       letter-spacing: 1px;
       font-size: 11px;
@@ -1113,7 +1113,7 @@ div.fanzines img {
       width: 98%;
       border-radius: 26px;
       text-align: center;
-      box-shadow: inset 0px 3px 3px #414141;
+      box-shadow: inset 0px 3px 3px #111;
 
       outline: none;
       transition: all 0.20s ease-in-out;
@@ -1124,7 +1124,7 @@ div.fanzines img {
       }
 
       &::placeholder{
-          color:$cinzaEscuro;
+          color:$cinza;
       }
 
       &:focus {
