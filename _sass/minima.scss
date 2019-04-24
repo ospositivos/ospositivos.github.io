@@ -1707,14 +1707,16 @@ footer {
         input[type="button"],
         input[type="submit"] {
             background-color: $preto;
-            border-bottom: 1px solid $preto;
+            /*border-bottom: 1px solid $preto;
             border-left: none;
             border-right: 1px solid $preto;
-            border-top: none;
-            color: $branco;
+            border-top: none;*/
+            border: none;
+            color: $cinza;
             cursor: pointer;
-            font-weight: bold;
-            padding: 8px 10px;
+            //font-weight: bold;
+            font-size: 11px;
+            padding: 7px 10px;
             text-decoration: none;
             text-transform: uppercase;
             -webkit-appearance: none;
