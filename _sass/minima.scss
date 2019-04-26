@@ -730,7 +730,10 @@ ul.lista {
       font-weight: 400;
       text-transform:none;
       display: block;
-      float: right;
+      float: left;
+      a {
+        box-shadow: none !important;
+      }
     }
 }
 
