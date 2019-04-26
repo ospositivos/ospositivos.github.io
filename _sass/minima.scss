@@ -724,6 +724,14 @@ ul.lista {
     & + & {
       margin-top:$a;
     }
+
+    small {
+      font-family: "Roboto Condensed";
+      font-weight: 400;
+      text-transform:none;
+      display: block;
+      float: right;
+    }
 }
 
 // teses indice
