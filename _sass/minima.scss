@@ -171,11 +171,12 @@ html {
               }
             }
             #mce-EMAIL {
-              border: 2px solid $branco;
+              border: 1px solid grey;
+              line-height: 29px;
             }
             input[type="button"],
             input[type="submit"] {
-                border: 1px solid $branco;
+                border: 1px solid grey;
                 box-shadow: none;
             }
 
@@ -1711,7 +1712,7 @@ footer {
         margin-bottom: $a*2;
 
         #mce-EMAIL {
-            width: 150px;
+            width: 220px;
             background: darkgray;
             box-shadow: inset 0px 3px 3px #111;
             border: 1px solid $preto;
@@ -1724,7 +1725,6 @@ footer {
         input[type="submit"] {
             cursor: pointer;
             background-color: $preto;
-            box-shadow:0 0 8px;
             border: none;
             padding: 9px 10px;
             color: $cinza;
@@ -1734,7 +1734,7 @@ footer {
             -webkit-appearance: none;
 
             @media(min-width:$mobileS) {
-              margin-left: -$b/2;
+              margin-left: -$a/2;
               box-sizing: content-box;
               }
             }
