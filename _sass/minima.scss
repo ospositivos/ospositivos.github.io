@@ -1720,10 +1720,6 @@ footer {
             line-height: 27px;
             text-align: center;
             font-size: 11px;
-
-            @media screen and (min-color-index:0) and (-webkit-min-device-pixel-ratio:0) {
-                line-height: 25px;
-              }
           }
 
         input[type="button"],
