@@ -1707,14 +1707,14 @@ footer {
         input[type="submit"] {
           display: inline-block;
           font-family: "Roboto Condensed";
-          font-size: 11px;
+          font-size: $c;
           outline: none;
-          padding: 5px;
+          padding: $b/2;
           text-decoration: none;
         }
 
         #mce-EMAIL {
-            width: 220px;
+            //width: 220px;
             background: darkgray;
             border:1px solid darkgray;
             box-shadow: inset 0px 3px 3px #111;
@@ -1730,6 +1730,7 @@ footer {
             color: gainsboro;
             text-decoration: none;
             text-transform: uppercase;
+            letter-spacing: -1px;
             -webkit-appearance: none;
 
             @media(min-width:$mobileS) {
