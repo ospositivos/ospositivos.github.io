@@ -171,13 +171,13 @@ html {
               }
             }
             #mce-EMAIL {
-              border: 1px solid grey;
-              line-height: 29px;
+              ///border: 1px solid grey;
+              //line-height: 29px;
             }
             input[type="button"],
             input[type="submit"] {
-                border: 1px solid grey;
-                box-shadow: none;
+                //border: 1px solid grey;
+                //box-shadow: none;
             }
 
             article.post {
@@ -1711,31 +1711,38 @@ footer {
         margin-top: $a*2;
         margin-bottom: $a*2;
 
+        #mce-EMAIL,
+        input[type="button"],
+        input[type="submit"] {
+          display: inline-block;
+          font-family: "Roboto Condensed";
+          font-size: 11px;
+          outline: none;
+          padding: 5px;
+          text-decoration: none;
+        }
+
         #mce-EMAIL {
             width: 220px;
             background: darkgray;
+            border:1px solid darkgray;
             box-shadow: inset 0px 3px 3px #111;
-            border: 1px solid $preto;
             border-radius: 0;
-            line-height: 27px;
             text-align: center;
-            font-size: 11px;
           }
 
-        input[type="button"],
-        input[type="submit"] {
+          input[type="button"],
+          input[type="submit"] {
             cursor: pointer;
             background-color: $preto;
-            border: none;
-            padding: 9px 10px;
+            border:1px solid darkgray;
             color: gainsboro;
-            font-size: 11px;
             text-decoration: none;
             text-transform: uppercase;
             -webkit-appearance: none;
 
             @media(min-width:$mobileS) {
-              margin-left: -$a/2;
+              margin-left: -$b/2;
               box-sizing: content-box;
               }
             }
