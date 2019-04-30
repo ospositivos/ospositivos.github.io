@@ -725,8 +725,9 @@ ul.lista {
       font-family: "Roboto Condensed";
       font-weight: 400;
       text-transform:none;
+      text-align: center;
       display: block;
-      float: left;
+      //float: left;
       a {
         box-shadow: none !important;
       }
