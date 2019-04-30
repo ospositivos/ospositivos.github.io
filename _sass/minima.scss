@@ -679,10 +679,10 @@ ul.lista {
 
 // blurb
 .blurb {
-    padding: $a*2 74px;
+    padding: $b*2 $b*4;
     margin: 1em auto;
     box-sizing: border-box;
-    width: 710px;
+    //width: 710px;
     position: relative;
     color: $preto;
     font-family: 'Sedgwick Ave Display', cursive;
@@ -690,17 +690,18 @@ ul.lista {
     text-align: left;
     border-radius: 4px;
     font-size: 3.5em;
-    line-height: 1.1em;
+    line-height: 1.2em;
     text-transform: uppercase;
+    text-align: center;
     //letter-spacing: 2px;
     //font-style: italic;
 
     @media (max-width: $mobileL){
-        font-size: 2.5em;
-        padding: $a*2 5%;
-        width:100%;
-        border-radius: 0;
-    }
+      padding: $a*2;
+      border-radius: 0;
+      font-size: 2.5em;
+      line-height: 1.4em;
+      }
 
     &:after {
         /*content: '';
