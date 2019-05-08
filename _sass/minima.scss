@@ -1064,29 +1064,6 @@ article.clip {
     }
 }
 
-// fanzines
-div.fanzines img {
-    margin-right: 10px;
-}
-
-.missing {
-    float: left;
-    width: 148px;
-    height: 120px;
-    border: 1px dotted #CCC;
-    padding: 80px 0 0 0;
-    text-align: center;
-    background-color: #F6F5E5;
-    margin: 2px 5px 5px 0;
-    border-radius: 5px;
-    a {
-        text-decoration: none;
-    }
-    @media screen and (max-width: $mobileM) {
-        width: 100%;
-    }
-}
-
 // ----------------------
 // indice webcomix
 .indice-2016-2017 {
@@ -1623,6 +1600,45 @@ article.post {
 
       // highlightlink
       @include highlightlink;
+
+      // fanzines arquivo
+      .fanzines {
+        max-width: $mobileM;
+        margin: 1em auto;
+        padding: 0.5em 0;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        position: relative;
+
+        @media screen and (max-width: $mobileM) {
+          margin: 1em;
+          }
+
+        &::after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        li {
+          //background-color: #F6F5E5;
+          background: url(/assets/paper.jpg) 50% 50% no-repeat;
+          background-size: cover;
+          width: 32%;
+          height: 120px;
+          border: 1px dotted #CCC;
+          padding: 80px 0 0 0;
+          text-align: center;
+          margin: 2px 5px 5px 0;
+          border-radius: 5px;
+
+          @media screen and (max-width: $mobileM) {
+            width: 100%;
+            }
+          }
+      }
 
     } // fim coluna
 
