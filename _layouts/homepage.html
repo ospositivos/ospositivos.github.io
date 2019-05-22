@@ -54,10 +54,7 @@ layout: compress
     <!-- latest -->
     <ul>
       {% for post in site.posts offset:1 %}
-
       {% capture year %}{{post.date | date: "%Y"}}{% endcapture %}
-
-
       <li>
           <small>
             {% if year == "1977" or year == "1997" %}
