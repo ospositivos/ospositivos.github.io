@@ -65,7 +65,7 @@ html {
               .coluna {
                 color: $branco;
 
-                /* não apagar!
+                // não apagar!
                 .recentes {
                   max-width: 480px;
                   margin-left: auto;
@@ -85,13 +85,13 @@ html {
                     border-bottom: 1px solid $cinzaEscuro;
                   }
                 }
-                */
 
               .info {
                 border-radius: 0;
                 background: $vermelho;
 
                 blockquote {
+                  //display: table;
                   position: relative;
                   box-sizing: border-box;
                   color:$branco;
@@ -110,7 +110,7 @@ html {
                   }
                 }
                 ul {
-                  max-width: 256px;
+                  max-width: 370px;
                   margin:$b/2 auto;
                   padding: 0;
                   list-style: none;
@@ -153,6 +153,10 @@ html {
                         float: right;
                         margin-left: $a;
                         padding-left: $c/2;
+                        display: inline-block;
+                        color: #789;
+                        font-size: 10px;
+                        letter-spacing: -1px;
                       //}
                       @media(max-width:$mobileM){
                         padding-right: $b/2;
