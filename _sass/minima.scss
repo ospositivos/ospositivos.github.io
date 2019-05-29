@@ -1705,21 +1705,17 @@ article.post {
   bottom: 0;
   z-index: 999;
   width: 100%;
-  padding: $a*2 0;
+  padding: $a 0;
   text-align: center;
-  background: rgba(220, 20, 60, 0.9);
-  box-shadow: -2px 1px $a/2 $cinzaEscuro;
-  color: $preto;
+  background: rgba(20, 20, 20, 0.9);
+  box-shadow: -2px 1px $a/2 $cinza;
+  color: $branco;
   font-size: 11px;
   text-transform: uppercase;
   font-weight: 700;
   a{
     color:$branco;
-    &:hover {
-      color:$cinzaEscuro;
-      border-bottom:1px solid $cinzaEscuro;
     }
-  }
 }
 .avisoData-unpin {
   transform: translateY(265px);
