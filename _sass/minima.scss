@@ -430,6 +430,13 @@ hr {
   color:$amarelo;
   }
 
+.mobileOnly {
+  display: none;
+  @media (max-width: $mobileL) {
+    display: inline-block;
+  }
+}
+
 .imagemComplementar {
     // remendo imagens recortadas.
     margin-top: $a/2;
