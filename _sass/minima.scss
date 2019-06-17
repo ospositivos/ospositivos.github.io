@@ -283,6 +283,10 @@ p {
     margin: 1em 0;
 }
 
+h3 {
+    font-family: 'Permanent Marker';
+}
+
 blockquote {
     color: $cinzaEscuro;
     border-left: 6px solid gainsboro;
@@ -476,6 +480,23 @@ hr {
       font-size: 2em;
       font-family: 'Permanent Marker';
       letter-spacing: 4px;
+    }
+    
+    &.info-primary {
+        background: $preto;
+        color:$branco;
+        
+        h2, h3, div, span, p, blockquote, small {
+            color:$branco;
+        }
+        
+        a:not(.link) {
+            color:$branco !important;
+        }        
+        
+        blockquote {
+            border-color:$branco;
+        }
     }
 }
 
@@ -771,6 +792,7 @@ ul.lista {
             font-style: italic;
             margin: 1em auto;
             padding: 0.5em 1em;
+            font-size: $b;
         }
         ul {
             margin: 0;
@@ -1375,7 +1397,11 @@ article.post {
             margin: 1em auto;
             padding: 0px 1em;
             }
-
+        
+        h3 {
+            font-size:$c;
+            }
+        
         & > ul,
         & > ol,
         & > blockquote,
