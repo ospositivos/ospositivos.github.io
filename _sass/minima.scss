@@ -1,5 +1,5 @@
 @charset "utf-8";
-@import "uikitgrid.scss";
+// @import "uikitgrid.scss";
 // ----------------------
 // variables
 // ----------------------
@@ -366,6 +366,7 @@ sup {
 
 hr {
   border: 0;
+  margin:0 auto;
   height: 1px;
   background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
   max-width: 80%;
