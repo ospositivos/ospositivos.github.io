@@ -429,10 +429,6 @@ hr {
   clear:both;
   }
 
-.fundoVermelho {
-  background-color: $vermelho !important;
-  }
-
 .sucesso {
   color:$verde;
   }
@@ -478,7 +474,8 @@ hr {
       letter-spacing: 4px;
     }
 
-    &.info-primary {
+    &.info-primary,
+    &.info-secondary, {
         background: $preto;
         color:$branco;
 
@@ -494,6 +491,9 @@ hr {
             border-color:$branco;
         }
     }
+    .info-secondary {
+      background-color: $vermelho !important;
+      }
 }
 
 table.mytabela {
@@ -1199,6 +1199,9 @@ article.clip {
     }
     img {
         margin-bottom: -5px
+    }
+    .mySlides {
+      width: 100%;
     }
 }
 
