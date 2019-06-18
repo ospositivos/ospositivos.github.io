@@ -421,6 +421,10 @@ hr {
     margin: 100px auto !important;
   }
 
+.afasta-base {
+  margin-bottom: $a  !important;
+}
+
 .clearfix {
   clear:both;
   }
@@ -437,18 +441,6 @@ hr {
   }
 .aviso{
   color:$amarelo;
-  }
-
-.mobileOnly {
-  display: none;
-  @media (max-width: $mobileL) {
-    display: inline-block;
-  }
-}
-
-.imagemComplementar {
-    // remendo imagens recortadas.
-    margin-top: $a/2;
   }
 
 .moldura {
@@ -566,6 +558,12 @@ code {
     padding: $a;
     background: repeating-linear-gradient(-45deg, #fff, #fff $a/2, cornsilk $a/2, cornsilk $a);
     border-left: 2px solid bisque;
+
+    &.linha {
+      display: inline-block;
+      padding: 0 $b/2;
+      margin-right: 4px;
+    }
 }
 
 // lista
