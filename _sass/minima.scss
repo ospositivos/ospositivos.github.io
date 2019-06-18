@@ -481,19 +481,19 @@ hr {
       font-family: 'Permanent Marker';
       letter-spacing: 4px;
     }
-    
+
     &.info-primary {
         background: $preto;
         color:$branco;
-        
+
         h2, h3, div, span, p, blockquote, small {
             color:$branco;
         }
-        
+
         a:not(.link) {
             color:$branco !important;
-        }        
-        
+        }
+
         blockquote {
             border-color:$branco;
         }
@@ -1090,11 +1090,6 @@ article.clip {
         padding: 0;
     }
 
-    strong {
-        color: $preto;
-        font-family: 'Times New Roman', Times, serif !important;
-    }
-
     small {
         line-height: $b;
     }
@@ -1102,7 +1097,8 @@ article.clip {
         margin: 1em auto;
         padding: 0.5em 1em;
         font-style: italic;
-        border-radius: 0 4px 4px 0;
+        border-left: 3px double lightslategray
+        //border-radius: 0 4px 4px 0;
     }
 }
 
@@ -1397,11 +1393,11 @@ article.post {
             margin: 1em auto;
             padding: 0px 1em;
             }
-        
+
         h3 {
             font-size:$c;
             }
-        
+
         & > ul,
         & > ol,
         & > blockquote,
