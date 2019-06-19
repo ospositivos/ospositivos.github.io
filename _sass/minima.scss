@@ -1107,6 +1107,15 @@ article.clip {
 // ----------------------
 // indice webcomix
 .indice-2016-2017 {
+  max-width: 550px !important;
+  padding: 0 !important;
+  margin-bottom: $a !important;
+
+  &::after {
+    display: table;
+    content: "";
+    clear: both;
+  }
 
     li {
         font-style: italic;
@@ -1116,11 +1125,14 @@ article.clip {
         @media screen and (min-width: $mobileM) {
             float: left;
             padding-right: $b;
-        }
+      }
     }
-}
-.info .indice-2016-2017 li a {
-    font-size: 11px;
+  }
+.info .indice-2016-2017 {
+  padding-top: $a !important;
+  li a {
+      font-size: 11px;
+  }
 }
 
 // ----------------------
@@ -1619,6 +1631,10 @@ article.post {
               font-size:14px;
               @media(max-width:$tablet){
                 font-size:$a;
+                }
+
+              &.headerless {
+                border-top:1px solid #f2f2f2;
                 }
               }
 
