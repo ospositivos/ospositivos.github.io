@@ -1391,6 +1391,11 @@ article.post {
         text-align: center;
         line-height: 1em;
         margin-top: -$a*2;
+        @media (min-width: $mobileM) {
+          max-width:70%;
+          margin-left: auto;
+          margin-right: auto;
+        }
         @media (max-width: $mobileM) {
             margin-top: -$b*2;
             padding-left:$b;
