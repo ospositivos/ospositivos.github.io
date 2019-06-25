@@ -8,28 +8,29 @@ layout: compress
 
 <body id="homepage">
   <header>
-    <!-- Html Elements for Search -->
-    <div id="search-container">
-      <input data-hj-whitelist type="text" id="search-input" placeholder="pesquisar título (10 desc)" onfocus="this.placeholder = ''" onblur="this.placeholder = 'pesquisar título (10 desc)'">
-      <div class="search"></div>
-    </div>
   </header>
 
   <article class="post">
     <div class="coluna">
-      <!-- display results -->
-      <ul id="results-container"></ul>
-      <!-- Script pointing to search-script.js -->
-      <script src="/assets/search-script.js"></script>
-      <!-- Configuration -->
-      <script>
-      SimpleJekyllSearch({
-        searchInput: document.getElementById('search-input'),
-        resultsContainer: document.getElementById('results-container'),
-        json: '/search.json'
-      })
-      </script>
-
+      <div style="min-height:100px;position:relative;">
+      <!-- Html Elements for Search -->
+      <div id="search-container">
+        <input data-hj-whitelist type="text" id="search-input" placeholder="" onfocus="this.placeholder = ''" onblur="this.placeholder = ''">
+        <div class="search"></div>
+      </div>
+      </div>
+  <!-- display results -->
+  <ul id="results-container"></ul>
+  <!-- Script pointing to search-script.js -->
+  <script src="/assets/search-script.js"></script>
+  <!-- Configuration -->
+  <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/search.json'
+  })
+  </script>
     {% comment %}
       <!-- featured -->
       {% for post in site.posts limit:1 %}

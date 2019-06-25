@@ -178,7 +178,7 @@ html {
             }
 
             article.post {
-              margin-bottom:$a;
+              margin-bottom:0;
             }
 
             footer {
@@ -222,11 +222,11 @@ html {
                   left: 0;
                   width: 80px;
                   height: 80px;
-                  background: $vermelho;
+                  background-color: rgba(220,20,60, 0.9);
                   border-radius: 50%;
                   transition: all 1s;
                   z-index: 4;
-                  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4);
+                  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.6);
                   &:hover {
                     cursor: pointer;
                   }
