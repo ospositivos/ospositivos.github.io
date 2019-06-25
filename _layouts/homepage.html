@@ -8,19 +8,19 @@ layout: compress
 
 <body id="homepage">
   <header>
+    <!-- Html Elements for Search -->
+    <div id="search-container">
+      <input data-hj-whitelist type="text" id="search-input" placeholder="pesquisar título (10 desc)" onfocus="this.placeholder = ''" onblur="this.placeholder = 'pesquisar título (10 desc)'">
+      <div class="search"></div>
+    </div>
   </header>
+
   <article class="post">
     <div class="coluna">
-
-      <!-- Html Elements for Search -->
-      <div id="search-container">
-      <input data-hj-whitelist type="text" id="search-input" placeholder="pesquisar título (10 desc)" onfocus="this.placeholder = ''" onblur="this.placeholder = 'pesquisar título (10 desc)'">
+      <!-- display results -->
       <ul id="results-container"></ul>
-      </div>
-
       <!-- Script pointing to search-script.js -->
       <script src="/assets/search-script.js"></script>
-
       <!-- Configuration -->
       <script>
       SimpleJekyllSearch({
@@ -30,7 +30,7 @@ layout: compress
       })
       </script>
 
-{% comment %}
+    {% comment %}
       <!-- featured -->
       {% for post in site.posts limit:1 %}
       <ul>

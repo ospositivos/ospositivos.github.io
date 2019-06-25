@@ -62,6 +62,8 @@ html {
             }
 
             article.post {
+              position: relative;
+
               .coluna {
                 color: $branco;
 
@@ -180,10 +182,7 @@ html {
             }
 
             footer {
-              font-size: $c;
-              @media(min-width: $mobileS) {
-                font-size: $a*2;
-              }
+
               a {
                 box-shadow:none;
                 &:hover {
@@ -201,6 +200,182 @@ html {
                   border:none;
                   background: $vermelho;
                   }
+              }
+            }
+
+            // ----------------------
+            // pesquisa
+            #search-container {
+                position: absolute;
+                margin: auto;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+
+                .search {
+                  position: absolute;
+                  margin: auto;
+                  top: 0;
+                  right: 0;
+                  bottom: 0;
+                  left: 0;
+                  width: 80px;
+                  height: 80px;
+                  background: $vermelho;
+                  border-radius: 50%;
+                  transition: all 1s;
+                  z-index: 4;
+                  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4);
+                  &:hover {
+                    cursor: pointer;
+                  }
+                  &::before {
+                    content: "";
+                    position: absolute;
+                    margin: auto;
+                    top: 22px;
+                    right: 0;
+                    bottom: 0;
+                    left: 22px;
+                    width: 12px;
+                    height: 2px;
+                    background: $branco;
+                    transform: rotate(45deg);
+                    transition: all .5s;
+                  }
+                  &::after {
+                    content: "";
+                    position: absolute;
+                    margin: auto;
+                    top: -5px;
+                    right: 0;
+                    bottom: 0;
+                    left: -5px;
+                    width: 25px;
+                    height: 25px;
+                    border-radius: 50%;
+                    border: 2px solid $branco;
+                    transition: all .5s;
+                  }
+                }
+                input {
+                  position: absolute;
+                  margin: auto;
+                  top: 0;
+                  right: 0;
+                  bottom: 0;
+                  left: 0;
+                  width: 50px;
+                  height: 50px;
+                  outline: none;
+                  border: none;
+                  background: $vermelho;
+                  color: $branco;
+                  text-shadow: 0 0 10px $vermelho;
+                  padding: 0 80px 0 20px;
+                  border-radius: 30px;
+                  box-shadow: 0 0 25px 0 $vermelho,
+                              0 20px 25px 0 rgba(0, 0, 0, 0.2);
+                  transition: all 1s;
+                  opacity: 0;
+                  z-index: 5;
+                  font-weight: bolder;
+                  letter-spacing: 0.1em;
+                  &:hover {
+                    cursor: pointer;
+                  }
+                  &:focus {
+                    width: 200px;
+                    opacity: 1;
+                    cursor: text;
+                  }
+                  &:focus ~ .search {
+                    right: -240px;
+                    background: #151515;
+                    z-index: 6;
+                    &::before {
+                      top: 0;
+                      left: 0;
+                      width: 25px;
+                    }
+                    &::after {
+                      top: 0;
+                      left: 0;
+                      width: 25px;
+                      height: 2px;
+                      border: none;
+                      background: $branco;
+                      border-radius: 0%;
+                      transform: rotate(-45deg);
+                    }
+                  }
+                  &::placeholder {
+                    color: $branco;
+                    opacity: 0.5;
+                    font-weight: bolder;
+                  }
+                }
+
+                /*
+                max-width: 520px;
+                margin-left: auto;
+                margin-right: auto;
+
+                input {
+                  background: #252525;
+                  display: block;
+                  margin:auto;
+                  padding: $a/2;
+                  width: 75%;
+                  box-shadow: inset 0px 3px 3px #111;
+                  border: 1px solid $cinzaEscuro;
+                  border-radius: 0;
+                  text-transform: uppercase;
+                  color:$branco;
+                  letter-spacing: 1px;
+                  font-size: 11px;
+                  text-align: center;
+                  outline: none;
+                  transition: all 0.20s ease-in-out;
+
+                  &::placeholder{
+                      color:$cinza;
+                  }
+
+                  &:focus {
+                    width:90%;
+                  }
+                }
+                */
+            }
+            #results-container {
+              max-width: 370px;
+              margin-left: auto;
+              margin-right: auto;
+              margin-bottom: $a*4;
+              font-size: 11px;
+              color: $cinza;
+              text-align: center;
+
+              li {
+                text-align: left;
+
+                a {
+                  font-size: 10px;
+                  color:$branco;
+                  box-shadow: none;
+                  &:hover {
+                    color:$vermelho;
+                  }
+                  span {
+                    display: inline-block;
+                    float: right;
+                    color:$cinzaMetal;
+                    text-decoration: none;
+                    letter-spacing: -1px;
+                  }
+                }
               }
             }
         }
@@ -1150,65 +1325,6 @@ article.clip {
   li a {
       font-size: 11px;
   }
-}
-
-// ----------------------
-// pesquisa
-#search-container {
-    max-width: 520px;
-    margin-left: auto;
-    margin-right: auto;
-
-    input {
-      background: #252525;
-      display: block;
-      margin:auto;
-      padding: $a/2;
-      width: 75%;
-      box-shadow: inset 0px 3px 3px #111;
-      border: 1px solid $cinzaEscuro;
-      border-radius: 0;
-      text-transform: uppercase;
-      color:$branco;
-      letter-spacing: 1px;
-      font-size: 11px;
-      text-align: center;
-      outline: none;
-      transition: all 0.20s ease-in-out;
-
-      &::placeholder{
-          color:$cinza;
-      }
-
-      &:focus {
-        width:90%;
-      }
-    }
-
-    #results-container {
-      font-size: 11px;
-      margin-bottom: $a*2;
-      color: $cinza;
-      text-align: center;
-      li {
-        text-align: left;
-        a {
-          font-size: 10px;
-          color:$branco;
-          box-shadow: none;
-          &:hover {
-            color:$vermelho;
-          }
-          span {
-            display: inline-block;
-            float: right;
-            color:$cinzaMetal;
-            text-decoration: none;
-            letter-spacing: -1px;
-          }
-        }
-      }
-    }
 }
 
 // ----------------------
