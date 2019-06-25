@@ -179,10 +179,19 @@ html {
               margin-bottom:$c*4;
             }
 
+            #mce-EMAIL {
+              border:none;
+              }
+            input[type="submit"] {
+              border:none;
+              background: $vermelho;
+              }
+
             footer a {
-              border-bottom: 1px dotted #FFF;
+              box-shadow:none;
+              //border-bottom: 1px dotted #FFF;
               &:hover {
-                border-bottom:1px dotted $vermelho;
+                color:$cinza;
               }
             }
         }
@@ -331,26 +340,25 @@ small,
 
 a {
     color: $preto;
-    border-bottom: 1px solid gainsboro;
+    //border-bottom: 1px solid gainsboro;
     text-decoration: none;
 
     &:hover {
         text-decoration: none;
         color: darkgrey;
-        border-bottom: 1px dotted gainsboro;
+        //border-bottom: 1px dotted gainsboro;
     }
 }
 
 a[href^="http://localhost:4000"],
 a[href^="https://www.ospositivos.pt"],
 a[href^="http://www.ospositivos.pt"] {
-    border-bottom: 1px solid $vermelho;
+    //border-bottom: 1px solid $vermelho;
+    //color: $preto;
     padding: 2px 0;
-    color: $preto;
     text-decoration: none;
-
     &:hover {
-        color: $vermelho;
+        //color: $vermelho;
     }
 }
 
@@ -1150,7 +1158,7 @@ article.clip {
       width: 75%;
       box-shadow: inset 0px 3px 3px #111;
       border: 1px solid $cinzaEscuro;
-      border-radius: $a/2;
+      //border-radius: $a/2;
       text-transform: uppercase;
       color:$branco;
       letter-spacing: 1px;
@@ -1747,10 +1755,9 @@ article.post {
             width: 100%;
             font-size: 12px;
             font-weight: normal;
-            //margin-bottom: -8px;
+            line-height: 1em;
             padding-bottom: 0;
             letter-spacing: 2px;
-            //background: $branco;
         }
     }
 }
@@ -1803,14 +1810,15 @@ footer {
     }
 
     a {
-        padding: 0px 4px;
-        color: $vermelho !important;
+        box-shadow: inset 0 -.6em 0 gainsboro;
         text-decoration: none;
-        border-bottom: 1px solid $vermelho;
+        transition: box-shadow .2s ease-in-out;
+        color:$vermelho;
         &:hover {
-            border-bottom: none;
+          color:$preto;
+          box-shadow: inset 0 -1.2em 0 fuchsia;
         }
-    }
+      }
 
     // form
     #mc_embed_signup {
@@ -1829,27 +1837,27 @@ footer {
         }
 
         #mce-EMAIL {
-            //width: 220px;
-            background: darkgray;
-            border:1px solid darkgray;
-            box-shadow: inset 0px 3px 3px #111;
+            background: $branco;
+            border:4px solid $preto;
+            box-shadow: inset 0.25rem 0.25rem 0 #ddd;
             border-radius: 0;
             text-align: center;
+            min-width: calc(50% - 0px);
           }
 
           input[type="button"],
           input[type="submit"] {
             cursor: pointer;
             background-color: $preto;
-            border:1px solid darkgray;
+            border:4px solid $preto;
             color: gainsboro;
             text-decoration: none;
             text-transform: uppercase;
             -webkit-appearance: none;
 
             @media(min-width:$mobileS) {
-              margin-left: -$b/2;
-              box-sizing: content-box;
+              //margin-left: -$b/2;
+              //box-sizing: content-box;
               }
             }
 
