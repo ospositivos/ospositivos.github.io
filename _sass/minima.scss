@@ -176,22 +176,31 @@ html {
             }
 
             article.post {
-              margin-bottom:$c*4;
+              margin-bottom:$a;
             }
 
-            #mce-EMAIL {
-              border:none;
+            footer {
+              font-size: $c;
+              @media(min-width: $mobileS) {
+                font-size: $a*2;
               }
-            input[type="submit"] {
-              border:none;
-              background: $vermelho;
+              a {
+                box-shadow:none;
+                &:hover {
+                  color:$cinza;
+                }
               }
+              #mc_embed_signup {
+                margin-top:$a/2;
+                margin-bottom:$c/2;
 
-            footer a {
-              box-shadow:none;
-              //border-bottom: 1px dotted #FFF;
-              &:hover {
-                color:$cinza;
+                #mce-EMAIL {
+                  border:none;
+                  }
+                input[type="submit"] {
+                  border:none;
+                  background: $vermelho;
+                  }
               }
             }
         }
