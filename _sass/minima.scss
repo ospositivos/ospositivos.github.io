@@ -246,11 +246,6 @@ html {
                 right: 0;
                 bottom: 0;
 
-                ::placeholder  {
-                  color:$cinza;
-                  text-transform: uppercase;
-                }
-
                 .search {
                     z-index: 6;
                     position: absolute;
@@ -262,7 +257,7 @@ html {
                     width: 80px;
                     height: 80px;
                     border-radius: 50%;
-                    background: $cinzaEscuro;
+                    background: #111;
                     box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.6);
                     transition: all 1s;
 
@@ -312,18 +307,30 @@ html {
                     height: 50px;
                     outline: none;
                     border: none;
-                    background: $cinzaEscuro;
+                    background: #111;
                     color: $branco;
                     padding: 0 80px 0 20px;
                     border-radius: 0;
                     opacity: 1;
                     z-index: 5;
                     font-weight: bolder;
+                    text-transform: uppercase;
                     letter-spacing: 0.1em;
                     cursor: pointer;
                     transition: all 1s;
 
+                    &::placeholder  {
+                      color:darkred;
+                      text-transform: uppercase;
+                    }
+
                     &:focus {
+                      background-color: $cinzaEscuro;
+                      &::placeholder  {
+                        color:$vermelho;
+                        text-transform: uppercase;
+                      }
+
                       @media (max-width: $tablet) {
                           font-size: $a;
                       }
@@ -333,6 +340,8 @@ html {
                     }
 
                     &:focus ~ .search {
+                      background: $cinzaEscuro;
+
                         &::before {
                           top: 22px;
                           width: 12px;

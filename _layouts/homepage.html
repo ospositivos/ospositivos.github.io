@@ -13,6 +13,26 @@ layout: compress
   <article class="post">
     <div class="coluna">
 
+      <div id="searcher-container">
+        <!-- Html Elements for Search -->
+        <div id="search-container">
+          <input autofocus="autofocus" data-hj-whitelist type="text" id="search-input" placeholder="pesquisa por título" onfocus="this.placeholder = 'pesquisa por título'" onblur="this.placeholder = 'pesquisa por título'">
+          <div class="search"></div>
+        </div>
+      </div>
+      <!-- display results -->
+      <ul id="results-container"></ul>
+      <!-- Script pointing to search-script.js -->
+      <script src="/assets/search-script.js"></script>
+      <!-- Configuration -->
+      <script>
+      SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('results-container'),
+        json: '/search.json'
+      })
+      </script>
+
     {% comment %}
       <!-- featured -->
       {% for post in site.posts limit:1 %}
@@ -63,25 +83,6 @@ layout: compress
   </div>
 </article>
 {%- include footer.html -%}
-<div id="searcher-container">
-  <!-- Html Elements for Search -->
-  <div id="search-container">
-    <input autofocus="autofocus" data-hj-whitelist type="text" id="search-input" placeholder="pesquisa por título" onfocus="this.placeholder = 'pesquisa por título'" onblur="this.placeholder = 'pesquisa por título'">
-    <div class="search"></div>
-  </div>
-</div>
-<!-- display results -->
-<ul id="results-container"></ul>
-<!-- Script pointing to search-script.js -->
-<script src="/assets/search-script.js"></script>
-<!-- Configuration -->
-<script>
-SimpleJekyllSearch({
-  searchInput: document.getElementById('search-input'),
-  resultsContainer: document.getElementById('results-container'),
-  json: '/search.json'
-})
-</script>
 </body>
 
 </html>
