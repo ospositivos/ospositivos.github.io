@@ -335,9 +335,6 @@ html {
                     &:focus {
                       background-color: $vermelho;
                       box-shadow: inset 0.25rem 0.25rem 0 darkred;
-                      @media (max-width: $tablet) {
-                          font-size: $a;
-                      }
                     }
 
                     &:focus ~ .search {
