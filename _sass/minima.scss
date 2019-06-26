@@ -258,7 +258,7 @@ html {
                     height: 80px;
                     border-radius: 50%;
                     //background: #111;
-                    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.6);
+                    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 1);
                     transition: all 1s;
 
                     @media (max-width: $mobileM) {
@@ -314,6 +314,7 @@ html {
                     opacity: 1;
                     z-index: 5;
                     font-weight: bolder;
+                    font-size: $a;
                     text-transform: uppercase;
                     letter-spacing: 0.1em;
                     cursor: pointer;
@@ -324,8 +325,13 @@ html {
                       text-transform: uppercase;
                     }
 
+                    @media (max-width: $mobileM) {
+                        width: 200px;
+                    }
+
                     &:focus {
                       background-color: $cinzaEscuro;
+                      box-shadow: inset 0.25rem 0.25rem 0 #111;
                       &::placeholder  {
                         color:$vermelho;
                         text-transform: uppercase;
@@ -335,13 +341,8 @@ html {
                           font-size: $a;
                       }
                     }
-                    @media (max-width: $mobileM) {
-                        width: 200px;
-                    }
 
                     &:focus ~ .search {
-                      //background: $cinzaMetal;
-
                         &::before {
                           top: 22px;
                           width: 12px;
