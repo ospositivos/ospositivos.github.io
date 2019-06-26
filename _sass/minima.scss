@@ -177,6 +177,10 @@ html {
                 color: $cinza;
                 text-align: center;
 
+                @media(max-width: $mobileM){
+                  max-width: 300px;
+                }
+
                 li {
                     text-align: left;
 
