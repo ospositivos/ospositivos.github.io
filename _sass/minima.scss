@@ -327,13 +327,9 @@ html {
                       color:darkred;
                       text-transform: uppercase;
                     }
-
-
-                    @media (max-width: $mobileL) {
-                        font-size: $a;
-                    }
                     @media (max-width: $mobileM) {
                         width: 200px;
+                        font-size: $a;
                     }
 
                     &:focus {
