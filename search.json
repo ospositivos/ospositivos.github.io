@@ -6,6 +6,7 @@
 
       "title"    : "{{ post.title | escape }}",
       "url"      : "{{ site.baseurl }}{{ post.url }}",
+      "termos"   : "{{ post.termos | join: ', ' }}",      
       "tags"     : "{{ post.tags | join: ', ' }}",
       "sumario"  : "{{ post.sumario | strip_html | strip_newlines | escape }}",
       "date"     : "{{ post.date | date: "%Y-%m-%d"}}"
