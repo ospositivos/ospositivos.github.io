@@ -205,6 +205,7 @@ html {
 
             // ----------------------
             // pesquisa
+            // https://codepen.io/anon/pen/xoLrNQ
             #search-container {
                 position: absolute;
                 margin: auto;
@@ -214,21 +215,20 @@ html {
                 bottom: 0;
 
                 .search {
+                  z-index: 6;
                   position: absolute;
                   margin: auto;
                   top: 0;
-                  right: 0;
                   bottom: 0;
+                  right: -240px;
                   left: 0;
                   width: 80px;
                   height: 80px;
-                  background-color: rgba(220,20,60, 0.9);
                   border-radius: 50%;
-                  transition: all 1s;
-                  z-index: 4;
+                  background: $cinzaEscuro;
                   box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.6);
                   &:hover {
-                    cursor: pointer;
+                    //cursor: pointer;
                   }
                   &::before {
                     content: "";
@@ -266,7 +266,7 @@ html {
                   right: 0;
                   bottom: 0;
                   left: 0;
-                  width: 50px;
+                  width: 200px;
                   height: 50px;
                   outline: none;
                   border: none;
@@ -274,80 +274,16 @@ html {
                   color: $branco;
                   text-shadow: 0 0 10px $vermelho;
                   padding: 0 80px 0 20px;
-                  border-radius: 30px;
+                  border-radius: $a;
                   box-shadow: 0 0 25px 0 $vermelho,
                               0 20px 25px 0 rgba(0, 0, 0, 0.2);
                   transition: all 1s;
-                  opacity: 0;
+                  opacity: 1;
                   z-index: 5;
                   font-weight: bolder;
                   letter-spacing: 0.1em;
-                  &:hover {
-                    cursor: pointer;
+                  cursor: pointer;
                   }
-                  &:focus {
-                    width: 200px;
-                    opacity: 1;
-                    cursor: text;
-                  }
-                  &:focus ~ .search {
-                    right: -240px;
-                    background: #151515;
-                    z-index: 6;
-                    &::before {
-                      top: 0;
-                      left: 0;
-                      width: 25px;
-                    }
-                    &::after {
-                      top: 0;
-                      left: 0;
-                      width: 25px;
-                      height: 2px;
-                      border: none;
-                      background: $branco;
-                      border-radius: 0%;
-                      transform: rotate(-45deg);
-                    }
-                  }
-                  &::placeholder {
-                    color: $branco;
-                    opacity: 0.5;
-                    font-weight: bolder;
-                  }
-                }
-
-                /*
-                max-width: 520px;
-                margin-left: auto;
-                margin-right: auto;
-
-                input {
-                  background: #252525;
-                  display: block;
-                  margin:auto;
-                  padding: $a/2;
-                  width: 75%;
-                  box-shadow: inset 0px 3px 3px #111;
-                  border: 1px solid $cinzaEscuro;
-                  border-radius: 0;
-                  text-transform: uppercase;
-                  color:$branco;
-                  letter-spacing: 1px;
-                  font-size: 11px;
-                  text-align: center;
-                  outline: none;
-                  transition: all 0.20s ease-in-out;
-
-                  &::placeholder{
-                      color:$cinza;
-                  }
-
-                  &:focus {
-                    width:90%;
-                  }
-                }
-                */
             }
             #results-container {
               max-width: 370px;
