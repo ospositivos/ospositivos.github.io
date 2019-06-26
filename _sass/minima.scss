@@ -257,7 +257,7 @@ html {
                     width: 80px;
                     height: 80px;
                     border-radius: 50%;
-                    background: #111;
+                    //background: #111;
                     box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.6);
                     transition: all 1s;
 
@@ -275,7 +275,7 @@ html {
                         bottom: 0;
                         width: 25px;
                         height: 2px;
-                        background: $preto;
+                        background: darkred;
                         transform: rotate(45deg);
                         transition: all .1s;
                     }
@@ -291,7 +291,7 @@ html {
                         height: 2px;
                         transition: all .1s;
                         border: none;
-                        background: $preto;
+                        background: darkred;
                         border-radius: 0%;
                         transform: rotate(-45deg);
                     }
@@ -340,20 +340,20 @@ html {
                     }
 
                     &:focus ~ .search {
-                      background: $cinzaEscuro;
+                      //background: $cinzaMetal;
 
                         &::before {
                           top: 22px;
                           width: 12px;
                           left: 22px;
-                          background: $cinzaMetal;
+                          background: $preto;
                         }
                         &::after {
                           top: -5px;
                           left: -5px;
                           width: 25px;
                           height: 25px;
-                          border: 2px solid $cinzaMetal;
+                          border: 2px solid $preto;
                           border-radius: 50%;
                           background: transparent;
                         }
