@@ -217,6 +217,11 @@ blockquote {
         font-style: normal; // remove highlightlink
         a {
             box-shadow: none !important;
+            border-bottom:1px solid $cinza;
+            &:hover {
+              color:$cinza !important;
+              border-bottom:1px solid $cinzaClaro;
+            }
         }
     }
     .voice {
