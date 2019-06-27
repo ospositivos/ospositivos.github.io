@@ -1,8 +1,9 @@
 ---
-layout: clean-b
+layout: default
 title: More
 permalink: more.html
 sitemap: false
+estilo: "clean-black"
 ---
 
 <header>
@@ -12,6 +13,6 @@ sitemap: false
 </header>
 <article class="post">
   <div class="coluna centre">
-    <h4>Não te conformes à lógica dos outros porque não há filosofia que melhor te sirva do que aquela que emana de dentro.</h4>
+    <h3>Não te conformes à lógica dos outros porque não há filosofia que melhor te sirva do que aquela que emana de dentro.</h3>
   </div>
 </article>
