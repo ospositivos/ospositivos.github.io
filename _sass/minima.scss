@@ -394,8 +394,7 @@ hr {
     }
 
     &.info-primary,
-    &.info-secondary,
-        {
+    &.info-secondary {
         background: $preto;
         color: $branco;
 
@@ -416,9 +415,16 @@ hr {
         blockquote {
             border-color: $branco;
         }
+
+        .moldura {
+          background:$branco;
+        }
     }
-    .info-secondary {
+    &.info-secondary {
         background-color: $vermelho !important;
+        blockquote {
+            border-color: darkred;
+        }
     }
 }
 
