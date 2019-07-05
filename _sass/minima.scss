@@ -787,12 +787,13 @@ ul.lista {
   &::after {
     content:"";
     position: absolute;
+    right: 0;
     background-image: url(/assets/scroll.svg);
     background-repeat: no-repeat;
     background-position: right;
     background-size: 100px 100px;
     display: inline-block;
-    width: 100%;
+    width: 100px;
     height: 100px;
   }
   @media(max-width: $tablet) {
