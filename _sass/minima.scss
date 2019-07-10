@@ -1659,9 +1659,11 @@ article.post {
                         opacity: 0;
                         height: 0;
                         transition: visibility 0s linear 0.33s, opacity 0.33s linear;
-
                         table {
                             display: none;
+                        }
+                        img.moldura {
+                          display: none;
                         }
                     } // Show if checkbox is clicked
                     &:checked + * {
@@ -1672,6 +1674,9 @@ article.post {
                         cursor: n-resize; // ugly hack
                         table {
                             display: table;
+                        }
+                        img.moldura {
+                          display: block;
                         }
                     }
                 }
