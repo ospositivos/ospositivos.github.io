@@ -468,7 +468,7 @@ ul.lista-artigos {
             margin-left: $a;
             padding-left: $c/2;
             display: inline-block;
-            color: #789;
+            color: $cinza;
             font-size: 10px;
             letter-spacing: -1px;
             @media(max-width: $mobileM) {
