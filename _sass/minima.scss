@@ -116,9 +116,6 @@ html {
         background:url(https://1.bp.blogspot.com/-dWUJyrj3mqA/XSkDsVHUMlI/AAAAAAAAVVA/h3UYxizfCkIL582RVtD0uDEOz-GXM0oYQCKgBGAs/s1600/screamcomix.jpg) no-repeat 40% 55% #000;
         background-attachment: fixed;
         background-size:cover;
-        @media(max-width: $mobileL){
-          background-position: 61% -150px;
-        }
 
         header {
           height: calc(25%);
@@ -152,6 +149,7 @@ html {
           }
         }
         footer {
+            text-shadow: 2px 2px black;
             a {
                 box-shadow: none;
                 &:hover {
