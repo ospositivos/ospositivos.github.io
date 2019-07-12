@@ -131,16 +131,22 @@ html {
         }
         article.post {
             margin-bottom: 0;
+
+            #results-container {
+              @media (max-height: 600px){
+                min-height: 100px;
+              }
+            }
         }
         // footer
         // ----------------------
         .fixedfooter {
-          position: fixed;
+          position: absolute;
           bottom: 0;
           margin: auto;
           width:100%;
-          @media (max-height: 680px){
-            display: none;
+          @media (max-height: 600px){
+            position: relative;
           }
         }
         footer {
