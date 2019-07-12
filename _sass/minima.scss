@@ -105,12 +105,15 @@ html {
     // ----------------------
     // homepage
     &.homepage {
-      background: $preto;
+      background: #070922;
 
       body {
         height: 100%;
-        background: $preto;
+        background: #070922;
         color: $branco;
+        // coverphoto
+        background:url(https://3.bp.blogspot.com/-DEZ_FsWoYa8/XNBIphETELI/AAAAAAAAUgM/PA0vnuIzfUk5fm4v1n8XFs8r_w4Jl_0OwCKgBGAs/s1600/flipit.jpg) no-repeat #070922;
+        background-size:cover;
 
         header {
           height: calc(40%);
