@@ -5,7 +5,7 @@ permalink: directorio.html
 sitemap: false
 estilo: "homepage clean-black"
 ---
-<header>
+<header class="directorio">
 </header>
 
 <article class="post">
