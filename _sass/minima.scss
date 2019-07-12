@@ -113,17 +113,27 @@ html {
         color: $branco;
 
         header {
+          height: calc(40%);
+          /* não apagar: reactivar daqui
             position: relative;
-            height: calc(40%);
             min-height: 400px;
             background: url(/assets/x_large.png) no-repeat 50% 45% $preto;
             background-size: 850px;
+            até aqui */
         }
         article.post {
             margin-bottom: 0;
         }
         // footer
         // ----------------------
+        .fixedfooter {
+          @media (min-width: $mobileL){
+            position: fixed;
+            bottom: 0;
+            margin: auto;
+            width:100%;
+            }
+        }
         footer {
             a {
                 box-shadow: none;
@@ -451,16 +461,16 @@ ul.lista-artigos {
         a {
             font-size: $b;
             font-weight: bold;
-            color: $vermelho !important;
+            color: $vermelho;
             text-transform: uppercase;
             font-style: normal;
             letter-spacing: 2px;
             box-shadow: none !important;
             &:visited {
-                color: $cinza !important;
+                color: $branco;
             }
             &:hover {
-                color: $cinzaClaro !important;
+                color: $cinzaClaro;
             }
         }
         small {
@@ -669,7 +679,7 @@ ul.lista-artigos {
         }
 
         &:focus ~ .search {
-          box-shadow: 0 0 25px 0 rgba(0, 0, 0, 1);
+          // não apagar box-shadow: 0 0 25px 0 rgba(0, 0, 0, 1);
 
             &::before {
               top: 22px;
