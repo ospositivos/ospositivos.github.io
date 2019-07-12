@@ -130,6 +130,9 @@ html {
         // footer
         // ----------------------
         .fixedfooter {
+          @media (max-width: $mobileL){
+            padding-top: 100px;
+          }
           @media (min-width: $mobileL){
             position: fixed;
             bottom: 0;
