@@ -112,10 +112,10 @@ html {
         background: #000;
         color: $branco;
         // coverphoto
-        background-size:cover;
         min-height: 100vh;
-        background-attachment: fixed;
         background:url(https://1.bp.blogspot.com/-dWUJyrj3mqA/XSkDsVHUMlI/AAAAAAAAVVA/h3UYxizfCkIL582RVtD0uDEOz-GXM0oYQCKgBGAs/s1600/screamcomix.jpg) no-repeat 40% 55% #000;
+        background-attachment: fixed;
+        background-size:cover;
         @media(max-width: $mobileM){
           background-position: 61% 90%;
         }
