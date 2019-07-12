@@ -117,7 +117,7 @@ html {
         background-attachment: fixed;
         background-size:cover;
         @media(max-width: $mobileM){
-          background-position: 61% 90%;
+          background-position: 61% -150px;
         }
 
         header {
