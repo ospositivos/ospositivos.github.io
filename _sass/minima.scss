@@ -132,7 +132,7 @@ html {
             margin-bottom: 0;
 
             #results-container {
-              @media (max-height: 600px){
+              @media (max-height: 738px){
                 min-height: 250px;
               }
             }
@@ -144,7 +144,7 @@ html {
           bottom: 0;
           margin: auto;
           width:100%;
-          @media (max-height: 600px){
+          @media (max-height: 738px){
             position: relative;
           }
         }
