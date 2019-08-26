@@ -1,5 +1,6 @@
 _site
 _import
 _drafts
+assets/fonts
 .sass-cache
 .jekyll-metadata
