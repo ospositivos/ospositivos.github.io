@@ -415,23 +415,25 @@ hr {
 
 // sidenote
 .sidenote {
+  display:block;
+  float:right;
+  padding:$a;
+  max-width:50%;
 
   &::before {
     content:"(*)";
   	display:inline-block;
-  	padding-right:$b/2;
+    padding-right: $a/2;
   }
-  @media (max-width:$mobileL){
-    display:block;
-    float:right;
-    padding:$a;
-		max-width:200px;
+
+  @media (max-width:tablet) and (min-width:$mobileM){
+    max-width:200px;
   }
-  @media (min-width:$mobileL){
+  @media (min-width:$tablet){
     position: absolute;
     float:none;
     right: 0;
-    margin: -22px -125px 0 0;
+    margin: -46px -160px 0 0;
     max-width:120px;
   }
 }
