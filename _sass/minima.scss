@@ -330,6 +330,14 @@ hr {
     height: 1px;
     background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
     max-width: 80%;
+
+    @media(max-width: $mobileM) {
+      border: 1px solid $cinza;
+
+      &.espaco {
+        margin:$a*2 !important;
+      }
+    }
 }
 
 // tags
