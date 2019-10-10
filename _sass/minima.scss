@@ -288,6 +288,17 @@ small,
     line-height: $b*2;
 }
 
+.unblur {
+  filter: blur(8px);
+  transition: 0.5s filter ease;
+  cursor: all-scroll;
+
+  &:hover {
+    filter: blur(0);
+    }
+  }
+
+
 a {
     color: $preto; //border-bottom: 1px solid gainsboro;
     text-decoration: none;
