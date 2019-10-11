@@ -289,6 +289,11 @@ small,
 }
 
 .unblur {
+  p {
+    display: none;
+  }
+
+  @media (min-width:$tablet) {
   position: relative;
   display: block;
   overflow: hidden;
@@ -349,6 +354,7 @@ a {
         text-decoration: none;
         color: darkgrey; //border-bottom: 1px dotted gainsboro;
     }
+}
 }
 
 a[href^="http://localhost:4000"],
