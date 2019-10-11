@@ -331,7 +331,7 @@ small,
       line-height: 1em;
     }
   }
-  &:hover {
+  &:hover, &:active {
     img {
       filter: blur(0);
       }
