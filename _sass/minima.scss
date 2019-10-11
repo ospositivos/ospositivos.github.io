@@ -321,7 +321,8 @@ small,
       padding: 15px;
       transition: all 0.4s ease-in-out 0s;
 
-    p {
+    &:after {
+      content: "mouser over please!";
 	    display: block;
 	    position: absolute;
 	    top: 40%;
