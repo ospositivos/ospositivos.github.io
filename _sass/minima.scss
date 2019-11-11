@@ -809,43 +809,30 @@ ul.lista {
 
 // blurb
 .blurb {
-    padding: $b*2 $b*4;
-    margin: 1em auto;
-    box-sizing: border-box; //width: 710px;
-    position: relative;
-    color: $preto;
-    font-family: 'Sedgwick Ave Display', cursive;
-    font-weight: 700;
-    text-align: left;
-    border-radius: 4px;
-    font-size: 3.5em;
-    line-height: 1.2em;
-    text-transform: uppercase;
-    text-align: center; //letter-spacing: 2px;
-    //font-style: italic;
-    @media (max-width: $mobileL) {
-        padding: $a*2;
-        border-radius: 0;
-        font-size: 2.5em;
-        line-height: 1.4em;
-    }
+  max-width: 1200px;
+  padding: $b*2 $b*4;
+  margin: 1em auto;
+  box-sizing: border-box;
+  position: relative;
+  color: $vermelho;
+  //font-family: 'Sedgwick Ave Display', cursive;
+  font-family: 'Shadows Into Light', cursive;
+  font-weight: 700;
+  font-size: 1.5em;
+  line-height: 1.4em;
+  text-transform: uppercase;
+  text-align: center;
 
-    &:after {
-        /*content: '';
-        position: absolute;
-        left: 5%;
-        border-style: solid;
-        border-color: $preto rgba(0, 0, 0, 0);
-        display: block;
-        width: 0;
-        bottom: -14px;
-        border-width: 14px 14px 0 0;*/
-    }
-    & blockquote {
-        border: none;
-    }
-    & + & {
-        margin-top: $a;
+  @media (max-width: $mobileL) {
+      padding: $a*2;
+  }
+
+  & blockquote {
+      border: none;
+  }
+
+  & + & {
+      margin-top: $a;
     }
 
     small {
@@ -853,10 +840,40 @@ ul.lista {
         font-weight: 400;
         text-transform: none;
         text-align: center;
-        display: block; //float: left;
+        display: block;
+        //float: left;
         a {
             box-shadow: none !important;
         }
+    }
+}
+
+// bubble
+.bublle,
+.bubble {
+    position: relative;
+    width: 20px;
+    height: 13px;
+    background: $vermelho;
+    border-radius: 1px;
+    margin: -3px 8px 0 0;
+    display: inline-block;
+    line-height: 0;
+    vertical-align: middle;
+    font-style: italic;
+    margin-top: -44px;
+
+    &:after,
+    &:after {
+        content: '';
+        position: absolute;
+        left: 45%;
+        border-style: solid;
+        border-color: $vermelho rgba(0, 0, 0, 0);
+        display: block;
+        width: 0;
+        bottom: -4px;
+        border-width: 4px 0 0 4px;
     }
 }
 
@@ -891,35 +908,6 @@ ul.lista {
             }
         }
         @include highlightlink;
-    }
-}
-
-// bubble
-.bublle,
-.bubble {
-    position: relative;
-    width: 20px;
-    height: 13px;
-    background: $vermelho;
-    border-radius: 1px;
-    margin: -3px 8px 0 0;
-    display: inline-block;
-    line-height: 0;
-    vertical-align: middle;
-    font-style: italic;
-    margin-top: -44px;
-
-    &:after,
-    &:after {
-        content: '';
-        position: absolute;
-        left: 45%;
-        border-style: solid;
-        border-color: $vermelho rgba(0, 0, 0, 0);
-        display: block;
-        width: 0;
-        bottom: -4px;
-        border-width: 4px 0 0 4px;
     }
 }
 
