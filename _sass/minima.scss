@@ -814,7 +814,7 @@ ul.lista {
   margin: 1em auto;
   box-sizing: border-box;
   position: relative;
-  color: $vermelho;
+  color: darkred;
   //font-family: 'Sedgwick Ave Display', cursive;
   font-family: 'Shadows Into Light', cursive;
   font-weight: 700;
@@ -822,6 +822,11 @@ ul.lista {
   line-height: 1.4em;
   text-transform: uppercase;
   text-align: center;
+
+  strong,b {
+    color:darkred;
+    border-bottom: 2px solid darkred;
+  }
 
   @media (max-width: $mobileL) {
       padding: $a*2;
