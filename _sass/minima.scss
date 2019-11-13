@@ -424,7 +424,7 @@ hr {
             transition: box-shadow .2s ease-in-out;
             color: $preto;
             &:visited {
-                color: $cinzaMetal;
+                color: $cinzaEscuro;
             }
             &:hover {
                 box-shadow: inset 0 -1.2em 0 fuchsia;
@@ -826,6 +826,9 @@ ul.lista {
     border-bottom: 2px solid darkred;
   }
 
+  @media (min-width: $desktopS) {
+      //left:200px;
+  }
   @media (max-width: $mobileL) {
       padding: $a*2;
   }
@@ -835,7 +838,7 @@ ul.lista {
   }
 
   & + & {
-      margin-top: $a;
+      margin-top:-$a*4;
     }
 
     small {
