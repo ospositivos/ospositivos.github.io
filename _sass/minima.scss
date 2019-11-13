@@ -809,16 +809,14 @@ ul.lista {
 
 // blurb
 .blurb {
-  max-width: 1200px;
+  max-width: 960px;
   padding: $b*2 $b*4;
   margin: 1em auto;
   box-sizing: border-box;
   position: relative;
-  color: darkred;
-  //font-family: 'Sedgwick Ave Display', cursive;
-  font-family: 'Shadows Into Light', cursive;
-  font-weight: 700;
-  font-size: 1.5em;
+  color: $preto;
+  font-family: 'Special Elite', cursive;
+  font-size: 2.5em;
   line-height: 1.4em;
   text-transform: uppercase;
   text-align: center;
@@ -1413,7 +1411,7 @@ article.post {
         line-height: 1em;
         margin-top: -$a*2;
         @media (min-width: $mobileM) {
-            max-width:70%;
+            max-width:69%;
             margin-left: auto;
             margin-right: auto;
         }
