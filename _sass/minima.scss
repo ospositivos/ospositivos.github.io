@@ -1032,6 +1032,10 @@ article.clip {
         padding-right: 10px;
     }
 
+    li + li {
+      padding-top: $a;
+    }
+
     a {
         color: $cinzaEscuro;
         border-bottom: 1px dotted $cinzaEscuro;
@@ -1062,7 +1066,8 @@ article.clip {
         margin-right: $a*4;
 
         h3,
-        p {
+        p,
+        ul {
             max-width: 780px;
             margin-left: auto;
             margin-right: auto;
