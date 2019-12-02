@@ -1,4 +1,4 @@
-![OS POSITIVOS](/assets/x_large.png)
+![OS POSITIVOS](/assets/images/x_large.png)
 
 # www.ospositivos.pt
 

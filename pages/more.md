@@ -8,7 +8,7 @@ estilo: "clean-black"
 
 <header>
     <a href="{{ "/" | relative_url }}">
-    <img src="{{ "/assets/skull.gif" | absolute_url }}" alt="OS POSITIVOS" />
+    <img src="{{ "/assets/images/skull.gif" | absolute_url }}" alt="OS POSITIVOS" />
     </a>
 </header>
 <article class="post">
