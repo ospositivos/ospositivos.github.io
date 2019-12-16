@@ -8,7 +8,7 @@ layout: default
     <h1 class="post-title">{{ page.title | escape }}</h1>
   </header>
 
-  {% capture warningDate %}{{ site.time | date: '%Y' | minus:3 }}{% endcapture %}
+  {% capture warningDate %}{{ site.time | date: '%Y' | minus:2 }}{% endcapture %}
   {% capture postDate %}{{ page.date | date: "%Y" }}{% endcapture %}
   {% if postDate < warningDate %}
     <script src="/assets/pinwarning-script.js"></script>
