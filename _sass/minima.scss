@@ -84,6 +84,7 @@ html {
             h1.post-title {
                 color: $branco;
             }
+
             input[type='button'],
             input[type='submit'] {
                 border: 1px solid $branco;
@@ -383,6 +384,26 @@ img {
 
 sup {
     font-weight: bold;
+}
+
+del {
+  text-decoration-color: $vermelho;
+  text-decoration-style: wavy;
+  text-decoration-thickness: 2px;
+}
+
+ins {
+  text-decoration: none;
+  background: transparent;
+  font-size: .8em;
+  font-family: "Permanent Marker", cursive;
+  color:red;
+  position: absolute;
+  transform: rotate(-10deg);
+  margin-left: -10px;
+  margin-top: -10px;
+
+  &.long {transform: rotate(-4deg);}
 }
 
 hr {
@@ -1417,7 +1438,25 @@ article.post {
         @media screen and (max-width: $mobileM) {
             font-size: 2em;
         }
-    }
+
+        del {
+          text-decoration-style:dashed;
+          text-decoration-thickness: 5px;
+        }
+
+        ins {
+            @media screen and (min-width: $tablet) {
+              margin-left: -60px;
+              margin-top: -43px;
+            }
+            @media screen and (max-width: $tablet) {
+              position: relative;
+              display: block;
+              margin-top: -$a;
+              transform: rotate(-6deg);
+            }
+          }
+        }
 
     .subtitle {
         font-family: 'Permanent Marker';
