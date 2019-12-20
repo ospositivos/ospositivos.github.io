@@ -1440,14 +1440,13 @@ article.post {
         }
 
         del {
-          text-decoration-style:dashed;
           text-decoration-thickness: 5px;
         }
 
         ins {
             @media screen and (min-width: $tablet) {
-              margin-left: -60px;
-              margin-top: -43px;
+              margin-left: -90px;
+              margin-top: 25px;
             }
             @media screen and (max-width: $tablet) {
               position: relative;
