@@ -1640,7 +1640,7 @@ article.post {
               margin-left: auto;
               margin-right: auto;
               @media (max-width: $tablet) and (min-width: $mobileL) {
-                & > * {
+                &:not(.uk-grid-collapse) > * {
                 padding-right: $a*2;
                 }
               }
@@ -1649,6 +1649,13 @@ article.post {
                 @media (max-width: $tablet) {
                     margin-left: 0;
                 }
+            }
+            &.vm-grid-small {
+              margin-top: -$a;
+
+              & > * {
+                padding-top: $a;
+              }
             }
         }
 
