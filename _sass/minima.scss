@@ -609,24 +609,6 @@ table.mytabela {
     }
 }
 
-.prancha-spread {
-    max-width: 1100px;
-    margin: auto;
-    padding-left: $a;
-    padding-right: $a;
-
-    @media(max-width: $tablet) {
-        .uk-grid {
-            margin-left: 0;
-        }
-
-        .spread {
-            border: 0;
-            display: none;
-        }
-    }
-}
-
 .centre {
     text-align: center;
 
@@ -912,6 +894,21 @@ ul.lista {
 
 // teses indice
 #teses-indice {
+
+  &::before {
+    content: "leituras adicionais";
+    display: table;
+    margin-bottom: -$a;
+    color:gainsboro;
+    font-size: $a*2;
+    padding-left: $b*2;
+    font-family: 'Permanent Marker';
+  }
+
+  margin-top:$a*4;
+  margin-left:$a/2;
+  margin-right: $a/2;
+
     @media(min-width: $tablet) {
         margin-left:$a*3;
         margin-right: $a*3;
@@ -928,6 +925,7 @@ ul.lista {
             margin: 1em auto;
             padding: 0.5em 1em;
             font-size: $b;
+            border-color:ghostwhite;
         }
         ul {
             margin: 0;
@@ -1621,44 +1619,44 @@ article.post {
 
         // uk-grid
         .uk-grid {
+
           & > * {
-              @media(max-width: $mobileL) {
+              @media(max-width: 639px) {
                 padding-left:0;
                 padding-right: 0;
 
                 img {
-                      width: 100%;
+                  width: 100%;
                   }
+
                 p {
-                      padding-left: $a;
-                      padding-right: $b;
+                  padding-left: $a;
+                  padding-right: $b;
                   }
               }
           }
+
           &:not(.full) {
               max-width: 820px;
               margin-left: auto;
               margin-right: auto;
-              @media (max-width: $tablet) and (min-width: $mobileL) {
-                &:not(.uk-grid-collapse) > * {
-                padding-right: $a*2;
-                }
               }
-            }
+
             &.full {
                 @media (max-width: $tablet) {
                     margin-left: 0;
+                  }
                 }
-            }
-            &.vm-grid-small {
+
+            &.uk-grid-small {
               margin-top: -$a;
 
               & > * {
                 padding-top: $a;
                 padding-right: 0 !important;
+                }
               }
             }
-        }
 
         & > iframe,
         & > div:not([class]) > iframe,
