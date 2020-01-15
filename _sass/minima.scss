@@ -504,29 +504,57 @@ hr {
 }
 
 // sidenote
-.sidenote {
-  display:block;
-  float:right;
-  padding:$a;
-  max-width:50%;
-
-  &::before {
-    content:"(*)";
-  	display:inline-block;
-    padding-right: $a/2;
-  }
-
-  @media (max-width:tablet) and (min-width:$mobileM){
-    max-width:200px;
-  }
-  @media (min-width:$tablet){
-    position: absolute;
-    float:none;
-    right: 0;
-    margin: -46px -160px 0 0;
-    max-width:120px;
-  }
+.asterisk {
+  color:forestgreen;
 }
+.sidenote {
+    box-sizing: border-box;
+    position: relative;
+    width: 45%;
+    padding: $a;
+    font-size: $b;
+    color:darkgrey;
+
+    &::before {
+      display: block;
+      margin-left: -$b*2;
+      margin-top: -$a;
+      font-size: $a*2;
+      font-family: 'Lora';
+      content: "*";
+      color: forestgreen;
+    }
+
+    &.sidenote-right {
+      float: right;
+      margin-right: 0;
+
+      &::before {
+        float: right;
+        margin-right: -$b*2;
+      }
+    }
+    &.sidenote-left {
+      float: left;
+      margin-left: 0;
+      &::before {
+        float: left;
+        margin-left: -$b*2;
+      }
+    }
+
+    @media (min-width: $tablet){
+      width: 30%;
+      transform: translateY(-6%);
+
+      &.sidenote-right {
+        margin-right: -31%;
+      }
+      &.sidenote-left {
+        margin-left: -31%;
+      }
+    }
+  }
 
 // info
 .info {
