@@ -10,6 +10,8 @@ estilo: "homepage clean-black"
 
 <article class="post">
   <div class="coluna">
+
+    <!-- tags -->
     <div class="directorio">
 
       <!-- featured -->
@@ -57,5 +59,6 @@ estilo: "homepage clean-black"
       {% endfor %}
     </ul>
     </div>
+
   </div>
 </article>
