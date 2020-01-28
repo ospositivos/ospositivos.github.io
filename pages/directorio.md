@@ -10,8 +10,7 @@ estilo: "homepage clean-black"
 
 <article class="post">
   <div class="coluna">
-
-    <!-- tags -->
+  
     <div class="directorio">
 
       <!-- featured -->
