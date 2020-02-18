@@ -858,6 +858,30 @@ ul.lista {
   text-transform: uppercase;
   text-align: center;
 
+  &.blurby{
+    font-size: 1.5em;
+
+    @media(min-width:$desktopS){
+
+      &.blurby-l{
+        text-align: left;
+        small {
+          text-align: left;
+            }
+          }
+      &.blurby-r{
+        text-align: right;
+        small {
+          text-align: right;
+          }
+        }
+
+      .bubble {
+        margin-left:-36px;
+        }
+      }
+    }
+
   strong,b {
     color:darkred;
     border-bottom: 2px solid darkred;
