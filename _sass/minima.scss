@@ -1,25 +1,4 @@
 @charset "utf-8";
-// @import "uikitgrid.scss";
-
-/* offline fonts
-@font-face {
-  font-family: "Roboto Condensed";
-  src: url("/assets/fonts/RobotoCondensed-Regular.ttf");
-}
-@font-face {
-  font-family: "Lora";
-  src: url("/assets/fonts/Lora-Regular.ttf");
-}
-@font-face {
-  font-family: "Permanent Marker";
-  src: url("/assets/fonts/PermanentMarker-Regular.ttf");
-}
-@font-face {
-  font-family: "Sedgwick Ave Display";
-  src: url("/assets/fonts/SedgwickAveDisplay-Regular.ttf");
-}
-*/
-
 // ----------------------
 // variables
 // ----------------------
@@ -34,7 +13,8 @@ $mobileL: 760px;
 $mobileM: 560px;
 $mobileS: 450px;
 
-$base-font-family: "Roboto Condensed";
+$base-font-family: "Bellota Text";
+$alt-font-family: "Roboto Mono";
 $base-font-size: $a;
 $base-font-weight: 400;
 $small-font-size: $base-font-size * 0.875;
@@ -129,11 +109,12 @@ html {
       background: #000;
 
       body {
-        //height: 100%;
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+
         background: #000;
         color: $branco;
-        // coverphoto
-        min-height: 100vh;
         background:url(https://2.bp.blogspot.com/-AcY_nZEAYTk/XSzl23hLBqI/AAAAAAAAVV4/ZVXKhrg2TncjnDBUIOnLF6KoAMkXhbqiwCKgBGAs/s1600/wescreamcomix.jpg) no-repeat 40% 55% #000;
         //background:url(/assets/images/wescreamcomix.jpg) no-repeat 40% 55% #000;
         background-attachment: fixed;
@@ -152,6 +133,8 @@ html {
         }
         article.post {
             margin-bottom: 0;
+            flex: 1;
+
 
             #results-container {
               @media (max-height: 738px){
@@ -161,15 +144,6 @@ html {
         }
         // footer
         // ----------------------
-        .fixedfooter {
-          position: absolute;
-          bottom: 0;
-          margin: auto;
-          width:100%;
-          @media (max-height: 738px){
-            position: relative;
-          }
-        }
         footer {
             text-shadow: 2px 2px black;
             a {
@@ -521,7 +495,6 @@ hr {
       margin-left: -$b*2;
       margin-top: -$a;
       font-size: $a*2;
-      font-family: 'Lora';
       content: "*";
       color: forestgreen;
     }
@@ -904,12 +877,11 @@ ul.lista {
     }
 
     small {
-        font-family: "Roboto Condensed";
+        font-family: $alt-font-family;
         font-weight: 400;
         text-transform: none;
         text-align: center;
         display: block;
-        //float: left;
         a {
             box-shadow: none !important;
         }
@@ -1056,10 +1028,10 @@ ul.lista {
 article.clip {
     position: relative;
     background: floralwhite;
-    font-family: 'Lora', serif;
+    font-family: $alt-font-family;
     color: #111;
     padding: $a/2 $a*4 $a*2 $a*4;
-    font-size: $a;
+    font-size: $b;
     border: 1px solid antiquewhite;
     border-top: none;
 
@@ -1167,7 +1139,8 @@ article.clip {
     position: relative;
     background-color: #f3ede1;
     margin: 20px auto;
-    font-family: 'Lora', serif;
+    font-family: $alt-font-family;
+    font-size: $b;
     color: $cinzaEscuro;
 
     &::before,
@@ -1183,12 +1156,12 @@ article.clip {
         content: "";
         transform: skew(-4deg) rotate(-4deg);
         box-shadow: 0 10px 12px rgba(0, 0, 0, 0.5);
-    }
+      }
     &::after {
         transform: skew(4deg) rotate(4deg);
         left: auto;
         right: 12px;
-    }
+      }
 
     @media (min-width: $tablet) {
         max-width: 650px;
@@ -1254,14 +1227,17 @@ article.clip {
         padding: 0;
     }
 
-    small {
-        line-height: $b;
+    small,
+    .smallish {
+        line-height: $a;
+        font-size: 0.9em;
     }
     blockquote {
         margin: 1em auto;
         padding: 0.5em 1em;
         font-style: italic;
-        border-left: 3px double lightslategray //border-radius: 0 4px 4px 0;
+        font-size: 14px;
+        border-left: 3px solid lightslategray;
     }
 }
 
@@ -1966,27 +1942,21 @@ article.post {
         // results-container
         // ----------------------
         #results-container {
-            max-width: 370px;
-            margin-left: auto;
-            margin-right: auto;
+            max-width: 85%;
+            margin-left: $a*2;
             margin-bottom: $a*4;
+            position: relative;;
             font-size: 11px;
             color: $cinza;
             text-align: center;
             color: $vermelho;
 
-            @media(max-width: $mobileM){
-              max-width: 300px;
-            }
-
             li {
                 text-align: left;
 
-                &:nth-child(n+2) {
-                }
                 &::before {
                   display: none;
-                }
+                  }
 
                 a {
 
@@ -2034,122 +2004,131 @@ article.post {
             margin: auto;
             top: 0;
             left: 0;
-            right: 0;
+            //right: 0;
             bottom: 0;
+            //width: 300px;
+            height: 100px;
+            left: $a;
 
             .search {
-                z-index: 6;
                 position: absolute;
                 margin: auto;
                 top: 0;
+                //right: 0;
                 bottom: 0;
-                right: -400px;
                 left: 0;
-                width: 80px;
-                height: 80px;
+                width: $a*2;
+                height: $a*2;
+                background: $preto;
                 border-radius: 50%;
-                box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0);
-                transition: all 0.1s;
+                transition: all 0.2s;
+                z-index: 4;
+                box-shadow: 0 0 25px 0 $branco;
+                animation: pulse 2.25s infinite cubic-bezier(1, 0, 0, 1);
 
-                @media (max-width: $mobileM) {
-                    right: -240px;
-                }
+                @keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
 
                 &::before {
                     content: "";
                     position: absolute;
                     margin: auto;
-                    top:0;
-                    left: 0;
+                    top:  $a/2;
                     right: 0;
                     bottom: 0;
-                    width: 25px;
+                    left:  $a/2;
+                    width:  $a/2;
                     height: 2px;
-                    background: $cinza;
+                    background: $branco;
                     transform: rotate(45deg);
-                    transition: all .1s;
-                }
+                    transition: all .2s;
+                    }
+
                 &::after {
                     content: "";
                     position: absolute;
                     margin: auto;
+                    top: -5px;
                     right: 0;
-                    top: 0;
-                    left: 0;
                     bottom: 0;
-                    width: 25px;
-                    height: 2px;
-                    transition: all .1s;
-                    border: none;
-                    background: $cinza;
-                    border-radius: 0%;
-                    transform: rotate(-45deg);
+                    left: -5px;
+                    width:  $a/2;
+                    height:  $a/2;
+                    border-radius: 50%;
+                    border: 2px solid $branco;
+                    transition: all .2s;
                 }
             }
+
             input {
                 position: absolute;
                 margin: auto;
                 top: 0;
-                right: 0;
+                //right: 0;
                 bottom: 0;
                 left: 0;
-                width: 360px;
+                width: 50px;
                 height: 50px;
                 outline: none;
                 border: none;
-                background: rgba(11,11,11,0.8);
-                color: $branco;
+                background: $preto;
+                color: white;
+                text-shadow: 0 0 10px $vermelho;
                 padding: 0 80px 0 20px;
-                border-radius: 0;
-                opacity: 1;
+                border-radius: 30px;
+                box-shadow: 0 0 25px 0 white, 0 20px 25px 0 rgba(0, 0, 0, 0.2);
+                transition: all 0.1s;
+                opacity: 0;
                 z-index: 5;
                 font-weight: bolder;
-                text-transform: uppercase;
                 letter-spacing: 0.1em;
-                cursor: pointer;
-                transition: all 0.5s;
 
                 &::placeholder  {
                   color:$vermelho;
                   text-transform: uppercase;
                 }
-                @media (max-width: $mobileM) {
-                    width: 200px;
-                    font-size: $a;
-                }
 
                 &:focus {
-                  background-color: #111;
-                  border: none;
+                    width: 200px;
+                    opacity: 1;
+                    cursor: text;
+
                   &::placeholder  {
                     color:$branco;
-                  }
-                }
+                      }
+                    }
 
                 &:focus ~ .search {
-                  // não apagar box-shadow: 0 0 25px 0 rgba(0, 0, 0, 1);
+                    left: 260px;
+                    background: $vermelho;
+                    box-shadow: 0 0 25px 0 $vermelho, 0 20px 25px 0 rgba(0, 0, 0, 0.2);
+                    z-index: 6;
+                    animation:none;
 
                     &::before {
-                      top: 13px;
-                      width: 12px;
-                      left: 12px;
-                      background: $branco;
+                        top: 0;
+                        left: 0;
+                        width: $a;
+                        background: $branco;
                     }
                     &::after {
-                      top: -5px;
-                      left: -5px;
-                      width: 12px;
-                      height: 12px;
-                      border: 2px solid $branco;
-                      border-radius: 50%;
-                      background: transparent;
+                        top: 0;
+                        left: 0;
+                        width: $a;
+                        height: 2px;
+                        border: none;
+                        background: $branco;
+                        border-radius: 0%;
+                        transform: rotate(-45deg);
+                        }
                     }
                 }
+              }
             }
-          }
-        }
+            // fim pesquisa
+            // ----------------------
 
-    } // fim coluna
+    }
+    // fim coluna
     #next {
 
         margin: $a*4 auto $b*4 auto;
@@ -2268,7 +2247,6 @@ footer {
         input[type="submit"] {
             border-radius: 0;
             display: inline-block;
-            font-family: "Roboto Condensed";
             font-size: $b;
             outline: none;
             padding: $b/2;
