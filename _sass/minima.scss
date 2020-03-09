@@ -43,7 +43,7 @@ html {
         scroll-behavior: smooth;
         background: $branco;
         color: $preto;
-        font: normal normal 15px/1.8 $base-font-family;
+        font: normal 300 15px/1.8 $base-font-family;
 
         // ----------------------
         // facebuuukit
@@ -248,8 +248,10 @@ blockquote {
     }
 }
 
+b, strong {
+    font-weight: 700;
+}
 strong {
-    font-weight: bold;
     color: $vermelho;
 }
 
@@ -382,7 +384,7 @@ ins {
 
 hr {
     border: 0;
-    margin: 0 auto;
+    margin: $a*2 auto;
     height: 1px;
     background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
     max-width: 80%;
@@ -1526,11 +1528,14 @@ article.post {
             margin: 1em auto;
             padding: 0.5em 1em;
             font-size: 14px;
-            font-style: italic;
             border-radius: 0 4px 4px 0;
             @media (max-width: $mobileM) {
                 margin-left:$a/2;
                 margin-right: $a/2;
+            }
+            &:first-letter,
+            & > p:first-letter {
+              text-transform: uppercase;
             }
         }
 
@@ -1763,7 +1768,8 @@ article.post {
                     border-bottom-right-radius: 5px;
                     border-bottom-left-radius: 5px;
                     border-top: none;
-                    font-family: Tahoma;
+                    //font-family: Tahoma;
+                    font-family: $alt-font-family;
                     font-size: 14px;
                     @media(max-width: $tablet) {
                         font-size:$a;
@@ -1791,7 +1797,8 @@ article.post {
                     small {
                         display: inline-block;
                         line-height: $a;
-                        margin-bottom: $c;
+                        margin: $c 0;
+                        font-size: 0.7em;
                     }
                 }
             }
@@ -2024,7 +2031,7 @@ article.post {
                 transition: all 0.2s;
                 z-index: 4;
                 box-shadow: 0 0 25px 0 $branco;
-                animation: pulse 2.25s infinite cubic-bezier(1, 0, 0, 1);
+                animation: pulse 2.25s infinite cubic-bezier(0.1, 0, 0, 1);
 
                 @keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
 
@@ -2079,7 +2086,7 @@ article.post {
                 transition: all 0.1s;
                 opacity: 0;
                 z-index: 5;
-                font-weight: bolder;
+                font-weight: 700;
                 letter-spacing: 0.1em;
 
                 &::placeholder  {
