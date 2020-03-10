@@ -838,13 +838,14 @@ ul.lista {
 
     @media(min-width:$desktopS){
 
-      &.blurby-l{
+      &.blurby-l {
         text-align: left;
         small {
           text-align: left;
             }
           }
-      &.blurby-r{
+          
+      &.blurby-r {
         text-align: right;
         small {
           text-align: right;
