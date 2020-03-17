@@ -9,9 +9,7 @@ estilo: "homepage clean-black"
 </header>
 
 <article class="post">
-  <div class="coluna">
-  
-    <div class="directorio">
+  <div class="coluna directorio">
 
       <!-- featured -->
       {% for post in site.posts limit:1 %}
@@ -57,7 +55,6 @@ estilo: "homepage clean-black"
       </li>
       {% endfor %}
     </ul>
-    </div>
 
   </div>
 </article>
