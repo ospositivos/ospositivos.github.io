@@ -628,11 +628,11 @@ hr {
         font-family: $hand-font-family;
         letter-spacing: 4px;
     }
-    
+
     blockquote {
             border-color: $vermelho;
-            
-            
+
+
             &::after{ color:$vermelho;}
         }
 
@@ -658,7 +658,7 @@ hr {
         blockquote {
             border-color: dimgrey;
             background: transparent;
-            
+
             &::after{ color:dimgrey;}
         }
 
@@ -759,7 +759,7 @@ ol.lista {
             padding-bottom: 0;
         }
     }
-    
+
     p + & { margin-top:$a/2;}
 }
 
@@ -1390,7 +1390,7 @@ article.clip {
         margin: 0;
         padding: 0;
     }
-    
+
     hr {
     background-image: linear-gradient(#333, #999, #111);
     }
@@ -1403,7 +1403,7 @@ article.clip {
     blockquote {
         font-style: italic;
         font-family: $alt-font-family;
-        
+
         @media(min-width:$mobileL){
             margin-left: -$b*2;
             margin-right: -$b*2;
@@ -2240,17 +2240,15 @@ article.post {
         // pesquisa https://codepen.io/anon/pen/xoLrNQ
         // ----------------------
         #searcher-container {
-            min-height: 100px;
+            //min-height: 100px;
             position: relative;
 
             #search-container {
                 position: absolute;
                 margin: auto;
-                top: 0;
+                top: $a*2;
                 left: 0;
-                //right: 0;
                 bottom: 0;
-                //width: 300px;
                 height: 100px;
                 left: $a;
 
@@ -2258,7 +2256,6 @@ article.post {
                     position: absolute;
                     margin: auto;
                     top: 0;
-                    //right: 0;
                     bottom: 0;
                     left: 0;
                     width: $a*2;
