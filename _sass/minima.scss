@@ -429,7 +429,7 @@ del {
 ins {
     text-decoration: none;
     background: transparent;
-    font-size: .8em;
+    font-size: 1em;
     font-family: $hand-font-family;
     color: red;
     position: absolute;
@@ -570,18 +570,16 @@ hr {
     &.sidenote-right {
         float: right;
         margin-right: 0;
-        //box-shadow: -16px 17px 8px -21px rgba(0,0,0,0.2);
 
         &::before {
             float: right;
-            margin-right: -$b*2;
+            margin-right: -$a*2;
         }
     }
 
     &.sidenote-left {
         float: left;
         margin-left: 0;
-        //box-shadow: 12px 14px 12px -20px rgba(0,0,0,0.2);
 
         &::before {
             float: left;
