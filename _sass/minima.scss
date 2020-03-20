@@ -563,7 +563,7 @@ hr {
         font-size: $a*2;
         content: "*";
         color: forestgreen;
-        background: $branco;
+        //background: $branco;
         padding-right: $a;
     }
 
@@ -676,6 +676,8 @@ hr {
 
         blockquote {
             border-color: darkred;
+
+            &::after{ color:darkred;}
         }
     }
 
