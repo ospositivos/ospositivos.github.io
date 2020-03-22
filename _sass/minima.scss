@@ -131,7 +131,7 @@ html {
 
             background: #000;
             color: $branco;
-            background: url(https://2.bp.blogspot.com/-AcY_nZEAYTk/XSzl23hLBqI/AAAAAAAAVV4/ZVXKhrg2TncjnDBUIOnLF6KoAMkXhbqiwCKgBGAs/s1600/wescreamcomix.jpg) no-repeat 40% 55% #000;
+            background: url(https://2.bp.blogspot.com/-ZcI1JwRb5Rs/XndUde7_WkI/AAAAAAAAXvs/Xb3i-8kE_hkA0eC8oLl4thbz59BTCXGigCKgBGAsYHg/s1600/scream-comix.jpg) no-repeat 40% 55% #000;
             background-attachment: fixed;
             background-size: cover;
 
@@ -558,8 +558,8 @@ hr {
 
     &::before {
         display: block;
-        margin-left: -$b*2;
         margin-top: -$a;
+        margin-left: -$b*2;
         font-size: $a*2;
         content: "*";
         color: forestgreen;
@@ -573,7 +573,7 @@ hr {
 
         &::before {
             float: right;
-            margin-right: -$a*2;
+            margin-right: -$b*2;
         }
     }
 
@@ -583,7 +583,7 @@ hr {
 
         &::before {
             float: left;
-            margin-left: -$b*2;
+            margin-left: -$b;
         }
     }
 
@@ -593,6 +593,9 @@ hr {
 
         &.sidenote-right {
             margin-right: -31%;
+            &::before {
+                margin-right: -$a;
+            }
         }
 
         &.sidenote-left {
