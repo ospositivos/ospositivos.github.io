@@ -660,6 +660,9 @@ hr {
 
         blockquote {
             border-color: dimgrey;
+            border-left: 1px solid dimgrey;
+            border-right: 1px solid dimgrey;
+            border-bottom: 1px solid dimgrey;
             background: transparent;
 
             &::after{ color:dimgrey;}
