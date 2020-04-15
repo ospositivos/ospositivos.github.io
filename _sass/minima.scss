@@ -46,7 +46,7 @@ html {
         scroll-behavior: smooth;
         background: $branco;
         color: $preto;
-        font: normal 300 14px/1.8 $base-font-family;
+        font: normal 300 16px/1.8 $base-font-family;
 
         // ----------------------
         // facebuuukit
@@ -250,7 +250,7 @@ blockquote {
     border-radius: 2px;
     background: $branco;
     padding: 1em 2em;
-    font-size: 12px;
+    font-size: 14px;
     font-style: normal;
     color: $cinzaEscuro;
     line-height: 1.8em;
@@ -323,10 +323,10 @@ i {
 
 small,
 .smallish {
-    font-size: 10px;
+    font-size: $b;
 
     blockquote {
-      font-size: 10px !important;
+      font-size: $b !important;
     }
 }
 
@@ -701,7 +701,7 @@ table.mytabela {
 
     caption {
         text-align: left;
-        font-size: 14px;
+        font-size: $a;
         text-transform: uppercase;
         margin-bottom: 20px;
         line-height: 22px;
@@ -968,11 +968,11 @@ ul.lista {
     box-sizing: border-box;
     position: relative;
     color: $preto;
-    font-family: 'Bellota';
+    font-family: $blockquote-font-family;
     font-size: 1.5em;
     font-weight: 700;
+    font-style: italic;
     line-height: 1.4em;
-    //text-transform: uppercase;
     text-align: center;
 
     @media(min-width:$desktopS) {
@@ -1062,7 +1062,7 @@ ul.lista {
         border-color: $vermelho rgba(0, 0, 0, 0);
         display: block;
         width: 0;
-        bottom: -4px;
+        bottom: -3px;
         border-width: 4px 0 0 4px;
     }
 }
@@ -1713,7 +1713,7 @@ article.post {
             max-width: 525px;
             margin: 1em auto;
             padding: 0.5em 1em;
-            font-size: 14px;
+            font-size: $a;
 
             @media (max-width: $mobileM) {
                 margin-left: $a/2;
@@ -1992,7 +1992,7 @@ article.post {
                     border-top: none;
                     //font-family: Tahoma;
                     font-family: $alt-font-family;
-                    font-size: 14px;
+                    font-size: $a;
 
                     @media(max-width: $tablet) {
                         font-size: $a;
@@ -2444,7 +2444,7 @@ article.post {
     width: 100%;
     padding: $a 0;
     text-align: center;
-    background: rgba(20, 20, 20, 0.9);
+    background: rgba(220, 20, 20, 0.9);
     box-shadow: -2px 1px $a/2 $cinza;
     color: $branco;
     font-size: 11px;
@@ -2453,11 +2453,11 @@ article.post {
 
     a {
         color: $branco;
-        box-shadow: inset 0 -.6em 0 darkred;
+        box-shadow: inset 0 -.6em 0 black;
         transition: box-shadow .2s ease-in-out;
 
         &:hover {
-            box-shadow: inset 0 -1.2em 0 fuchsia;
+            box-shadow: inset 0 -1.2em 0 black;
         }
     }
 }
