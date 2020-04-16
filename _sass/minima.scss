@@ -322,11 +322,14 @@ i {
 }
 
 small,
-.smallish {
+.smallish,
+blockquote.smallish {
     font-size: $b;
 
+    small {font-size:10px;}
+
     blockquote {
-      font-size: $b !important;
+      font-size: $b;
     }
 }
 
