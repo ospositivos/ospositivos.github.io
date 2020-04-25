@@ -17,6 +17,7 @@ $hand-font-family: 'Sue Ellen Francisco';
 $base-font-family: "Bellota Text";
 $blockquote-font-family: "Bellota";
 $alt-font-family: "Roboto Mono";
+$blurb-font-family: "Playfair Display";
 $base-font-size: $a;
 $base-font-weight: 400;
 $small-font-size: $base-font-size * 0.875;
@@ -965,13 +966,13 @@ ul.lista {
 
 // blurb
 .blurb {
-    max-width: 700px;
+    max-width: 810px;
     padding: $b*2 $b*4;
     margin: 1em auto;
     box-sizing: border-box;
     position: relative;
     color: $preto;
-    font-family: $blockquote-font-family;
+    font-family: $blurb-font-family;
     font-size: 1.5em;
     font-weight: 700;
     font-style: italic;
@@ -1039,36 +1040,36 @@ ul.lista {
             box-shadow: none !important;
         }
     }
-}
 
-// bubble
-.bublle,
-.bubble {
-    position: relative;
-    width: 20px;
-    height: 13px;
-    background: $vermelho;
-    border-radius: 1px;
-    margin: -3px 8px 0 0;
-    display: inline-block;
-    line-height: 0;
-    vertical-align: middle;
-    font-style: italic;
-    margin-top: -44px;
+    // bubble
+    .bublle,
+    .bubble {
+        position: relative;
+        width: 20px;
+        height: 13px;
+        background: $vermelho;
+        border-radius: 1px;
+        margin: -3px 8px 0 0;
+        display: inline-block;
+        line-height: 0;
+        vertical-align: middle;
+        font-style: italic;
+        margin-top: -44px;
 
-    &:after,
-    &:after {
-        content: '';
-        position: absolute;
-        left: 45%;
-        border-style: solid;
-        border-color: $vermelho rgba(0, 0, 0, 0);
-        display: block;
-        width: 0;
-        bottom: -3px;
-        border-width: 4px 0 0 4px;
+        &::after {
+            content: '';
+            position: absolute;
+            left: 45%;
+            border-style: solid;
+            border-color: $vermelho rgba(0, 0, 0, 0);
+            display: block;
+            width: 0;
+            bottom: -3px;
+            border-width: 4px 0 0 4px;
+        }
     }
 }
+
 
 // teses indice
 #teses-indice {
@@ -1647,7 +1648,7 @@ article.post {
         text-align: center;
         line-height: 120%;
         color: $preto;
-        text-transform: uppercase;
+        text-transform: uppercase;       
 
         @media screen and (min-width: $tablet) {
             max-width: 80%;
