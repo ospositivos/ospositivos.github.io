@@ -49,6 +49,10 @@ html {
         color: $preto;
         font: normal 300 16px/1.8 $base-font-family;
 
+        h1,h2,h3,h4,h5,h6 {
+            font-family: $base-font-family;
+            }
+
         // ----------------------
         // facebuuukit
         &#facebuuukit {
@@ -991,6 +995,7 @@ ul.lista {
 
             small {
                 text-align: left;
+                line-height: $a;
             }
 
             .bubble {
@@ -1003,6 +1008,7 @@ ul.lista {
 
             small {
                 text-align: right;
+                line-height: $a;
             }
 
             .bubble {
@@ -1649,7 +1655,7 @@ article.post {
         text-align: center;
         line-height: 120%;
         color: $preto;
-        text-transform: uppercase;       
+        text-transform: uppercase;
 
         @media screen and (min-width: $tablet) {
             max-width: 80%;
