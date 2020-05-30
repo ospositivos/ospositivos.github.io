@@ -559,7 +559,6 @@ hr {
     position: relative;
     background: $branco;
     width: 45%;
-    padding: $a;
     font-size: 10px;
     color: $preto;
     position: relative;
@@ -579,6 +578,7 @@ hr {
     &.sidenote-right {
         float: right;
         margin-right: 0;
+        padding: $a $b*2 $a $a;
 
         &::before {
             float: right;
@@ -589,6 +589,7 @@ hr {
     &.sidenote-left {
         float: left;
         margin-left: 0;
+        padding: $a $a $a $b*2;
 
         &::before {
             float: left;
