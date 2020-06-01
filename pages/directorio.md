@@ -5,12 +5,12 @@ permalink: directorio.html
 sitemap: false
 estilo: "homepage clean-black"
 ---
+
 <header class="directorio">
 </header>
 
 <article class="post">
   <div class="coluna directorio">
-
       <!-- featured -->
       {% for post in site.posts limit:1 %}
       <ul class="lista-artigos">
