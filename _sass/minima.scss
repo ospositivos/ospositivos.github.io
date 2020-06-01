@@ -54,6 +54,22 @@ html {
             }
 
         // ----------------------
+        .uk-tab {
+          li {
+            &.uk-active > a {
+              color: $vermelho;
+              border-bottom: none;
+              }
+            a {
+              color: $cinza;
+              }
+          }
+          &::before {
+            border-bottom: 3px solid $vermelho;
+            }
+        }
+
+        // ----------------------
         // facebuuukit
         &#facebuuukit {
             background: $preto;
@@ -2119,12 +2135,22 @@ article.post {
                     letter-spacing: 2px;
                     box-shadow: none !important;
 
+                    & > * {
+                      color: $vermelho;
+                    }
+
                     &:visited {
                         color: $cinza;
+                        & > * {
+                          color: $cinza;
+                        }
                     }
 
                     &:hover {
                         color: $cinzaClaro;
+                        & > * {
+                          color: $cinzaClaro;
+                        }
                     }
                 }
 
