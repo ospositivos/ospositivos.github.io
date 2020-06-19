@@ -1689,7 +1689,7 @@ article.post {
         ins {
             @media screen and (min-width: $tablet) {
                 margin-left: -90px;
-                margin-top: 25px;
+                margin-top: -$a*3;
             }
 
             @media screen and (max-width: $tablet) {
