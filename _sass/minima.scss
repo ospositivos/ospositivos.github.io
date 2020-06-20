@@ -2238,6 +2238,12 @@ article.post {
             text-align: center;
             color: $vermelho;
 
+            .noResultsText {
+              text-align:left;
+              color:$branco;
+              text-transform: uppercase;
+              }
+
             li {
                 text-align: left;
 
