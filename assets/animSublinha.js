@@ -24,7 +24,7 @@ window.addEventListener('scroll', function (event) {
 
             if (executaRisca) {
 
-                const a1 = annotate(document.querySelector('span.sublinha'), {
+                const a1 = annotate(document.querySelector('.sublinha'), {
                     type: 'highlight',
                     color: '#FFF176',
                     animationDelay: 1000
