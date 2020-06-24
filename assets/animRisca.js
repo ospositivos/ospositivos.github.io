@@ -24,7 +24,7 @@ window.addEventListener('scroll', function (event) {
 
             if (executaRisca) {
 
-                const a1 = annotate(document.querySelector('span.risca'), {
+                const a1 = annotate(document.querySelector('.risca'), {
                     type: 'crossed-off',
                     color: '#F44336',
                     animationDelay: 1000
