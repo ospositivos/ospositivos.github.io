@@ -38,13 +38,13 @@ $cinzaMetal: lightslategray;
 // ----------------------
 // styles
 // ----------------------
+
 html {
     height: 100%;
 
     body {
         margin: 0;
         padding: 0;
-        scroll-behavior: smooth;
         background: $branco;
         color: $preto;
         font: normal 300 16px/1.8 $base-font-family;
