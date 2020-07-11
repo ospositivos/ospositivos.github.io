@@ -49,23 +49,29 @@ html {
         color: $preto;
         font: normal 300 16px/1.8 $base-font-family;
 
-        h1,h2,h4,h5,h6 {
+        h1,
+        h2,
+        h4,
+        h5,
+        h6 {
             font-family: $base-font-family;
-            }
+        }
 
         // ----------------------
         .uk-tab {
-          li {
-            &.uk-active > a {
-              color: $vermelho;
-              border-bottom: none;
-              }
-            a {
-              color: $cinza;
-              }
-          }
-          &::before {
-            border-bottom: 3px solid $vermelho;
+            li {
+                &.uk-active > a {
+                    color: $vermelho;
+                    border-bottom: none;
+                }
+
+                a {
+                    color: $cinza;
+                }
+            }
+
+            &::before {
+                border-bottom: 3px solid $vermelho;
             }
         }
 
@@ -223,6 +229,7 @@ html {
             }
         }
     }
+
     // fim homepage
     // ----------------------
 
@@ -245,6 +252,7 @@ html {
             }
         }
     }
+
     // ----------------------
 }
 
@@ -266,7 +274,7 @@ h3 {
 }
 
 blockquote {
-    box-shadow: 0px 3px 12px -6px rgba(0,0,0,0.2);
+    box-shadow: 0px 3px 12px -6px rgba(0, 0, 0, 0.2);
     border-top: 6px solid $preto;
     border-radius: 2px;
     background: $branco;
@@ -277,46 +285,47 @@ blockquote {
     line-height: 1.8em;
     font-family: $blockquote-font-family;
     position: relative;
-    @media(max-width:$mobileL){
-      padding-left: 3em;
+
+    @media(max-width:$mobileL) {
+        padding-left: 3em;
     }
 
     &::after {
-      position: absolute;
-      content: "❝";
-      color: $preto;
-      font-size: $a*3;
-      top: $a;
-      left: -$b*2;
+        position: absolute;
+        content: "❝";
+        color: $preto;
+        font-size: $a*3;
+        top: $a;
+        left: -$b*2;
 
-      @media(max-width:$mobileL){
-        left: -$b/2;
-      }
+        @media(max-width:$mobileL) {
+            left: -$b/2;
+        }
     }
 
     & > h3:first-of-type,
     & > p:first-of-type,
     & > ul:first-of-type {
         margin-top: 0;
-      }
+    }
 
     & > h3:last-of-type,
     & > p:last-of-type,
     & > ul:last-of-type {
         margin-bottom: 0;
-      }
+    }
 
     small {
         font-style: normal;
         display: block;
-        margin-top:$a/2;
+        margin-top: $a/2;
         padding-top: $b/2;
-        border-top:1px dotted gainsboro;
+        border-top: 1px dotted gainsboro;
         font-size: 10px;
 
         a {
             box-shadow: none !important;
-            color:$verde-escuro !important;
+            color: $verde-escuro !important;
 
             &:hover {
                 color: $verde !important;
@@ -324,6 +333,7 @@ blockquote {
             }
         }
     }
+
     .voice {
         font-style: italic;
     }
@@ -335,7 +345,7 @@ strong {
 }
 
 strong {
-    color:$vermelho;
+    color: $vermelho;
 }
 
 em,
@@ -348,10 +358,12 @@ small,
 blockquote.smallish {
     font-size: $b;
 
-    small {font-size:10px;}
+    small {
+        font-size: 10px;
+    }
 
     blockquote {
-      font-size: $b;
+        font-size: $b;
     }
 }
 
@@ -482,6 +494,7 @@ hr {
         }
     }
 }
+
 // tags
 // ----------------------
 
@@ -619,6 +632,7 @@ hr {
 
         &.sidenote-right {
             margin-right: -31%;
+
             &::before {
                 //margin-right: -$a;
             }
@@ -659,11 +673,13 @@ hr {
     }
 
     blockquote {
-            border-color: $vermelho;
+        border-color: $vermelho;
 
 
-            &::after{ color:$vermelho;}
+        &::after {
+            color: $vermelho;
         }
+    }
 
     &.info-primary,
     &.info-secondary {
@@ -691,11 +707,13 @@ hr {
             border-bottom: 1px solid dimgrey;
             background: transparent;
 
-            &::after{ color:dimgrey;}
+            &::after {
+                color: dimgrey;
+            }
         }
 
         hr {
-          background-image: linear-gradient(#111, #555, #444);
+            background-image: linear-gradient(#111, #555, #444);
         }
 
         .moldura {
@@ -709,34 +727,14 @@ hr {
         blockquote {
             border-color: darkred;
 
-            &::after{ color:darkred;}
+            &::after {
+                color: darkred;
+            }
         }
     }
 
     hr {
-      background-image: linear-gradient(#f0f0f0, #cccccc, #f0f0f0);
-    }
-}
-
-// mytabela
-table.mytabela {
-    @media(min-width: $tablet) {
-        max-width: 550px;
-        margin: 1em auto;
-    }
-
-    caption {
-        text-align: left;
-        font-size: $a;
-        text-transform: uppercase;
-        margin-bottom: 20px;
-        line-height: 22px;
-    }
-
-    th {
-        text-align: left;
-        padding-bottom: 20px;
-        color: $preto;
+        background-image: linear-gradient(#f0f0f0, #cccccc, #f0f0f0);
     }
 }
 
@@ -794,7 +792,9 @@ ol.lista {
         }
     }
 
-    p + & { margin-top:$a/2;}
+    p + & {
+        margin-top: $a/2;
+    }
 }
 
 ul.lista {
@@ -867,9 +867,9 @@ ul.lista {
 
 // twitter
 .twitter {
-    margin:auto;
+    margin: auto;
     max-width: 540px;
-    }
+}
 
 //prancha
 .prancha {
@@ -1130,11 +1130,12 @@ ul.lista {
             margin: 1em auto;
             padding: 0.5em 1em;
             font-size: $b;
-            border-left:$b/2 solid ghostwhite;
-            border-top:none;
+            border-left: $b/2 solid ghostwhite;
+            border-top: none;
             background: transparent;
             box-shadow: none;
-            &::after{
+
+            &::after {
                 display: none;
             }
         }
@@ -1428,7 +1429,7 @@ article.clip {
     }
 
     hr {
-    background-image: linear-gradient(#333, #999, #111);
+        background-image: linear-gradient(#333, #999, #111);
     }
 
     small,
@@ -1440,12 +1441,12 @@ article.clip {
         font-style: italic;
         font-family: $alt-font-family;
 
-        @media(min-width:$mobileL){
+        @media(min-width:$mobileL) {
             margin-left: -$b*2;
             margin-right: -$b*2;
-            }
         }
     }
+}
 
 // ----------------------
 // indice webcomix
@@ -1653,6 +1654,7 @@ header {
         border-bottom: none;
     }
 }
+
 // header
 // ----------------------
 
@@ -1756,8 +1758,8 @@ article.post {
 
         & > blockquote,
         .uk-grid blockquote {
-          max-width: 550px;
-          margin: 1em auto;
+            max-width: 550px;
+            margin: 1em auto;
         }
 
         .table-container {
@@ -1770,6 +1772,15 @@ article.post {
             padding: 0px 1em;
             box-sizing: content-box;
             border: 1px solid $cinza;
+            
+            caption {
+                text-align: center;
+                font-size: $b;
+                text-transform: uppercase;
+                padding:$a/2; 
+                background: $preto;
+                color: $branco;
+            }
 
             @media (min-width: $mobileM) {
                 width: 100%;
@@ -1787,6 +1798,10 @@ article.post {
             tr {
                 td {
                     border-bottom: 1px dotted $cinza;
+                }
+
+                &:last-of-type td {
+                    border-bottom: none;
                 }
             }
         }
@@ -2136,20 +2151,22 @@ article.post {
                     box-shadow: none !important;
 
                     & > * {
-                      color: $vermelho;
+                        color: $vermelho;
                     }
 
                     &:visited {
                         color: $cinza;
+
                         & > * {
-                          color: $cinza;
+                            color: $cinza;
                         }
                     }
 
                     &:hover {
                         color: $cinzaClaro;
+
                         & > * {
-                          color: $cinzaClaro;
+                            color: $cinzaClaro;
                         }
                     }
                 }
@@ -2178,8 +2195,9 @@ article.post {
                     background: transparent;
                     box-shadow: none;
                     font-family: $base-font-family;
-                    &::after{
-                      display: none;
+
+                    &::after {
+                        display: none;
                     }
                 }
             }
@@ -2211,15 +2229,16 @@ article.post {
                 background: $vermelho !important;
 
                 blockquote {
-                    max-width:386px;
+                    max-width: 386px;
                     margin: 0 auto;
                     padding: 0;
                     text-indent: 0;
                     border: none;
                     background: transparent;
                     box-shadow: none;
-                    &::after{
-                      display: none;
+
+                    &::after {
+                        display: none;
                     }
                 }
             }
@@ -2239,10 +2258,10 @@ article.post {
             color: $vermelho;
 
             .noResultsText {
-              text-align:left;
-              color:$branco;
-              text-transform: uppercase;
-              }
+                text-align: left;
+                color: $branco;
+                text-transform: uppercase;
+            }
 
             li {
                 text-align: left;
