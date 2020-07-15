@@ -540,6 +540,11 @@ hr {
     margin-bottom: 100px !important;
 }
 
+.espaco-meio {
+    margin-top: 32px !important;
+    margin-bottom: 32px !important;
+}
+
 .sem-espaco-base {
     margin-bottom: 0 !important;
 
@@ -1772,12 +1777,12 @@ article.post {
             padding: 0px 1em;
             box-sizing: content-box;
             border: 1px solid $cinza;
-            
+
             caption {
                 text-align: center;
                 font-size: $b;
                 text-transform: uppercase;
-                padding:$a/2; 
+                padding:$a/2;
                 background: $preto;
                 color: $branco;
             }
