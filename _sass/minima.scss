@@ -598,14 +598,13 @@ hr {
     position: relative;
     z-index: 89;
 
-    &::before {
+    &::after {
         display: block;
         margin-top: -$a;
         margin-left: -$b*2;
         font-size: $a*2;
         content: "*";
         color: forestgreen;
-        //background: $branco;
         padding-right: $a;
     }
 
@@ -614,9 +613,10 @@ hr {
         margin-right: 0;
         padding: $a $b*2 $a $a;
 
-        &::before {
-            float: right;
-            margin-right: -$b*2;
+        &::after {
+            position: absolute;
+            top: $a;
+            left: $b*2;
         }
     }
 
@@ -625,9 +625,10 @@ hr {
         margin-left: 0;
         padding: $a $a $a $b*2;
 
-        &::before {
-            float: left;
-            margin-left: -$b;
+        &::after {
+            position: absolute;
+            top: $a;
+            margin-left: -$a;
         }
     }
 
@@ -636,7 +637,7 @@ hr {
         transform: translateY(-6%);
 
         &.sidenote-right {
-            margin-right: -31%;
+            margin-right: -32%;
 
             &::before {
                 //margin-right: -$a;
