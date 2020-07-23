@@ -1748,7 +1748,7 @@ article.post {
         pre {
           white-space: pre-wrap;
           border: none;
-          padding: $a;
+          padding: $a $a 0 $a;
         }
 
         & > ul,
