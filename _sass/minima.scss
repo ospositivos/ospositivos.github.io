@@ -597,6 +597,7 @@ hr {
     color: $preto;
     position: relative;
     z-index: 89;
+    line-height: $c;
 
     &::after {
         display: block;
@@ -615,7 +616,7 @@ hr {
 
         &::after {
             position: absolute;
-            top: $a;
+            top: $c*2;
             left: $b*2;
         }
     }
@@ -627,7 +628,7 @@ hr {
 
         &::after {
             position: absolute;
-            top: $a;
+            top: $a*2;
             margin-left: -$a;
         }
     }
