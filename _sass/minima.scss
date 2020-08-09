@@ -1820,6 +1820,27 @@ article.post {
             }
         }
 
+
+        // uk-accordion
+        .uk-accordion {
+          border: 1px dotted $cinzaMetal;
+          border-bottom: 3px double $cinzaMetal;
+          max-width: 650px;
+          margin: auto;
+
+          .uk-accordion-title {
+            text-align: center;
+            font-size:$b;
+            box-shadow: none;
+            &:hover {
+              box-shadow: none;
+            }
+          }
+          .uk-accordion-content {
+            & > p:first-of-type {margin-top:0;}
+          }
+        }
+
         // hide & reveal v2 //
         .expande {
             border: 1px dotted $cinzaMetal;
@@ -1843,6 +1864,8 @@ article.post {
                     cursor: pointer;
                     appearance: none;
                     -moz-appearance: none;
+                    -moz-appearance: none;
+                    -webkit-appearance: none;
                     outline: 0;
 
                     &:before {
