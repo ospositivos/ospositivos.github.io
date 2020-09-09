@@ -1776,6 +1776,12 @@ article.post {
             margin: 1em auto;
         }
 
+        & > blockquote.full {
+          max-width: 95%;
+          margin-left: $a;
+          margin-right: $a;
+        }
+
         .table-container {
             overflow: auto;
         }
@@ -1971,11 +1977,6 @@ article.post {
                 @media (max-width: $tablet) {
                     margin-left: 0;
                 }
-            }
-            &.almost-full {
-              max-width: 95%;
-              margin-left: $a;
-              margin-right: $a;
             }
 
             &.uk-grid-small {
