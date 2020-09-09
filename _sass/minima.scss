@@ -1972,6 +1972,11 @@ article.post {
                     margin-left: 0;
                 }
             }
+            &.almost-full {
+              max-width: 95%;
+              margin-left: $a;
+              margin-right: $a;
+            }
 
             &.uk-grid-small {
                 margin-top: -$a;
