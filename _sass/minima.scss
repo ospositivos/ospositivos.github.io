@@ -2354,6 +2354,28 @@ article.post {
             }
         }
 
+        // icon-random
+        .icon-random {
+          display:inline-block;
+          position:absolute;
+          top:49px;
+          left:$a;
+          box-shadow: none !important;
+
+          .icon-random-svg {
+            display: inline-block;
+            width: $a*2;
+            height: $a*2;
+            background-size: cover;
+            border-radius: 50%;
+            background-image: url('/assets/images/icon-random.svg');
+
+            &:hover {
+               filter: invert(100%);
+            }
+          }
+        }
+
         // pesquisa https://codepen.io/anon/pen/xoLrNQ
         // ----------------------
         #searcher-container {
@@ -2364,10 +2386,9 @@ article.post {
                 position: absolute;
                 margin: auto;
                 top: $a*2;
-                left: 0;
+                left: $a;
                 bottom: 0;
                 height: 100px;
-                left: $a;
 
                 .search {
                     position: absolute;
@@ -2400,7 +2421,7 @@ article.post {
                         left: $a/2;
                         width: $a/2;
                         height: 2px;
-                        background: $branco;
+                        background: $cinza;
                         transform: rotate(45deg);
                         transition: all .2s;
                     }
@@ -2416,7 +2437,7 @@ article.post {
                         width: $a/2;
                         height: $a/2;
                         border-radius: 50%;
-                        border: 2px solid $branco;
+                        border: 2px solid $cinza;
                         transition: all .2s;
                     }
                 }
