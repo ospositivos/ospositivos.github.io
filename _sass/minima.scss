@@ -2297,7 +2297,6 @@ article.post {
             margin-left: $a*2;
             margin-bottom: $a*4;
             position: relative;
-            ;
             font-size: 11px;
             color: $cinza;
             text-align: center;
@@ -2307,6 +2306,7 @@ article.post {
                 text-align: left;
                 color: $branco;
                 text-transform: uppercase;
+                font-family:$hand-font-family;
             }
 
             li {
@@ -2354,28 +2354,6 @@ article.post {
             }
         }
 
-        // icon-random
-        .icon-random {
-          display:inline-block;
-          position:absolute;
-          top:49px;
-          left:$a;
-          box-shadow: none !important;
-
-          .icon-random-svg {
-            display: inline-block;
-            width: $a*2;
-            height: $a*2;
-            background-size: cover;
-            border-radius: 50%;
-            background-image: url('/assets/images/icon-random.svg');
-
-            &:hover {
-               filter: invert(100%);
-            }
-          }
-        }
-
         // pesquisa https://codepen.io/anon/pen/xoLrNQ
         // ----------------------
         #searcher-container {
@@ -2385,7 +2363,7 @@ article.post {
             #search-container {
                 position: absolute;
                 margin: auto;
-                top: $a*2;
+                top: $c*2;
                 left: $a;
                 bottom: 0;
                 height: 100px;
@@ -2446,7 +2424,6 @@ article.post {
                     position: absolute;
                     margin: auto;
                     top: 0;
-                    //right: 0;
                     bottom: 0;
                     left: 0;
                     width: 50px;
@@ -2454,7 +2431,7 @@ article.post {
                     outline: none;
                     border: none;
                     background: $preto;
-                    color: white;
+                    color: $branco;
                     text-shadow: 0 0 10px $vermelho;
                     padding: 0 80px 0 20px;
                     border-radius: 30px;
@@ -2462,13 +2439,9 @@ article.post {
                     transition: all 0.1s;
                     opacity: 0;
                     z-index: 5;
-                    font-weight: 700;
-                    letter-spacing: 0.1em;
-
-                    &::placeholder {
-                        color: $vermelho;
-                        text-transform: uppercase;
-                    }
+                    font-size: 11px;
+                    //font-weight: 700;
+                    //letter-spacing: 0.1em;
 
                     &:focus {
                         width: 200px;
@@ -2476,7 +2449,7 @@ article.post {
                         cursor: text;
 
                         &::placeholder {
-                            color: $branco;
+                            color: $cinza;
                         }
                     }
 
@@ -2512,6 +2485,38 @@ article.post {
         // fim pesquisa
         // ----------------------
 
+    }
+
+    // icon-random
+    .icon-random {
+      display:inline-block;
+      position:relative;
+      top:$a/2;
+      left:$a;
+      z-index: 33;
+
+      a {box-shadow: none !important;}
+
+      .icon-random-svg {
+        display: inline-block;
+        width: $a*2;
+        height: $a*2;
+        background-size: cover;
+        border-radius: 50%;
+        background-image: url('/assets/images/icon-random.svg');
+
+        &:hover {
+           filter: invert(100%);
+           &::after {
+            display:table;
+            content: "random!";
+            font-size:$a;
+            margin-left: $c*2;
+            //margin-top:$b/2;
+            font-family: $hand-font-family;
+           }
+        }
+      }
     }
 
     // fim coluna
