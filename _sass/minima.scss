@@ -2427,7 +2427,7 @@ article.post {
                     bottom: 0;
                     left: 0;
                     width: 50px;
-                    height: 50px;
+                    height: 42px;
                     outline: none;
                     border: none;
                     background: $preto;
@@ -2491,7 +2491,7 @@ article.post {
     .icon-random {
       display:inline-block;
       position:relative;
-      top:$a/2;
+      top:$b;
       left:$a;
       z-index: 33;
 
