@@ -2294,6 +2294,7 @@ article.post {
         // ----------------------
         #results-container {
             max-width: 85%;
+            margin-top: $a;
             margin-left: $a*2;
             margin-bottom: $a*4;
             position: relative;
@@ -2357,13 +2358,13 @@ article.post {
         // pesquisa https://codepen.io/anon/pen/xoLrNQ
         // ----------------------
         #searcher-container {
-            min-height: 100px;
+            min-height: $a*3;;
             position: relative;
 
             #search-container {
                 position: absolute;
                 margin: auto;
-                top: $c*2;
+                top: $a;
                 left: $a;
                 bottom: 0;
                 height: 100px;
@@ -2440,8 +2441,6 @@ article.post {
                     opacity: 0;
                     z-index: 5;
                     font-size: 11px;
-                    //font-weight: 700;
-                    //letter-spacing: 0.1em;
 
                     &:focus,
                     &:hover {
@@ -2450,7 +2449,8 @@ article.post {
                         cursor: text;
 
                         &::placeholder {
-                            color: $cinza;
+                            font-size: $a;
+                            font-family: $hand-font-family;
                         }
                     }
 
@@ -2483,7 +2483,6 @@ article.post {
                 }
             }
         }
-
         // fim pesquisa
         // ----------------------
 
