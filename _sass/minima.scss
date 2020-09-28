@@ -599,6 +599,8 @@ hr {
     position: relative;
     z-index: 89;
     line-height: $c;
+    font-family: $base-font-family;
+    text-align: left;
 
     &::after {
         display: block;
