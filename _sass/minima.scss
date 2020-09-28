@@ -442,13 +442,6 @@ blockquote.smallish {
     }
 }
 
-a[href^="http://localhost:4000"],
-a[href^="https://www.ospositivos.pt"],
-a[href^="http://www.ospositivos.pt"] {
-    //padding: 2px 0;
-    //text-decoration: none;
-}
-
 img {
     position: relative;
     max-width: 100%;
@@ -517,17 +510,17 @@ hr {
         &[href*="localhost:4000"],
         &[href*="www.ospositivos.pt"],
         &[href*="www.ospositivos.com"] {
-            box-shadow: inset 0 -.2em 0 fuchsia;
+            box-shadow: inset 0 -.2em 0 fuchsia !important;
             text-decoration: none;
             transition: box-shadow .2s ease-in-out;
-            color: $preto;
+            color: $preto !important;
 
             &:visited {
-                color: $cinzaEscuro;
+                color: $cinzaEscuro !important;
             }
 
             &:hover {
-                box-shadow: inset 0 -1.4em 0 fuchsia;
+                box-shadow: inset 0 -1.4em 0 fuchsia !important;
             }
         }
     }
@@ -601,6 +594,7 @@ hr {
     line-height: $c;
     font-family: $base-font-family;
     text-align: left;
+    @include highlightlink;
 
     &::after {
         display: block;
@@ -2126,8 +2120,9 @@ article.post {
         }
 
         // highlightlink
-        @include highlightlink; // fanzines arquivo
+        @include highlightlink;
 
+        // fanzines arquivo
         .fanzines {
             max-width: $mobileM;
             margin: 1em auto;
