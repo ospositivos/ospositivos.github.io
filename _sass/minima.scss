@@ -805,6 +805,10 @@ ol.lista {
     p + & {
         margin-top: $a/2;
     }
+
+    &.smallish li {
+      font-size: 11px;
+    }
 }
 
 ul.lista {
