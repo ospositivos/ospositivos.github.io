@@ -1923,9 +1923,14 @@ article.post {
                         height: auto;
                         transition-delay: 0s;
                         cursor: n-resize; // ugly hack
+                        padding-top: $a/2;
 
                         table {
                             display: table;
+                        }
+
+                        img {
+                          max-width: 100%;
                         }
 
                         img.moldura {
