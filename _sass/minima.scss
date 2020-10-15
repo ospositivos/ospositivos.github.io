@@ -1990,6 +1990,14 @@ article.post {
                 }
             }
 
+            &.almost-full {
+              max-width: 100%;
+              @media (min-width: $tablet) {
+                  margin-left: $a !important;
+                  margin-right: $a !important;
+              }
+            }
+
             &.uk-grid-small {
                 margin-top: -$a;
 
