@@ -2008,6 +2008,12 @@ article.post {
             }
         }
 
+        [class*='uk-child-width'] {
+          img {
+            height:100%;
+          }
+        }
+
         & > iframe,
         & > div:not([class]) > iframe,
         & > div[class=""] > iframe {
