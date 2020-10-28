@@ -1,7 +1,6 @@
 ---
 layout: compress
 ---
-
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "pt" }}" class="{{ page.estilo }}">
   <meta charset="utf-8">
@@ -9,10 +8,18 @@ layout: compress
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="{{ '/assets/' | relative_url }}images/favicon.ico" rel="icon" type="image/x-icon" />
   <link href="{{ '/assets/' | relative_url }}images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
+  <link href="https://fonts.googleapis.com/css2?family=Bellota&display=swap" rel="stylesheet">
 
   <style>
   <!--
-    body{margin:0;padding:0;}
+    body{
+      margin:0;padding:0;
+      background-color: cornsilk;
+      }
+    body * {
+      font-family: 'Bellota', cursive;
+      text-align:center;
+      }
   -->
   </style>
 
