@@ -648,100 +648,6 @@ hr {
     }
 }
 
-// info
-.info {
-    background-color: whitesmoke;
-    padding: 1em 2em;
-
-    @media (max-width: $mobileL) {
-        margin-left: 0;
-        margin-right: 0;
-        padding: 1em 0;
-    }
-
-    @media (max-width: $tablet) {
-        .uk-grid {
-            padding-left: $a;
-            padding-right: $a;
-        }
-    }
-
-    h3 small & {
-        display: block;
-        background: url(/assets/images/info-header.png) no-repeat 50% 0 transparent;
-        min-height: 54px;
-        color: $branco;
-        font-size: 2em;
-        font-family: $hand-font-family;
-        letter-spacing: 4px;
-    }
-
-    blockquote {
-        border-color: $vermelho;
-
-
-        &::after {
-            color: $vermelho;
-        }
-    }
-
-    &.info-primary,
-    &.info-secondary {
-        background: $preto;
-        color: $branco;
-
-        h2,
-        h3,
-        div,
-        span,
-        p,
-        blockquote,
-        small {
-            color: $branco;
-        }
-
-        a:not(.link) {
-            color: $branco !important;
-        }
-
-        blockquote {
-            border-color: dimgrey;
-            border-left: 1px solid dimgrey;
-            border-right: 1px solid dimgrey;
-            border-bottom: 1px solid dimgrey;
-            background: transparent;
-
-            &::after {
-                color: dimgrey;
-            }
-        }
-
-        hr {
-            background-image: linear-gradient(#111, #555, #444);
-        }
-
-        .moldura {
-            background: dimgrey;
-        }
-    }
-
-    &.info-secondary {
-        background-color: $vermelho !important;
-
-        blockquote {
-            border-color: darkred;
-
-            &::after {
-                color: darkred;
-            }
-        }
-    }
-
-    hr {
-        background-image: linear-gradient(#f0f0f0, #cccccc, #f0f0f0);
-    }
-}
-
 // centre
 .centre {
     text-align: center;
@@ -1752,6 +1658,16 @@ article.post {
             position: relative;
         }
 
+        h3 small .info {
+            display: block;
+            background: url(/assets/images/info-header.png) no-repeat 50% 0 transparent;
+            min-height: 54px;
+            color: $branco;
+            font-size: 2em;
+            font-family: $hand-font-family;
+            letter-spacing: 4px;
+        }
+
         pre {
           white-space: pre-wrap;
           border: none;
@@ -2511,6 +2427,90 @@ article.post {
         }
         // fim pesquisa
         // ----------------------
+
+        // info
+        .info {
+            background-color: whitesmoke;
+            padding: 1em 2em;
+
+            @media (max-width: $mobileL) {
+                margin-left: 0;
+                margin-right: 0;
+                padding: 1em 0;
+            }
+
+            @media (max-width: $tablet) {
+                .uk-grid {
+                    padding-left: $a;
+                    padding-right: $a;
+                }
+            }
+
+            blockquote {
+                border-color: $vermelho;
+
+
+                &::after {
+                    color: $vermelho;
+                }
+            }
+
+            &.info-primary,
+            &.info-secondary {
+                background: $preto;
+                color: $branco;
+
+                h2,
+                h3,
+                div,
+                span,
+                p,
+                blockquote,
+                small {
+                    color: $branco;
+                }
+
+                a:not(.link) {
+                    color: $branco !important;
+                }
+
+                blockquote {
+                    border-color: dimgrey;
+                    border-left: 1px solid dimgrey;
+                    border-right: 1px solid dimgrey;
+                    border-bottom: 1px solid dimgrey;
+                    background: transparent;
+
+                    &::after {
+                        color: dimgrey;
+                    }
+                }
+
+                hr {
+                    background-image: linear-gradient(#111, #555, #444);
+                }
+
+                .moldura {
+                    background: dimgrey;
+                }
+            }
+
+            &.info-secondary {
+                background-color: $vermelho !important;
+
+                blockquote {
+                    border-color: darkred;
+
+                    &::after {
+                        color: darkred;
+                    }
+                }
+            }
+
+            hr {
+                background-image: linear-gradient(#f0f0f0, #cccccc, #f0f0f0);
+            }
+        }
 
     }
 
