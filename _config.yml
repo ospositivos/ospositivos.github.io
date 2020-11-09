@@ -34,6 +34,7 @@ future: false
 
 plugins:
   - jekyll-sitemap
+  - jekyll-redirect-from
 #  - jekyll-feed
 
 # compress_html
