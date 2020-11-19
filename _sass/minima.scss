@@ -1215,9 +1215,11 @@ article.clip {
         color: $preto;
     }
 
-    espaco-topo {
+    .espaco-topo {
         margin-top: 50px !important;
     }
+
+    .smallish {font-size:10px;}
 
     .info {
         background: gainsboro;
