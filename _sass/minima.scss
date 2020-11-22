@@ -1044,7 +1044,8 @@ ul.lista {
             margin: 1em auto;
             padding: 0.5em 1em;
             font-size: $b;
-            border-left: $b/2 solid ghostwhite;
+            border-radius: 0;
+            border-left: 1px dotted $cinzaMetal;
             border-top: none;
             background: transparent;
             box-shadow: none;
@@ -1052,6 +1053,10 @@ ul.lista {
             &::after {
                 display: none;
             }
+        }
+
+        small {
+          font-size: 11px;
         }
 
         ul {
@@ -1067,7 +1072,8 @@ ul.lista {
             }
         }
 
-        @include highlightlink;
+        //@include highlightlink;
+        a {color:$cinzaMetal; }
     }
 }
 
