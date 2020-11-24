@@ -17,5 +17,19 @@ layout: default
 
   {{ content }}
 
+  <div class="postnav uk-grid uk-grid-small uk-child-width-1-2 uk-flex-center">
+  {% if page.previous.url %}
+    <a class="prev uk-text-right" href="{{page.previous.url}}">&#10534; prev</a>
+    {% else %}
+    <span class="no-prev"></span>
+  {% endif %}
+  {% if page.next.url %}
+    <a class="next uk-text-left" href="{{page.next.url}}">next &#10532;</a>
+    {% else %}
+    <span class="no-next"></span>
+  {% endif %}
+</div>
+
+
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>

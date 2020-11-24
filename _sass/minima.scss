@@ -513,7 +513,7 @@ hr {
             box-shadow: inset 0 -.2em 0 fuchsia !important;
             text-decoration: none;
             transition: box-shadow .2s ease-in-out;
-            color: $preto !important;
+            color: $preto;
 
             &:visited {
                 color: $cinzaEscuro !important;
@@ -2479,7 +2479,7 @@ article.post {
                 }
 
                 a:not(.link) {
-                    color: $branco !important;
+                    color: $branco;
                 }
 
                 blockquote {
@@ -2492,6 +2492,8 @@ article.post {
                     &::after {
                         color: dimgrey;
                     }
+
+                    small a {color: $verde-escuro;}
                 }
 
                 hr {
@@ -2512,6 +2514,8 @@ article.post {
                     &::after {
                         color: darkred;
                     }
+
+                    small a {color: $amarelo !important;}
                 }
             }
 
@@ -2547,17 +2551,15 @@ article.post {
             content: "random!";
             font-size:$a;
             margin-left: $c*2;
-            //margin-top:$b/2;
             font-family: $hand-font-family;
            }
         }
       }
     }
 
-    // fim coluna
     #next {
 
-        margin: $a*4 auto $b*4 auto;
+        margin: $a*4 auto $b auto;
         text-align: center;
         line-height: 1.5em;
 
@@ -2590,17 +2592,60 @@ article.post {
 
         &::before {
             display: table;
-            content: "next:";
+            content: "follow-up:";
             text-align: center;
             width: 100%;
-            font-size: 12px;
+            font-size: 10px;
             font-weight: normal;
-            line-height: 1em;
-            padding-bottom: 0;
+            line-height: 1.2em;
+            padding-bottom: $a/2;
             letter-spacing: 2px;
+            color:$cinza;
+        }
+
+        & + .postnav {
+          margin-top:0;
+          display: flex;
         }
     }
+
+    // ----------------------
+    // paginacao cronos
+    .postnav {
+        display: none;
+        margin: $a*2 auto;
+
+      a {
+        color:$cinza;
+        font-size: 10px;
+        letter-spacing: 2px;
+        text-decoration: none;
+
+        &:hover {
+          color: $vermelho;
+        }
+
+        /*&.prev::before,
+        &.next::before {
+          display: block;
+          width: auto;
+          margin-top:-$a;
+          font-size:10px;
+          color:$cinza;
+          letter-spacing: 2px;
+          }
+
+        &.prev::before {
+            content: "« prev";
+          }
+        &.next::before {
+          content: "next »";
+        }*/
+        }
+      }
+
 }
+// fim article.post
 
 // main
 // ----------------------
