@@ -1,0 +1,67 @@
+html body {
+  background: black;
+  color: white;
+}
+
+html body h1,
+html body h2,
+html body h4,
+html body h5,
+html body h6,
+html body p {
+  color: white;
+}
+
+html body header {
+  background: black;
+}
+
+html body header a img {
+  display: none;
+}
+
+html body header a::before {
+  display: block;
+  margin:auto;
+  content: "";
+  width:200px;
+  height: 200px;
+  background: url('/assets/images/x-inverted-200.png');
+}
+
+html body article.post h1.post-title {
+  color: white;
+}
+
+html body article.post .coluna blockquote  {
+    border-color: dimgrey;
+    border-left: 1px solid dimgrey;
+    border-right: 1px solid dimgrey;
+    border-bottom: 1px solid dimgrey;
+    background: transparent;
+    color: white;
+}
+
+html body article.post .coluna blockquote::after  {
+    color: dimgrey;
+}
+
+html body article.post .coluna ul.script  {
+    color: black;
+}
+
+html body article.post .coluna .info {
+  background-color: white;
+  color: black;
+}
+
+html body article.post .coluna .info-primary) > *
+html body article.post .coluna .info-secondary > * {
+  color: white;
+}
+html body article.post .coluna .info-secondary strong {
+  color: white;
+}
+
+
+html body article.post #next a:hover {color:white;}
