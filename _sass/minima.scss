@@ -581,6 +581,10 @@ hr {
     padding: $c;
     box-sizing: border-box;
 
+    .uk-grid.uk-grid-small & {
+      padding: $b !important;;
+    }
+
     &.mini {
         padding: 2px;
 
