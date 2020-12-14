@@ -7,6 +7,23 @@ estilo: "clean-black"
 ---
 <link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
 
+<script>
+  $.get("https://freegeoip.app/json/", function (response) {
+      $("#ip").html("IP: " + response.ip);
+      $("#country_code").html(response.country_code);
+      if(response.country_code=='PT'||response.country_code=='ES'){
+      	document.getElementById(response.country_code).style.display = "block";
+  	}
+  }, "jsonp");
+</script>
+<style>
+  #PT { text-align: left; color: blue; display:none;}
+  #ES { text-align: left; color: blue; display:none;}
+</style>
+<p id="PT">bemvindo PT</p>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
 <header>
     <a href="{{ "/" | relative_url }}">
     <img src="{{ "/assets/images/skull.gif" | absolute_url }}" alt="OS POSITIVOS" style="max-width:300px;" />
