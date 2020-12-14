@@ -7,13 +7,6 @@ estilo: "clean-black"
 ---
 <link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>
-$.getJSON('https://freegeoip.net/json/', function(result) {
-   alert(result.country_code);
- });
-</script>
-
 <header>
     <a href="{{ "/" | relative_url }}">
     <img src="{{ "/assets/images/skull.gif" | absolute_url }}" alt="OS POSITIVOS" style="max-width:300px;" />
