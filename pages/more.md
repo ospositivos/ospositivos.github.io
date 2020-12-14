@@ -7,24 +7,12 @@ estilo: "clean-black"
 ---
 <link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
 
-<script
-			  src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-			  integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
-			  crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
-$.get("http://ipinfo.io", function (response) {
-    $("#ip").html("IP: " + response.ip);
-    $("#address").html("Location: " + response.city + ", " + response.region);
-    $("#details").html(JSON.stringify(response, null, 4));
-}, "jsonp");
+$.getJSON('https://freegeoip.net/json/', function(result) {
+   alert(result.country_code);
+ });
 </script>
-
-<h3>Client side IP geolocation using <a href="http://ipinfo.io">ipinfo.io</a></h3>
-
-<hr/>
-<div id="ip"></div>
-<div id="address"></div>
-<hr/>Full response: <pre id="details"></pre>
 
 <header>
     <a href="{{ "/" | relative_url }}">
