@@ -50,6 +50,8 @@ html {
         color: $preto;
         font: normal 300 16px/1.8 $base-font-family;
 
+        transition: background-color .3s;
+
         h1,
         h2,
         h4,
@@ -57,6 +59,8 @@ html {
         h6 {
             font-family: $base-font-family;
         }
+
+        a {color:$preto;}
 
         // ----------------------
         .uk-tab {
@@ -231,7 +235,6 @@ html {
             }
         }
     }
-
     // fim homepage
     // ----------------------
 
@@ -280,7 +283,7 @@ blockquote {
     box-shadow: 0px 3px 12px -6px rgba(0, 0, 0, 0.2);
     border-top: 6px solid $preto;
     border-radius: 2px;
-    background: $branco;
+    //background: $branco;
     padding: 1em 2em;
     font-size: 14px;
     font-style: normal;
@@ -428,7 +431,7 @@ hr {
         box-shadow: inset 0 -.2em 0 $verde;
         text-decoration: none;
         transition: box-shadow .2s ease-in-out;
-        color: $preto;
+        //color: $preto;
         text-decoration-style: wavy;
         text-decoration-thickness: 1px;
 
@@ -443,10 +446,6 @@ hr {
             text-decoration: none;
             transition: box-shadow .2s ease-in-out;
             color: $preto;
-
-            &:visited {
-                color: $cinzaEscuro;
-            }
 
             &:hover {
                 box-shadow: inset 0 -1.4em 0 fuchsia !important;
@@ -1000,7 +999,6 @@ ul.lista {
     }
 
     // bubble
-    .bublle,
     .bubble {
         position: relative;
         width: 20px;
@@ -1044,11 +1042,11 @@ ul.lista {
 
     margin-top:$a*4;
     margin-left:$a/2;
-    margin-right: $a/2;
+    //margin-right: $a/2; voltar ligar se não contem uk-grid?
 
     @media(min-width: $tablet) {
         margin-left: $a*3;
-        margin-right: $a*3;
+        margin-right: $a/2;
     }
 
     article {
@@ -1807,8 +1805,8 @@ article.post {
 
         // hide & reveal v2 //
         .expande {
-            border: 1px dotted $cinzaMetal;
-            border-bottom: 3px double $cinzaMetal;
+            border: 1px dotted $cinza;
+            border-bottom: 3px double $cinza;
             max-width: 650px;
             margin: auto;
 
@@ -1995,16 +1993,34 @@ article.post {
 
         // script
         ul.script {
-            background: url('https://1.bp.blogspot.com/-8v3NAkKlZho/V__kCKNkz2I/AAAAAAAAJtA/z-Oe26FWoPkPIWEGwHZen83Xcx8DnNkMwCPcB/s1600/notepad.gif') repeat #ffffe3;
+            //background: url('https://1.bp.blogspot.com/-8v3NAkKlZho/V__kCKNkz2I/AAAAAAAAJtA/z-Oe26FWoPkPIWEGwHZen83Xcx8DnNkMwCPcB/s1600/notepad.gif') repeat #ffffe3;
             padding: $b*2 $b*4 !important;
-            font-size: 13px;
+            font-size: $b;
             font-family: Courier;
             font-style: normal;
             box-sizing: border-box;
             max-width: 650px;
+            list-style: lower-roman;
+            position: relative;
+            border: 1px dotted $cinza;
+
+            &::before {
+              position:absolute;
+              top:0;
+              right: 0;
+              display: table;
+              width: auto;
+              padding:0 $a/2;
+              border-left: 1px dotted $cinza;
+              border-bottom: 1px dotted $cinza;
+              content: "script";
+              color: $preto;
+              text-transform: uppercase;
+              letter-spacing: -1px;
+            }
 
             li {
-                padding-bottom: $b*2;
+                padding-bottom: $b;
 
                 @media(min-width: $tablet) {
                     margin-left: $a*2;
@@ -2013,10 +2029,6 @@ article.post {
                 &:last-child {
                     padding-bottom: 0;
                 }
-            }
-
-            &.script-condensado li {
-                padding-bottom: 0;
             }
         }
 
@@ -2338,7 +2350,6 @@ article.post {
         // ----------------------
         #searcher-container {
             min-height: $a*3;
-            ;
             position: relative;
 
             #search-container {
@@ -2539,7 +2550,7 @@ article.post {
             }
 
             &.info-secondary {
-                background-color: $vermelho !important;
+                background-color: $vermelho;
 
                 blockquote {
                     border-color: darkred;
@@ -2698,7 +2709,7 @@ article.post {
     width: 100%;
     padding: $a 0;
     text-align: center;
-    background: rgba(64, 65, 79, 0.9);
+    background: rgba(4, 5, 9, 0.9);
     box-shadow: -2px 1px $a/2 $cinza;
     color: $branco;
     font-size: 11px;
@@ -2826,6 +2837,219 @@ footer {
         }
     }
 }
-
 // footer
 // ----------------------
+
+// ----------------------
+// dark mode
+#appDarkmodeButton {
+  position:absolute;
+  top:$b/2;
+  right:-$a;
+  display: block;
+  width:$a*2;
+  height:$a*2;
+  padding-right: $a/2;
+  padding-left: $b/2;
+  box-shadow: 0 0 $b rgba(0, 0, 0, 0.2);
+  border-radius: 500px 0 0 500px;
+  background-color: $cinzaClaro;
+  transition: all 500ms;
+
+  @media(min-width: $tablet){
+    position: fixed;
+  }
+
+  &:hover {
+    box-shadow: 0 0 $a rgba(0, 0, 0, 0.5);
+    right:0;
+  }
+
+  img {
+    width:$b*2;
+    padding: 2px;
+  }
+}
+
+body[data-light-mode=dark] {
+  background-color: #2a2a2a;
+  color: $branco;
+
+  #appDarkmodeButton{
+    background-color: $cinzaEscuro;
+    box-shadow: 0 0 $b rgba(255, 255, 255, 0.2);
+    &:hover {
+      box-shadow: 0 0 $a rgba(255, 255, 255, 0.5);
+      }
+    }
+
+  header a {
+    display: block;
+    width:200px;
+    height:189px;
+    margin: auto;
+
+    &::after {
+      display: block;
+      content: "";
+      background: url('/assets/images/x_inverted.png') no-repeat;
+      background-size: contain;
+      width: 100%;
+      height: 100%;
+    }
+
+    img {display: none;}
+  }
+
+  .post-title,
+  .subtitle {
+    color: $branco;
+  }
+
+  article.post {
+
+    .coluna {
+
+      h1, h2, h3, h4, h5, h6, p, a {
+        color: $branco;
+      }
+
+      blockquote {
+        box-shadow: 0px 3px 12px -6px rgba(225,225,225,0.2);
+        border-top-color:$cinza;
+        color: $branco;
+
+        &::after {
+          color: $branco;
+          }
+        }
+
+      a {
+        &[href*="localhost:4000"],
+        &[href*="www.ospositivos.pt"],
+        &[href*="www.ospositivos.com"] {
+          color: $branco;
+          }
+        }
+
+    img {
+      background-color: $branco;
+      filter: brightness(.5) contrast(1) grayscale(100%);
+    }
+
+    hr {
+    background: linear-gradient(90deg, rgba(40,40,40,0) 0%, #4a4a4a 50%, rgba(40,40,40,0) 100%);
+      }
+
+    .sidenote{
+      background-color: transparent;
+      color:$branco;
+      }
+
+    .fanzines {
+      color: $preto;
+      a {
+        &[href*="localhost:4000"],
+        &[href*="www.ospositivos.pt"],
+        &[href*="www.ospositivos.com"] {
+          color: $preto;
+          }
+        }
+    }
+
+    .blurb {
+      color: $branco;
+
+      b,strong {color:$vermelho;}
+
+      .bublle::after{
+          border-color: $branco;
+        }
+      }
+
+    .expande .trigger input[type="checkbox"]::before{
+      border-color: $cinzaClaro;
+    }
+
+    .script {
+      background: none;
+
+      &:before{
+        color: $branco;
+      }
+    }
+
+    .info:not(.info-primary):not(.info-secondary){
+      background-color: #1f1f1f;
+      color: $branco;
+
+      blockquote {
+        box-shadow: 0px 3px 12px -6px rgba(225,225,225,0.2);
+        }
+      }
+
+    h3.centre small .info {
+        background-color: #2a2a2a !important;
+        background-blend-mode: color-burn;
+      }
+
+    .uk-flex-center,
+    .uk-flex-right {
+      background-color: grey;
+      }
+
+    .uk-grid-small,
+    .almost-full {
+        [class*="uk-width"] {
+          background-color: grey;
+        }
+      }
+    }
+
+    #next a:hover {
+      color: $branco;
+      }
+  }
+
+  .thumb {
+      background: dimgray;
+      border-color: gray;
+      img {
+        filter: brightness(.5) contrast(1) grayscale(100%);
+      }
+    }
+  article.clip {
+    background: dimgray;
+    border-color: gray;
+
+    h1 a {
+      color:$branco;
+      &:hover {color:$verde}
+    }
+
+    h3,p,ul {
+      color: $cinzaClaro;
+      }
+      strong{
+        color: $branco;
+      }
+    }
+
+  footer {
+    a{
+      color: $cinza;
+      &:hover {
+        color: $branco;
+      }
+    }
+  #mc_embed_signup {
+    #mce-EMAIL {
+      background-color: $cinza;
+      box-shadow: inset 0.25rem 0.25rem 0 $cinzaEscuro;
+      }
+  input[type="submit"] {
+      box-shadow: 0px 3px 12px -6px rgba(255,255,255,0.5);
+      }
+    }
+  }
+}
