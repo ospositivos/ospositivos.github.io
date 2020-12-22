@@ -2845,7 +2845,7 @@ footer {
 #appDarkmodeButton {
   position:absolute;
   top:$b/2;
-  right:-$a;
+  right: 0;
   display: block;
   width:$a*2;
   height:$a*2;
@@ -2858,11 +2858,13 @@ footer {
 
   @media(min-width: $tablet){
     position: fixed;
+    right:-$a;
   }
 
   &:hover {
     box-shadow: 0 0 $a rgba(0, 0, 0, 0.5);
     right:0;
+    cursor: pointer;
   }
 
   img {
@@ -2873,7 +2875,7 @@ footer {
 
 body[data-light-mode=dark] {
   background-color: grey;
-  color: $branco;
+  color: #e0e0e0;
 
   #appDarkmodeButton{
     background-color: $cinzaEscuro;
@@ -2901,23 +2903,30 @@ body[data-light-mode=dark] {
     img {display: none;}
   }
 
-  .post-title,
-  .subtitle {
-    color: $branco;
-  }
+  b,strong,ins {color:$branco;}
 
   article.post {
 
     .coluna {
 
       h1, h2, h3, h4, h5, h6, p, a {
-        color: $branco;
+        color: #e0e0e0;
       }
 
       blockquote {
         box-shadow: 0px 3px 12px -6px rgba(4,4,4,0.2);
         border-top-color:$cinza;
-        color: $branco;
+        color: #e0e0e0;
+
+        small {
+          color:$cinzaEscuro;
+          a {
+            color:$preto !important;
+            &:hover {
+              border-color: $cinzaEscuro;
+            }
+          }
+        }
 
         &::after {
           color: $branco;
@@ -2929,10 +2938,15 @@ body[data-light-mode=dark] {
         &[href*="www.ospositivos.pt"],
         &[href*="www.ospositivos.com"] {
           color: $branco;
+          box-shadow: inset 0 -.2em 0 brown !important;
+          &:hover {
+            box-shadow: inset 0 -1.4em 0 brown !important
+            }
           }
         }
 
-      iframe[src*="https://www.youtube.com"] {
+      iframe[src*="https://www.youtube.com"],
+      iframe[src*="https://w.soundcloud.com"] {
         filter: brightness(0.5) contrast(1) grayscale(100%)
         }
 
@@ -2947,9 +2961,15 @@ body[data-light-mode=dark] {
           background: linear-gradient(to right, rgba(40,40,40,0) 0%, #4a4a4a 50%, rgba(40,40,40,0) 100%);
             }
 
-      .sidenote{
-        background-color: transparent;
+      .asterisk {
+        color:lightgreen;
+        }
+      .sidenote {
+        background-color: grey;
         color:$branco;
+        &::after {
+          color: lightgreen;
+          }
         }
 
       .fanzines {
@@ -2967,10 +2987,11 @@ body[data-light-mode=dark] {
       .blurb {
         color: $branco;
 
-        b,strong {color:$vermelho;}
-
-        .bublle::after{
-          border-color: $branco;
+        .bubble{
+          background: darkred;
+          &::after{
+            border-color: darkred rgba(0,0,0,0);;
+            }
           }
         }
 
@@ -2991,27 +3012,35 @@ body[data-light-mode=dark] {
         color: $branco;
 
         blockquote {
-          box-shadow: 0px 3px 12px -6px rgba(4,4,4,0.2);
+          box-shadow: 0px 3px 12px -6px rgba(4,4,4,0.8);
+
+          small {
+            color:$cinzaClaro;
+            a {
+              color:$cinza !important;
+              &:hover {
+                border-color: $cinza;
+              }
+            }
+          }
           }
         }
 
       h3.centre small .info {
-        background-color: #2a2a2a !important;
+        background-color: grey !important;
         background-blend-mode: color-burn;
         }
 
-      .uk-flex-center,
-      .uk-flex-right {
-        background-color: grey;
-        }
-
-      .uk-grid-small,
-      .almost-full {
-          [class*="uk-width"] {
-            background-color: grey;
-          }
+      .moldura {
+        background-color:$cinzaEscuro;
         }
       }
+
+    #teses-indice {
+      & > .uk-grid {
+        margin-left: 0;
+      }
+    }
 
     #next a {
       color: darkred;
