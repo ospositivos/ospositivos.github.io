@@ -199,6 +199,7 @@ html {
 
                 a {
                     box-shadow: none;
+                    color: $vermelho;
 
                     &:hover {
                         color: $cinza;
@@ -2002,7 +2003,7 @@ article.post {
             max-width: 650px;
             list-style: lower-roman;
             position: relative;
-            border: 1px dotted $cinza;
+            border: 1px dotted $cinzaEscuro;
 
             &::before {
               position:absolute;
@@ -2011,8 +2012,8 @@ article.post {
               display: table;
               width: auto;
               padding:0 $a/2;
-              border-left: 1px dotted $cinza;
-              border-bottom: 1px dotted $cinza;
+              border-left: 1px dotted $cinzaEscuro;
+              border-bottom: 1px dotted $cinzaEscuro;
               content: "script";
               color: $preto;
               text-transform: uppercase;
