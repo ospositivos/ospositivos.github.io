@@ -2872,7 +2872,7 @@ footer {
 }
 
 body[data-light-mode=dark] {
-  background-color: #2a2a2a;
+  background-color: grey;
   color: $branco;
 
   #appDarkmodeButton{
@@ -2915,7 +2915,7 @@ body[data-light-mode=dark] {
       }
 
       blockquote {
-        box-shadow: 0px 3px 12px -6px rgba(225,225,225,0.2);
+        box-shadow: 0px 3px 12px -6px rgba(4,4,4,0.2);
         border-top-color:$cinza;
         color: $branco;
 
@@ -2932,84 +2932,101 @@ body[data-light-mode=dark] {
           }
         }
 
-    img {
-      background-color: $branco;
-      filter: brightness(.5) contrast(1) grayscale(100%);
-    }
+      iframe[src*="https://www.youtube.com"] {
+        filter: brightness(0.5) contrast(1) grayscale(100%)
+        }
 
-    hr {
-    background: linear-gradient(90deg, rgba(40,40,40,0) 0%, #4a4a4a 50%, rgba(40,40,40,0) 100%);
+      img {
+        background-color: $branco;
+        filter: brightness(.5) contrast(1) grayscale(100%);
+        }
+
+      hr {
+          background: -webkit-linear-gradient(left, rgba(40,40,40,0) 0%, #4a4a4a 50%, rgba(40,40,40,0) 100%);
+          background: -o-linear-gradient(left, rgba(40,40,40,0) 0%, #4a4a4a 50%, rgba(40,40,40,0) 100%);
+          background: linear-gradient(to right, rgba(40,40,40,0) 0%, #4a4a4a 50%, rgba(40,40,40,0) 100%);
+            }
+
+      .sidenote{
+        background-color: transparent;
+        color:$branco;
+        }
+
+      .fanzines {
+        color: $preto;
+
+        a {
+          &[href*="localhost:4000"],
+          &[href*="www.ospositivos.pt"],
+          &[href*="www.ospositivos.com"] {
+            color: $preto;
+            }
+          }
       }
 
-    .sidenote{
-      background-color: transparent;
-      color:$branco;
-      }
+      .blurb {
+        color: $branco;
 
-    .fanzines {
-      color: $preto;
-      a {
-        &[href*="localhost:4000"],
-        &[href*="www.ospositivos.pt"],
-        &[href*="www.ospositivos.com"] {
-          color: $preto;
+        b,strong {color:$vermelho;}
+
+        .bublle::after{
+          border-color: $branco;
           }
         }
-    }
 
-    .blurb {
-      color: $branco;
-
-      b,strong {color:$vermelho;}
-
-      .bublle::after{
-          border-color: $branco;
+      .expande .trigger input[type="checkbox"]::before{
+        border-color: $cinzaClaro;
         }
-      }
 
-    .expande .trigger input[type="checkbox"]::before{
-      border-color: $cinzaClaro;
-    }
+      .script {
+        background: none;
 
-    .script {
-      background: none;
+        &:before{
+          color: $branco;
+          }
+        }
 
-      &:before{
+      .info:not(.info-primary):not(.info-secondary){
+        background-color: #1f1f1f;
         color: $branco;
-      }
-    }
 
-    .info:not(.info-primary):not(.info-secondary){
-      background-color: #1f1f1f;
-      color: $branco;
-
-      blockquote {
-        box-shadow: 0px 3px 12px -6px rgba(225,225,225,0.2);
+        blockquote {
+          box-shadow: 0px 3px 12px -6px rgba(4,4,4,0.2);
+          }
         }
-      }
 
-    h3.centre small .info {
+      h3.centre small .info {
         background-color: #2a2a2a !important;
         background-blend-mode: color-burn;
+        }
+
+      .uk-flex-center,
+      .uk-flex-right {
+        background-color: grey;
+        }
+
+      .uk-grid-small,
+      .almost-full {
+          [class*="uk-width"] {
+            background-color: grey;
+          }
+        }
       }
 
-    .uk-flex-center,
-    .uk-flex-right {
-      background-color: grey;
-      }
-
-    .uk-grid-small,
-    .almost-full {
-        [class*="uk-width"] {
-          background-color: grey;
+    #next a {
+      color: darkred;
+      &:hover {
+        color: $branco;
         }
       }
     }
 
-    #next a:hover {
-      color: $branco;
-      }
-  }
+    .postnav a {
+      color:$cinzaEscuro;
+      &:hover {
+        color: $branco;
+        }
+    }
 
   .thumb {
       background: dimgray;
@@ -3037,15 +3054,17 @@ body[data-light-mode=dark] {
 
   footer {
     a{
-      color: $cinza;
+      color: $cinzaEscuro;
       &:hover {
         color: $branco;
       }
     }
+
   #mc_embed_signup {
     #mce-EMAIL {
-      background-color: $cinza;
-      box-shadow: inset 0.25rem 0.25rem 0 $cinzaEscuro;
+      background-color: $cinzaEscuro;
+      box-shadow: inset 0.25rem 0.25rem 0 $preto;
+      color:$branco;
       }
   input[type="submit"] {
       box-shadow: 0px 3px 12px -6px rgba(255,255,255,0.5);
