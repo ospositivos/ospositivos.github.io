@@ -2858,7 +2858,7 @@ footer {
 
   @media(min-width: $tablet){
     position: fixed;
-    right:-$a;
+    right:-$b/2;
   }
 
   &:hover {
