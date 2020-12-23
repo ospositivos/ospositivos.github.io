@@ -2857,6 +2857,17 @@ footer {
   background-color: $cinzaClaro;
   transition: all 500ms;
 
+  &::after{
+    display: inline-block;
+    content: "";
+    background: url('/assets/images/lamp.svg') no-repeat;
+    width:$b*2;
+    height:$a;
+    padding: 2px;
+    margin-top:$b/2;
+    margin-left:$b/3;
+  }
+
   @media(min-width: $tablet){
     position: fixed;
     right:-$b/2;
@@ -2867,11 +2878,6 @@ footer {
     right:0;
     cursor: pointer;
   }
-
-  img {
-    width:$b*2;
-    padding: 2px;
-  }
 }
 
 body[data-light-mode=dark] {
@@ -2881,6 +2887,11 @@ body[data-light-mode=dark] {
   #appDarkmodeButton{
     background-color: $cinzaEscuro;
     box-shadow: 0 0 $b rgba(255, 255, 255, 0.2);
+
+    &::after {
+      background: url('/assets/images/lamp-off.svg') no-repeat;
+    }
+
     &:hover {
       box-shadow: 0 0 $a rgba(255, 255, 255, 0.5);
       }
