@@ -2860,7 +2860,7 @@ footer {
   &::after{
     display: inline-block;
     content: "";
-    background: url('/assets/images/lamp.svg') no-repeat;
+    background: url('/assets/images/lamp-off.svg') no-repeat;
     width:$b*2;
     height:$a;
     padding: 2px;
@@ -2889,7 +2889,7 @@ body[data-light-mode=dark] {
     box-shadow: 0 0 $b rgba(255, 255, 255, 0.2);
 
     &::after {
-      background: url('/assets/images/lamp-off.svg') no-repeat;
+      background: url('/assets/images/lamp.svg') no-repeat;
     }
 
     &:hover {
@@ -2919,7 +2919,8 @@ body[data-light-mode=dark] {
 
   article.post {
 
-    h1.post-title {color:$branco;}
+    h1.post-title,
+    h2.subtitle {color:$branco;}
 
     .coluna {
 
@@ -2958,6 +2959,10 @@ body[data-light-mode=dark] {
             }
           }
         }
+
+      pre {
+        background-color:$cinzaClaro;
+      }
 
       iframe[src*="https://www.youtube.com"],
       iframe[src*="https://w.soundcloud.com"] {
