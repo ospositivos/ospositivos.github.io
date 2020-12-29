@@ -2919,6 +2919,8 @@ body[data-light-mode=dark] {
 
   article.post {
 
+    h1.post-title {color:$branco;}
+
     .coluna {
 
       h1, h2, h3, h4, h5, h6, p, a {
@@ -3007,9 +3009,13 @@ body[data-light-mode=dark] {
           }
         }
 
-      .expande .trigger input[type="checkbox"]::before{
-        border-color: $cinzaClaro;
-        }
+      .expande {
+        border-color: $branco;
+
+        .trigger input[type="checkbox"]::before{
+          border-color: $cinzaClaro;
+          }
+      }
 
       .script {
         background: none;
