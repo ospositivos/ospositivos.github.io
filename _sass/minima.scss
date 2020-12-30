@@ -455,6 +455,15 @@ hr {
     }
 }
 
+.small-caps {
+  p {
+    font-variant: small-caps;
+    &::first-letter {
+      font-size: $a*2;
+      line-height: 0;
+    }
+  }
+}
 .unblur {
     p {
         display: none;
