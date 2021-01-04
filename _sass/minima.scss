@@ -2976,7 +2976,8 @@ body[data-light-mode=dark] {
       }
 
       iframe[src*="https://www.youtube.com"],
-      iframe[src*="https://w.soundcloud.com"] {
+      iframe[src*="https://w.soundcloud.com"],
+      iframe[src*="//www.slideshare.net/"] {
         filter: brightness(0.5) contrast(1) grayscale(100%)
         }
 
