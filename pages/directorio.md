@@ -25,7 +25,7 @@ estilo: "homepage clean-black"
 </ul>
     {% if post.sumario %}
         <div class="info coluna">
-            <blockquote>
+            <blockquote style="box-shadow:none;">
             {{ post.sumario | strip_html | truncatewords:75 }}
             </blockquote>
         </div>
