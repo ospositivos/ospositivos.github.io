@@ -1007,6 +1007,8 @@ ul.lista {
 
         a {
             box-shadow: none !important;
+            color: $verde-escuro;
+            &:hover {color:$verde;}
         }
     }
 
