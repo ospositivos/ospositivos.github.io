@@ -2510,7 +2510,7 @@ article.post {
                 }
             }
 
-            .sidenote {background-color: transparent;}
+            .sidenote {background-color: transparent !important; }
 
             blockquote {
                 border-color: $vermelho;
