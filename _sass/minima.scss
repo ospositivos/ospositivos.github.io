@@ -252,6 +252,8 @@ html {
                 color: $branco;
             }
 
+            #appDarkmodeButton {display: none;}
+
             input[type='button'],
             input[type='submit'] {
                 border: 1px solid $branco;
