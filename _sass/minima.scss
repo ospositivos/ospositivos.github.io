@@ -440,6 +440,7 @@ hr {
 
         &:hover {
             box-shadow: inset 0 -1.2em 0 lightgreen;
+            color:$preto;
         }
 
         &[href*="localhost:4000"],
