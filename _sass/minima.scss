@@ -1958,11 +1958,12 @@ article.post {
             }
 
             &.almost-full {
-                max-width: 100%;
+                max-width: 1200px;
+                margin:auto;
 
                 @media (min-width: $tablet) {
-                    margin-left: $a !important;
-                    margin-right: $a !important;
+                    // margin-left: $a !important;
+                    // margin-right: $a !important;
                 }
             }
 
