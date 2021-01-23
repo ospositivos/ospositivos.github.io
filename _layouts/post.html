@@ -33,3 +33,13 @@ layout: default
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
+
+<script src="{{ '/assets/' | relative_url }}jquery-3.5.1.min.js"></script>
+
+<script>
+$.getJSON("http://api.db-ip.com/v2/free/self").then(function(addrInfo) {
+  if (addrInfo.ipAddress == "83.216.93.151") {
+    document.location = "{{ site.url }}/nocando.html";
+  } else {}
+});
+</script>

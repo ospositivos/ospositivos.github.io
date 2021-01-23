@@ -3142,3 +3142,6 @@ body[data-light-mode=dark] {
     }
   }
 }
+html.no-lights {
+  a#appDarkmodeButton {display: none;}
+}
