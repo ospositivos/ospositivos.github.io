@@ -14,6 +14,7 @@ $mobileM: 560px;
 $mobileS: 450px;
 
 $hand-font-family: 'Sue Ellen Francisco';
+$title-font-family: 'Bungee Shade';
 $base-font-family: "Bellota Text";
 $blockquote-font-family: "Bellota";
 $alt-font-family: "Roboto Mono";
@@ -133,7 +134,7 @@ html {
             }
 
             h2#next a {
-                color: $branco; //border-bottom: 1px solid $vermelho;
+                color: $branco;
 
                 &:hover {
                     color: $vermelho;
@@ -1635,12 +1636,11 @@ article.post {
         margin-right: auto;
         margin-left: auto;
         margin-top: $a*2;
-        font-family: $hand-font-family;
+        font-family: $title-font-family;
         font-size: 3.5em;
         text-align: center;
         line-height: 120%;
         color: $preto;
-        text-transform: uppercase;
 
         @media screen and (min-width: $tablet) {
             max-width: 80%;
@@ -1670,7 +1670,7 @@ article.post {
     }
 
     .subtitle {
-        font-family: $hand-font-family;
+        font-family: $title-font-family;
         text-align: center;
         line-height: 1.4em;
         margin-top: -$a*2;
