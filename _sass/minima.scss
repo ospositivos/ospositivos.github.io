@@ -1573,6 +1573,7 @@ article.clip {
 
 // fim W3C SLIDESHOW
 // ----------------------
+
 // ----------------------
 /** LIGHTBOX MARKUP **/
 
@@ -1689,6 +1690,22 @@ article.post {
 
         &.clear {
             margin: 1em auto;
+        }
+    }
+
+    // hero
+    .hero {
+      img {
+        min-width: 100%;
+      }
+      small {
+        font-size: 11px;
+        a {
+          color: $verde-escuro;
+          &:hover {
+            color:$verde;
+          }
+          }
         }
     }
 
@@ -3145,3 +3162,35 @@ body[data-light-mode=dark] {
 html.no-lights {
   a#appDarkmodeButton {display: none;}
 }
+
+html.hero-mosh {
+  header {
+    a {
+      &::after {
+          display: block;
+          content: "";
+          background: url("/assets/images/x_inverted.png") no-repeat;
+          background-size:contain;
+          width: 200px;
+          height: 200px;
+          margin: auto;
+        }
+      img {
+        display:none;
+      }
+    }
+  }
+  header:not(.post-header) {
+    background: url('https://1.bp.blogspot.com/-j7z4z5720L0/YCMFjWEKsOI/AAAAAAAAbSE/u0nWAvq_8mclk5nZO79ZsEBwAuZaUUpzQCPcBGAsYHg/s0/abc-no-ri-o-e.jpg') 50% 50%;
+    background-size: cover;
+    height: 100vh;
+    &::before {
+      display: block;
+      font-size:11px;
+      text-align:left;
+      padding-left: $a;
+      content:"imagem: Dan Witz, 'ABC no Rio' 2011";
+      color:white;
+      }
+    }
+  }
