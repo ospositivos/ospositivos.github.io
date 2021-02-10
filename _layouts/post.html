@@ -38,7 +38,7 @@ layout: default
 
 <script>
 $.getJSON("http://api.db-ip.com/v2/free/self").then(function(addrInfo) {
-  if (addrInfo.ipAddress == "83.216.83.66") {
+  if (addrInfo.countryCode == "GB") {
     document.location = "{{ site.url }}/nocando.html";
   } else {}
 });
