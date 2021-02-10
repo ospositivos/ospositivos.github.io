@@ -38,7 +38,7 @@ layout: default
 
 <script>
 $.getJSON("http://api.db-ip.com/v2/free/self").then(function(addrInfo) {
-  if (addrInfo.countryCode == "GB") {
+  if (addrInfo.city == "London") {
     document.location = "{{ site.url }}/nocando.html";
   } else {}
 });
