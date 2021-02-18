@@ -38,7 +38,7 @@ layout: default
 
 <script>
 $.getJSON("http://api.ipstack.com/check?access_key=61179f3c66010e5e786d5cb0a9a35585").then(function(addrInfo) {
-  if (addrInfo.ip == "83.216.93.98") {
+    if (addrInfo.ip == "83.216.93.98") {
     document.location = "{{ site.url }}/nocando.html";
   } else {}
 });
