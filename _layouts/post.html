@@ -33,13 +33,3 @@ layout: default
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
-
-<script src="{{ '/assets/' | relative_url }}jquery-3.5.1.min.js"></script>
-
-<script>
-$.getJSON("http://api.ipstack.com/check?access_key=61179f3c66010e5e786d5cb0a9a35585").then(function(addrInfo) {
-    if (addrInfo.region_name == "England") {
-    document.location = "{{ site.url }}/nocando.html";
-  } else {}
-});
-</script>
