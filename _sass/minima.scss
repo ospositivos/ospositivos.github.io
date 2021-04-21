@@ -149,9 +149,17 @@ html {
         // facebuuukit
         // ----------------------
 
-        // ----------------------
-        // fim body
+    // ----------------------
+    // fim body
     }
+
+    // ----------------------
+    // darkmode: no-lights
+    &.no-lights {
+      a#appDarkmodeButton {display: none;}
+    }
+    // fim darkmode: no-lights
+    // ----------------------
 
     // ----------------------
     // homepage
@@ -261,6 +269,115 @@ html {
             }
         }
     }
+    // fim clean-black
+    // ----------------------
+
+    // ----------------------
+    // hero-mosh
+    &.hero-mosh {
+      header:not(.post-header) {
+        background: url('https://1.bp.blogspot.com/-j7z4z5720L0/YCMFjWEKsOI/AAAAAAAAbSE/u0nWAvq_8mclk5nZO79ZsEBwAuZaUUpzQCPcBGAsYHg/s0/abc-no-ri-o-e.jpg') 50% 50%;
+        background-size: cover;
+        height: 100vh;
+
+        &::before {
+          display: block;
+          font-size:11px;
+          text-align:left;
+          padding-left: $a;
+          content:"imagem: Dan Witz, 'ABC no Rio' 2011";
+          color:white;
+          }
+
+        a {
+          display: inline-block;
+
+          &::after {
+              display: block;
+              content: "";
+              background: url("/assets/images/x_inverted.png") no-repeat;
+              background-size:contain;
+              width: 200px;
+              height: 200px;
+              margin: auto;
+              }
+            img {
+              display:none;
+            }
+          }
+        }
+      }
+    // fim hero-mosh
+    // ----------------------
+
+    // ----------------------
+    // twitter-talk
+    &.twitter-talk {
+      background: $preto;
+
+      body {
+        display: flex;
+        background: url('https://pbs.twimg.com/profile_banners/830759954617339905/1508416950/600x200') 50% 50%;
+        background-size: cover;
+        background-color: $preto;
+        min-height: 100vh;
+        flex-direction: column;
+
+        header:not(.post-header) {
+          height: calc(85%);
+
+          &::before {
+            display: block;
+            font-size:11px;
+            text-align:left;
+            padding-left: $a;
+            content:"Twitter Talk";
+            color:white;
+            }
+
+          a {
+            display: inline-block;
+
+            &::after {
+              display: block;
+              content: "";
+              background: url("/assets/images/x_inverted.png") no-repeat;
+              background-size:contain;
+              width: 200px;
+              height: 200px;
+              margin: auto;
+              }
+
+            img {
+              display:none;
+              }
+            }
+          }
+
+          article.post  {
+            flex: 1;
+            //position: absolute;
+            //left: 50%;
+            //top: 30%;
+            //transform: translate(-50%,-30%);
+
+            .post-title,
+            p {
+                color:$branco;
+              }
+
+            .coluna-roll {
+              clear: both;
+            }
+          }
+
+        footer {
+          color:$branco;
+        }
+      }
+    }
+    // fim twitter-talk
+    // ----------------------
 
     // ----------------------
     // fim HMTL
@@ -3159,38 +3276,5 @@ body[data-light-mode=dark] {
     }
   }
 }
-html.no-lights {
-  a#appDarkmodeButton {display: none;}
-}
-
-html.hero-mosh {
-  header {
-    a {
-      &::after {
-          display: block;
-          content: "";
-          background: url("/assets/images/x_inverted.png") no-repeat;
-          background-size:contain;
-          width: 200px;
-          height: 200px;
-          margin: auto;
-        }
-      img {
-        display:none;
-      }
-    }
-  }
-  header:not(.post-header) {
-    background: url('https://1.bp.blogspot.com/-j7z4z5720L0/YCMFjWEKsOI/AAAAAAAAbSE/u0nWAvq_8mclk5nZO79ZsEBwAuZaUUpzQCPcBGAsYHg/s0/abc-no-ri-o-e.jpg') 50% 50%;
-    background-size: cover;
-    height: 100vh;
-    &::before {
-      display: block;
-      font-size:11px;
-      text-align:left;
-      padding-left: $a;
-      content:"imagem: Dan Witz, 'ABC no Rio' 2011";
-      color:white;
-      }
-    }
-  }
+// fim dark mode (usar html.no-lights para cencelar)
+// ----------------------
