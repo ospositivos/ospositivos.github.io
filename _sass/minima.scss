@@ -367,10 +367,10 @@ html {
               }
 
               &.primary .bubblebox {
-                background-color: $preto;
-                border-color: $cinzaMetal;
+                background-color: mediumvioletred;
+                border-color: mediumvioletred !important;
                 * {
-                  border-color: $cinzaMetal !important;
+                  border-color: $branco !important;
                 }
               }
 
