@@ -320,9 +320,11 @@ html {
       color: $branco;
 
         header:not(.post-header) {
-          background: url('https://1.bp.blogspot.com/-TwCSlnydaB8/YICUrUTjfaI/AAAAAAAAbxg/AkKKddoeXXkCGJq_vVq1J4YQsvj5oqrvgCPcBGAsYHg/s0/twitter-header.png') no-repeat 50% 50%;
-          background-size: cover;
-          height: 100vh;
+          @media (min-height:500px){
+            background: url('https://1.bp.blogspot.com/-TwCSlnydaB8/YICUrUTjfaI/AAAAAAAAbxg/AkKKddoeXXkCGJq_vVq1J4YQsvj5oqrvgCPcBGAsYHg/s0/twitter-header.png') no-repeat 50% 50%;
+            background-size: cover;
+            height: 100vh;
+          }
 
           a {
             display: inline-block;
@@ -343,9 +345,12 @@ html {
             }
           }
 
-          article.post  {
+          article.post {
             .post-title {
-              visibility:collapse;
+              color: $branco;
+              @media (min-height:500px){
+                visibility:collapse;
+              }
             }
             p {
                 color:$branco;
@@ -353,36 +358,110 @@ html {
                 padding-right: $a*2;
               }
 
-            .coluna-roll {
-              clear: both;
-            }
+            .uk-grid:not(.full).twit {
+              max-width: 600px;
 
-            .profile {
-              position: sticky;
-              top: 0;
-              text-align: center;
-
-              img {
-                border-radius: 50%;
-                box-sizing: border-box;
-                border: $c/2 solid #000;
-                margin-top: $a;
-                max-width: 100px;
-
+              @media(max-width: $mobileL){
+                margin-left: $a;
+                margin-right: $a;
               }
-              small {
-                display: block;
-                text-align: center;
-              }
-            }
 
-            .vm-border-rounded {
-                border-radius: $a*2;
-                border:$a/2 solid $preto;
-                box-shadow: 0 $b $a rgba(255,255,255,0.3);
-                filter: contrast(1.9) grayscale(1);
+              &.primary .bubblebox {
+                background-color: $preto;
+                border-color: $cinzaMetal;
+                * {
+                  border-color: $cinzaMetal !important;
                 }
+              }
+
+              .profile {
+                text-align: center;
+                z-index: 55;
+
+                & > img {
+                  position: sticky;
+                  top: 0;
+                  display: block;
+                  box-sizing: border-box;
+                  margin-top: $a;
+                  margin-left: auto;
+                  margin-right: auto;
+                  margin-bottom: $a;
+                  border-radius: 50%;
+                  border: 2px dotted $cinza;
+                  }
+
+                  &::after {
+                    display: block;
+                    margin-top: $a/2;
+                    text-align: center;
+                    font-size: 11px;
+                    text-transform: uppercase;
+                  }
+                }
+
+              .bubblebox {
+                border-radius: $a/2;
+                border: 2px dotted $cinza;
+                margin-left: -$a*2;
+                padding: $a;
+                position: relative;
+                z-index: 54;
+
+                @media(max-width: $mobileL){
+                  padding-left: $a*2;
+                }
+
+                &:not(.last)::after {
+                  position: absolute;
+                  content: "";
+                  width: 2px;
+                  height: 100px;
+                  border-left: 2px dotted $cinza;
+                  margin-top:$a+2;
+                  left: 81%;
+                }
+
+                a {
+                  color:$branco;
+                }
+
+                .bubblebox-footer {
+                  border-top: 2px dotted $cinza;
+                  margin-left: -$a;
+                  margin-right: -$a;
+                  padding-left: $a*3;
+                  padding-right: $a*3;
+                  padding-top: $a;
+                  display: flex;
+                  align-items: center;
+
+                  @media(max-width: $mobileL){
+                    margin-left: -$a*2;
+                    padding-left: $a*3;
+                    padding-right: $a*2;
+                  }
+
+                  a,&:hover {
+                      box-shadow: none;
+                    }
+
+                  img {
+                    width: $a*2;
+                    height: $a*2;
+                    box-sizing:content-box;
+                    border-top: 2px dotted $cinza;
+                    border-radius: $a;
+                    padding: 3px;
+                  }
+
+                  small {
+                    margin-left: auto;
+                  }
+                }
+              }
             }
+        }
 
         footer {
           color:$branco;
