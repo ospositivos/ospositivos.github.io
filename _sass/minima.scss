@@ -510,7 +510,6 @@ html {
             }
         }
     }
-
     // fim hero-titans
     // ----------------------
 
@@ -676,6 +675,42 @@ html {
                             small {
                                 margin-left: auto;
                             }
+                        }
+                    }
+                    &.espaco-tempo-a {
+                        margin-bottom: 300vh;
+                        .bubblebox::after {
+                            position: absolute;
+                            content: "";
+                            width: 2px;
+                            height: 300vh;
+                            border-left: 2px dotted $cinza;
+                            margin-top: $a+2;
+                            left: 81%;
+                        }
+                    }
+                    &.espaco-tempo-b {
+                        margin-bottom: 300vh;
+                        .bubblebox::after {
+                            position: absolute;
+                            content: "";
+                            width: 2px;
+                            height: 300vh;
+                            border-left: 2px dotted $cinza;
+                            margin-top: $a+2;
+                            left: 81%;
+                        }
+                    }
+                    &.espaco-tempo-c {
+                        margin-bottom: 500vh;
+                        .bubblebox::after {
+                            position: absolute;
+                            content: "";
+                            width: 2px;
+                            height: 500vh;
+                            border-left: 2px dotted $cinza;
+                            margin-top: $a+2;
+                            left: 81%;
                         }
                     }
                 }
