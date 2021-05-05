@@ -381,7 +381,9 @@ html {
                                 border-radius: $a;
                             }
 
-                            blockquote {margin-bottom:$a;}
+                            blockquote {
+                                margin-bottom: $a;
+                            }
                         }
                     }
 
@@ -392,13 +394,82 @@ html {
                         }
                     }
                 }
+
+                &.inline {
+                    width: 98%;
+                    margin-top: $a;
+
+                    @media (min-width: $desktopM) {
+                        width: 560px;
+                    }
+
+                    ul#index_cards {
+
+                        li {
+                            float: none;
+                            padding: 0;
+                            width: 100%;
+                            margin-bottom: 0;
+                            top: 0;
+
+                            img {
+                                border-radius: $a;
+                            }
+
+                            @media (min-width: $desktopM) {
+                                &#card-1 {
+                                    transform: rotate(-7deg);
+                                    margin-bottom: $a*2;
+                                    top:$a*2;
+
+                                    &:hover {
+                                        transform: scale(1.1) rotate(-3deg);
+                                    }
+                                }
+
+                                &#card-2 {
+                                    transform: rotate(7deg);
+                                    top: $a*2;
+
+                                    &:hover {
+                                        transform: scale(1.1) rotate(3deg);
+                                    }
+                                }
+
+                                &#card-3 {
+                                    transform: rotate(-5deg);
+                                    top: -$a*4;
+                                    left: -$a*5;
+
+                                    &:hover {
+                                        transform: scale(1.1) rotate(2deg);
+                                    }
+                                }
+
+                                &#card-4 {
+                                    top: -$a*2;
+                                }
+
+                                &#card-5 {
+                                    top: -$a*4;
+                                    right: -$a*2;
+                                    transform: rotate(-7deg);
+
+                                    &:hover {
+                                        transform: scale(1.1) rotate(-3deg);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
 
         body[data-light-mode=dark] {
-          article.post #stage ul#index_cards li {
-            background-color:$cinza;
-          }
+            article.post #stage ul#index_cards li {
+                background-color: $cinza;
+            }
         }
     }
 
@@ -482,12 +553,12 @@ html {
 
             &::before {
                 display: block;
-                width:330px;
+                width: 330px;
                 font-size: 11px;
                 text-align: left;
                 padding-left: $a;
                 content: "imagem: Tom Scioli, 'Jack Kirby: The Epic Life of the King of Comics'";
-                background-color: rgba(0,0,0,0.5);
+                background-color: rgba(0, 0, 0, 0.5);
                 color: white;
             }
 
@@ -510,6 +581,7 @@ html {
             }
         }
     }
+
     // fim hero-titans
     // ----------------------
 
@@ -559,17 +631,19 @@ html {
 
 
                 .coluna {
-                  p {
-                      color: $branco;
-                      padding-left: $a*2;
-                      padding-right: $a*2;
-                  }
+                    p {
+                        color: $branco;
+                        padding-left: $a*2;
+                        padding-right: $a*2;
+                    }
 
-                  a {color:$branco !important;}
+                    a {
+                        color: $branco !important;
+                    }
 
-                  .sidenote {
-                    background-color: transparent;
-                    color: $branco;
+                    .sidenote {
+                        background-color: transparent;
+                        color: $branco;
                     }
                 }
 
@@ -677,37 +751,15 @@ html {
                             }
                         }
                     }
-                    &.espaco-tempo-a {
+
+                    &.espaco-tempo-baixo {
                         margin-bottom: 300vh;
+
                         .bubblebox::after {
                             position: absolute;
                             content: "";
                             width: 2px;
                             height: 300vh;
-                            border-left: 2px dotted $cinza;
-                            margin-top: $a+2;
-                            left: 81%;
-                        }
-                    }
-                    &.espaco-tempo-b {
-                        margin-bottom: 300vh;
-                        .bubblebox::after {
-                            position: absolute;
-                            content: "";
-                            width: 2px;
-                            height: 300vh;
-                            border-left: 2px dotted $cinza;
-                            margin-top: $a+2;
-                            left: 81%;
-                        }
-                    }
-                    &.espaco-tempo-c {
-                        margin-bottom: 500vh;
-                        .bubblebox::after {
-                            position: absolute;
-                            content: "";
-                            width: 2px;
-                            height: 500vh;
                             border-left: 2px dotted $cinza;
                             margin-top: $a+2;
                             left: 81%;
@@ -2218,7 +2270,7 @@ article.post {
         }
 
         img {
-          transition: filter 500ms ease-in-out;
+            transition: filter 500ms ease-in-out;
         }
 
         & > ul,
