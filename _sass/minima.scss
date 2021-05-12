@@ -588,11 +588,11 @@ html {
     // ----------------------
     // hero-twitter
     &.hero-twitter {
-        background: #202d38;
+        background: #f5f5f5;
 
         body {
-            background: #202d38;
-            color: $branco;
+            background: #f5f5f5;
+            //color: $branco;
 
             header:not(.post-header) {
                 @media (min-height:500px) {
@@ -622,7 +622,7 @@ html {
 
             article.post {
                 .post-title {
-                    color: $branco;
+                    //color: $branco;
 
                     @media (min-height:500px) {
                         visibility: collapse;
@@ -632,18 +632,18 @@ html {
 
                 .coluna {
                     p {
-                        color: $branco;
+                        //color: $branco;
                         padding-left: $a*2;
                         padding-right: $a*2;
                     }
 
                     a {
-                        color: $branco !important;
+                        //color: $branco !important;
                     }
 
                     .sidenote {
                         background-color: transparent;
-                        color: $branco;
+                        //color: $branco;
                     }
                 }
 
@@ -656,11 +656,13 @@ html {
                     }
 
                     &.primary .bubblebox {
-                        background-color: mediumvioletred;
-                        border-color: mediumvioletred !important;
+                        //background-color: $cinza;
+                        //border-color: $cinzaEscuro !important;
+
 
                         * {
-                            border-color: $branco !important;
+                            //border-color: $cinzaEscuro !important;
+                            //color: $branco !important;
                         }
                     }
 
@@ -692,32 +694,34 @@ html {
 
                     .bubblebox {
                         border-radius: $a/2;
-                        border: 2px dotted $cinza;
+                        //border: 2px dotted $cinza;
                         margin-left: -$a*2;
                         padding: $a;
                         position: relative;
                         z-index: 54;
+                        background: $branco;
+                        box-shadow: 0px 3px $a/2 $b/2 rgba(111, 111, 111, 0.2);
 
                         @media(max-width: $mobileL) {
                             padding-left: $a*2;
                         }
 
                         &:not(.last)::after {
-                            position: absolute;
+                            /*position: absolute;
                             content: "";
                             width: 2px;
                             height: 100px;
                             border-left: 2px dotted $cinza;
                             margin-top: $a+2;
-                            left: 81%;
+                            left: 81%;*/
                         }
 
                         a {
-                            color: $branco;
+                            //color: $branco;
                         }
 
                         .bubblebox-footer {
-                            border-top: 2px dotted $cinza;
+                            border-top: 2px solid $cinzaClaro;
                             margin-left: -$a;
                             margin-right: -$a;
                             padding-left: $a*3;
@@ -760,7 +764,7 @@ html {
                             content: "";
                             width: 2px;
                             height: 300vh;
-                            border-left: 2px dotted $cinza;
+                            //border-left: 2px dotted $cinza;
                             margin-top: $a+2;
                             left: 81%;
                         }
@@ -769,11 +773,11 @@ html {
             }
 
             footer {
-                color: $branco;
+                //color: $branco;
                 margin-top: $a*5;
 
                 a {
-                    color: $branco;
+                    //color: $branco;
                 }
             }
         }
