@@ -395,11 +395,11 @@ html {
                     }
                 }
 
-                &.inline {
+                &.smaller {
                     width: 98%;
                     margin-top: $a;
 
-                    @media (min-width: $desktopM) {
+                    @media (min-width: $tablet) {
                         width: 560px;
                     }
 
@@ -416,11 +416,14 @@ html {
                                 border-radius: $a;
                             }
 
-                            @media (min-width: $desktopM) {
+                            @media (min-width: $tablet) {
+                                margin-bottom: -$a*3;
+
                                 &#card-1 {
                                     transform: rotate(-7deg);
                                     margin-bottom: $a*2;
                                     top:$a*2;
+                                    left: 0;
 
                                     &:hover {
                                         transform: scale(1.1) rotate(-3deg);
@@ -429,7 +432,6 @@ html {
 
                                 &#card-2 {
                                     transform: rotate(7deg);
-                                    top: $a*2;
 
                                     &:hover {
                                         transform: scale(1.1) rotate(3deg);
@@ -438,7 +440,7 @@ html {
 
                                 &#card-3 {
                                     transform: rotate(-5deg);
-                                    top: -$a*4;
+                                    top: -$a*6;
                                     left: -$a*5;
 
                                     &:hover {
@@ -447,11 +449,12 @@ html {
                                 }
 
                                 &#card-4 {
-                                    top: -$a*2;
+                                  top: -$a*6;
+                                  z-index: 3;
                                 }
 
                                 &#card-5 {
-                                    top: -$a*4;
+                                    top: -$a*7;
                                     right: -$a*2;
                                     transform: rotate(-7deg);
 
