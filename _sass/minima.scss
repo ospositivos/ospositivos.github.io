@@ -591,10 +591,10 @@ html {
     // ----------------------
     // hero-twitter
     &.hero-twitter {
-        background: #f5f5f5;
-
+        background: ghostwhite;
+		
         body {
-            background: #f5f5f5;
+            background: ghostwhite;
 
             header:not(.post-header) {
                 /*@media (min-height:500px) {
@@ -3582,5 +3582,5 @@ body[data-light-mode=dark] {
     }
 }
 
-// fim dark mode (usar html.no-lights para cencelar)
+// fim dark mode (usar html.no-lights para cancelar)
 // ----------------------
