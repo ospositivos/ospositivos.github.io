@@ -60,6 +60,12 @@ inicio blockquote::after {
 		bottom:-26px;
 		}
 }
+@media (min-width: 624px) and (max-width: 767.98px) {
+	.coluna.inicio {
+		max-width: 100% !important;
+		margin-left: 0 !important;
+		}
+}
 .timeline *, .timeline *::before, .timeline *::after {
 	box-sizing: border-box;
 	font-family: 'KoHo', sans-serif;
@@ -231,14 +237,14 @@ inicio blockquote::after {
 	left: 90px;
 }
 .container {
-	padding-right:0 !important;
+	padding-right:8px !important;
 }
 .container, .container.close {
 	width: 100%;
 	padding-left: 120px;
 	padding-right: 30px;
 }
-.container.close::before, 
+.container.close::before,
 .container.close::after {
 	display: none;
 }
@@ -249,7 +255,7 @@ inicio blockquote::after {
 .container.right {
 	left: 0%;
 }
-.container.left::after, 
+.container.left::after,
 .container.right::after {
 	left: 82px;
 }
@@ -258,12 +264,12 @@ inicio blockquote::after {
 	left: 97px;
 	border-color: transparent #006E51 transparent transparent;
 }
-.container.left .nome, 
+.container.left .nome,
 .container.right .nome {
 	right: auto;
 	left: 15px;
 }
-.container.left .icon, 
+.container.left .icon,
 .container.right .icon {
 	right: auto;
 	left: 146px;
@@ -271,7 +277,7 @@ inicio blockquote::after {
 .container.left .content,
 .container.right .content {
 	padding: 60px 30px 60px 90px;
-	border-radius: 16px 0 0 16px;
+	border-radius: 16px;
 }
 .container.fim::after {
 	left: 74px;
@@ -280,6 +286,7 @@ inicio blockquote::after {
 }
 
 /* darkmode */
+#appDarkmodeButton {z-index: 99999999;}
 html.hero-twitter body[data-light-mode=dark] {
 	background-color: grey;
     color: #e0e0e0;
@@ -289,11 +296,17 @@ html.hero-twitter body[data-light-mode=dark] .inicio {
 	color:rgb(224, 224, 224);
 	}
 html.hero-twitter body[data-light-mode=dark] .inicio::after {background-color:gainsboro;}
+html.hero-twitter body[data-light-mode=dark] .inicio .icon {
+	border-color: gainsboro;
+	background-color: #fff;
+	filter: brightness(1) contrast(1) grayscale(100%);
+}
 html.hero-twitter body[data-light-mode=dark] .timeline::after {background-color:gainsboro;}
 html.hero-twitter body[data-light-mode=dark] .container * {color:rgb(224, 224, 224);}
 html.hero-twitter body[data-light-mode=dark] .container .content {background-color:#1f1f1f;}
 html.hero-twitter body[data-light-mode=dark] .timeline a,
-html.hero-twitter body[data-light-mode=dark] .timeline .content a {color:#90ee90;}
+html.hero-twitter body[data-light-mode=dark] .timeline .content a,
+html.hero-twitter body[data-light-mode=dark] .timeline .container a i {color:#90ee90;}
 html.hero-twitter body[data-light-mode=dark] .container .nome  {color:gainsboro;}
 html.hero-twitter body[data-light-mode=dark] .container .icon {
 	border-color: gainsboro;
