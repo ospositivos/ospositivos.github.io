@@ -1,186 +1,287 @@
-.timeline *, .timeline *::before, .timeline *::after {
-  box-sizing: border-box;
-  font-family: 'Special Elite', cursive;
+.inicio > img {
+    border-radius: 16px;
+    border: 16px solid #000;
+    box-shadow: 5px 10px #888888;
+    margin-bottom: 18px !important;
 }
+
+.inicio p {
+    margin: 32px auto 0 !important;
+    padding: 16px 24px 0 !important;
+    background: floralwhite;
+    font-family: 'Overlock', cursive;
+    font-size: 18px;
+    line-height: 1.6em;
+}
+
+.inicio p .icon {
+    background: url('https://1.bp.blogspot.com/-xLzanT25DSM/YKUAYqUSlGI/AAAAAAAAcEc/92YVUKPcUYcO_l118U1vMZKInSA5dXpIgCPcBGAsYHg/s0/enchanted.jpg') no-repeat;
+    background-size: auto;
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin: 24px auto;
+    border: 2px solid deeppink;
+    border-radius: 40px;
+
+}
+
+.inicio p::after {
+    display: block;
+    content: "";
+    background: deeppink;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    margin: 16px auto auto;
+}
+
+.timeline *,
+.timeline *::before,
+.timeline *::after {
+    box-sizing: border-box;
+    font-family: 'Overlock', cursive;
+}
+
 .timeline {
-  position: relative;
-  width: 100%;
-  max-width: 1140px;
-  margin: 0 auto;
-  padding: 15px 0;
-}
-.timeline::after {
-  content: '';
-  position: absolute;
-  width: 2px;
-  background: deeppink;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  margin-left: -1px;
-}
-.container {
-  padding: 15px 30px;
-  position: relative;
-  background: inherit;
-  width: 50%;
-}
-.container.left {
-  left: 0;
-}
-.container.right {
-  left: 50%;
-}
-.container::after {
-  content: '';
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  top: calc(50% - 8px);
-  right: -8px;
-  background: deeppink;
-  border: 2px solid deeppink;
-  border-radius: 16px;
-  z-index: 1;
-}
-.container.right::after {
-  left: -8px;
-}
-.container::before {
-  content: '';
-  position: absolute;
-  width: 50px;
-  height: 2px;
-  top: calc(50% - 1px);
-  right: 8px;
-  background: deeppink;
-  z-index: 1;
-}
-.container.right::before {
-  left: 8px;
-}
-.container .nome {
-  position: absolute;
-  display: inline-block;
-  top: calc(50% - 12px);
-  text-align: center;
-  font-size: 14px;
-  font-weight: bold;
-  color: deeppink;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  z-index: 1;
-}
-.container.left .nome {
-  right: -75px;
-}
-.container.left .nome::after {
-  content: "DI";
-}
-.container.right .nome {
-  left: -75px;
-}
-.container.right .nome::after {
-  content: "PM";
-}
-.container .icon {
-  position: absolute;
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  padding: 9px 0;
-  top: calc(50% - 20px);
-  background: lemonchiffon;
-  border: 2px solid deeppink;
-  border-radius: 40px;
-  text-align: center;
-  font-size: 18px;
-  color: deeppink;
-  z-index: 1;
-  background-size: contain;
-}
-.container.left .icon {
-  right: 56px;
-  background: url('https://1.bp.blogspot.com/-NcSoX9QU53c/YIXtN6mTwnI/AAAAAAAAb3Q/V8CIvoNjzR0efKUhPvem9l2_AqMiQnVtwCPcBGAsYHg/s0/di.png') no-repeat;
-  background-size: contain;
-}
-.container.right .icon {
-  left: 56px;
-  background: url('https://1.bp.blogspot.com/-IQ0PDWxEhIc/YIXmnO_kebI/AAAAAAAAb2c/qOgYDll8vYItQ4mS6FlC0DPZHa6yHf8wgCPcBGAsYHg/s0/pm.png') no-repeat;
-  background-size: contain;
-}
-.container .content {
-  padding: 30px 90px 30px 30px;
-  background: floralwhite;
-  position: relative;
-  border-radius: 0 16px 16px 0;
-}
-.container.right .content {
-  padding: 30px 30px 30px 90px;
-  border-radius: 16px 0 0 16px;
-}
-.container .content p {
-  margin: 0;
-  font-size: 14px;
-  line-height: 22px;
-}
-.container .content p + p {
-  margin-top: 16px;
-}
-.container.close {
-  width: 16px;
-  margin: 0;
-  padding: 0;
-  top: 32px;
-  left: calc(50% - 22px);
-}
-.container.close::before, .container.close::after {
-  display: none;
-}
-.container.close .icon {
-  background: url('https://1.bp.blogspot.com/-37OFnDrAbXQ/YKPwm9HQQ3I/AAAAAAAAcDs/8Ce9SAaXKDwNlQc2oVFsF9mzsdBCUyWWQCPcBGAsYHg/s0/enchanted.jpg') no-repeat;
-  background-size: contain;
-  margin-bottom: 36px;
-}
-@media (max-width: 767.98px) {
-  .timeline::after {
-    left: 90px;
-  }
-  .container, .container.close {
+    position: relative;
     width: 100%;
-    padding-left: 120px;
-    padding-right: 30px;
-  }
-  .container.close::before,
-	.container.close::after{
-display: none;
-	  
-	}
-	.container.close .icon {
-	  left: 30px;
-	  top: 30px;
-	  
-	}
-  .container.right {
-    left: 0%;
-  }
-  .container.left::after, .container.right::after {
-    left: 82px;
-  }
-  .container.left::before, .container.right::before {
-    left: 100px;
-    border-color: transparent #006E51 transparent transparent;
-  }
-  .container.left .nome, .container.right .nome {
-    right: auto;
-    left: 15px;
-  }
-  .container.left .icon, .container.right .icon {
-    right: auto;
-    left: 146px;
-  }
-  .container.left .content, .container.right .content {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 15px 0;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background: deeppink;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+}
+
+.container {
+    padding: 15px 30px;
+    position: relative;
+    background: inherit;
+    width: 50%;
+}
+
+.container.left {
+    left: 0;
+}
+
+.container.right {
+    left: 50%;
+}
+
+.container::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: calc(50% - 8px);
+    right: -8px;
+    background: deeppink;
+    border: 2px solid deeppink;
+    border-radius: 16px;
+    z-index: 1;
+}
+
+.container.right::after {
+    left: -8px;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    top: calc(50% - 1px);
+    right: 8px;
+    background: deeppink;
+    z-index: 1;
+}
+
+.container.right::before {
+    left: 8px;
+}
+
+.container .nome {
+    position: absolute;
+    display: inline-block;
+    top: calc(50% - 12px);
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: deeppink;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 1;
+}
+
+.container.left .nome {
+    right: -75px;
+}
+
+.container.left .nome::after {
+    content: "DI";
+}
+
+.container.right .nome {
+    left: -75px;
+}
+
+.container.right .nome::after {
+    content: "PM";
+}
+
+.container .icon {
+    position: absolute;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    padding: 9px 0;
+    top: calc(50% - 20px);
+    background: lemonchiffon;
+    border: 2px solid deeppink;
+    border-radius: 40px;
+    text-align: center;
+    font-size: 18px;
+    color: deeppink;
+    z-index: 1;
+    background-size: contain;
+}
+
+.container.left .icon {
+    right: 56px;
+    background: url('https://1.bp.blogspot.com/-NcSoX9QU53c/YIXtN6mTwnI/AAAAAAAAb3Q/V8CIvoNjzR0efKUhPvem9l2_AqMiQnVtwCPcBGAsYHg/s0/di.png') no-repeat;
+    background-size: contain;
+}
+
+.container.right .icon {
+    left: 56px;
+    background: url('https://1.bp.blogspot.com/-IQ0PDWxEhIc/YIXmnO_kebI/AAAAAAAAb2c/qOgYDll8vYItQ4mS6FlC0DPZHa6yHf8wgCPcBGAsYHg/s0/pm.png') no-repeat;
+    background-size: contain;
+}
+
+.container .content {
+    padding: 30px 90px 30px 30px;
+    background: floralwhite;
+    position: relative;
+    border-radius: 0 16px 16px 0;
+}
+
+.container.right .content {
     padding: 30px 30px 30px 90px;
     border-radius: 16px 0 0 16px;
-  }
+}
+
+.container .content p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.6em;
+}
+
+.container .content p + p {
+    margin-top: 16px;
+}
+
+.container.nota {
+    font-size: 12px;
+    text-align: center;
+}
+
+.container.nota img {
+    border: 2px solid #000;
+    margin-bottom: 24px;
+    box-shadow: 5px 10px #888888;
+}
+
+.container.nota::before,
+.container.nota::after {
+    display: none !important;
+}
+
+.container.close {
+    width: 16px;
+    margin: 0;
+    padding: 0;
+    top: 34px;
+    left: calc(50% - 20px);
+}
+
+.container.close::before,
+.container.close::after {
+    display: none;
+}
+
+.container.close .icon {
+    background: url('https://1.bp.blogspot.com/-37OFnDrAbXQ/YKPwm9HQQ3I/AAAAAAAAcDs/8Ce9SAaXKDwNlQc2oVFsF9mzsdBCUyWWQCPcBGAsYHg/s0/enchanted.jpg') no-repeat;
+    background-size: contain;
+    margin-bottom: 36px;
+}
+
+@media (max-width: 767.98px) {
+    .timeline {
+        overflow-x: hidden;
+    }
+    .timeline::after {
+        left: 90px;
+    }
+
+    .container,
+    .container.close {
+        width: 100%;
+        padding-left: 120px;
+        padding-right: 30px;
+    }
+
+    .container.close::before,
+    .container.close::after {
+        display: none;
+
+    }
+
+    .container.close .icon {
+        left: 30px;
+        top: 30px;
+
+    }
+
+    .container.right {
+        left: 0%;
+    }
+
+    .container.left::after,
+    .container.right::after {
+        left: 82px;
+    }
+
+    .container.left::before,
+    .container.right::before {
+        left: 97px;
+        border-color: transparent #006E51 transparent transparent;
+    }
+
+    .container.left .nome,
+    .container.right .nome {
+        right: auto;
+        left: 15px;
+    }
+
+    .container.left .icon,
+    .container.right .icon {
+        right: auto;
+        left: 146px;
+    }
+
+    .container.left .content,
+    .container.right .content {
+        padding: 30px 30px 30px 90px;
+        border-radius: 16px 0 0 16px;
+    }
 }
