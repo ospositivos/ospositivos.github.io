@@ -1,8 +1,7 @@
 .coluna .coluna.inicio {
 	margin: 32px auto 0;
 	padding: 16px 24px 0;
-	background: snow;
-	font-family: 'KoHo', sans-serif;
+	background: cornsilk;
 	font-size: 18px;
 	line-height: 1.6em;
 	max-width: 560px;
@@ -10,36 +9,42 @@
 	box-shadow: 0px 3px 12px -6px rgba(0, 0, 0, 0.2);
 	border-radius:8px;
 }
-.inicio .icon{
+.inicio .icon {
 	background: url('https://1.bp.blogspot.com/-xLzanT25DSM/YKUAYqUSlGI/AAAAAAAAcEc/92YVUKPcUYcO_l118U1vMZKInSA5dXpIgCPcBGAsYHg/s0/enchanted.jpg') no-repeat;
 	background-size: auto;
 	background-size: contain;
 	width: 44px;
 	height: 44px;
 	display: block;
-	margin: 24px auto;
+	margin: 24px auto 42px;
 	border: 2px solid deeppink;
 	border-radius: 40px;
 }
 .coluna .coluna.inicio > blockquote {
 	border-top: none;
 	box-shadow: none;
-	max-width: 400px;
-	font-family: 'KoHo', sans-serif;
+	max-width: 385px;
 	margin-top:0;
-	padding-top:0;
+	padding-top:12px;
 	margin-bottom:0;
 	padding-bottom:0;
+	line-height: 1.6em;
+	text-align: right;
+	font-style: italic;
+	font-size: 13px;
+}
+.coluna .coluna.inicio > blockquote::after {
+	top: 8px;
+	left: -16px;
 }
 .inicio blockquote small {
 	text-align: right;
-	padding-right:24px;
+	padding-top: 0;
 }
 .coluna .coluna.inicio > p {
-	padding-bottom:32px;
-}
-inicio blockquote::after {
-	left: -6px;
+	padding:44px 32px;
+	font-size: 13px;
+	line-height: 1.6em;
 }
 .inicio::after {
 	display: block;
@@ -68,7 +73,6 @@ inicio blockquote::after {
 }
 .timeline *, .timeline *::before, .timeline *::after {
 	box-sizing: border-box;
-	font-family: 'KoHo', sans-serif;
 }
 .timeline {
 	position: relative;
@@ -83,6 +87,12 @@ inicio blockquote::after {
 	max-width: 700px;
 	margin: 0 auto;
 	padding: 15px 0;
+}
+.timeline.smaller .container .content {
+	padding: 30px 90px 30px 30px;
+}
+.timeline.smaller .container.right .content {
+	padding: 30px 30px 30px 90px;
 }
 .timeline::after {
 	content: '';
@@ -189,17 +199,20 @@ inicio blockquote::after {
 }
 .container .content {
 	padding: 60px 90px 60px 60px;
-	background: snow;
+	background: cornsilk;
 	position: relative;
 	border-radius: 16px;
 	box-shadow: 0px 3px 12px -6px rgba(0, 0, 0, 0.2);
+}
+.container .content.primary {
+	background: moccasin;
 }
 .container.right .content {
 	padding: 60px 60px 60px 90px;
 }
 .container .content p {
 	margin: 0;
-	font-size: 18px;
+	font-size: 13px;
 	line-height: 1.6em;
 }
 .container .content p + p {
@@ -208,10 +221,16 @@ inicio blockquote::after {
 .container.nota {
 	font-size: 12px;
 	text-align: center;
+	margin-top: -8px;
+}
+.container.nota small {
+	display: block;
+	font-size: 10px;
+	line-height: 14px !important;
 }
 .container.nota img {
 	border: 2px solid #000;
-	margin-bottom: 24px;
+	margin-bottom: 12px;
 	box-shadow: 5px 10px #888888;
 }
 .container.nota::before, .container.nota::after {
@@ -232,6 +251,9 @@ inicio blockquote::after {
  @media (max-width: 767.98px) {
 .timeline {
 	overflow: hidden;
+}
+.timeline.smaller .container .content {
+	padding: 30px 30px 30px 90px;
 }
 .timeline::after {
 	left: 90px;
@@ -289,7 +311,7 @@ inicio blockquote::after {
 #appDarkmodeButton {z-index: 99999999;}
 html.hero-twitter body[data-light-mode=dark] {
 	background-color: grey;
-    color: #e0e0e0;
+  color: #e0e0e0;
 	}
 html.hero-twitter body[data-light-mode=dark] .inicio {
 	background-color:#1f1f1f;
@@ -304,6 +326,7 @@ html.hero-twitter body[data-light-mode=dark] .inicio .icon {
 html.hero-twitter body[data-light-mode=dark] .timeline::after {background-color:gainsboro;}
 html.hero-twitter body[data-light-mode=dark] .container * {color:rgb(224, 224, 224);}
 html.hero-twitter body[data-light-mode=dark] .container .content {background-color:#1f1f1f;}
+html.hero-twitter body[data-light-mode=dark] .container .content.primary {background: darkred;}
 html.hero-twitter body[data-light-mode=dark] .timeline a,
 html.hero-twitter body[data-light-mode=dark] .timeline .content a,
 html.hero-twitter body[data-light-mode=dark] .timeline .container a i {color:#90ee90;}
@@ -317,4 +340,7 @@ html.hero-twitter body[data-light-mode=dark] .container::before {background: gai
 html.hero-twitter body[data-light-mode=dark] .container::after {
     background: gainsboro;
     border-color: gainsboro;
+}
+html.hero-twitter body[data-light-mode=dark] .container.nota img {
+	box-shadow: 5px 10px #2a2a2a;
 }

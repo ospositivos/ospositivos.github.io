@@ -591,10 +591,12 @@ html {
     // ----------------------
     // hero-twitter
     &.hero-twitter {
-        background: ghostwhite;
-		
         body {
-            background: ghostwhite;
+
+            .inicio,
+            .timeline {
+              font-family: $alt-font-family;
+              }
 
             header:not(.post-header) {
                 /*@media (min-height:500px) {
@@ -3502,7 +3504,14 @@ body[data-light-mode=dark] {
             .moldura {
                 background-color: $cinzaEscuro;
             }
+
+            #artigo {
+                background-color: $cinzaEscuro;
+                em, small {color: #e0e0e0;}
+                blockquote small a {color:$branco !important;}
+            }
         }
+
 
         #teses-indice {
             & > .uk-grid {
