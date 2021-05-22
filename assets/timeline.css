@@ -189,7 +189,7 @@
 }
 .container.left .icon {
 	right: 56px;
-	background: url('https://1.bp.blogspot.com/-NcSoX9QU53c/YIXtN6mTwnI/AAAAAAAAb3Q/V8CIvoNjzR0efKUhPvem9l2_AqMiQnVtwCPcBGAsYHg/s0/di.png') no-repeat;
+	background: url('https://1.bp.blogspot.com/-h0H9zr6t5gA/YKfYqcdcHSI/AAAAAAAAcHA/9R4DJQGwl8A2ss7DEXSDwiai1kMoMFNZQCPcBGAsYHg/s0/di.png') no-repeat;
 	background-size: contain;
 }
 .container.right .icon {
@@ -204,8 +204,13 @@
 	border-radius: 16px;
 	box-shadow: 0px 3px 12px -6px rgba(0, 0, 0, 0.2);
 }
+.container .content img {
+	border-radius: 6px;
+	margin-bottom: 32px;
+	box-shadow: 5px 10px burlywood;
+}
 .container .content.primary {
-	background: moccasin;
+	background: darkseagreen;
 }
 .container.right .content {
 	padding: 60px 60px 60px 90px;
@@ -308,7 +313,7 @@
 }
 
 /* darkmode */
-#appDarkmodeButton {z-index: 99999999;}
+#appDarkmodeButton {z-index: 999;}
 html.hero-twitter body[data-light-mode=dark] {
 	background-color: grey;
   color: #e0e0e0;
