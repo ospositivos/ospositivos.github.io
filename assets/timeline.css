@@ -260,6 +260,23 @@
 	.timeline.smaller .container .content {
 		padding: 30px 30px 30px 90px;
 	}
+
+	.timeline.smaller .container.left::before,
+  .timeline.smaller .container.right::before  {
+  	 top:52px;
+   }
+ 	.timeline.smaller .container.left .icon,
+   .timeline.smaller .container.right .icon {
+   	 top:33px;
+    }
+ 	.timeline.smaller .container.left::after,
+ 	.timeline.smaller .container.right::after  {
+ 	 	 top:46px;
+ 	  }
+ 	.timeline.smaller .container.right .content {
+ 	    padding-left:53px;
+ 	}
+	
 	.timeline::after {
 		left: 90px;
 	}
@@ -313,6 +330,11 @@
 		left: 74px;
 		top:13px;
 	}
+}
+@media (max-width: 420px) {
+.container .content p {
+	 font-size:10px;
+ }
 }
 
 /* darkmode */
