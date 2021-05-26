@@ -254,62 +254,62 @@
 	padding-top: 5px;
 }
  @media (max-width: 767.98px) {
-.timeline {
-	overflow: hidden;
-}
-.timeline.smaller .container .content {
-	padding: 30px 30px 30px 90px;
-}
-.timeline::after {
-	left: 90px;
-}
-.container {
-	padding-right:8px !important;
-}
-.container, .container.close {
-	width: 100%;
-	padding-left: 120px;
-	padding-right: 30px;
-}
-.container.close::before,
-.container.close::after {
-	display: none;
-}
-.container.close .icon {
-	left: 30px;
-	top: 30px;
-}
-.container.right {
-	left: 0%;
-}
-.container.left::after,
-.container.right::after {
-	left: 82px;
-}
-.container.left::before,
-.container.right::before {
-	left: 97px;
-	border-color: transparent #006E51 transparent transparent;
-}
-.container.left .nome,
-.container.right .nome {
-	right: auto;
-	left: 15px;
-}
-.container.left .icon,
-.container.right .icon {
-	right: auto;
-	left: 146px;
-}
-.container.left .content,
-.container.right .content {
-	padding: 60px 30px 60px 90px;
-	border-radius: 16px;
-}
-.container.fim::after {
-	left: 74px;
-	top:13px;
-}
+	.timeline {
+		overflow: hidden;
+	}
+	.timeline.smaller .container .content {
+		padding: 30px 30px 30px 90px;
+	}
+	.timeline::after {
+		left: 90px;
+	}
+	.container {
+		padding-right:8px !important;
+	}
+	.container,
+	.container.close {
+		width: 100%;
+		padding-left: 120px;
+		padding-right: 30px;
+	}
+	.container.close::before,
+	.container.close::after {
+		display: none;
+	}
+	.container.close .icon {
+		left: 30px;
+		top: 30px;
+	}
+	.container.right {
+		left: 0%;
+	}
+	.container.left::after,
+	.container.right::after {
+		left: 82px;
+	}
+	.container.left::before,
+	.container.right::before {
+		left: 40px;
+		border-color: transparent #006E51 transparent transparent;
+	}
+	.container.left .nome,
+	.container.right .nome {
+		display: none;
+	}
+	.container.left .icon,
+	.container.right .icon {
+		right: auto;
+		left: 16px;
+	}
+	.container.left .content,
+	.container.right .content {
+		padding: 60px 30px 60px 30px;
+		border-radius: 16px;
+	}
+	.container.fim::after {
+		left: 74px;
+		top:13px;
+	}
 }
 
 /* darkmode */
