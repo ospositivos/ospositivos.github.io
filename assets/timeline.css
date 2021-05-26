@@ -285,10 +285,12 @@
 	}
 	.container.left::after,
 	.container.right::after {
+		top: 76px;
 		left: 82px;
 	}
 	.container.left::before,
 	.container.right::before {
+		top: 83px;
 		left: 40px;
 		border-color: transparent #006E51 transparent transparent;
 	}
@@ -299,6 +301,7 @@
 	.container.left .icon,
 	.container.right .icon {
 		right: auto;
+		top: 63px;
 		left: 16px;
 	}
 	.container.left .content,
