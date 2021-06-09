@@ -2410,7 +2410,6 @@ article.post {
 
         // script
         ul.script {
-            //background: url('https://1.bp.blogspot.com/-8v3NAkKlZho/V__kCKNkz2I/AAAAAAAAJtA/z-Oe26FWoPkPIWEGwHZen83Xcx8DnNkMwCPcB/s1600/notepad.gif') repeat #ffffe3;
             padding: $b*2 $b*4 !important;
             font-size: $b;
             font-family: Courier;
@@ -2446,6 +2445,13 @@ article.post {
                 &:last-child {
                     padding-bottom: 0;
                 }
+            }
+            small {
+              display: block;
+              border-top:1px dotted $cinza;
+              font-size: 10px;
+              padding-top: $b/2;
+              text-align: right;
             }
         }
 
