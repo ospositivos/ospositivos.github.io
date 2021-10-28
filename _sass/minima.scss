@@ -1322,11 +1322,25 @@ ul.lista {
     line-height: 1.4em;
     text-align: center;
 
-    @media(min-width:$desktopS) {
+    &.intro {
+      max-width: 580px;
+      font-size: 1em;
+      text-align: right;
 
-        &.blurbum {
-            font-size: 2.5em;
+      .bubble {
+        background: transparent;
+
+        &::after {
+          border: none;
+          content: "“";
+          bottom: -7px;
+          font-size: 4em;
+          left: 0;
         }
+      }
+    }
+
+    @media(min-width:$desktopS) {
 
         &.blurby-l {
             text-align: left;
