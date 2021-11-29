@@ -422,7 +422,7 @@ html {
                                 &#card-1 {
                                     transform: rotate(-7deg);
                                     margin-bottom: $a*2;
-                                    top:$a*2;
+                                    top: $a*2;
                                     left: 0;
 
                                     &:hover {
@@ -449,8 +449,8 @@ html {
                                 }
 
                                 &#card-4 {
-                                  top: -$a*6;
-                                  z-index: 3;
+                                    top: -$a*6;
+                                    z-index: 3;
                                 }
 
                                 &#card-5 {
@@ -595,34 +595,19 @@ html {
 
             .inicio,
             .timeline {
-              font-family: $alt-font-family;
-              }
-
-            header:not(.post-header) {
-                /*@media (min-height:500px) {
-                    background: url('https://1.bp.blogspot.com/-TwCSlnydaB8/YICUrUTjfaI/AAAAAAAAbxg/AkKKddoeXXkCGJq_vVq1J4YQsvj5oqrvgCPcBGAsYHg/s0/twitter-header.png') no-repeat 50% 50%;
-                    background-size: cover;
-                    height: 100vh;
-                }
-
-                a {
-                    display: inline-block;
-
-                    &::after {
-                        display: block;
-                        content: "";
-                        background: url("/assets/images/x_inverted.png") no-repeat;
-                        background-size: contain;
-                        width: 200px;
-                        height: 200px;
-                        margin: auto;
-                    }
-
-                    img {
-                        display: none;
-                    }
-                }*/
+                font-family: $alt-font-family;
             }
+        }
+    }
+
+    // fim twitter-talk
+    // ----------------------
+
+    // ----------------------
+    // untitled
+    &.untitled {
+        header.post-header {
+            display: none;
         }
     }
 
@@ -1323,21 +1308,21 @@ ul.lista {
     text-align: center;
 
     &.intro {
-      max-width: 580px;
-      font-size: 1em;
-      text-align: right;
+        max-width: 580px;
+        font-size: 1em;
+        text-align: right;
 
-      .bubble {
-        background: transparent;
+        .bubble {
+            background: transparent;
 
-        &::after {
-          border: none;
-          content: "“";
-          bottom: -7px;
-          font-size: 4em;
-          left: 0;
+            &::after {
+                border: none;
+                content: "“";
+                bottom: -7px;
+                font-size: 4em;
+                left: 0;
+            }
         }
-      }
     }
 
     @media(min-width:$desktopS) {
@@ -2460,12 +2445,13 @@ article.post {
                     padding-bottom: 0;
                 }
             }
+
             small {
-              display: block;
-              border-top:1px dotted $cinza;
-              font-size: 10px;
-              padding-top: $b/2;
-              text-align: right;
+                display: block;
+                border-top: 1px dotted $cinza;
+                font-size: 10px;
+                padding-top: $b/2;
+                text-align: right;
             }
         }
 
@@ -3527,8 +3513,15 @@ body[data-light-mode=dark] {
 
             #artigo {
                 background-color: $cinzaEscuro;
-                em, small {color: #e0e0e0;}
-                blockquote small a {color:$branco !important;}
+
+                em,
+                small {
+                    color: #e0e0e0;
+                }
+
+                blockquote small a {
+                    color: $branco !important;
+                }
             }
         }
 
