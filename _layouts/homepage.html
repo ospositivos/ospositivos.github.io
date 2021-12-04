@@ -12,24 +12,21 @@ layout: compress
 
   <article class="post">
     <div class="coluna">
-      <!--
+
+      <!-- random -->
       <div class="icon-random">
         <a href="/random/"><span class="icon-random-svg"></span></a>
       </div>
-      -->
+
+      <!-- search
       <div id="searcher-container">
-        <!-- Html Elements for Search -->
         <div id="search-container">
           <input data-hj-allow type="text" id="search-input" placeholder="type your poison">
           <div class="search"></div>
         </div>
       </div>
-
-      <!-- display results -->
       <ul id="results-container" class="lista-artigos"></ul>
-      <!-- Script pointing to search-script.js -->
       <script src="/assets/search-script-2021.js"></script>
-      <!-- Configuration -->
       <script>
       SimpleJekyllSearch({
         searchInput: document.getElementById('search-input'),
@@ -38,8 +35,8 @@ layout: compress
         fuzzy: false
       })
       </script>
-  </div>
-
+      -->
+    </div>
   </article>
 <div>
   {%- include footer.html -%}
@@ -52,5 +49,4 @@ inputField.addEventListener('mouseover', function() {
 </script>
 
 </body>
-
 </html>
