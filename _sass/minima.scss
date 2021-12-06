@@ -3017,9 +3017,12 @@ article.post {
             background-size: cover;
             border-radius: 50%;
             background-image: url('/assets/images/icon-random.svg');
+            filter: invert(100%);
 
             &:hover {
-                filter: invert(100%);
+                background-image: url('/assets/images/icon-random-crimson.svg');
+                filter: none;
+                color: $vermelho;
 
                 &::after {
                     display: table;
