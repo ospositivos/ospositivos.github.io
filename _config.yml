@@ -24,7 +24,7 @@ twitter_username: ospositivos
 github_username:  ospositivos
 
 # Google Analytics
-google_analytics: UA-8547796-14
+# google_analytics: UA-8547796-14
 
 # Build settings
 markdown: kramdown
