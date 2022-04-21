@@ -3506,6 +3506,19 @@ body[data-light-mode=dark] {
                     }
                 }
             }
+            .info.info-primary {
+
+                blockquote {
+                    small {
+                        a i {
+                            color: $verde;
+                            &:hover {
+                                border-color: $verde;
+                            }
+                        }
+                    }
+                }
+            }
 
             h3.centre small .info {
                 background-color: grey !important;
