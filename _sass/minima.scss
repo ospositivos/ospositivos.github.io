@@ -14,11 +14,11 @@ $mobileM: 560px;
 $mobileS: 450px;
 
 $hand-font-family: 'Sue Ellen Francisco';
-$title-font-family: 'Bungee Shade';
+$title-font-family: 'Italiana';
 $base-font-family: "Bellota Text";
 $blockquote-font-family: "Bellota";
 $alt-font-family: "Roboto Mono";
-$blurb-font-family: "Playfair Display";
+$blurb-font-family: "DM Serif Display";
 $base-font-size: $a;
 $base-font-weight: 400;
 $small-font-size: $base-font-size * 0.875;
@@ -1296,7 +1296,7 @@ ul.lista {
 
 // blurb
 .blurb {
-    max-width: 810px;
+    max-width: 610px;
     padding: $b*2 $b*4;
     margin: 1em auto;
     box-sizing: border-box;
@@ -1304,10 +1304,10 @@ ul.lista {
     color: $preto;
     font-family: $blurb-font-family;
     font-size: 1.5em;
-    font-weight: 700;
-    font-style: italic;
-    line-height: 1.4em;
-    text-align: center;
+    line-height: 1.3em;
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
 
     &.intro {
         max-width: 580px;
@@ -1323,35 +1323,6 @@ ul.lista {
                 bottom: -7px;
                 font-size: 4em;
                 left: 0;
-            }
-        }
-    }
-
-    @media(min-width:$desktopS) {
-
-        &.blurby-l {
-            text-align: left;
-
-            small {
-                text-align: left;
-                line-height: $a;
-            }
-
-            .bubble {
-                margin-left: -36px;
-            }
-        }
-
-        &.blurby-r {
-            text-align: right;
-
-            small {
-                text-align: right;
-                line-height: $a;
-            }
-
-            .bubble {
-                margin-left: -36px;
             }
         }
     }
@@ -1379,8 +1350,11 @@ ul.lista {
         font-family: $alt-font-family;
         font-weight: 400;
         text-transform: none;
-        text-align: center;
-        display: block;
+        line-height: 2em;
+
+        @media (max-width: $tablet){
+          margin-left: $b*2;
+        }
 
         a {
             box-shadow: none !important;
@@ -1402,9 +1376,7 @@ ul.lista {
         margin: -3px 8px 0 0;
         display: inline-block;
         line-height: 0;
-        vertical-align: middle;
-        font-style: italic;
-        margin-top: -44px;
+        top: -$b;
 
         &::after {
             content: '';
