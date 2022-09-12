@@ -1994,6 +1994,10 @@ article.post {
         line-height: 120%;
         color: $preto;
 
+        @media (resolution:96dpi) {
+            font-weight: 700;
+        }
+
         @media screen and (min-width: $tablet) {
             max-width: 80%;
         }
