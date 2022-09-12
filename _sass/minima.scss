@@ -1330,7 +1330,6 @@ ul.lista {
     strong,
     b {
         color: $vermelho;
-        //border-bottom: 2px solid $preto;
     }
 
     @media (max-width: $mobileL) {
@@ -1379,7 +1378,7 @@ ul.lista {
         top: -$b;
 
         &::after {
-            content: '';
+            content: 'quote';
             position: absolute;
             left: 45%;
             border-style: solid;
@@ -1388,6 +1387,10 @@ ul.lista {
             width: 0;
             bottom: -3px;
             border-width: 4px 0 0 4px;
+            font-size: $c/2;
+            font-weight: 100;
+            font-family: $alt-font-family;
+            color:$cinza;
         }
     }
 }
