@@ -3440,7 +3440,7 @@ body[data-light-mode=dark] {
 
                     &::after {
                         border-color: darkred rgba(0, 0, 0, 0);
-                        ;
+                        color: $cinzaEscuro;
                     }
                 }
             }
