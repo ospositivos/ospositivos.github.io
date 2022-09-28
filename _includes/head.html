@@ -3,15 +3,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="{{ '/assets/' | relative_url }}images/favicon.ico" rel="icon" type="image/x-icon" />
-    <link href="{{ '/assets/' | relative_url }}images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
+    <link href="{{ '/assets/images/favicon.ico' | relative_url }}" rel="icon" type="image/x-icon" />
+    <link href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}" rel="apple-touch-icon" sizes="180x180" />
 
     {% seo %}
 
-    <link rel="stylesheet" href="{{ '/assets/' | relative_url }}uikit.min.css">
-    <script src="{{ '/assets/' | relative_url }}uikit.min.js"></script>
+    <link rel="stylesheet" href="{{ '/assets/uikit.min.css' | relative_url }}">
+    <script src="{{ '/assets/uikit.min.js' | relative_url }}"></script>
 
-    <link rel="stylesheet" href="{{ '/assets/' | relative_url }}main.css">
+    <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
     {% if page.custom_css %}
         {% for stylesheet in page.custom_css %}
         <link rel="stylesheet" href="{{ '/assets/' | relative_url }}/{{ stylesheet }}.css">
@@ -27,7 +27,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
 
     <!-- <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css2?family=Sue+Ellen+Francisco&display=swap" rel="stylesheet">

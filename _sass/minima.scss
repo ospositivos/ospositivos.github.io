@@ -190,7 +190,8 @@ html {
                 &.directorio {
                     position: relative;
                     min-height: 400px;
-                    background: url(/assets/images/x_large.png) no-repeat 50% 45% $preto;
+                    background: url('/assets/images/x_large.png') no-repeat 50% 45% $preto;
+
                     background-size: 850px;
                 }
 
