@@ -578,6 +578,34 @@ html {
         }
     }
 
+    // hero-guerreiro
+    &.hero-guerreiro {
+        header:not(.post-header) {
+            background: url('https://raw.githubusercontent.com/ospositivos/files/master/ultimo-grasnar/actualizar-titulo-web.jpg?raw=true') 50% 50%;
+            background-size: cover;
+            filter: grayscale(11%) brightness(96%) hue-rotate(360deg) saturate(300%);
+            height: 100vh;
+
+            a {
+                display: inline-block;
+
+                &::after {
+                    display: block;
+                    content: "";
+                    background: url("/assets/images/x_inverted.png") no-repeat;
+                    background-size: contain;
+                    width: 200px;
+                    height: 200px;
+                    margin: auto;
+                }
+
+                img {
+                    display: none;
+                }
+            }
+        }
+    }
+
     // fim hero-titans
     // ----------------------
 
