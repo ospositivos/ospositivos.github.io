@@ -163,9 +163,6 @@ html {
         }
     }
 
-    // fim darkmode: no-lights
-    // ----------------------
-
     // ----------------------
     // homepage
     &.homepage {
@@ -256,6 +253,33 @@ html {
 
     // fim homepage
     // ----------------------
+
+    // ----------------------
+    // clean-black
+    &.clean-black {
+        background: $preto;
+
+        body {
+            background: $preto;
+            color: $branco;
+
+            * {
+                color: $branco;
+            }
+
+            #appDarkmodeButton {
+                display: none;
+            }
+            #appJustComixButton {
+                display: none;
+            }
+
+            input[type='button'],
+            input[type='submit'] {
+                border: 1px solid $branco;
+            }
+        }
+    }
 
     // ----------------------
     // hero-sortable
@@ -479,39 +503,12 @@ html {
         }
     }
 
-    // fim hero-sortable
-    // ----------------------
-
-    // ----------------------
-    // clean-black
-    &.clean-black {
-        background: $preto;
-
-        body {
-            background: $preto;
-            color: $branco;
-
-            * {
-                color: $branco;
-            }
-
-            #appDarkmodeButton {
-                display: none;
-            }
-
-            input[type='button'],
-            input[type='submit'] {
-                border: 1px solid $branco;
-            }
-        }
-    }
-
-    // fim clean-black
-    // ----------------------
-
     // ----------------------
     // hero-mosh
     &.hero-mosh {
+
+      body:not([data-justcomix-mode=true]){
+
         header:not(.post-header) {
             background: url('https://1.bp.blogspot.com/-j7z4z5720L0/YCMFjWEKsOI/AAAAAAAAbSE/u0nWAvq_8mclk5nZO79ZsEBwAuZaUUpzQCPcBGAsYHg/s0/abc-no-ri-o-e.jpg') 50% 50%;
             background-size: cover;
@@ -544,14 +541,15 @@ html {
                 }
             }
         }
+      }
     }
-
-    // fim hero-mosh
-    // ----------------------
 
     // ----------------------
     // hero-notes
     &.hero-notes {
+
+      body:not([data-justcomix-mode=true]){
+
         header:not(.post-header) {
             background: url('https://raw.githubusercontent.com/ospositivos/files/master/takin-notes/notes-web.jpg?raw=true') 50% 50%;
             background-size: cover;
@@ -575,15 +573,16 @@ html {
                     display: none;
                 }
             }
+          }
         }
     }
-
-    // fim hero-titans
-    // ----------------------
 
     // ----------------------
     // hero-titans
     &.hero-titans {
+
+      body:not([data-justcomix-mode=true]){
+
         header:not(.post-header) {
             background: url('https://1.bp.blogspot.com/-pID6C7u0CaA/YIq7_v6MHtI/AAAAAAAAb7E/JvXmNOoQPCYPT0rV5Gyjijb5q9yd7By8wCPcBGAsYHg/s0/too-shocked.jpg') 50% 50%;
             background-size: contain;
@@ -618,10 +617,8 @@ html {
                 }
             }
         }
+      }
     }
-
-    // fim hero-titans
-    // ----------------------
 
     // ----------------------
     // hero-twitter
@@ -635,9 +632,6 @@ html {
         }
     }
 
-    // fim twitter-talk
-    // ----------------------
-
     // ----------------------
     // untitled
     &.untitled {
@@ -645,9 +639,6 @@ html {
             display: none;
         }
     }
-
-    // fim twitter-talk
-    // ----------------------
 
     // ----------------------
     // fim HMTL
@@ -3303,6 +3294,8 @@ footer {
     background-color: $cinzaClaro;
     transition: all 500ms;
 
+    z-index: 999; // sobrepor aos HEROs
+
     &::after {
         display: inline-block;
         content: "";
@@ -3638,4 +3631,83 @@ body[data-light-mode=dark] {
 }
 
 // fim dark mode (usar html.no-lights para cancelar)
+// ----------------------
+
+// ----------------------
+// justcomix mode
+html:not(.justcomix) {
+  #appJustComixButton {
+    display:none;
+  }
+}
+html.justcomix {
+  #appJustComixButton {
+      position: absolute;
+      top: $a*3;
+      right: 0;
+      display: block;
+      width: $a*2;
+      height: $a*2;
+      padding-right: $a/2;
+      padding-left: $b/2;
+      box-shadow: 0 0 $b rgba(0, 0, 0, 0.2);
+      border-radius: 500px 0 0 500px;
+      background-color: $cinzaClaro;
+      transition: all 500ms;
+
+      z-index: 999; // sobrepor aos HEROs
+
+      &::after {
+          display: inline-block;
+          content: "";
+          background: url('/assets/images/comic-cover.svg') no-repeat;
+          width: $b*2;
+          height: $a;
+          padding: 2px;
+          margin-top: $b/2;
+          margin-left: $b/3;
+      }
+
+      @media(min-width: $tablet) {
+          position: fixed;
+          right: -$b/2;
+      }
+
+      &:hover {
+          box-shadow: 0 0 $a rgba(0, 0, 0, 0.5);
+          right: 0;
+          cursor: pointer;
+      }
+  }
+
+  body[data-justcomix-mode=true] {
+
+    article.post {
+
+      header {
+        display: none;
+
+        & + .subtitle {
+          display: none;
+        }
+      }
+
+        .coluna {
+
+          * {
+            display: none;
+          }
+
+          .featured {
+            display: block;
+            margin-top: $a !important;
+            margin-bottom: $a !important;
+          }
+        }
+    }
+
+    #next { margin-top:$a; }
+  }
+}
+// fim justcomix
 // ----------------------

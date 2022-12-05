@@ -15,8 +15,16 @@ layout: compress
         appDarkmodeButton.checked = true;
       }
     </script>
+    <script>
+        var appJustComixMode = document.getElementsByTagName("BODY")[0];
+        if (localStorage.comixMode == "true") {
+            appJustComixMode.setAttribute("data-justcomix-mode", "true");
+            appJustComixButton.checked = true;
+          }
+        </script>
 
     <a id="appDarkmodeButton" onclick="toggle_light_mode()"></a>
+    <a id="appJustComixButton" onclick="toggle_justcomix_mode()"></a>
 
   {{ content }}
 
@@ -34,6 +42,18 @@ layout: compress
     }
   }
   </script>
+  <script>
+    function toggle_justcomix_mode() {
+      var appJustComixMode = document.getElementsByTagName("BODY")[0];
+      if (localStorage.comixMode == "true") {
+    	  localStorage.comixMode = "false";
+    	  appJustComixMode.setAttribute("data-justcomix-mode", "false");
+      } else {
+    	  localStorage.comixMode = "true";
+    	  appJustComixMode.setAttribute("data-justcomix-mode", "true");
+      }
+    }
+    </script>
 
   </body>
 </html>
