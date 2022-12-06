@@ -3279,6 +3279,98 @@ footer {
 // ----------------------
 
 // ----------------------
+// justcomix mode
+html:not(.justcomix) {
+  #appJustComixButton {
+    display:none;
+  }
+}
+html.justcomix {
+  #appJustComixButton {
+      position: absolute;
+      top: $a*3;
+      right: 0;
+      display: block;
+      width: $a*2;
+      height: $a*2;
+      padding-right: $a/2;
+      padding-left: $b/2;
+      box-shadow: 0 0 $b rgba(0, 0, 0, 0.2);
+      border-radius: 500px 0 0 500px;
+      background-color: $cinzaClaro;
+      transition: all 500ms;
+
+      z-index: 999; // sobrepor aos HEROs
+
+      &::after {
+          display: inline-block;
+          content: "";
+          background: url('/assets/images/ico-cover-open.svg') no-repeat;
+          width: $b*2;
+          height: $a;
+          padding: 2px;
+          margin-top: $b/2;
+          margin-left: $b/3;
+      }
+
+      @media(min-width: $tablet) {
+          position: fixed;
+          right: -$b/2;
+      }
+
+      &:hover {
+          box-shadow: 0 0 $a rgba(0, 0, 0, 0.5);
+          right: 0;
+          cursor: pointer;
+      }
+  }
+
+  body[data-justcomix-mode=true] {
+
+    #appJustComixButton {
+        box-shadow: 0 0 $b rgba(0, 0, 0, 0.2);
+
+        &::after {
+            background: url('/assets/images/ico-cover-closed.svg') no-repeat;
+        }
+
+        &:hover {
+            box-shadow: 0 0 $a rgba(0, 0, 0, 0.5);
+        }            
+    }
+
+    article.post {
+
+      header {
+        display: none;
+
+        & + .subtitle {
+          display: none;
+        }
+      }
+
+        .coluna {
+
+          * {
+            display: none;
+          }
+
+          .featured {
+            display: block;
+            margin-top: $a !important;
+            margin-bottom: $a !important;
+          }
+        }
+    }
+
+    #next { margin-top:$a; }
+  }
+}
+// fim justcomix
+// ----------------------
+
+
+// ----------------------
 // dark mode
 #appDarkmodeButton {
     position: absolute;
@@ -3335,6 +3427,8 @@ body[data-light-mode=dark] {
             box-shadow: 0 0 $a rgba(255, 255, 255, 0.5);
         }
     }
+
+    #appJustComixButton {background-color: $cinzaEscuro;}
 
     header a {
         display: block;
@@ -3631,83 +3725,4 @@ body[data-light-mode=dark] {
 }
 
 // fim dark mode (usar html.no-lights para cancelar)
-// ----------------------
-
-// ----------------------
-// justcomix mode
-html:not(.justcomix) {
-  #appJustComixButton {
-    display:none;
-  }
-}
-html.justcomix {
-  #appJustComixButton {
-      position: absolute;
-      top: $a*3;
-      right: 0;
-      display: block;
-      width: $a*2;
-      height: $a*2;
-      padding-right: $a/2;
-      padding-left: $b/2;
-      box-shadow: 0 0 $b rgba(0, 0, 0, 0.2);
-      border-radius: 500px 0 0 500px;
-      background-color: $cinzaClaro;
-      transition: all 500ms;
-
-      z-index: 999; // sobrepor aos HEROs
-
-      &::after {
-          display: inline-block;
-          content: "";
-          background: url('/assets/images/comic-cover.svg') no-repeat;
-          width: $b*2;
-          height: $a;
-          padding: 2px;
-          margin-top: $b/2;
-          margin-left: $b/3;
-      }
-
-      @media(min-width: $tablet) {
-          position: fixed;
-          right: -$b/2;
-      }
-
-      &:hover {
-          box-shadow: 0 0 $a rgba(0, 0, 0, 0.5);
-          right: 0;
-          cursor: pointer;
-      }
-  }
-
-  body[data-justcomix-mode=true] {
-
-    article.post {
-
-      header {
-        display: none;
-
-        & + .subtitle {
-          display: none;
-        }
-      }
-
-        .coluna {
-
-          * {
-            display: none;
-          }
-
-          .featured {
-            display: block;
-            margin-top: $a !important;
-            margin-bottom: $a !important;
-          }
-        }
-    }
-
-    #next { margin-top:$a; }
-  }
-}
-// fim justcomix
 // ----------------------
