@@ -3336,7 +3336,7 @@ html.justcomix {
 
         &:hover {
             box-shadow: 0 0 $a rgba(0, 0, 0, 0.5);
-        }            
+        }
     }
 
     article.post {
@@ -3359,6 +3359,12 @@ html.justcomix {
             display: block;
             margin-top: $a !important;
             margin-bottom: $a !important;
+            
+            &.espaco-topo
+            &.espaco-base {
+              margin-top: $a !important;
+              margin-bottom: $a !important;
+            }
           }
         }
     }
