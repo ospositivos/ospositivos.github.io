@@ -3351,15 +3351,23 @@ html.justcomix {
 
         .coluna {
 
-          * {
+          & > *:not(.featured) {
             display: none;
           }
 
-          .featured {
+          div.featured {
+            width:auto;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: $a !important;
+            margin-bottom: $a !important;
+            }
+
+          img.featured {
             display: block;
             margin-top: $a !important;
             margin-bottom: $a !important;
-            
+
             &.espaco-topo
             &.espaco-base {
               margin-top: $a !important;
@@ -3367,6 +3375,10 @@ html.justcomix {
             }
           }
         }
+
+      #teses-indice {
+        display: none;
+      }
     }
 
     #next { margin-top:$a; }
