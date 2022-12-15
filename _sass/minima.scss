@@ -3343,11 +3343,11 @@ html.justcomix {
 
       header {
         display: none;
-
-        & + .subtitle {
-          display: none;
         }
-      }
+        
+      .subtitle {
+        display: none;
+        }
 
         .coluna {
 
