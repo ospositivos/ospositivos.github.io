@@ -51,6 +51,11 @@ html {
         color: $preto;
         font: normal 300 16px/1.8 $base-font-family;
 
+        @media(max-width: $mobileL){
+          font-weight: 400;
+          font-size: $c;
+        }
+
         transition: background-color .2s;
 
         h1,
@@ -3344,7 +3349,7 @@ html.justcomix {
       header {
         display: none;
         }
-        
+
       .subtitle {
         display: none;
         }
