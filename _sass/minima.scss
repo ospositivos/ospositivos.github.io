@@ -70,6 +70,10 @@ html {
             color: $preto;
         }
 
+        .dejected-bg {
+          background-color:#1ee6e6;
+          }
+
         // ----------------------
         .uk-tab {
             li {
@@ -3449,6 +3453,10 @@ body[data-light-mode=dark] {
         &:hover {
             box-shadow: 0 0 $a rgba(255, 255, 255, 0.5);
         }
+    }
+
+    .dejected-bg {
+      background-color: #5e5e5e;
     }
 
     #appJustComixButton {background-color: $cinzaEscuro;}
