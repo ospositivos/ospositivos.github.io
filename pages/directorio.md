@@ -6,7 +6,7 @@ sitemap: false
 estilo: "homepage clean-black"
 ---
 
-<header class="directorio"></header>
+<header class="directorio"><a href="/"></a></header>
 
 <article class="post">
 <div class="coluna directorio">
@@ -36,10 +36,13 @@ estilo: "homepage clean-black"
 <ul class="lista-artigos">
   {% for post in site.posts offset:1 %}
   {% capture year %}{{post.date | date: "%Y"}}{% endcapture %}
+  {% capture month %}{{post.date | date: "%m"}}{% endcapture %}
   <li>
       <small>
         {% if year == "1977" or year == "1997" %}
           {{ post.date | date: '%Y' }}
+        {% elsif year == "2009" and month == "05" %}
+            {{ post.date | date: '%Y' }}
         {% else %}
           {{ post.date | date: '%d-%m-%Y' }}
         {% endif %}
