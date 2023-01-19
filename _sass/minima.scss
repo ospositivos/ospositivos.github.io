@@ -3358,6 +3358,9 @@ html.justcomix {
         display: none;
         }
 
+        .thumb,
+        .clip {display: none;}
+
         .coluna {
 
           & > *:not(.featured) {
