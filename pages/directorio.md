@@ -6,7 +6,7 @@ sitemap: false
 estilo: "homepage clean-black"
 ---
 
-<header class="directorio"><a href="{{ site.url }}"></a></header>
+<header class="directorio"></header>
 
 <article class="post">
 <div class="coluna directorio">
