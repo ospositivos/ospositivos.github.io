@@ -2798,6 +2798,9 @@ article.post {
                 height: 100px;
 
                 .search {
+                    // hidden
+                    //visibility: hidden;
+                    //&:hover {visibility: visible;}
                     position: absolute;
                     margin: auto;
                     top: 0;
