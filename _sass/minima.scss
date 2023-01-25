@@ -2015,6 +2015,11 @@ header {
 article.post {
     margin-bottom: $a*4;
 
+    header.post-header {
+      //justcomix
+      transition: filter 0.5s ease-out;
+    }
+
     .post-title {
         display: table;
         padding: 0 $b*2;
@@ -2102,6 +2107,10 @@ article.post {
 
     // coluna
     .coluna {
+
+      & * {
+        transition: filter 0.5s ease-out;
+        }
 
         & > h2,
         & > h3,
@@ -3339,6 +3348,17 @@ html.justcomix {
 
   body[data-justcomix-mode=true] {
 
+    .notfeatured {
+      visibility: hidden;
+      opacity: 0;
+      height: 0;
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+      filter: blur(5px);
+    }
+
     #appJustComixButton {
         box-shadow: 0 0 $b rgba(0, 0, 0, 0.2);
 
@@ -3354,20 +3374,26 @@ html.justcomix {
     article.post {
 
       header {
-        display: none;
+        //display: none;
+        @extend .notfeatured;
         }
 
       .subtitle {
-        display: none;
+        //display: none;
+        @extend .notfeatured;
         }
 
         .thumb,
-        .clip {display: none;}
+        .clip {
+          //display: none;
+          @extend .notfeatured;
+        }
 
         .coluna {
 
           & > *:not(.featured) {
-            display: none;
+            //display: none;
+            @extend .notfeatured;
           }
 
           div.featured {
@@ -3380,6 +3406,7 @@ html.justcomix {
 
           img.featured {
             display: block;
+            visibility: visible;
             margin-top: $a !important;
             margin-bottom: $a !important;
 
@@ -3392,7 +3419,11 @@ html.justcomix {
         }
 
       #teses-indice {
-        display: none;
+        //display: none;
+        visibility: hidden;
+        height: 0;
+        margin: 0;
+        padding: 0;
       }
     }
 
