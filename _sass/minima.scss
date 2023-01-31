@@ -3373,30 +3373,39 @@ html.justcomix {
 
     article.post {
 
-      header {
-        //display: none;
+      header,
+      .subtitle,
+      .thumb,
+      .clip {
         @extend .notfeatured;
         }
 
-      .subtitle {
-        //display: none;
-        @extend .notfeatured;
-        }
+      .coluna {
 
-        .thumb,
-        .clip {
-          //display: none;
-          @extend .notfeatured;
-        }
-
-        .coluna {
-
-          & > *:not(.featured) {
-            //display: none;
+        & > *:not(.featured) {
             @extend .notfeatured;
           }
 
-          div.featured {
+        h3.centre,
+        blockquote {
+          @extend .notfeatured;
+          border:none;
+
+          &::after,
+            * {
+              position: inherit;
+              display: none;
+              top: 0;
+              bottom: 0;
+              content: none;
+            }
+          }
+
+        br {
+            display: none;
+          }
+
+        div.featured {
             width:auto;
             margin-left: auto;
             margin-right: auto;
@@ -3404,22 +3413,21 @@ html.justcomix {
             margin-bottom: $a !important;
             }
 
-          img.featured {
+        img.featured {
             display: block;
             visibility: visible;
             margin-top: $a !important;
             margin-bottom: $a !important;
 
-            &.espaco-topo
+            &.espaco-topo,
             &.espaco-base {
               margin-top: $a !important;
               margin-bottom: $a !important;
             }
           }
-        }
+      }
 
       #teses-indice {
-        //display: none;
         visibility: hidden;
         height: 0;
         margin: 0;
