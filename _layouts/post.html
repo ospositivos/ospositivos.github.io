@@ -17,7 +17,7 @@ layout: default
   {% capture postDate %}{{ page.date | date: "%Y" }}{% endcapture %}
   {% if postDate < warningDate %}
     <script src="/assets/pinwarning-script.js"></script>
-    <div id="avisoData" class="avisoData">hum... esta página já tem alguns anos <sup>({{ page.date | date: "%Y" }})</sup>.<br class="mobileOnly"> E se procurasses alguma coisa <a href="{{ site.url }}">mais recente</a> ? </div>
+    <div id="avisoData" class="avisoData">hum... esta página é antiga <sup>({{ page.date | date: "%Y" }})</sup>: lê o <a href="{{ site.url }}/disclaimer.html">disclaimer</a> ou procura outra <a href="{{ site.url }}">mais recente</a></div>
   {% endif %}
 
   {{ content }}
