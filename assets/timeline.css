@@ -10,7 +10,7 @@
 	border-radius:8px;
 }
 .inicio .icon {
-	background: url('https://1.bp.blogspot.com/-xLzanT25DSM/YKUAYqUSlGI/AAAAAAAAcEc/92YVUKPcUYcO_l118U1vMZKInSA5dXpIgCPcBGAsYHg/s0/enchanted.jpg') no-repeat;
+	background: url('https://raw.githubusercontent.com/ospositivos/files/master/espaco-s-tmp/enchanted.jpg') no-repeat;
 	background-size: auto;
 	background-size: contain;
 	width: 44px;
@@ -189,12 +189,12 @@
 }
 .container.left .icon {
 	right: 56px;
-	background: url('https://1.bp.blogspot.com/-h0H9zr6t5gA/YKfYqcdcHSI/AAAAAAAAcHA/9R4DJQGwl8A2ss7DEXSDwiai1kMoMFNZQCPcBGAsYHg/s0/di.png') no-repeat;
+	background: url('https://raw.githubusercontent.com/ospositivos/files/master/espaco-s-tmp/di.jpg') no-repeat;
 	background-size: contain;
 }
 .container.right .icon {
 	left: 56px;
-	background: url('https://1.bp.blogspot.com/-IQ0PDWxEhIc/YIXmnO_kebI/AAAAAAAAb2c/qOgYDll8vYItQ4mS6FlC0DPZHa6yHf8wgCPcBGAsYHg/s0/pm.png') no-repeat;
+	background: url('https://raw.githubusercontent.com/ospositivos/files/master/espaco-s-tmp/pm.jpg') no-repeat;
 	background-size: contain;
 }
 .container .content {
