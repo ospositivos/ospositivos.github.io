@@ -848,6 +848,15 @@ hr {
     }
 }
 
+.caixa-mail {
+    box-shadow:  0px 10px $a*2 $a rgba(0,0,0,0.2);
+	border-style: solid;
+	border-width: 69px 107px 85px 66px;
+	border-image: url(/assets/images/frame-gmail.png) 404 624 421 405 fill repeat;
+    &::after {display: none;}
+    font-family: monospace;
+}
+
 .small-caps {
     p {
         &::first-line {
