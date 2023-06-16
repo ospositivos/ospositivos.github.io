@@ -855,6 +855,9 @@ hr {
 	border-image: url(/assets/images/frame-gmail.png) 404 624 421 405 fill repeat;
     &::after {display: none;}
     font-family: monospace;
+    @media (max-width:$mobileM){
+        font-size: $b;
+    }
 }
 
 .small-caps {
