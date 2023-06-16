@@ -39,7 +39,7 @@ estilo: "homepage clean-black"
   {% capture month %}{{post.date | date: "%m"}}{% endcapture %}
   <li>
       <small>
-        {% if year == "1977" or year == "1997" %}
+        {% if year == "1977" or year == "1997" or year == "1999" %}
           {{ post.date | date: '%Y' }}
         {% elsif year == "2009" and month == "05" %}
             {{ post.date | date: '%Y' }}
