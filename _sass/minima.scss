@@ -3411,7 +3411,8 @@ html.justcomix {
                 }
 
                 h3.centre,
-                blockquote {
+                blockquote,
+                .interview {
                     @extend .notfeatured;
                     border: none;
 
@@ -3425,7 +3426,8 @@ html.justcomix {
                     }
                 }
 
-                br {
+                br,
+                .espaco-meio {
                     display: none;
                 }
 
