@@ -14,7 +14,7 @@ $mobileM: 560px;
 $mobileS: 450px;
 
 $hand-font-family: 'Sue Ellen Francisco';
-$title-font-family: "DM Serif Display";
+$title-font-family: "Covered By Your Grace";
 $base-font-family: "Bellota Text";
 $blockquote-font-family: "Bellota";
 $alt-font-family: "Roboto Mono";
@@ -2046,9 +2046,10 @@ article.post {
         text-align: center;
         line-height: 120%;
         color: $preto;
+        letter-spacing: -2px;
 
         @media (resolution:96dpi) {
-            font-weight: 700;
+            //font-weight: 700; // monitor treta
         }
 
         @media screen and (min-width: $tablet) {
@@ -3093,8 +3094,8 @@ article.post {
 
         a {
             position: relative;
-            //font-family: 'Permanent Marker';
-            font-family: $hand-font-family;
+            //font-family: $hand-font-family;
+            font-family: $title-font-family;
             border: none;
             color: $vermelho;
 
