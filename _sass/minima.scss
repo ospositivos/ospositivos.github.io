@@ -1352,10 +1352,15 @@ ul.lista {
     color: $preto;
     font-family: $blurb-font-family;
     font-size: 1.5em;
+    font-style: italic;
     line-height: 1.3em;
     text-align: left;
-    display: flex;
-    flex-wrap: wrap;
+    //display: flex;
+    //flex-wrap: wrap;
+    
+    & *:not(.bubble) {
+        flex:none; // not working
+    }
 
     &.intro {
         max-width: 580px;
@@ -1426,7 +1431,7 @@ ul.lista {
         top: -$b;
 
         &::after {
-            content: 'quote';
+            content: '';
             position: absolute;
             left: 45%;
             border-style: solid;
