@@ -1702,6 +1702,10 @@ article.clip {
     @media(max-width:$tablet) {
         padding: $a*2;
     }
+    
+    .sidenote {
+        background: transparent;
+    }
 }
 
 // ----------------------
@@ -3814,6 +3818,11 @@ body[data-light-mode=dark] {
         strong {
             color: $branco;
         }
+        
+        .sidenote {
+            background-color: transparent; 
+            color:$branco;
+            }
     }
 
     footer {
