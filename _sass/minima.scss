@@ -69,8 +69,10 @@ html {
         a {
             color: $preto;
         }
-        
-        img {border-radius:($b/2)}
+
+        img {
+            border-radius: ($b/2)
+        }
 
         .dejected-bg {
             background-color: #1ee6e6;
@@ -851,13 +853,18 @@ hr {
 }
 
 .caixa-mail {
-    box-shadow:  0px 10px $a*2 $a rgba(0,0,0,0.2);
-	border-style: solid;
-	border-width: 69px 107px 85px 66px;
-	border-image: url(/assets/images/frame-gmail.png) 404 624 421 405 fill repeat;
-    &::after {display: none;}
+    box-shadow: 0px 10px $a*2 $a rgba(0, 0, 0, 0.2);
+    border-style: solid;
+    border-width: 69px 107px 85px 66px;
+    border-image: url(/assets/images/frame-gmail.png) 404 624 421 405 fill repeat;
+
+    &::after {
+        display: none;
+    }
+
     font-family: monospace;
-    @media (max-width:$mobileM){
+
+    @media (max-width:$mobileM) {
         font-size: $b;
     }
 }
@@ -1359,9 +1366,9 @@ ul.lista {
     text-align: left;
     //display: flex;
     //flex-wrap: wrap;
-    
+
     & *:not(.bubble) {
-        flex:none; // not working
+        flex: none; // not working
     }
 
     &.intro {
@@ -1705,7 +1712,7 @@ article.clip {
     @media(max-width:$tablet) {
         padding: $a*2;
     }
-    
+
     .sidenote {
         background: transparent;
     }
@@ -2059,6 +2066,11 @@ article.post {
         line-height: 120%;
         color: $preto;
         letter-spacing: -2px;
+
+        small {
+            font-size: 50%;
+            ;
+        }
 
         @media (resolution:96dpi) {
             //font-weight: 700; // monitor treta
@@ -3443,8 +3455,10 @@ html.justcomix {
                 .espaco-meio {
                     display: none;
                 }
-                
-                .clip {display: none;}
+
+                .clip {
+                    display: none;
+                }
 
                 div.featured {
                     width: auto;
@@ -3823,11 +3837,11 @@ body[data-light-mode=dark] {
         strong {
             color: $branco;
         }
-        
+
         .sidenote {
-            background-color: transparent; 
-            color:$branco;
-            }
+            background-color: transparent;
+            color: $branco;
+        }
     }
 
     footer {
