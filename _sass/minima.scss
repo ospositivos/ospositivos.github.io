@@ -635,6 +635,49 @@ html {
             }
         }
     }
+    
+    // ----------------------
+    // hero-mist
+    &.hero-mist {
+
+        body:not([data-justcomix-mode=true]) {
+
+            header:not(.post-header) {
+                background: url('https://raw.githubusercontent.com/ospositivos/files/master/antes-dos-tractores/header-mist.jpg?raw=true') 50% 50%;
+                background-size: cover;
+                height: 200vh;
+
+                &::before {
+                    display: block;
+                    width: 330px;
+                    font-size: 11px;
+                    text-align: left;
+                    padding-left: $a;
+                    content: "from the chaotic mists of old to the orderly chains of modern";
+                    background-color: rgba(0, 0, 0, 0.5);
+                    color: white;
+                }
+
+                a {
+                    display: inline-block;
+
+                    &::after {
+                        display: block;
+                        content: "";
+                        background: url("/assets/images/x_inverted.png") no-repeat;
+                        background-size: contain;
+                        width: 200px;
+                        height: 200px;
+                        margin: auto;
+                    }
+
+                    img {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
 
     // ----------------------
     // hero-twitter
@@ -2063,7 +2106,7 @@ article.post {
         font-family: $title-font-family;
         font-size: 3.5em;
         text-align: center;
-        line-height: 120%;
+        line-height: 70%;
         color: $preto;
         letter-spacing: -2px;
 
