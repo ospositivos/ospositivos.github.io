@@ -3199,35 +3199,18 @@ article.post {
     // ----------------------
     // paginacao cronos
     .postnav {
-        display: none;
+        //display: none;
         margin: $a*2 auto;
 
         a {
-            color: $cinza;
+            color: $vermelho;
             font-size: 10px;
             letter-spacing: 2px;
             text-decoration: none;
 
             &:hover {
-                color: $vermelho;
+                color: $cinzaEscuro;
             }
-
-            /*&.prev::before,
-        &.next::before {
-          display: block;
-          width: auto;
-          margin-top:-$a;
-          font-size:10px;
-          color:$cinza;
-          letter-spacing: 2px;
-          }
-
-        &.prev::before {
-            content: "« prev";
-          }
-        &.next::before {
-          content: "next »";
-        }*/
         }
     }
 
