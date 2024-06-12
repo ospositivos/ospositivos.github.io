@@ -3445,11 +3445,16 @@ html.justcomix {
                 display: none;
             }
         }
+        
+        .subtitle {
+            @extend .notfeatured;
+        }
 
         article.post {
 
             header,
             .subtitle,
+            #artigo,
             .thumb,
             .clip {
                 @extend .notfeatured;
@@ -3457,7 +3462,8 @@ html.justcomix {
 
             .coluna {
 
-                & > *:not(.featured) {
+                & > *:not(.featured),
+                & > *:not(.featured) *{
                     @extend .notfeatured;
                 }
 
@@ -3476,6 +3482,14 @@ html.justcomix {
                         content: none;
                     }
                 }
+                
+                &.info {
+                    @extend .notfeatured;
+                    
+                    * {
+                        @extend .notfeatured;
+                        }
+                    }
 
                 br,
                 .espaco-meio {
