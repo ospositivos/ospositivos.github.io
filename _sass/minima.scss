@@ -559,6 +559,38 @@ html {
             }
         }
     }
+    
+    // ----------------------
+    // hero-proposito
+    &.hero-proposito {
+
+        body:not([data-justcomix-mode=true]) {
+
+            header:not(.post-header) {
+                background: url('https://raw.githubusercontent.com/ospositivos/files/master/ponto-situacao/not-a-bunker.jpg?raw=true') 50% 50%;
+                background-size: cover;
+                height: 100vh;
+
+                a {
+                    display: inline-block;
+
+                    &::after {
+                        display: block;
+                        content: "";
+                        background: url("/assets/images/x_inverted.png") no-repeat;
+                        background-size: contain;
+                        width: 200px;
+                        height: 200px;
+                        margin: auto;
+                    }
+
+                    img {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
 
     // ----------------------
     // hero-notes
