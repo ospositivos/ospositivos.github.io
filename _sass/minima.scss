@@ -559,7 +559,7 @@ html {
             }
         }
     }
-    
+
     // ----------------------
     // hero-proposito
     &.hero-proposito {
@@ -570,6 +570,15 @@ html {
                 background: url('https://raw.githubusercontent.com/ospositivos/files/master/ponto-situacao/not-a-bunker.jpg?raw=true') 50% 50%;
                 background-size: cover;
                 height: 100vh;
+
+                &::before {
+                    display: block;
+                    font-size: 11px;
+                    text-align: left;
+                    padding-left: $a;
+                    content: "imagem: got-a-bunker?";
+                    color: white;
+                }
 
                 a {
                     display: inline-block;
@@ -667,8 +676,8 @@ html {
             }
         }
     }
-    
-    
+
+
     // ----------------------
     // hero-misapop
     &.hero-misapop {
@@ -700,7 +709,7 @@ html {
             }
         }
     }
-    
+
     // ----------------------
     // hero-mist
     &.hero-mist {
@@ -3510,7 +3519,7 @@ html.justcomix {
                 display: none;
             }
         }
-        
+
         .subtitle {
             @extend .notfeatured;
         }
@@ -3528,7 +3537,7 @@ html.justcomix {
             .coluna {
 
                 & > *:not(.featured),
-                & > *:not(.featured) *{
+                & > *:not(.featured) * {
                     @extend .notfeatured;
                 }
 
@@ -3547,14 +3556,14 @@ html.justcomix {
                         content: none;
                     }
                 }
-                
+
                 &.info {
                     @extend .notfeatured;
-                    
+
                     * {
                         @extend .notfeatured;
-                        }
                     }
+                }
 
                 br,
                 .espaco-meio {
