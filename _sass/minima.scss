@@ -801,7 +801,7 @@ blockquote {
     //background: $branco;
     letter-spacing:-0.5px;
     padding: 1em 2em;
-    font-size: 14px;
+    font-size: 15px;
     font-style: normal;
     color: $cinzaEscuro;
     line-height: 1.8em;
@@ -3467,7 +3467,7 @@ html.justcomix {
         &::after {
             display: inline-block;
             content: "";
-            background: url('/assets/images/ico-book-open.svg') no-repeat;
+            background: url('/assets/images/ico-book-closed.svg') no-repeat;
             width: $b*2;
             height: $a;
             padding: 2px;
@@ -3504,7 +3504,7 @@ html.justcomix {
             box-shadow: 0 0 $b rgba(0, 0, 0, 0.2);
 
             &::after {
-                background: url('/assets/images/ico-book-closed.svg') no-repeat;
+                background: url('/assets/images/ico-book-open.svg') no-repeat;
             }
 
             &:hover {

@@ -8,6 +8,7 @@ layout: compress
 
   <body>
 
+   <!-- toggle pt1 -->
     <script>
     var appDarkMode = document.getElementsByTagName("BODY")[0];
     if (localStorage.lightMode == "dark") {
@@ -21,7 +22,7 @@ layout: compress
             appJustComixMode.setAttribute("data-justcomix-mode", "true");
             appJustComixButton.checked = true;
           }
-        </script>
+    </script>
 
     <a id="appDarkmodeButton" onclick="toggle_light_mode()"></a>
     <a id="appJustComixButton" onclick="toggle_justcomix_mode()"></a>
@@ -30,6 +31,7 @@ layout: compress
 
   {%- include footer.html -%}
 
+    <!-- toggle pt2 -->
   <script>
   function toggle_light_mode() {
     var appDarkMode = document.getElementsByTagName("BODY")[0];
