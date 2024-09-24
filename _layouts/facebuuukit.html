@@ -4,24 +4,28 @@ layout: compress
 
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "pt" }}">
-  {%- include head.html -%}
-  <body id="facebuuukit">
-    
+{%- include head.html -%}
+
+<body id="facebuuukit">
+
     {% if jekyll.environment == 'production' and site.google_analytics %}
-        {% include analytics-post-body.html %}
+    {% include analytics-post-body.html %}
     {% endif %}
-    
+
     <header>
         <a href="{{ "/" | relative_url }}">
-        <img src="{{ "/assets/images/x-inverted-200.png" | absolute_url }}" alt="OS POSITIVOS" width="200" />
+            <img src="{{ "/assets/images/x-inverted-200.png" | absolute_url }}" alt="OS POSITIVOS" width="200" />
         </a>
     </header>
     <article class="post">
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
-      </header>
-      {{ content }}
+        <header class="post-header">
+            <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+        </header>
+
+        {{ content }}
+        
     </article>
-  {%- include footer.html -%}
-  </body>
+    {%- include footer.html -%}
+</body>
+
 </html>

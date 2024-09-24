@@ -124,10 +124,13 @@ html {
             }
 
             .photos {
-                position: relative;
+                //position: relative;
                 background: #000;
+                width:820px;
+                max-width:100%;
+                margin:auto;
                 line-height: 0;
-                column-count: 5;
+                column-count: 2;
                 column-gap: 4px;
 
                 img {
