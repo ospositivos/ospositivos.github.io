@@ -7,9 +7,12 @@ layout: compress
 {%- include head.html -%}
 
 <body>
-  <header>
-    
-  </header>
+    {% if jekyll.environment == 'production' and site.google_analytics %}
+        {% include analytics-post-top.html %}
+    {% endif %}
+  
+    <header>
+    </header>
 
   <article class="post">
     <div class="coluna">

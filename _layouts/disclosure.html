@@ -37,6 +37,9 @@ layout: compress
 <script src="/assets/bigfoot.min.js"></script>
 </head>
 <body>
+    {% if jekyll.environment == 'production' and site.google_analytics %}
+        {% include analytics-post-top.html %}
+    {% endif %}
 
   {{ content }}
 

@@ -6,6 +6,11 @@ layout: compress
 <html lang="{{ page.lang | default: site.lang | default: "pt" }}">
   {%- include head.html -%}
   <body id="facebuuukit">
+    
+    {% if jekyll.environment == 'production' and site.google_analytics %}
+        {% include analytics-post-top.html %}
+    {% endif %}
+    
     <header>
         <a href="{{ "/" | relative_url }}">
         <img src="{{ "/assets/images/x-inverted-200.png" | absolute_url }}" alt="OS POSITIVOS" width="200" />
