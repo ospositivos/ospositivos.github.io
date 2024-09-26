@@ -124,18 +124,29 @@ html {
             }
 
             .photos {
-                //position: relative;
                 background: #000;
-                width:820px;
-                max-width:100%;
-                margin:auto;
-                line-height: 0;
-                column-count: 2;
-                column-gap: 4px;
+                column-count: 4;
+                column-gap: 1rem;
+                width: 100%;
+
+                a {
+
+                    mask-image: url('/assets/images/mask-image.png');
+                    mask-repeat: no-repeat;
+                    mask-size: cover;
+                    mask-position: center;
+
+                    break-inside: avoid;
+                    margin-bottom: 1rem;
+                    padding: 1rem;
+                }
 
                 img {
-                    width: 100% !important;
-                    height: auto !important;
+                    max-width: 100%;
+                    display: block;
+                    //width: 100% !important;
+                    //height: auto !important;
+                    //border-radius: 20px;
                 }
 
                 @media (max-width: $desktopS) {
@@ -802,7 +813,7 @@ blockquote {
     border-top: 6px solid $preto;
     border-radius: 2px;
     //background: $branco;
-    letter-spacing:-0.5px;
+    letter-spacing: -0.5px;
     padding: 1em 2em;
     font-size: 14px;
     font-style: normal;
