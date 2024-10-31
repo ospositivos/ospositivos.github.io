@@ -3136,6 +3136,7 @@ article.post {
 
                 h2,
                 h3,
+                h4,
                 div,
                 span,
                 p,
@@ -3143,6 +3144,8 @@ article.post {
                 small {
                     color: $branco;
                 }
+                
+                b {text-decoration: underline;}
 
                 a:not(.link) {
                     color: $branco;
