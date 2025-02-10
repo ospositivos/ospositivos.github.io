@@ -3548,7 +3548,11 @@ html.justcomix {
             .subtitle,
             #artigo,
             .thumb,
-            .clip {
+            .clip,
+            .clip::before,
+            .clip::after,
+            .clip h1,
+            .clip p {
                 @extend .notfeatured;
             }
 
