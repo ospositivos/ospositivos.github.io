@@ -6,7 +6,7 @@ layout: compress
 <html lang="{{ page.lang | default: site.lang | default: "pt" }}" class="{{ page.estilo }}">
   {%- include head.html -%}
 
-  <body>
+  <body data-justcomix-mode="true">
     {% if jekyll.environment == 'production' and site.google_analytics %}
         {% include analytics-post-body.html %}
     {% endif %}
@@ -23,7 +23,7 @@ layout: compress
         var appJustComixMode = document.getElementsByTagName("BODY")[0];
         if (localStorage.comixMode == "true") {
             appJustComixMode.setAttribute("data-justcomix-mode", "true");
-            appJustComixButton.checked = true;
+            appJustComixButton.checked = false;
           }
     </script>
 
