@@ -23,7 +23,7 @@ layout: compress
         var appJustComixMode = document.getElementsByTagName("BODY")[0];
         if (localStorage.comixMode == "true") {
             appJustComixMode.setAttribute("data-justcomix-mode", "true");
-            appJustComixButton.checked = false;
+            appJustComixButton.checked = true;
           }
     </script>
 
@@ -50,12 +50,12 @@ layout: compress
   <script>
     function toggle_justcomix_mode() {
       var appJustComixMode = document.getElementsByTagName("BODY")[0];
-      if (localStorage.comixMode == "true") {
-    	  localStorage.comixMode = "false";
-    	  appJustComixMode.setAttribute("data-justcomix-mode", "false");
-      } else {
+      if (localStorage.comixMode == "false") {
     	  localStorage.comixMode = "true";
     	  appJustComixMode.setAttribute("data-justcomix-mode", "true");
+      } else {
+    	  localStorage.comixMode = "false";
+    	  appJustComixMode.setAttribute("data-justcomix-mode", "false");
       }
     }
     </script>
