@@ -6,7 +6,7 @@ layout: compress
 <html lang="{{ page.lang | default: site.lang | default: "pt" }}" class="{{ page.estilo }}">
   {%- include head.html -%}
 
-  <body data-justcomix-mode="true">
+  <body>
     {% if jekyll.environment == 'production' and site.google_analytics %}
         {% include analytics-post-body.html %}
     {% endif %}
@@ -50,12 +50,12 @@ layout: compress
   <script>
     function toggle_justcomix_mode() {
       var appJustComixMode = document.getElementsByTagName("BODY")[0];
-      if (localStorage.comixMode == "false") {
-    	  localStorage.comixMode = "true";
-    	  appJustComixMode.setAttribute("data-justcomix-mode", "true");
-      } else {
+      if (localStorage.comixMode == "true") {
     	  localStorage.comixMode = "false";
     	  appJustComixMode.setAttribute("data-justcomix-mode", "false");
+      } else {
+    	  localStorage.comixMode = "true";
+    	  appJustComixMode.setAttribute("data-justcomix-mode", "true");
       }
     }
     </script>
