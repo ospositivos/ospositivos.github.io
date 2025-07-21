@@ -3588,8 +3588,8 @@ html.justcomix {
                 }
 
                 br,
-                .espaco,
-                .espaco-meio {
+                .espaco:not(.featured),
+                .espaco-meio:not(.featured) {
                     display: none;
                 }
 
@@ -3615,6 +3615,8 @@ html.justcomix {
                     margin-top: $a !important;
                     margin-bottom: $a !important;
 
+                    &.espaco,
+                    &.espaco-meio,
                     &.espaco-topo,
                     &.espaco-base {
                         margin-top: $a !important;
