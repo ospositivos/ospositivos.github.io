@@ -21,10 +21,13 @@ layout: compress
     </script>
     <script>
         var appJustComixMode = document.getElementsByTagName("BODY")[0];
-        if (localStorage.comixMode == "true") {
+        if (localStorage.comixMode === null) {
             appJustComixMode.setAttribute("data-justcomix-mode", "true");
             appJustComixButton.checked = true;
-          }
+          } else if (localStorage.comixMode == "true") {
+            appJustComixMode.setAttribute("data-justcomix-mode", "true");
+            appJustComixButton.checked = true;
+          } 
     </script>
 
     <a id="appDarkmodeButton" onclick="toggle_light_mode()"></a>
