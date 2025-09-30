@@ -1,9 +1,9 @@
 ---
 layout: default
+estilo: clean-black nocomix
 title: More
 permalink: more.html
 sitemap: false
-estilo: "clean-black"
 ---
 <link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
 

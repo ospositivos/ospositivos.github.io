@@ -10,73 +10,83 @@ termos:
 - Pablo Defendini
 ---
 <div class="coluna">
-  <blockquote> <b>The reality of screens is that they're not one, immutable thing—screens have unique characteristics that are different from printed, paper pages. Screens are fluid surfaces, and the way we design content for them must change accordingly.</b>
-  <br><small>in <i><a href="i" target="_blank">&quot;Embrace the Chaos<b>&quot;</b></a></i></small></blockquote>
-  <div class="centre" style="background:aliceblue;padding:6px;">
-    <iframe src="https://www.ospositivos.pt/porting/balak/index.html" width="640" height="480" scrolling="no" frameborder="0"></iframe>
-    <br>
-    <b>Balak</b> <i>"About Digital Comics"</i> <a href="https://www.catsuka.com/turbomedia/about_digital_comics_balak_en.html" target="_blank"><sup>2009</sup></a>
-  <p><small><a href="{{ site.url }}/2018/02/murat.html">sem Flash?</a> já vimos esse filme antes</small></p> </div>
-  <p><a href="{{ site.url }}/2018/03/scrolling-appearance.html" target="_blank">Ficámos</a> no <em>&quot;monitor/ecrã/viewport/constrangimento de enquadramento exterior à BD&quot;</em>, e o exemplo de hoje exemplifica a procura por uma resposta  nesses domínios.</p>
-  <div class="blurb"><i class="bubble"></i> HTML + CSS = Comics.</div>
-  <blockquote>
-    <p>Some of the ways in which print excels don’t translate well into digital. We need to figure out what to keep from print, but we need to also realize what to leave behind.</p>
-    <p>Most of the approaches taken toward creating digital comics so far fail to take advantage of the medium. In trying to adapt the known experience of printed comics for a screen, artists design comics layouts as if they were still designing for a static, one-size page. The metaphor of the page is a tough one to break—we've been living with it for 500 years. But a screen—or rather, a continuum of screens—has very different characteristics from a printed page in a book.</p>
-    <p>The printed page is immutable, and fixed in size. It is also static. An individual screen on a particular reader's device is also immutable and fixed in size, but it's not static, and this is the place where most comics are playing these days—taking advantage of the internal fluidity of the screen to do things like displaying an infinite canvas, light interaction and animations, superimposing panel states to depict action over time, to name a few examples—but always within the context of a fixed viewport size.</p>
-    <p>Creating comics for individual viewports imposes a new set of limitations: storytellers end up designing page layouts for, say, an iPad, a Kindle Fire, or another, arbitrary screen size defined by a single target platform. But this approach isn't scalable: any comic created this way will always be bespoke to a particular screen—or more accurately, viewport size, to use web design parlance.</p>
-    <p>Applying common web design and development techniques to how we make and display comics on screens can dramatically improve the reading experience, and also decrease complexity when trying to deliver a comic across a wide gamut of devices, platforms, and network conditions. Targeting one screen size or another is a losing game of whack-a-mole. Instead of focusing on one layout or one device, we should be designing systems that can be displayed across a multitude of viewing conditions.<br>
-      <small><b>Pablo Defendini</b> <em><a href="http://digitalcomics.co/" target="_blank">&quot;Standards, Semantics, &amp; Sequential ArtToward a Digital Comics Praxis&quot;</a></em> <sup>2 nov 2016</sup></small> </p>
-  </blockquote>
-  <div class="info coluna">
-    <p>Antes de continuarmos a advertência: a abrangência da proposta é, uh, curta. Fazemos o registo pela problemática identificada, não a solução que lhe dá. Conceptualmente, apesar das boas intenções parece igualmente preso à metáfora do papel e de<em> &quot;relying on print-centric conventions&quot;</em> quanto tenta justamente afastar-se destas. </p>
-    <blockquote>
-      <p><b>The fundamental unit of storytelling in comics is the full-page layout, not the individual panel.</b> The magic of comics happens in the gestalt of the visual juxtaposition of multiple panels. Otherwise, you just have a series of related images, presented to the reader in order over time. The comics reader usually takes in the gestalt of a page, and then starts reading panels in sequence. Designing the page layout, determining panel sizes in relation to each other, using a color theme to reinforce narrative rhythm, are all page-level techniques that the comics storyteller employs as a way to support their narrative.</p>
-      <p><span class="voice">[<b>Paul Duffield</b> <em>et &quot;comics mode&quot;:</em>]</span> Comics live in the expressive, representative and symbolic nature of a drawing, in the comic page when treated as an interconnected piece of art, in the reader’s ability to &quot;pause&quot;, &quot;rewind&quot;, &quot;rewatch&quot; and linger on a moment at their hearts content. Comics thrive when each panel doesn’t just represent a mechanical shot-by-shot advancing of the plot, but a carefully considered and timed &quot;beat&quot; which enforces an emotion, underlines a joke or teases out a dramatic moment. Comics excel when the artist understands how to guide the reader’s eye around the page, when a layout does more than frame a sequence of images, when the story is expressed non-photographically and when the qualities of the artwork beam the characters’ emotional states right into the reader’s head before they read a word of dialogue.<br>
-        <small><b>Pablo Defendini</b> <em><a href="http://digitalcomics.co/" target="_blank">&quot;Standards, Semantics, &amp; Sequential ArtToward a Digital Comics Praxis&quot;</a></em> <sup>2 nov 2016</sup></small></p>
+    <blockquote><p>The reality of screens is that they're not one, immutable thing—screens have unique characteristics that are different from printed, paper pages. Screens are fluid surfaces, and the way we design content for them must change accordingly.
+        <br><small>in <i><a href="i" target="_blank">&quot;Embrace the Chaos<b>&quot;</b></a></i></small></p>
     </blockquote>
-    <p>Em próximas entradas questionamos a página como  unidade fundamental da história.
-      Continuando, olhemos para a solução proposta:<em> &quot;responsive layouts, live text, and resolution-independent artwork&quot;</em>. A sermos simpáticos podemos dizer que a universalidade da sua proposta é imediatamente reduzida a uns quantos estilos de comics que a podem encaixar, os demais não. A não sermos simpáticos, temos que notar que a primeira componente do enunciado obriga a reinventar a BD como a conhecemos — mas é isso que nos ocupa, afinal! —, a segunda a negação da natureza da relação entre texto e imagem em comics, a terceira a negação da própria BD. O exercício em torno de<em> &quot;un-semantic blobs&quot;</em> e <em>&quot;live text&quot;</em> desnecessário e erróneo. Vectores não suportam uma vasta gama de estilos visuais, o texto pertence à imagem, e os avanços em AI tornam as imagens decifráveis e reconhecíveis a motores de pesquisa — mas  pouco nos deve importar se esses as conseguem &quot;ler&quot; ou não, os comics são para consumo humano, não <a href="{{ site.url }}/2018/03/comic-book-markup-language.html">bases de dados</a>:</p>
+    <div class="centre">
+        <iframe src="https://www.ospositivos.pt/porting/balak/index.html" width="640" height="480" scrolling="no" frameborder="0"></iframe>
+        <br>
+        <b>Balak</b> <i>"About Digital Comics"</i> <a href="https://www.catsuka.com/turbomedia/about_digital_comics_balak_en.html" target="_blank"><sup>2009</sup></a>
+        <small class="centre"><a href="{{ site.url }}/2018/02/murat.html">sem Flash?</a> já vimos esse filme antes</small>
+    </div>
+    <p><a href="{{ site.url }}/2018/03/scrolling-appearance.html" target="_blank">Ficámos</a> no <em>&quot;monitor/ecrã/viewport/constrangimento de enquadramento exterior à BD&quot;</em>, e o exemplo de hoje exemplifica a procura por uma resposta nesses domínios.</p>
+    <div class="blurb"><i class="bubble"></i> HTML + CSS = Comics.</div>
     <blockquote>
-      <p>By breaking your layout into individual components, your comic is suddenly a lot more searchable, findable, and parseable by non-human actors on the network, which is great for both SEO and, crucially, for accessibility.<br>
-        <small><b>Pablo Defendini</b> <em><a href="http://digitalcomics.co/" target="_blank">&quot;Standards, Semantics, &amp; Sequential ArtToward a Digital Comics Praxis&quot;</a></em> <sup>2 nov 2016</sup></small></p>
+        <p>Some of the ways in which print excels don’t translate well into digital. We need to figure out what to keep from print, but we need to also realize what to leave behind.</p>
+        <p>Most of the approaches taken toward creating digital comics so far fail to take advantage of the medium. In trying to adapt the known experience of printed comics for a screen, artists design comics layouts as if they were still designing for a static, one-size page. The metaphor of the page is a tough one to break—we've been living with it for 500 years. But a screen—or rather, a continuum of screens—has very different characteristics from a printed page in a book.</p>
+        <p>The printed page is immutable, and fixed in size. It is also static. An individual screen on a particular reader's device is also immutable and fixed in size, but it's not static, and this is the place where most comics are playing these days—taking advantage of the internal fluidity of the screen to do things like displaying an infinite canvas, light interaction and animations, superimposing panel states to depict action over time, to name a few examples—but always within the context of a fixed viewport size.</p>
+        <p>Creating comics for individual viewports imposes a new set of limitations: storytellers end up designing page layouts for, say, an iPad, a Kindle Fire, or another, arbitrary screen size defined by a single target platform. But this approach isn't scalable: any comic created this way will always be bespoke to a particular screen—or more accurately, viewport size, to use web design parlance.</p>
+        <p>Applying common web design and development techniques to how we make and display comics on screens can dramatically improve the reading experience, and also decrease complexity when trying to deliver a comic across a wide gamut of devices, platforms, and network conditions. Targeting one screen size or another is a losing game of whack-a-mole. Instead of focusing on one layout or one device, we should be designing systems that can be displayed across a multitude of viewing conditions.<br>
+            <small><b>Pablo Defendini</b> <em><a href="http://digitalcomics.co/" target="_blank">&quot;Standards, Semantics, &amp; Sequential ArtToward a Digital Comics Praxis&quot;</a></em> <sup>2 nov 2016</sup></small>
+        </p>
     </blockquote>
-    <p>Ponto para a acessibilidade, mas um leitor invisual quererá suportar &quot;ler&quot; uma BD ou é-lhe mais interessante um conto literário que não depende da relação texto / imagem para sentido? Sobram os <em>non-humam actors</em> e o SEO, e a esses badamerda. 
-  </div>
-  <p>Mas não queremos desmotivar-vos à leitura, aquele primeiro aspecto do enunciado anterior aproxima-se das metafísicas que afligem os comics em digital. </p>
-  <p>Continuemos de <em>&quot;responsive layouts&quot;</em>:</p>
-  <blockquote>
-    <p>This site depicts one possible approach to building comics with HTML, CSS, and SVG, using responsive design techniques.</p>
-    <p>Responsive web design techniques have become the de facto standard for practicing web design and front end development, building one website that can adapt and, well, respond to the unknowable combinations of devices, connectivity, and viewing conditions that exist across the internet. Responsive layouts adapt to their containing screens, changing to accommodate the size and dimensions of the screen the reader is using. Thanks in large part to the advent of the flexbox spec, you can create comics layouts that respond to their viewing context, but retain the ability to execute complex page layouts.<br>
-      <small><b>Pablo Defendini</b> <em><a href="http://digitalcomics.co/" target="_blank">&quot;Standards, Semantics, &amp; Sequential ArtToward a Digital Comics Praxis&quot;</a></em> <sup>2 nov 2016</sup></small> </p>
-  </blockquote>
-  <p>Com o resultado altamente criativo — brinco — que uniformizou o <em>webdesign</em> na década que nos ocupa às mesmas variantes de sempre:</p>
-  <blockquote>
-    <p><b>At small sizes, the page reverts to a stacked panel layout, in order to maximize the space available. At larger viewport sizes, the panels are laid out according to the artist original designs for print.<br>
-      </b><small><b>Pablo Defendini</b> <em><a href="http://digitalcomics.co/" target="_blank">&quot;Standards, Semantics, &amp; Sequential ArtToward a Digital Comics Praxis&quot;</a></em> <sup>2 nov 2016</sup></small> </p>
-  </blockquote>
-  <p>Mas obviamente, a toda uma geração de nativos digitais capazes de empreender a ponte entre BD e linguagens web:</p>
-  <div class="blurb"><i class="bubble"></i> Bandwidth, language, and screen resolution are just a few of the variables that designers on the web need to take into account.</div>
-  <blockquote>
-    <p><b>Naturally, using these techniques will also affect the way comics creators design their stories.</b></p>
-    <p>The idea of altering the way in which artwork is produced can add to the learning curve <span class="voice">[and]</span> it directly infringes on a working artists' process and workflow, but also the actual aesthetics of their work.<br>
-      <small><b>Pablo Defendini</b> <em><a href="http://digitalcomics.co/" target="_blank">&quot;Standards, Semantics, &amp; Sequential ArtToward a Digital Comics Praxis&quot;</a></em> <sup>2 nov 2016</sup></small> </p>
-  </blockquote>
-  <p>Citamos Jeramias:</p>
-  <div class="info coluna">
+    <div class="info coluna">
+        <p>Antes de continuarmos a advertência: a abrangência da proposta é, uh, curta. Fazemos o registo pela problemática identificada, não a solução que lhe dá. Conceptualmente, apesar das boas intenções parece igualmente preso à metáfora do papel e de<em> &quot;relying on print-centric conventions&quot;</em> quanto tenta justamente afastar-se destas. </p>
+        <blockquote>
+            <p><b>The fundamental unit of storytelling in comics is the full-page layout, not the individual panel.</b> The magic of comics happens in the gestalt of the visual juxtaposition of multiple panels. Otherwise, you just have a series of related images, presented to the reader in order over time. The comics reader usually takes in the gestalt of a page, and then starts reading panels in sequence. Designing the page layout, determining panel sizes in relation to each other, using a color theme to reinforce narrative rhythm, are all page-level techniques that the comics storyteller employs as a way to support their narrative.</p>
+            <p><span class="voice">[<b>Paul Duffield</b> <em>et &quot;comics mode&quot;:</em>]</span> Comics live in the expressive, representative and symbolic nature of a drawing, in the comic page when treated as an interconnected piece of art, in the reader’s ability to &quot;pause&quot;, &quot;rewind&quot;, &quot;rewatch&quot; and linger on a moment at their hearts content. Comics thrive when each panel doesn’t just represent a mechanical shot-by-shot advancing of the plot, but a carefully considered and timed &quot;beat&quot; which enforces an emotion, underlines a joke or teases out a dramatic moment. Comics excel when the artist understands how to guide the reader’s eye around the page, when a layout does more than frame a sequence of images, when the story is expressed non-photographically and when the qualities of the artwork beam the characters’ emotional states right into the reader’s head before they read a word of dialogue.<br>
+                <small><b>Pablo Defendini</b> <em><a href="http://digitalcomics.co/" target="_blank">&quot;Standards, Semantics, &amp; Sequential ArtToward a Digital Comics Praxis&quot;</a></em> <sup>2 nov 2016</sup></small>
+            </p>
+        </blockquote>
+        <p>Em próximas entradas questionamos a página como unidade fundamental da história.
+            Continuando, olhemos para a solução proposta:<em> &quot;responsive layouts, live text, and resolution-independent artwork&quot;</em>. A sermos simpáticos podemos dizer que a universalidade da sua proposta é imediatamente reduzida a uns quantos estilos de comics que a podem encaixar, os demais não. A não sermos simpáticos, temos que notar que a primeira componente do enunciado obriga a reinventar a BD como a conhecemos — mas é isso que nos ocupa, afinal! —, a segunda a negação da natureza da relação entre texto e imagem em comics, a terceira a negação da própria BD. O exercício em torno de<em> &quot;un-semantic blobs&quot;</em> e <em>&quot;live text&quot;</em> desnecessário e erróneo. Vectores não suportam uma vasta gama de estilos visuais, o texto pertence à imagem, e os avanços em AI tornam as imagens decifráveis e reconhecíveis a motores de pesquisa — mas pouco nos deve importar se esses as conseguem &quot;ler&quot; ou não, os comics são para consumo humano, não <a href="{{ site.url }}/2018/03/comic-book-markup-language.html">bases de dados</a>:</p>
+        <blockquote>
+            <p>By breaking your layout into individual components, your comic is suddenly a lot more searchable, findable, and parseable by non-human actors on the network, which is great for both SEO and, crucially, for accessibility.<br>
+                <small><b>Pablo Defendini</b> <em><a href="http://digitalcomics.co/" target="_blank">&quot;Standards, Semantics, &amp; Sequential ArtToward a Digital Comics Praxis&quot;</a></em> <sup>2 nov 2016</sup></small>
+            </p>
+        </blockquote>
+        <p>Ponto para a acessibilidade, mas um leitor invisual quererá suportar &quot;ler&quot; uma BD ou é-lhe mais interessante um conto literário que não depende da relação texto / imagem para sentido? Sobram os <em>non-humam actors</em> e o SEO, e a esses badamerda.
+    </div>
+    <p>Mas não queremos desmotivar-vos à leitura, aquele primeiro aspecto do enunciado anterior aproxima-se das metafísicas que afligem os comics em digital. </p>
+    <p>Continuemos de <em>&quot;responsive layouts&quot;</em>:</p>
     <blockquote>
-      <p>Any sufficiently advanced (and embedded) process is indistinguishable from culture.<br>
-        <small> in <em><a href="https://adactio.com/notes/13592" target="_blank">&quot;March 19th, 2018&quot;</a></em> <sup>idem</sup></small></p>
+        <p>This site depicts one possible approach to building comics with HTML, CSS, and SVG, using responsive design techniques.</p>
+        <p>Responsive web design techniques have become the de facto standard for practicing web design and front end development, building one website that can adapt and, well, respond to the unknowable combinations of devices, connectivity, and viewing conditions that exist across the internet. Responsive layouts adapt to their containing screens, changing to accommodate the size and dimensions of the screen the reader is using. Thanks in large part to the advent of the flexbox spec, you can create comics layouts that respond to their viewing context, but retain the ability to execute complex page layouts.<br>
+            <small><b>Pablo Defendini</b> <em><a href="http://digitalcomics.co/" target="_blank">&quot;Standards, Semantics, &amp; Sequential ArtToward a Digital Comics Praxis&quot;</a></em> <sup>2 nov 2016</sup></small>
+        </p>
     </blockquote>
-  </div>
-  <p>Exemplo,</p>
-  <blockquote>
-    <p>To give just one example: printed comics can use a double-page spread to wonderful effect. But on the iPad double-page spreads become a nuisance, rather than an enhancement: the reader ends up with an experience that is the exact opposite of what the creator intended: the double-page spread feels smaller and more cramped, rather than bigger and more expansive. Applying responsive design techniques and designing multiple layouts for one page based on viewport size can introduce an additional element for the storyteller to incorporate into their narrative. For example, what does one page look like as laid out for a mobile device, verses for a tablet, versus for large screen devices? Does the narrative rhythm change? Do cliffhangers and big reveals happen in different ways on different sized screens?<br>
-      <small><b>Pablo Defendini</b> <em><a href="http://digitalcomics.co/" target="_blank">&quot;Standards, Semantics, &amp; Sequential ArtToward a Digital Comics Praxis&quot;</a></em> <sup>2 nov 2016</sup></small> </p>
-  </blockquote>
-  <p>Questões que <a href="{{ site.url }}/2018/02/premio-2018.html">tocámos antes</a> :) e por aqui fechamos hoje.  Levados às devidas consequências,</p>
-  <blockquote>
-    <p>You’ll enter unchartered territory that transcends the current crop of adapted-from-print digital comics<br>
-      <small><b>Pablo Defendini</b> <em><a href="http://digitalcomics.co/" target="_blank">&quot;Standards, Semantics, &amp; Sequential ArtToward a Digital Comics Praxis&quot;</a></em> <sup>2 nov 2016</sup></small> </p>
-  </blockquote>
+    <p>Com o resultado altamente criativo — brinco — que uniformizou o <em>webdesign</em> na década que nos ocupa às mesmas variantes de sempre:</p>
+    <blockquote>
+        <p><b>At small sizes, the page reverts to a stacked panel layout, in order to maximize the space available. At larger viewport sizes, the panels are laid out according to the artist original designs for print.<br>
+            </b><small><b>Pablo Defendini</b> <em><a href="http://digitalcomics.co/" target="_blank">&quot;Standards, Semantics, &amp; Sequential ArtToward a Digital Comics Praxis&quot;</a></em> <sup>2 nov 2016</sup></small> </p>
+    </blockquote>
+    <p>Mas obviamente, a toda uma geração de nativos digitais capazes de empreender a ponte entre BD e linguagens web:</p>
+    <div class="blurb"><i class="bubble"></i> Bandwidth, language, and screen resolution are just a few of the variables that designers on the web need to take into account.</div>
+    <blockquote>
+        <p><b>Naturally, using these techniques will also affect the way comics creators design their stories.</b></p>
+        <p>The idea of altering the way in which artwork is produced can add to the learning curve <span class="voice">[and]</span> it directly infringes on a working artists' process and workflow, but also the actual aesthetics of their work.<br>
+            <small><b>Pablo Defendini</b> <em><a href="http://digitalcomics.co/" target="_blank">&quot;Standards, Semantics, &amp; Sequential ArtToward a Digital Comics Praxis&quot;</a></em> <sup>2 nov 2016</sup></small>
+        </p>
+    </blockquote>
+    <p>Citamos Jeramias:</p>
+    <div class="info coluna">
+        <blockquote>
+            <p>Any sufficiently advanced (and embedded) process is indistinguishable from culture.<br>
+                <small> in <em><a href="https://adactio.com/notes/13592" target="_blank">&quot;March 19th, 2018&quot;</a></em> <sup>idem</sup></small>
+            </p>
+        </blockquote>
+    </div>
+    <p>Exemplo,</p>
+    <blockquote>
+        <p>To give just one example: printed comics can use a double-page spread to wonderful effect. But on the iPad double-page spreads become a nuisance, rather than an enhancement: the reader ends up with an experience that is the exact opposite of what the creator intended: the double-page spread feels smaller and more cramped, rather than bigger and more expansive. Applying responsive design techniques and designing multiple layouts for one page based on viewport size can introduce an additional element for the storyteller to incorporate into their narrative. For example, what does one page look like as laid out for a mobile device, verses for a tablet, versus for large screen devices? Does the narrative rhythm change? Do cliffhangers and big reveals happen in different ways on different sized screens?<br>
+            <small><b>Pablo Defendini</b> <em><a href="http://digitalcomics.co/" target="_blank">&quot;Standards, Semantics, &amp; Sequential ArtToward a Digital Comics Praxis&quot;</a></em> <sup>2 nov 2016</sup></small>
+        </p>
+    </blockquote>
+    <p>Questões que <a href="{{ site.url }}/2018/02/premio-2018.html">tocámos antes</a> :) e por aqui fechamos hoje. Levados às devidas consequências,</p>
+    <blockquote>
+        <p>You’ll enter unchartered territory that transcends the current crop of adapted-from-print digital comics<br>
+            <small><b>Pablo Defendini</b> <em><a href="http://digitalcomics.co/" target="_blank">&quot;Standards, Semantics, &amp; Sequential ArtToward a Digital Comics Praxis&quot;</a></em> <sup>2 nov 2016</sup></small>
+        </p>
+    </blockquote>
 </div>
 <h2 id="next"><a href="{{ site.url }}/2018/03/qual-dos-dois.html">go-a-head</a></h2>

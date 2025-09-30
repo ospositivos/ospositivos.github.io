@@ -2,22 +2,29 @@
 layout: default
 ---
 <style type="text/css" media="screen">
-  .container {
-    margin: 10px auto 50px;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
+    .container {
+        margin: 10px auto 50px;
+        max-width: 600px;
+        text-align: center;
+    }
+
+    h1 {
+        margin: 30px 0;
+        font-size: 4em;
+        line-height: 1;
+        letter-spacing: -1px;
+    }
+
+    #appDarkmodeButton,
+    #appJustComixButton {
+        display: none !important;
+    }
+
 </style>
 
 {%- include header.html -%}
 
 <div class="container">
-  <h1 style="margin-bottom:0;font-family: 'Sedgwick Ave Display', cursive; font-size:11em;color:#B73239;">404</h1>
-  <p><strong style="color:#B73239;">Page not found :(</strong></p>
+    <h1 style="margin-bottom:0;font-family: 'Sedgwick Ave Display', cursive; font-size:11em;color:#B73239;">404</h1>
+    <p><strong style="color:#B73239;">Page not found :(</strong></p>
 </div>

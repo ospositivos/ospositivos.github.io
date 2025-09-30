@@ -3460,7 +3460,7 @@ footer {
 
 // ----------------------
 // justcomix mode
-html:not(.justcomix) {
+html:not(.justcomix):not(.homepage):not(.nocomix){
     // #appJustComixButton {
     //    display: none;
     // }
@@ -3531,7 +3531,7 @@ html:not(.justcomix) {
                 margin: auto;
             }
 
-            & > * {
+            & > *:not(.postnav) {
                 visibility: none;
                 display: none;
             }
@@ -3663,9 +3663,10 @@ html.justcomix {
                 }
 
                 br,
-                .espaco-topo:not(.featured),
                 .espaco:not(.featured),
-                .espaco-meio:not(.featured) {
+                .espaco-topo:not(.featured),
+                .espaco-meio:not(.featured),
+                .espaco-base:not(.featured),{
                     display: none;
                 }
 

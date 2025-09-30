@@ -1,9 +1,9 @@
 ---
 layout: default
+estilo: nocomix
 title: yeeeah 'bout that...
 permalink: nocando.html
 sitemap: false
-estilo: no-lights
 ---
 <header>
     <a href="{{ "/" | relative_url }}">
