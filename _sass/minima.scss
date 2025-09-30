@@ -3634,9 +3634,14 @@ html.justcomix {
             .coluna {
 
                 & > *:not(.featured),
-                & > *:not(.featured) * {
+                & > *:not(.featured) *{
                     @extend .notfeatured;
                 }
+                
+                p:not(.featured){
+                    display: none;
+                }
+
 
                 h3.centre,
                 blockquote,
