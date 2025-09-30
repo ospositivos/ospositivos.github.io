@@ -4,64 +4,73 @@ layout: compress
 
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "pt" }}" class="{{ page.estilo }}">
-  {%- include head.html -%}
+{%- include head.html -%}
 
-  <body>
+<body>
     {% if jekyll.environment == 'production' and site.google_analytics %}
-        {% include analytics-post-body.html %}
+    {% include analytics-post-body.html %}
     {% endif %}
 
-   <!-- toggle pt1 -->
+    <!-- toggle pt1 -->
     <script>
-    var appDarkMode = document.getElementsByTagName("BODY")[0];
-    if (localStorage.lightMode == "dark") {
-        appDarkMode.setAttribute("data-light-mode", "dark");
-        appDarkmodeButton.checked = true;
-      }
+        var appDarkMode = document.getElementsByTagName("BODY")[0];
+        if (localStorage.lightMode == "dark") {
+            appDarkMode.setAttribute("data-light-mode", "dark");
+            appDarkmodeButton.checked = true;
+        }
+
     </script>
     <script>
         var appJustComixMode = document.getElementsByTagName("BODY")[0];
-        if (localStorage.comixMode === null) {
+
+        if (localStorage.comixMode == "true") {
             appJustComixMode.setAttribute("data-justcomix-mode", "true");
             appJustComixButton.checked = true;
-          } else if (localStorage.comixMode == "true") {
+        } else if (localStorage.comixMode == "false") {
+            appJustComixMode.setAttribute("data-justcomix-mode", "false");
+            appJustComixButton.checked = false;
+        } else {
             appJustComixMode.setAttribute("data-justcomix-mode", "true");
-            appJustComixButton.checked = true;
-          } 
+            appJustComixButton.checked = false;
+        }
+
     </script>
 
     <a id="appDarkmodeButton" onclick="toggle_light_mode()"></a>
     <a id="appJustComixButton" onclick="toggle_justcomix_mode()"></a>
 
-  {{ content }}
+    {{ content }}
 
-  {%- include footer.html -%}
+    {%- include footer.html -%}
 
     <!-- toggle pt2 -->
-  <script>
-  function toggle_light_mode() {
-    var appDarkMode = document.getElementsByTagName("BODY")[0];
-    if (localStorage.lightMode == "dark") {
-  	  localStorage.lightMode = "light";
-  	  appDarkMode.setAttribute("data-light-mode", "light");
-    } else {
-  	  localStorage.lightMode = "dark";
-  	  appDarkMode.setAttribute("data-light-mode", "dark");
-    }
-  }
-  </script>
-  <script>
-    function toggle_justcomix_mode() {
-      var appJustComixMode = document.getElementsByTagName("BODY")[0];
-      if (localStorage.comixMode == "true") {
-    	  localStorage.comixMode = "false";
-    	  appJustComixMode.setAttribute("data-justcomix-mode", "false");
-      } else {
-    	  localStorage.comixMode = "true";
-    	  appJustComixMode.setAttribute("data-justcomix-mode", "true");
-      }
-    }
+    <script>
+        function toggle_light_mode() {
+            var appDarkMode = document.getElementsByTagName("BODY")[0];
+            if (localStorage.lightMode == "dark") {
+                localStorage.lightMode = "light";
+                appDarkMode.setAttribute("data-light-mode", "light");
+            } else {
+                localStorage.lightMode = "dark";
+                appDarkMode.setAttribute("data-light-mode", "dark");
+            }
+        }
+
+    </script>
+    <script>
+        function toggle_justcomix_mode() {
+            var appJustComixMode = document.getElementsByTagName("BODY")[0];
+            if (localStorage.comixMode == "false") {
+                localStorage.comixMode = "true";
+                appJustComixMode.setAttribute("data-justcomix-mode", "true");
+            } else {
+                localStorage.comixMode = "false";
+                appJustComixMode.setAttribute("data-justcomix-mode", "false");
+            }
+        }
+
     </script>
 
-  </body>
+</body>
+
 </html>

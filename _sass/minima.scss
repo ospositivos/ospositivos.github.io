@@ -3484,7 +3484,7 @@ html.justcomix {
         &::after {
             display: inline-block;
             content: "";
-            background: url('/assets/images/ico-book-closed.svg') no-repeat;
+            background: url('/assets/images/ico-book-open.svg') no-repeat;
             width: $b*2;
             height: $a;
             padding: 2px;
@@ -3521,7 +3521,7 @@ html.justcomix {
             box-shadow: 0 0 $b rgba(0, 0, 0, 0.2);
 
             &::after {
-                background: url('/assets/images/ico-book-open.svg') no-repeat;
+                background: url('/assets/images/ico-book-closed.svg') no-repeat;
             }
 
             &:hover {
