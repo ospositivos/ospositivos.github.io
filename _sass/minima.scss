@@ -3460,7 +3460,7 @@ footer {
 
 // ----------------------
 // justcomix mode
-html:not(.justcomix):not(.homepage):not(.nocomix){
+html:not(.justcomix):not(.homepage):not(.nocomix) {
     // #appJustComixButton {
     //    display: none;
     // }
@@ -3617,6 +3617,12 @@ html.justcomix {
             @extend .notfeatured;
         }
 
+        // espaco s/ tempo
+        .inicio,
+        .timeline {
+            display: none;
+        }
+
         article.post {
 
             header,
@@ -3634,11 +3640,11 @@ html.justcomix {
             .coluna {
 
                 & > *:not(.featured),
-                & > *:not(.featured) *{
+                & > *:not(.featured) * {
                     @extend .notfeatured;
                 }
-                
-                p:not(.featured){
+
+                p:not(.featured) {
                     display: none;
                 }
 
@@ -3667,12 +3673,12 @@ html.justcomix {
                     }
                 }
 
+                table,
                 br,
                 .espaco:not(.featured),
                 .espaco-topo:not(.featured),
                 .espaco-meio:not(.featured),
-                .espaco-base:not(.featured),
-                table {
+                .espaco-base:not(.featured) {
                     display: none;
                 }
 
