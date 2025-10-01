@@ -3671,7 +3671,8 @@ html.justcomix {
                 .espaco:not(.featured),
                 .espaco-topo:not(.featured),
                 .espaco-meio:not(.featured),
-                .espaco-base:not(.featured),{
+                .espaco-base:not(.featured),
+                table {
                     display: none;
                 }
 
@@ -3679,7 +3680,8 @@ html.justcomix {
                     display: none !important;
                 }
 
-                .clip {
+                .clip,
+                .thumb {
                     display: none;
                 }
 
