@@ -3523,10 +3523,10 @@ html:not(.justcomix):not(.homepage):not(.nocomix) {
             &::before {
                 display: block;
                 content: "";
-                background: url('https://raw.githubusercontent.com/ospositivos/files/master/comunidades-a-partes/no-comix-today.png?raw=true') center no-repeat;
+                background: url('https://raw.githubusercontent.com/ospositivos/files/master/ai-gimmics/ai-gimmikcs.png?raw=true') center 50px no-repeat;
                 background-size: contain;
                 width: 600px;
-                height: 300px;
+                min-height: 600px;
                 max-width: 100%;
                 margin: auto;
             }
