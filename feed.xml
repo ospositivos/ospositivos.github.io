@@ -19,7 +19,6 @@ layout: null
             </link>
             <description>
                <![CDATA[
-               <p><img src="{{ site.url }}/assets/images/x.png" /></p>
                 <p>{{ post.sumario | xml_escape | escape | truncate: '400' }}</p>
                 <p><a href="{{ post.url | prepend: site.url }}">ler mais</a></p>
                 ]]>
