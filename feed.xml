@@ -18,11 +18,13 @@ layout: null
             {{ post.url | prepend: site.url }}
             </link>
             <description>
-               <img src="{{ site.url }}/assets/images/x.png" />
-                {{ post.sumario | xml_escape | escape | truncate: '400' }}
+               <![CDATA[
+               <p><img src="{{ site.url }}/assets/images/x.png" /></p>
+                <p>{{ post.sumario | xml_escape | escape | truncate: '400' }}</p>
                 <p><a href="{{ post.url | prepend: site.url }}">ler mais</a></p>
+                ]]>
             </description>
-            <pubDate>{{ post.date | date: "%-d/%m/%Y" }}</pubDate>
+            <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
             <guid>
                 {{ post.url | prepend: site.url }}
             </guid>
