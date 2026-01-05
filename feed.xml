@@ -17,6 +17,7 @@ layout: null
             <link>
             {{ post.url | prepend: site.url }}
             </link>
+            <media:thumbnail xmlns:media="{{ site.url }}/assets/images/x.png" url="{{ site.url }}/assets/images/x.png" />
             <description>
                <![CDATA[
                 <p>{{ post.sumario | xml_escape | escape | truncate: '400' }}</p>
