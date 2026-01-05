@@ -8,16 +8,19 @@ layout: null
     <channel>
         <title>{{ site.title }}</title>
         <link>{{ site.url }}</link>
+
         <atom:link href="{{ page.url | prepend: site.url }}" rel="self" type="application/rss+xml" />
         <description>{{ site.description | xml_escape }}</description>
         {% for post in site.posts limit:10 %}
         <item>
             <title>{{ post.title | strip_html | normalize_whitespace | xml_escape }}</title>
             <link>
-                {{ post.url | prepend: site.url }}
+            {{ post.url | prepend: site.url }}
             </link>
             <description>
+               <img src="{{ site.url }}/assets/images/x.png" />
                 {{ post.sumario | xml_escape | escape | truncate: '400' }}
+                <p><a href="{{ post.url | prepend: site.url }}">ler mais</a></p>
             </description>
             <pubDate>{{ post.date | date: "%-d/%m/%Y" }}</pubDate>
             <guid>
