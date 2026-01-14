@@ -23,7 +23,7 @@ group :jekyll_plugins do
   gem 'jekyll-sitemap'
   #gem 'jekyll-admin'
   gem 'jekyll-redirect-from'
-  gem "webrick", "~> 1.7"
+  gem "webrick", "~> 1.8"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
