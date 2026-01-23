@@ -839,6 +839,27 @@ blockquote {
         }
     }
 
+    &.ai-lorem {
+        border: 1px dashed $cinza;
+        box-shadow: none;
+        font-family: "Roboto Mono", monospace;
+
+        &::after {
+            position: absolute;
+            background-image: url('/assets/images/ai-lorem.png');
+            background-size: 30px;
+            display: inline-block;
+            width: 30px;
+            height: 38px;
+            top: ($a/2);
+            content: "";
+        @media(max-width:$mobileL) {
+            top: -$a;
+            left: $b/2;
+            }
+        }
+    }
+
     & > h3:first-of-type,
     & > p:first-of-type,
     & > ul:first-of-type {
@@ -3885,6 +3906,15 @@ body[data-light-mode=dark] {
 
                 &::after {
                     color: $branco;
+                }
+
+                &.ai-lorem {
+                    border-color: $preto;
+                    
+                    &::after {
+                        filter: brightness(0.5) contrast(1) grayscale(100%);
+                    }
+
                 }
             }
 
