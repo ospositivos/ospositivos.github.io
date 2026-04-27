@@ -194,6 +194,22 @@ html {
 
     // ----------------------
     // homepage
+    &.homepage {
+        header {
+            height: calc(25%);
+
+            &.directorio {
+                position: relative;
+                min-height: 400px;
+                background: url('/assets/images/x_large.png') no-repeat 50% 45% $preto;
+
+                background-size: 850px;
+            }
+
+        }
+    }
+
+    //old homepage
     &.homepage-screamcomix {
         background: #000;
 
@@ -283,8 +299,10 @@ html {
         }
     }
 
+    //new homepage
     &.homepage.coverfanzine {
         body {
+            min-height: inherit;
 
             // footer
             // ----------------------
@@ -3177,7 +3195,6 @@ article.post {
                     border: none;
                     background: $preto;
                     color: $branco;
-                    text-shadow: 0 0 10px $vermelho;
                     padding: 0 80px 0 20px;
                     border-radius: 30px;
                     box-shadow: 0 0 25px 0 white, 0 20px 25px 0 rgba(0, 0, 0, 0.2);
