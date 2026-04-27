@@ -194,7 +194,7 @@ html {
 
     // ----------------------
     // homepage
-    &.homepage {
+    &.homepage-screamcomix {
         background: #000;
 
         body {
@@ -203,6 +203,7 @@ html {
             flex-direction: column;
 
             background: #000;
+            background: $branco;
             color: $branco;
             background: url(https://2.bp.blogspot.com/-cs1FL6dr5fk/XxF9RByaNoI/AAAAAAAAZGE/5Kwiyxn_d4QAqRD_9vrCgwO_qoF0mNtNgCPcBGAsYHg/s1600/scream-comix.jpg) no-repeat 40% 55% #000;
             background-attachment: fixed;
@@ -278,6 +279,17 @@ html {
                         }
                     }
                 }
+            }
+        }
+    }
+
+    &.homepage.coverfanzine {
+        body {
+
+            // footer
+            // ----------------------
+            footer {
+                display: none;
             }
         }
     }
@@ -3140,6 +3152,52 @@ article.post {
                         }
                     }
                 }
+            }
+        }
+
+        // fim pesquisa
+        // ----------------------
+
+        // pesquisa v2 home "coverfanzine"
+        // ----------------------
+        #searching-container.v2 {
+            max-width: 310px;
+            margin: 1em auto;
+            padding: 0px 1em;
+            position: relative;
+
+            #search-container {
+
+                .search {}
+
+                input {
+                    width: 50px;
+                    height: 42px;
+                    outline: none;
+                    border: none;
+                    background: $preto;
+                    color: $branco;
+                    text-shadow: 0 0 10px $vermelho;
+                    padding: 0 80px 0 20px;
+                    border-radius: 30px;
+                    box-shadow: 0 0 25px 0 white, 0 20px 25px 0 rgba(0, 0, 0, 0.2);
+                    z-index: 5;
+                    font-size: 11px;
+                    width: 200px;
+                    cursor: text;
+
+                    &::placeholder {
+                        font-size: $a;
+                        font-family: $hand-font-family;
+                    }
+                }
+            }
+
+            & + #results-container {
+                max-width: 260px;
+                margin: 1em auto;
+                /*padding: 0px 1em;
+                position: relative;*/
             }
         }
 
