@@ -877,6 +877,10 @@ blockquote {
         font-family: "Roboto Mono", monospace;
         //position: inherit;
 
+        &.smallish {
+            font-size: 11px;
+        }
+
         & > *:first-child {
             margin-top: -$b*2;
         }
@@ -903,6 +907,9 @@ blockquote {
             display: none;
         }
 
+        & > table {
+            width: auto !important;
+        }
     }
 
     & > h3:first-of-type,
@@ -2464,7 +2471,6 @@ article.post {
                 }
             }
         }
-
 
         // uk-accordion
         .uk-accordion {
