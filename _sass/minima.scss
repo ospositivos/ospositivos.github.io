@@ -76,6 +76,46 @@ html {
             border-radius: ($b/2)
         }
 
+        table {
+            max-width: 550px;
+            margin: 1em auto;
+            padding: 0px 1em;
+            box-sizing: content-box;
+            border: 1px solid $cinza;
+
+            caption {
+                text-align: center;
+                font-size: $b;
+                text-transform: uppercase;
+                padding: $a/2;
+                background: $preto;
+                color: $branco;
+            }
+
+            @media (min-width: $mobileM) {
+                width: 100%;
+            }
+
+            &.borderless {
+                border: none;
+            }
+
+            th {
+                text-align: left;
+                border-bottom: 3px solid $preto;
+            }
+
+            tr {
+                td {
+                    border-bottom: 1px dotted $cinza;
+                }
+
+                &:last-of-type td {
+                    border-bottom: none;
+                }
+            }
+        }
+
         .dejected-bg {
             background-color: #1ee6e6;
         }
@@ -2442,46 +2482,6 @@ article.post {
             overflow: auto;
         }
 
-        table {
-            max-width: 550px;
-            margin: 1em auto;
-            padding: 0px 1em;
-            box-sizing: content-box;
-            border: 1px solid $cinza;
-
-            caption {
-                text-align: center;
-                font-size: $b;
-                text-transform: uppercase;
-                padding: $a/2;
-                background: $preto;
-                color: $branco;
-            }
-
-            @media (min-width: $mobileM) {
-                width: 100%;
-            }
-
-            &.borderless {
-                border: none;
-            }
-
-            th {
-                text-align: left;
-                border-bottom: 3px solid $preto;
-            }
-
-            tr {
-                td {
-                    border-bottom: 1px dotted $cinza;
-                }
-
-                &:last-of-type td {
-                    border-bottom: none;
-                }
-            }
-        }
-
         // uk-accordion
         .uk-accordion {
             border: 1px dotted $cinzaMetal;
@@ -3289,17 +3289,22 @@ article.post {
             }
 
             &.info-ai {
-                background-color:darkseagreen;
-                
-                * {
-                    color: $branco;
-                    font-size: 0.9em;
-                    }
-                
+                background-color: aliceblue;
+                padding-top: $a*4;
+                padding-bottom: $a*4;
+
+                h2 {
+                    font-size: $c;
+                }
+
+                h3 {
+                    font-size: $a;
+                }
+
 
                 blockquote {
-                    border-color: $branco;
-                    
+                    border-color: $preto;
+
                 }
             }
 
@@ -3568,11 +3573,24 @@ footer {
 // ----------------------
 
 // ----------------------
+// info-ai pt1
+.info-ai {
+
+    * {
+        visibility: hidden;
+        opacity: 0;
+        height: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        filter: blur(5px);
+    }
+}
+
+// ----------------------
 // justcomix mode
 html:not(.justcomix):not(.homepage):not(.nocomix) {
-    // #appJustComixButton {
-    //    display: none;
-    // }
 
     #appJustComixButton {
         position: absolute;
@@ -3632,15 +3650,15 @@ html:not(.justcomix):not(.homepage):not(.nocomix) {
             &::before {
                 display: block;
                 content: "";
-                background: url('/assets/images/phone-book-zine.gif') center 50px no-repeat;
+                background: url('/assets/images/phone-book-zine.gif') center center no-repeat;
                 background-size: contain;
-                width: 600px;
-                min-height: 600px;
+                width: 400px;
+                min-height: 400px;
                 max-width: 100%;
                 margin: auto;
             }
 
-            & > *:not(.postnav) {
+            & > *:not(.postnav):not(.info-ai) {
                 visibility: none;
                 display: none;
             }
@@ -3650,6 +3668,59 @@ html:not(.justcomix):not(.homepage):not(.nocomix) {
             article.post::before {
                 filter: brightness(0.5) contrast(1) grayscale(100%);
             }
+        }
+    }
+
+    // ai-info pt2
+    &.ai-info body[data-justcomix-mode=true] {
+
+        header:not(.post-header) {
+
+            a {
+                display: inline-block;
+
+                &::after {
+                    display: block;
+                    content: "";
+                    background: url("/assets/images/ai-cloud.png") no-repeat;
+                    background-size: contain;
+                    width: 200px;
+                    height: 200px;
+                    margin: auto;
+                }
+
+                img {
+                    display: none;
+                }
+            }
+        }
+
+        .info-ai {
+
+            * {
+                visibility: visible;
+                opacity: 1;
+                filter: blur(0);
+                height: auto;
+                margin-top: auto;
+                margin-bottom: auto;
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            p,
+            blockquote {
+                padding-top: $a;
+                padding-bottom: $a;
+            }
+        }
+
+        #next {
+            display: block;
         }
     }
 }
@@ -3760,7 +3831,7 @@ html.justcomix {
                 }
 
                 p:not(.featured) {
-                    display: none;
+                    //display: none;
                 }
 
 
