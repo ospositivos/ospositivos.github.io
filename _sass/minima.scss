@@ -836,7 +836,7 @@ p {
     margin: 1em 0;
 }
 
-h3 {
+h3:not(.ai-lorem *) {
     font-family: $hand-font-family;
 }
 
@@ -876,6 +876,16 @@ blockquote {
         box-shadow: none;
         font-family: "Roboto Mono", monospace;
         //position: inherit;
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Roboto Mono", monospace;
+            font-weight: bold;
+        }
 
         &.smallish {
             font-size: 11px;
@@ -3275,6 +3285,21 @@ article.post {
                     small a {
                         color: $amarelo !important;
                     }
+                }
+            }
+
+            &.info-ai {
+                background-color:darkseagreen;
+                
+                * {
+                    color: $branco;
+                    font-size: 0.9em;
+                    }
+                
+
+                blockquote {
+                    border-color: $branco;
+                    
                 }
             }
 
