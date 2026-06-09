@@ -3706,16 +3706,18 @@ html:not(.justcomix):not(.homepage):not(.nocomix) {
                 margin-bottom: auto;
             }
 
-            h1,
-            h2,
-            h3,
-            h4,
-            h5,
-            h6,
+            .ai-lorem {
+                padding-bottom: $c;
+            }
+
+            blockquote,
             p,
-            blockquote {
-                padding-top: $a;
-                padding-bottom: $a;
+            ul {
+                padding-top: $c;
+            }
+
+            table {
+                margin-top: $c;
             }
         }
 
