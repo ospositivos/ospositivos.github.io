@@ -3680,13 +3680,13 @@ html:not(.justcomix):not(.homepage):not(.nocomix) {
                 display: inline-block;
 
                 &::after {
-                    display: block;
+                    /*display: block;
                     content: "";
                     background: url("/assets/images/ai-cloud.png") no-repeat;
                     background-size: contain;
                     width: 200px;
                     height: 200px;
-                    margin: auto;
+                    margin: auto;*/
                 }
 
                 img {
