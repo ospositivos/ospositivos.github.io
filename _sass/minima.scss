@@ -942,7 +942,7 @@ blockquote {
             height: 38px;
             top: ($a/2);
             margin-left: -$c*2;
-
+            margin-bottom: -50px;
             content: "";
             background: url('/assets/images/ai-lorem.png') 0 0 no-repeat;
             background-size: 20px;
@@ -3647,7 +3647,11 @@ html:not(.justcomix):not(.homepage):not(.nocomix) {
 
         article.post {
 
-            &::before {
+            & > *:not(.postnav):not(.info-ai):not(.post-header) {
+                display: none;
+            }
+
+            header.post-header::after {
                 display: block;
                 content: "";
                 background: url('/assets/images/phone-book-zine.gif') center center no-repeat;
@@ -3655,17 +3659,12 @@ html:not(.justcomix):not(.homepage):not(.nocomix) {
                 width: 400px;
                 min-height: 400px;
                 max-width: 100%;
-                margin: auto;
-            }
-
-            & > *:not(.postnav):not(.info-ai) {
-                visibility: none;
-                display: none;
+                margin: -32px auto 32px;
             }
         }
 
         &[data-light-mode=dark] {
-            article.post::before {
+            article.post .post-header::after {
                 filter: brightness(0.5) contrast(1) grayscale(100%);
             }
         }
@@ -3680,18 +3679,32 @@ html:not(.justcomix):not(.homepage):not(.nocomix) {
                 display: inline-block;
 
                 &::after {
-                    /*display: block;
+                    display: block;
                     content: "";
                     background: url("/assets/images/ai-cloud.png") no-repeat;
                     background-size: contain;
                     width: 200px;
                     height: 200px;
-                    margin: auto;*/
+                    margin: auto;
                 }
 
                 img {
                     display: none;
                 }
+            }
+        }
+
+        article.post .post-header {
+
+            &::after {
+                display: block;
+                width: 100%;
+                content: "Resumo da IA. Para lerem o original, sabem o que fazer :)";
+                font-family: $title-font-family;
+                text-align: center;
+                margin-bottom: $a;
+                background: none;
+                min-height: 0;
             }
         }
 
@@ -3723,6 +3736,13 @@ html:not(.justcomix):not(.homepage):not(.nocomix) {
 
         #next {
             display: block;
+        }
+
+        &[data-light-mode=dark] {
+            article.post .post-header::after {
+                filter: brightness(1) contrast(1) grayscale(100%);
+                color: #e0e0e0;
+            }
         }
     }
 }
@@ -3983,12 +4003,16 @@ body[data-light-mode=dark] {
         }
     }
 
+    blockquote.ai-lorem::before {
+        filter: brightness(0.5) contrast(1) grayscale(100%);
+    }
+
     .dejected-bg {
         background-color: #5e5e5e;
     }
 
     #appJustComixButton {
-        background-color: $cinzaEscuro;
+        background-color: $cinzaEscuro !important;
     }
 
     header a {
