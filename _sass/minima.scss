@@ -364,7 +364,7 @@ html {
             background: $preto;
             color: $branco;
 
-            * {
+            *, h1.post-title {
                 color: $branco;
             }
 
