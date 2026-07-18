@@ -364,7 +364,8 @@ html {
             background: $preto;
             color: $branco;
 
-            *, h1.post-title {
+            *,
+            h1.post-title {
                 color: $branco;
             }
 
@@ -2481,6 +2482,8 @@ article.post {
         .table-container {
             overflow: auto;
         }
+
+        i.ai-lorem { }
 
         // uk-accordion
         .uk-accordion {
