@@ -2417,6 +2417,11 @@ article.post {
 
         & * {
             transition: filter 0.5s ease-out;
+
+            @starting-style {
+                opacity: 0;
+                filter: blur(15px);
+            }
         }
 
         & > h2,
@@ -2483,7 +2488,7 @@ article.post {
             overflow: auto;
         }
 
-        i.ai-lorem { }
+        i.ai-lorem {}
 
         // uk-accordion
         .uk-accordion {
@@ -3793,14 +3798,17 @@ html.justcomix {
     body[data-justcomix-mode=true] {
 
         .notfeatured {
-            visibility: hidden;
+            /*visibility: hidden;
             opacity: 0;
             height: 0;
             margin-top: 0;
             margin-bottom: 0;
             padding-top: 0;
-            padding-bottom: 0;
+            padding-bottom: 0;*/
+
+            display: none;
             filter: blur(5px);
+            transition: display 0.4s allow-discrete, opacity 0.4s ease, filter 0.4s
         }
 
         #appJustComixButton {
