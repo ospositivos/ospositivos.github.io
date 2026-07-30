@@ -22,5 +22,33 @@
 </footer>
 
 {% if jekyll.environment == 'production' %}
-  {% include analytics-bottom.html %}
+{% include analytics-bottom.html %}
 {%- endif -%}
+
+<!-- toggle lightmode e justcomix pt2 -->
+<script>
+    function toggle_light_mode() {
+        var appDarkMode = document.getElementsByTagName("BODY")[0];
+        if (localStorage.lightMode == "dark") {
+            localStorage.lightMode = "light";
+            appDarkMode.setAttribute("data-light-mode", "light");
+        } else {
+            localStorage.lightMode = "dark";
+            appDarkMode.setAttribute("data-light-mode", "dark");
+        }
+    }
+
+</script>
+<script>
+    function toggle_justcomix_mode() {
+        var appJustComixMode = document.getElementsByTagName("BODY")[0];
+        if (localStorage.comixMode == "false") {
+            localStorage.comixMode = "true";
+            appJustComixMode.setAttribute("data-justcomix-mode", "true");
+        } else {
+            localStorage.comixMode = "false";
+            appJustComixMode.setAttribute("data-justcomix-mode", "false");
+        }
+    }
+
+</script>

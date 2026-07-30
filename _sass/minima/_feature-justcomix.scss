@@ -145,6 +145,20 @@ html:not(.justcomix):not(.homepage):not(.nocomix) {
             table {
                 margin-top: $c;
             }
+
+            blockquote > blockquote {
+                border: 1px solid $preto;
+                padding-top: 0;
+                font-style: italic;
+
+                & > p:first-of-type {
+                    padding-bottom: $a;
+                }
+
+                &::after {
+                    display: none;
+                }
+            }
         }
 
         #next {

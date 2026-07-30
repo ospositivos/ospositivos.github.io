@@ -1,0 +1,27 @@
+<!-- toggle lightmode e justcomix pt1 -->
+<script>
+    var appDarkMode = document.getElementsByTagName("BODY")[0];
+    if (localStorage.lightMode == "dark") {
+        appDarkMode.setAttribute("data-light-mode", "dark");
+        appDarkmodeButton.checked = true;
+    }
+
+</script>
+<script>
+    var appJustComixMode = document.getElementsByTagName("BODY")[0];
+
+    if (localStorage.comixMode == "true") {
+        appJustComixMode.setAttribute("data-justcomix-mode", "true");
+        appJustComixButton.checked = true;
+    } else if (localStorage.comixMode == "false") {
+        appJustComixMode.setAttribute("data-justcomix-mode", "false");
+        appJustComixButton.checked = false;
+    } else {
+        appJustComixMode.setAttribute("data-justcomix-mode", "true");
+        appJustComixButton.checked = false;
+    }
+
+</script>
+
+<a id="appDarkmodeButton" onclick="toggle_light_mode()"></a>
+<a id="appJustComixButton" onclick="toggle_justcomix_mode()"></a>
