@@ -165,6 +165,8 @@ html {
             input[type='submit'] {
                 border: 1px solid $branco;
             }
+            
+            #next a:hover {color: $branco;}
         }
     }
 
