@@ -1,0 +1,79 @@
+// =============================================================
+// VARIABLES
+// Fontes únicas de verdade para cores, tipografia, espaçamento
+// e breakpoints. Alterar aqui propaga a todo o tema.
+// =============================================================
+
+// ---- breakpoints (mobile-first, usados via mixin `respond()`) ----
+$desktopM: 1200px;
+$desktopS: 1024px;
+$tablet:    960px;
+$mobileL:   760px;
+$mobileM:   560px;
+$mobileS:   450px;
+
+// mapa de breakpoints — usado pelo mixin `respond()` em _mixins.scss
+$breakpoints: (
+  mobileS:  $mobileS,
+  mobileM:  $mobileM,
+  mobileL:  $mobileL,
+  tablet:   $tablet,
+  desktopS: $desktopS,
+  desktopM: $desktopM,
+);
+
+// ---- espaçamento base (tem de vir antes de tudo o que o usa) ----
+$a: 16px;
+$b: 12px;
+$c: 18px;
+$spacing-unit: 30px;
+
+// derivadas (substituem as antigas divisões `$a/2`, `$b/2`, etc. —
+// sintaxe que o Sass moderno passou a reportar como deprecated).
+// Como $a/$b/$c são constantes fixas, os valores vão pré-calculados
+// em vez de usar math.div(), que exige `@use "sass:math"` — módulo
+// que o conversor Sass do Jekyll (via @import) não carrega bem.
+$a-half:  8px;   // $a / 2
+$b-half:  6px;   // $b / 2
+$b-third: 4px;   // $b / 3
+$c-half:  9px;   // $c / 2
+
+// ---- tipografia ----
+$hand-font-family:       'Sue Ellen Francisco';
+$title-font-family:      "Covered By Your Grace";
+$base-font-family:       "Bellota Text";
+$blockquote-font-family: "Bellota";
+$alt-font-family:        "Roboto Mono";
+$blurb-font-family:      "Abril Fatface";
+
+$base-font-size:   $a;
+$base-font-weight: 400;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+// ---- cores ----
+// nomeadas em português para manter a legibilidade do código original
+$branco:      #FFF;
+$preto:       #000;
+$vermelho:    crimson;
+$verde:       lightgreen;
+$verde-escuro: #78C0A8;
+$amarelo:     yellow;
+$cinza:       #828282;
+$cinzaEscuro: #222;
+$cinzaClaro:  ghostwhite;
+$cinzaMetal:  lightslategray;
+
+// mapa de cores — útil para iterar (ex.: gerar classes utilitárias)
+$colors: (
+  branco: $branco,
+  preto: $preto,
+  vermelho: $vermelho,
+  verde: $verde,
+  verde-escuro: $verde-escuro,
+  amarelo: $amarelo,
+  cinza: $cinza,
+  cinza-escuro: $cinzaEscuro,
+  cinza-claro: $cinzaClaro,
+  cinza-metal: $cinzaMetal,
+);

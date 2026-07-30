@@ -1,0 +1,112 @@
+// =============================================================
+// BASE
+// Reset leve, tipografia de página, links, imagens e tabelas.
+// =============================================================
+
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+
+    body {
+        min-height: 100%;
+        margin: 0;
+        padding: 0;
+        background: $branco;
+        color: $preto;
+        font: normal 300 16px/1.8 $base-font-family;
+
+        @include respond(mobileL, max) {
+            font-weight: 400;
+            font-size: $c;
+        }
+
+        transition: background-color .2s;
+
+        h1,
+        h2,
+        h4,
+        h5,
+        h6 {
+            font-family: $base-font-family;
+        }
+
+        a {
+            color: $preto;
+        }
+
+        img {
+            border-radius: ($b-half)
+        }
+
+        table {
+            max-width: 550px;
+            margin: 1em auto;
+            padding: 0px 1em;
+            box-sizing: content-box;
+            border: 1px solid $cinza;
+
+            caption {
+                text-align: center;
+                font-size: $b;
+                text-transform: uppercase;
+                padding: $a-half;
+                background: $preto;
+                color: $branco;
+            }
+
+            @include respond(mobileM, min) {
+                width: 100%;
+            }
+
+            &.borderless {
+                border: none;
+            }
+
+            th {
+                text-align: left;
+                border-bottom: 3px solid $preto;
+            }
+
+            tr {
+                td {
+                    border-bottom: 1px dotted $cinza;
+                }
+
+                &:last-of-type td {
+                    border-bottom: none;
+                }
+            }
+        }
+
+        .dejected-bg {
+            background-color: #1ee6e6;
+        }
+
+        // ----------------------
+        .uk-tab {
+            li {
+                &.uk-active > a {
+                    color: $vermelho;
+                    border-bottom: none;
+                }
+
+                a {
+                    color: $cinza;
+                }
+            }
+
+            &::before {
+                border-bottom: 3px solid $vermelho;
+            }
+        }
+
+        // ----------------------
+        // facebuuukit
+
+        // facebuuukit
+        // ----------------------
+
+        // ----------------------
+        // fim body
+    }
+}

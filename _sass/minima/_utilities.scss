@@ -1,0 +1,54 @@
+// =============================================================
+// UTILITIES
+// Classes utilitárias de uso único (espaçamento, cor de estado,
+// helpers de layout). Adicionar novas classes utilitárias aqui.
+// =============================================================
+
+.espaco-topo {
+    margin-top: 100px !important;
+}
+
+.espaco-base {
+    margin-bottom: 100px !important;
+}
+
+.espaco-meio {
+    margin-top: $a*2 !important;
+    margin-bottom: $a*2 !important;
+}
+
+.sem-espaco-base {
+    margin-bottom: 0 !important;
+
+    & + * {
+        margin-top: 0 !important;
+    }
+}
+
+.espaco {
+    margin: 100px auto !important;
+}
+
+.uk-padding-small-left {
+    padding-left: $b-half;
+}
+
+.uk-padding-small-right {
+    padding-right: $b-half;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.sucesso {
+    color: $verde;
+}
+
+.insucesso {
+    color: $vermelho;
+}
+
+.aviso {
+    color: $amarelo;
+}

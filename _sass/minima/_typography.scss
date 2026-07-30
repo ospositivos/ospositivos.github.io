@@ -1,0 +1,214 @@
+// =============================================================
+// TIPOGRAFIA
+// Elementos de texto genéricos (h1-h6, blockquote, listas inline,
+// hr, etc.)
+// =============================================================
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    color: $preto;
+    margin: 1em 0;
+}
+
+h3:not(.ai-lorem *) {
+    font-family: $hand-font-family;
+}
+
+blockquote {
+    box-shadow: 0px 3px 12px -6px rgba(0, 0, 0, 0.2);
+    border-top: 6px solid $preto;
+    border-radius: 2px;
+    //background: $branco;
+    letter-spacing: -0.5px;
+    padding: 1em 2em;
+    font-size: 14px;
+    font-style: normal;
+    color: $cinzaEscuro;
+    line-height: 1.8em;
+    font-family: $blockquote-font-family;
+    position: relative;
+
+    @include respond(mobileL, max) {
+        padding-left: 3em;
+    }
+
+    &::after {
+        position: absolute;
+        content: "❝";
+        color: $preto;
+        font-size: $a*3;
+        top: $a;
+        left: -$b*2;
+
+        @include respond(mobileL, max) {
+            left: -$b-half;
+        }
+    }
+
+    &.ai-lorem {
+        border: 1px dashed $cinza;
+        box-shadow: none;
+        font-family: "Roboto Mono", monospace;
+        //position: inherit;
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Roboto Mono", monospace;
+            font-weight: bold;
+        }
+
+        &.smallish {
+            font-size: 11px;
+        }
+
+        & > *:first-child {
+            margin-top: -$b*2;
+        }
+
+        &::before {
+            position: sticky;
+            display: block;
+            width: 30px;
+            height: 38px;
+            top: ($a-half);
+            margin-left: -$c*2;
+            margin-bottom: -30px;
+            content: "";
+            background: url('/assets/images/ai-lorem.png') 0 0 no-repeat;
+            background-size: 20px;
+
+            @include respond(mobileL, max) {
+                top: $a;
+                left: $b-half;
+            }
+        }
+
+        &::after {
+            display: none;
+        }
+
+        & > table {
+            width: auto !important;
+        }
+    }
+
+    & > h3:first-of-type,
+    & > p:first-of-type,
+    & > ul:first-of-type {
+        margin-top: 0;
+    }
+
+    & > h3:last-of-type,
+    & > p:last-of-type,
+    & > ul:last-of-type {
+        margin-bottom: 0;
+    }
+
+    small {
+        font-style: normal;
+        display: block;
+        margin-top: $a-half;
+        padding-top: $b-half;
+        border-top: 1px dotted gainsboro;
+        font-size: 10px;
+
+        a {
+            box-shadow: none !important;
+            color: $verde-escuro !important;
+
+            &:hover {
+                color: $verde !important;
+                border-bottom: 1px solid $cinzaClaro;
+            }
+        }
+    }
+
+    .voice {
+        font-style: italic;
+    }
+}
+
+b,
+strong {
+    font-weight: 700;
+}
+
+strong {
+    color: $vermelho;
+}
+
+em,
+i {
+    color: inherit;
+}
+
+small,
+.smallish,
+blockquote.smallish {
+    font-size: $b;
+
+    small {
+        font-size: 10px;
+    }
+
+    blockquote {
+        font-size: $b;
+    }
+}
+
+img {
+    position: relative;
+    max-width: 100%;
+}
+
+sup {
+    font-weight: bold;
+}
+
+del {
+    text-decoration-color: $vermelho;
+    text-decoration-style: wavy;
+    text-decoration-thickness: 1px;
+}
+
+ins {
+    text-decoration: none;
+    background: transparent;
+    font-size: 1em;
+    font-family: $hand-font-family;
+    color: red;
+    position: absolute;
+    transform: rotate(-10deg);
+    margin-left: -10px;
+    margin-top: -10px;
+
+    &.long {
+        transform: rotate(-4deg);
+    }
+}
+
+hr {
+    border: 0;
+    margin: $a*3 auto;
+    height: 2px;
+    background: rgb(240, 240, 240);
+    background: linear-gradient(90deg, rgba(240, 240, 240, 0) 0%, rgba(240, 240, 240, 1) 50%, rgba(240, 240, 240, 0) 100%);
+    max-width: 80%;
+
+    @include respond(mobileM, max) {
+        border: 1px solid $cinza;
+
+        &.espaco {
+            margin: $a*2 !important;
+        }
+    }
+}

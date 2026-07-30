@@ -1,0 +1,116 @@
+// =============================================================
+// TEMPLATE: #artigo (yomomma)
+// =============================================================
+
+#artigo {
+    position: relative;
+    background-color: #f3ede1;
+    margin: 20px auto;
+    font-family: $alt-font-family;
+    font-size: $b;
+    color: $cinzaEscuro;
+
+    &::before,
+    &::after {
+        position: absolute;
+        z-index: -1;
+        top: auto;
+        left: 12px;
+        bottom: 21px;
+        width: 40%;
+        height: 10px;
+        background: none;
+        content: "";
+        transform: skew(-4deg) rotate(-4deg);
+        box-shadow: 0 10px 12px rgba(0, 0, 0, 0.5);
+    }
+
+    &::after {
+        transform: skew(4deg) rotate(4deg);
+        left: auto;
+        right: 12px;
+    }
+
+    @include respond(tablet, min) {
+        max-width: 650px;
+        padding: $b*2 100px $b*5;
+    }
+
+    @include respond(tablet, max) {
+        padding: 20px 40px;
+    }
+
+    @include respond(mobileM, max) {
+        padding: 20px;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: 'Times New Roman', Times, serif !important;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        font-weight: normal;
+        text-align: center;
+        margin: 40px 0 10px 0;
+        font-size: 26px;
+    }
+
+    h2 {
+        font-size: 22px;
+        font-weight: 700;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    h4 {
+        font-size: 13px;
+        font-style: normal;
+        font-variant: normal;
+        text-align: center;
+
+        em {
+            font-style: italic;
+            font-weight: normal;
+        }
+    }
+
+    h5 {
+        color: $cinzaEscuro;
+        font-family: Georgia, serif;
+        font-size: 9px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: normal;
+        line-height: 13px;
+        margin: 0;
+        padding: 0;
+    }
+
+    hr {
+        background-image: linear-gradient(#333, #999, #111);
+    }
+
+    small,
+    .smallish {
+        font-size: 0.7em;
+    }
+
+    blockquote {
+        font-style: italic;
+        font-family: $alt-font-family;
+
+        @include respond(mobileL, min) {
+            margin-left: -$b*2;
+            margin-right: -$b*2;
+        }
+    }
+}

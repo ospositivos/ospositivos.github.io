@@ -1,0 +1,358 @@
+// =============================================================
+// FEATURE: modo "justcomix"
+// Alterna a leitura entre modo normal e modo "banda desenhada".
+// =============================================================
+
+html:not(.justcomix):not(.homepage):not(.nocomix) {
+
+    #appJustComixButton {
+        position: absolute;
+        top: $a*3;
+        right: 0;
+        display: block;
+        width: $a*2;
+        height: $a*2;
+        padding-right: $a-half;
+        padding-left: $b-half;
+        box-shadow: 0 0 $b rgba(0, 0, 0, 0.2);
+        border-radius: 500px 0 0 500px;
+        background-color: $cinzaClaro;
+        transition: all 500ms;
+
+        z-index: 999; // sobrepor aos HEROs
+
+        &::after {
+            display: inline-block;
+            content: "";
+            background: url('/assets/images/ico-book-open.svg') no-repeat;
+            width: $b*2;
+            height: $a;
+            padding: 2px;
+            margin-top: $b-half;
+            margin-left: $b-third;
+        }
+
+        @include respond(tablet, min) {
+            position: fixed;
+            right: -$b-half;
+        }
+
+        &:hover {
+            box-shadow: 0 0 $a rgba(0, 0, 0, 0.5);
+            right: 0;
+            cursor: pointer;
+        }
+    }
+
+    body[data-justcomix-mode=true] {
+
+        #appJustComixButton {
+            box-shadow: 0 0 $b rgba(0, 0, 0, 0.2);
+
+            &::after {
+                background: url('/assets/images/ico-book-closed.svg') no-repeat;
+            }
+
+            &:hover {
+                box-shadow: 0 0 $a rgba(0, 0, 0, 0.5);
+            }
+        }
+
+        article.post {
+
+            & > *:not(.postnav):not(.info-ai):not(.post-header) {
+                display: none;
+            }
+
+            header.post-header::after {
+                display: block;
+                content: "";
+                background: url('/assets/images/phone-book-zine.gif') center center no-repeat;
+                background-size: contain;
+                width: 400px;
+                min-height: 400px;
+                max-width: 100%;
+                margin: -32px auto 32px;
+            }
+        }
+
+        &[data-light-mode=dark] {
+            article.post .post-header::after {
+                @include dim-image;
+            }
+        }
+    }
+
+    // ai-info pt2
+    &.ai-info body[data-justcomix-mode=true] {
+
+        header:not(.post-header) {
+
+            a {
+                display: inline-block;
+
+                &::after {
+                    display: block;
+                    content: "";
+                    background: url("/assets/images/typin-cloud.png") no-repeat;
+                    background-size: contain;
+                    width: 200px;
+                    height: 189px;
+                    margin: auto;
+                }
+
+                img {
+                    display: none;
+                }
+            }
+        }
+
+        article.post .post-header {
+
+            &::after {
+                display: block;
+                width: 100%;
+                content: "Resumo da IA. Para lerem o original, sabem o que fazer :)";
+                font-family: $title-font-family;
+                text-align: center;
+                margin-bottom: $a;
+                background: none;
+                min-height: 0;
+            }
+        }
+
+        .info-ai {
+
+            * {
+                visibility: visible;
+                opacity: 1;
+                filter: blur(0);
+                height: auto;
+                margin-top: auto;
+                margin-bottom: auto;
+            }
+
+            .ai-lorem {
+                padding-bottom: $c;
+            }
+
+            blockquote,
+            p,
+            ul {
+                padding-top: $c;
+            }
+
+            table {
+                margin-top: $c;
+            }
+        }
+
+        #next {
+            display: block;
+        }
+
+        &[data-light-mode=dark] {
+            article.post .post-header::after {
+                @include dim-image(1);
+                color: #e0e0e0;
+            }
+        }
+    }
+}
+
+html.justcomix {
+    #appJustComixButton {
+        position: absolute;
+        top: $a*3;
+        right: 0;
+        display: block;
+        width: $a*2;
+        height: $a*2;
+        padding-right: $a-half;
+        padding-left: $b-half;
+        box-shadow: 0 0 $b rgba(0, 0, 0, 0.2);
+        border-radius: 500px 0 0 500px;
+        background-color: $cinzaClaro;
+        transition: all 500ms;
+
+        z-index: 999; // sobrepor aos HEROs
+
+        &::after {
+            display: inline-block;
+            content: "";
+            background: url('/assets/images/ico-book-open.svg') no-repeat;
+            width: $b*2;
+            height: $a;
+            padding: 2px;
+            margin-top: $b-half;
+            margin-left: $b-third;
+        }
+
+        @include respond(tablet, min) {
+            position: fixed;
+            right: -$b-half;
+        }
+
+        &:hover {
+            box-shadow: 0 0 $a rgba(0, 0, 0, 0.5);
+            right: 0;
+            cursor: pointer;
+        }
+    }
+
+    body[data-justcomix-mode=true] {
+
+        .notfeatured {
+            /*visibility: hidden;
+            opacity: 0;
+            height: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+            padding-top: 0;
+            padding-bottom: 0;*/
+
+            display: none;
+            filter: blur(5px);
+            transition: display 0.4s allow-discrete, opacity 0.4s ease, filter 0.4s
+        }
+
+        #appJustComixButton {
+            box-shadow: 0 0 $b rgba(0, 0, 0, 0.2);
+
+            &::after {
+                background: url('/assets/images/ico-book-closed.svg') no-repeat;
+            }
+
+            &:hover {
+                box-shadow: 0 0 $a rgba(0, 0, 0, 0.5);
+            }
+        }
+
+        #uncomix {
+
+            display: none !important;
+
+            * {
+                display: none;
+            }
+        }
+
+        .subtitle {
+            @extend .notfeatured;
+        }
+
+        // espaco s/ tempo
+        .inicio,
+        .timeline {
+            display: none;
+        }
+
+        article.post {
+
+            header,
+            .subtitle,
+            #artigo,
+            .thumb,
+            .clip,
+            .clip::before,
+            .clip::after,
+            .clip h1,
+            .clip p {
+                @extend .notfeatured;
+            }
+
+            .coluna {
+
+                & > *:not(.featured),
+                & > *:not(.featured) * {
+                    @extend .notfeatured;
+                }
+
+                p:not(.featured) {
+                    //display: none;
+                }
+
+
+                h3.centre,
+                blockquote,
+                .interview {
+                    @extend .notfeatured;
+                    border: none;
+
+                    &::after,
+                    * {
+                        position: inherit;
+                        display: none;
+                        top: 0;
+                        bottom: 0;
+                        content: none;
+                    }
+                }
+
+                &.info {
+                    @extend .notfeatured;
+
+                    * {
+                        @extend .notfeatured;
+                    }
+                }
+
+                table,
+                br,
+                .espaco:not(.featured),
+                .espaco-topo:not(.featured),
+                .espaco-meio:not(.featured),
+                .espaco-base:not(.featured) {
+                    display: none;
+                }
+
+                .twitter-tweet {
+                    display: none !important;
+                }
+
+                .clip,
+                .thumb {
+                    display: none;
+                }
+
+                .script {
+                    display: none;
+                }
+
+                div.featured {
+                    width: auto;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-top: $a !important;
+                    margin-bottom: $a !important;
+                }
+
+                img.featured {
+                    display: block;
+                    visibility: visible;
+                    margin-top: $a !important;
+                    margin-bottom: $a !important;
+
+                    &.espaco,
+                    &.espaco-meio,
+                    &.espaco-topo,
+                    &.espaco-base {
+                        margin-top: $a !important;
+                        margin-bottom: $a !important;
+                    }
+                }
+            }
+
+            #teses-indice {
+                visibility: hidden;
+                height: 0;
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        #next {
+            margin-top: $a;
+        }
+    }
+}

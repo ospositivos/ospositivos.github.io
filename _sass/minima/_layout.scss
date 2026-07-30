@@ -1,0 +1,112 @@
+// =============================================================
+// LAYOUT
+// Cabeçalho e rodapé globais do site.
+// =============================================================
+
+header {
+    text-align: center;
+
+    a,
+    a:hover {
+        border-bottom: none;
+    }
+}
+
+footer {
+    display: block;
+    width: 90%;
+    padding: 0 0 1em 0;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: $hand-font-family;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: $a;
+
+    @include respond(mobileL, min) {
+        width: 550px;
+    }
+
+    a {
+        box-shadow: inset 0 -.4em 0 fuchsia;
+        text-decoration: none;
+        transition: box-shadow .2s ease-in-out;
+        color: $vermelho;
+
+        &:hover {
+            color: $preto;
+            box-shadow: inset 0 -1.2em 0 fuchsia;
+            text-decoration: none;
+        }
+    }
+
+    // form
+    #mc_embed_signup {
+        margin-top: $a*2;
+        margin-bottom: $a*2;
+
+        #mce-EMAIL,
+        input[type="button"],
+        input[type="submit"] {
+            border-radius: 0;
+            display: inline-block;
+            font-size: $b;
+            outline: none;
+            padding: $b-half;
+            text-decoration: none;
+        }
+
+        #mce-EMAIL {
+            background: $branco;
+            border: 4px solid $preto;
+            box-shadow: inset 0.25rem 0.25rem 0 #ddd;
+            text-align: center;
+            min-width: calc(50% - 0px);
+        }
+
+        input[type="button"],
+        input[type="submit"] {
+            cursor: pointer;
+            background-color: $preto;
+            border: 4px solid $preto;
+            color: gainsboro;
+            text-decoration: none;
+            text-transform: uppercase;
+            -webkit-appearance: none;
+
+            @include respond(mobileS, min) {
+                //margin-left: -$b-half;
+                //box-sizing: content-box;
+            }
+        }
+
+        @include respond(mobileS, max) {
+            #mc-embedded-subscribe-form {
+                position: relative;
+
+                #mce-EMAIL {
+                    width: 100%;
+                    margin-top: 10px;
+                    box-sizing: border-box;
+                }
+
+                #mc-embedded-subscribe {
+                    width: 100%;
+                    position: absolute;
+                    left: 0;
+                    bottom: -28px;
+                }
+            }
+        }
+    }
+
+    .mailme {
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        margin-bottom: $b*2;
+
+        @include respond(mobileS, max) {
+            padding-top: $a*2;
+        }
+    }
+}

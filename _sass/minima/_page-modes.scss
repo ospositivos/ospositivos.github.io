@@ -1,0 +1,489 @@
+// =============================================================
+// MODOS DE PÁGINA
+// Classes aplicadas ao <html> que alteram o layout consoante o
+// tipo de página (homepage, hero variants, clean-black, etc.).
+// Cada nova variante de página deve ser acrescentada aqui.
+// =============================================================
+
+// header do "directório" (topo com o x grande) — igual em .homepage
+// e em .homepage-screamcomix, por isso vive num placeholder e é
+// juntado via @extend em vez de duplicado.
+%directorio-header {
+    position: relative;
+    min-height: 400px;
+    background: url('/assets/images/x_large.png') no-repeat 50% 45% $preto;
+    background-size: 850px;
+}
+
+html {
+    // ----------------------
+    // darkmode: no-lights
+    &.no-lights {
+        a#appDarkmodeButton {
+            display: none;
+        }
+    }
+
+    // ----------------------
+    // homepage
+    &.homepage {
+        header {
+            height: calc(25%);
+
+            &.directorio {
+                @extend %directorio-header;
+            }
+
+        }
+    }
+
+    //old homepage
+    &.homepage-screamcomix {
+        background: #000;
+
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+
+            background: #000;
+            background: $branco;
+            color: $branco;
+            background: url(https://2.bp.blogspot.com/-cs1FL6dr5fk/XxF9RByaNoI/AAAAAAAAZGE/5Kwiyxn_d4QAqRD_9vrCgwO_qoF0mNtNgCPcBGAsYHg/s1600/scream-comix.jpg) no-repeat 40% 55% #000;
+            background-attachment: fixed;
+            background-size: cover;
+
+            .no-homepage {
+                display: none;
+            }
+
+            header {
+                height: calc(25%);
+
+                &.directorio {
+                    @extend %directorio-header;
+                }
+
+            }
+
+            article.post {
+                margin-bottom: 0;
+                flex: 1;
+
+
+                #results-container {
+                    @media (max-height: 738px) {
+                        min-height: 250px;
+                    }
+                }
+            }
+
+            // footer
+            // ----------------------
+            footer {
+                text-shadow: 2px 2px black;
+
+                a {
+                    box-shadow: none;
+                    color: $vermelho;
+
+                    &:hover {
+                        color: $cinza;
+                    }
+                }
+
+                #mc_embed_signup {
+                    margin-top: $a-half;
+                    margin-bottom: $c-half;
+
+                    #mce-EMAIL {
+                        border: none;
+                        padding: $a;
+                    }
+
+                    input[type="submit"] {
+                        border: none;
+                        background: $vermelho;
+                        padding: $a;
+
+                        @include respond(mobileS, max) {
+                            bottom: -46px !important;
+                        }
+                    }
+
+                    & + .mailme {
+                        margin-bottom: 0;
+
+                        @include respond(mobileS, max) {
+                            margin-top: $a*2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //new homepage
+    &.homepage.coverfanzine {
+        body {
+            min-height: inherit;
+
+            // footer
+            // ----------------------
+            footer {
+                //display: none;
+            }
+        }
+    }
+
+    // fim homepage
+    // ----------------------
+
+    // ----------------------
+    // clean-black
+    &.clean-black {
+        background: $preto;
+
+        body {
+            background: $preto;
+            color: $branco;
+
+            *,
+            h1.post-title {
+                color: $branco;
+            }
+
+            #appDarkmodeButton {
+                display: none;
+            }
+
+            #appJustComixButton {
+                display: none;
+            }
+
+            input[type='button'],
+            input[type='submit'] {
+                border: 1px solid $branco;
+            }
+        }
+    }
+
+    // ----------------------
+    // hero-sortable
+    &.hero-sortable {
+        article.post {
+
+            #stage {
+                margin: 0 auto;
+
+                @include respond(desktopM, min) {
+                    width: 1200px;
+                }
+
+                ul#index_cards {
+                    margin: 0 auto;
+                    padding: 0;
+                    margin-bottom: $a*2;
+
+                    li {
+                        background-color: $branco;
+                        display: block;
+                        position: relative;
+                        border-radius: $a;
+                        box-shadow: 2px 2px 10px $cinza;
+                        border: 1px solid $cinzaClaro;
+                        transition: all 0.5s ease-in-out;
+
+                        blockquote {
+                            border-top: none;
+                            box-shadow: none;
+                            margin-bottom: 0;
+                            padding-bottom: 0;
+                            font-size: 13px;
+                            text-align: center;
+
+                            &::after {
+                                left: -$c-half;
+                            }
+
+                            small {
+                                text-align: right;
+
+                                a {
+                                    box-shadow: none !important;
+                                }
+                            }
+                        }
+
+                        @include respond(desktopM, min) {
+                            float: left;
+                            width: 200px;
+                            padding: $b*2 $b;
+                            margin-bottom: $a*3;
+
+                            &#card-1 {
+                                transform: rotate(-7deg);
+                                z-index: 1;
+                                left: 80px;
+                                top: -10px;
+
+                                &:hover {
+                                    transform: scale(1.1) rotate(-10deg);
+                                }
+                            }
+
+                            &#card-2 {
+                                transform: rotate(8deg);
+                                z-index: 2;
+                                left: 10px;
+                                top: -40px;
+
+                                &:hover {
+                                    transform: scale(1.1) rotate(-2deg);
+                                }
+                            }
+
+                            &#card-3 {
+                                transform: rotate(3deg);
+                                z-index: 3;
+                                left: -20px;
+                                top: 20px;
+
+                                &:hover {
+                                    transform: scale(1.1) rotate(-3deg);
+                                }
+                            }
+
+                            &#card-4 {
+                                transform: rotate(7deg);
+                                z-index: 1;
+                                right: 30px;
+                                top: 0;
+
+                                &:hover {
+                                    transform: scale(1.1) rotate(2deg);
+                                }
+                            }
+
+                            &#card-5 {
+                                transform: rotate(10deg);
+                                z-index: 2;
+                                right: 35px;
+                                top: 30px;
+
+                                &:hover {
+                                    transform: scale(1.1) rotate(8deg);
+                                }
+                            }
+
+                            &:hover {
+                                z-index: 4 !important;
+                            }
+                        }
+                    }
+
+                    @include respond(desktopM, max) {
+                        display: flex;
+                        justify-content: center;
+                        flex-wrap: wrap;
+
+                        li {
+                            width: 300px;
+                            margin: $b-half;
+
+                            img {
+                                border-radius: $a;
+                            }
+
+                            blockquote {
+                                margin-bottom: $a;
+                            }
+                        }
+                    }
+
+                    @include respond(mobileS, max) {
+                        li {
+                            width: 200px;
+                            margin: $b-half;
+                        }
+                    }
+                }
+
+                &.smaller {
+                    width: 98%;
+                    margin-top: $a;
+
+                    @include respond(tablet, min) {
+                        width: 560px;
+                    }
+
+                    ul#index_cards {
+
+                        li {
+                            float: none;
+                            padding: 0;
+                            width: 100%;
+                            margin-bottom: 0;
+                            top: 0;
+
+                            img {
+                                border-radius: $a;
+                            }
+
+                            @include respond(tablet, min) {
+                                margin-bottom: -$a*3;
+
+                                &#card-1 {
+                                    transform: rotate(-7deg);
+                                    margin-bottom: $a*2;
+                                    top: $a*2;
+                                    left: 0;
+
+                                    &:hover {
+                                        transform: scale(1.1) rotate(-3deg);
+                                    }
+                                }
+
+                                &#card-2 {
+                                    transform: rotate(7deg);
+
+                                    &:hover {
+                                        transform: scale(1.1) rotate(3deg);
+                                    }
+                                }
+
+                                &#card-3 {
+                                    transform: rotate(-5deg);
+                                    top: -$a*6;
+                                    left: -$a*5;
+
+                                    &:hover {
+                                        transform: scale(1.1) rotate(2deg);
+                                    }
+                                }
+
+                                &#card-4 {
+                                    top: -$a*6;
+                                    z-index: 3;
+                                }
+
+                                &#card-5 {
+                                    top: -$a*7;
+                                    right: -$a*2;
+                                    transform: rotate(-7deg);
+
+                                    &:hover {
+                                        transform: scale(1.1) rotate(-3deg);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        body[data-light-mode=dark] {
+            article.post #stage ul#index_cards li {
+                background-color: $cinza;
+            }
+        }
+    }
+
+    // ----------------------
+    // heróis de página (todos usam o mixin hero-cover, ver _mixins.scss)
+    // Para adicionar um novo: &.hero-nome { @include hero-cover('url'); }
+
+    &.hero-mosh {
+        @include hero-cover('https://raw.githubusercontent.com/ospositivos/files/master/play-me-the-same-song/abc-no-ri-o-e.jpg?raw=true') {
+            &::before {
+                display: block;
+                font-size: 11px;
+                text-align: left;
+                padding-left: $a;
+                content: "imagem: Dan Witz, 'ABC no Rio' 2011";
+                color: white;
+            }
+        }
+    }
+
+    &.hero-proposito {
+        @include hero-cover('https://raw.githubusercontent.com/ospositivos/files/master/ponto-situacao/not-a-bunker.jpg?raw=true') {
+            &::before {
+                display: block;
+                font-size: 11px;
+                text-align: left;
+                padding-left: $a;
+                content: "imagem: got-a-bunker?";
+                color: white;
+            }
+        }
+    }
+
+    &.hero-notes {
+        @include hero-cover('https://raw.githubusercontent.com/ospositivos/files/master/takin-notes/notes-web.jpg?raw=true') {
+            filter: grayscale(11%) brightness(96%) hue-rotate(360deg) saturate(300%);
+        }
+    }
+
+    &.hero-titans {
+        @include hero-cover('https://raw.githubusercontent.com/ospositivos/files/master/entre-titans/too-shocked.jpg?raw=true') {
+            &::before {
+                display: block;
+                width: 330px;
+                font-size: 11px;
+                text-align: left;
+                padding-left: $a;
+                content: "imagem: Tom Scioli, 'Jack Kirby: The Epic Life of the King of Comics'";
+                background-color: rgba(0, 0, 0, 0.5);
+                color: white;
+            }
+        }
+    }
+
+    &.hero-misapop {
+        @include hero-cover('https://raw.githubusercontent.com/ospositivos/files/master/misantropia-pop/rush.jpg?raw=true');
+    }
+
+    &.hero-mist {
+        @include hero-cover('https://raw.githubusercontent.com/ospositivos/files/master/antes-dos-tractores/header-mist.jpg?raw=true', 200vh) {
+            &::before {
+                display: block;
+                width: 330px;
+                font-size: 11px;
+                text-align: left;
+                padding-left: $a;
+                content: "from the chaotic mists of old to the orderly chains of modern";
+                background-color: rgba(0, 0, 0, 0.5);
+                color: white;
+            }
+        }
+    }
+
+    // fim heróis
+    // ----------------------
+
+    // ----------------------
+    // hero-twitter
+    &.hero-twitter {
+        body {
+
+            .inicio,
+            .timeline {
+                font-family: $alt-font-family;
+            }
+        }
+    }
+
+    // ----------------------
+    // untitled
+    &.untitled {
+        header.post-header {
+            display: none;
+        }
+    }
+
+    // ----------------------
+    // fim HMTL
+
+}
