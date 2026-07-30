@@ -6,6 +6,7 @@
 // =============================================================
 
 article.post {
+    flex: 1 0 auto; /* cresce para ocupar o espaço livre entre header e footer */
     margin-bottom: $a*4;
 
     header.post-header {
