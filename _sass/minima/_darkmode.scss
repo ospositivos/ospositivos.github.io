@@ -118,6 +118,11 @@ body[data-light-mode=dark] {
             a {
                 color: #e0e0e0;
             }
+            
+            table {
+                border-color: $preto;
+                background-color: $cinzaEscuro;
+            }
 
             blockquote {
                 box-shadow: 0px 3px 12px -6px rgba(4, 4, 4, 0.2);

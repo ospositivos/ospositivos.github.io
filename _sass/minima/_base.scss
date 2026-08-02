@@ -48,7 +48,7 @@ html {
         table {
             max-width: 550px;
             margin: 1em auto;
-            padding: 0px 1em;
+            padding: 0;
             box-sizing: content-box;
             border: 1px solid $cinza;
 
@@ -57,6 +57,11 @@ html {
                 font-size: $b;
                 text-transform: uppercase;
                 padding: $a-half;
+                background: $preto;
+                color: $branco;
+            }
+            
+            thead {
                 background: $preto;
                 color: $branco;
             }
