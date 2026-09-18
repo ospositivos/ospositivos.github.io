@@ -16,6 +16,7 @@
 }
 
 html {
+
     // ----------------------
     // darkmode: no-lights
     &.no-lights {
@@ -165,8 +166,10 @@ html {
             input[type='submit'] {
                 border: 1px solid $branco;
             }
-            
-            #next a:hover {color: $branco;}
+
+            #next a:hover {
+                color: $branco;
+            }
         }
     }
 
@@ -404,6 +407,19 @@ html {
                 text-align: left;
                 padding-left: $a;
                 content: "imagem: Dan Witz, 'ABC no Rio' 2011";
+                color: white;
+            }
+        }
+    }
+
+    &.hero-canone {
+        @include hero-cover('https://raw.githubusercontent.com/ospositivos/files/master/contra-c-da-bd/oy.jpg?raw=true') {
+            &::before {
+                display: block;
+                font-size: 11px;
+                text-align: left;
+                padding-left: $a;
+                content: "imagem: ...Previously 2018";
                 color: white;
             }
         }
