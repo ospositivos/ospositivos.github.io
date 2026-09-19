@@ -1,33 +1,42 @@
 ---
 layout: null
 ---
-
 <?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" 
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:media="http://search.yahoo.com/mrss/">
 
     <channel>
-        <title>{{ site.title }}</title>
+        <title>{{ site.title | xml_escape }}</title>
         <link>{{ site.url }}</link>
 
-        <atom:link href="{{ page.url | prepend: site.url }}" rel="self" type="application/rss+xml" />
+        <atom:link href="{{ page.url | absolute_url }}" rel="self" type="application/rss+xml" />
         <description>{{ site.description | xml_escape }}</description>
+        
         {% for post in site.posts limit:10 %}
         <item>
             <title>{{ post.title | strip_html | normalize_whitespace | xml_escape }}</title>
-            <link>
-            {{ post.url | prepend: site.url }}
-            </link>
-            <media:thumbnail xmlns:media="{{ site.url }}/assets/images/x.png" url="{{ site.url }}/assets/images/x.png" />
+            
+            <!-- URL colado na tag, sem quebras de linha -->
+            <link>{{ post.url | absolute_url }}</link>
+            
+            {% if post.thumbnail %}
+            
+            <!-- URL do thumbnail absoluto -->
+            <media:content url="{{ post.thumbnail | absolute_url }}" medium="image" type="image/jpeg" />
+            <enclosure url="{{ post.thumbnail | absolute_url }}" type="image/jpeg" length="0" />
+            {% endif %}
+            
             <description>
-               <![CDATA[
-                <p>{{ post.sumario | xml_escape | escape | truncate: '400' }}</p>
-                <p><a href="{{ post.url | prepend: site.url }}">ler mais</a></p>
+                <![CDATA[
+                <p>{{ post.sumario | strip_html | truncate: 400 }}</p>
+                <p><a href="{{ post.url | absolute_url }}">ler mais</a></p>
                 ]]>
             </description>
             <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-            <guid>
-                {{ post.url | prepend: site.url }}
-            </guid>
+            
+            <!-- GUID colado na tag, sem quebras de linha -->
+            <guid isPermaLink="true">{{ post.url | absolute_url }}</guid>
         </item>
         {% endfor %}
     </channel>
