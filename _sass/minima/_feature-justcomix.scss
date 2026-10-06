@@ -83,7 +83,17 @@ html:not(.justcomix):not(.homepage):not(.nocomix) {
         }
     }
 
-    // ai-info pt2
+    // ai-info
+    &.ai-info body[data-justcomix-mode=false]  {
+
+        article.post {
+
+            blockquote.ai-lorem table {
+                display: none !important;
+            }
+        }
+    }
+    
     &.ai-info body[data-justcomix-mode=true] {
 
         header:not(.post-header) {
