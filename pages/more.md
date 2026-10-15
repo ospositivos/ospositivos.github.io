@@ -15,5 +15,6 @@ sitemap: false
 <article class="post" style="margin-bottom:128px;">
   <div class="coluna centre">
     <h3 style="font-family: 'Nothing You Could Do', cursive; font-size:3.3em;">Não te conformes à lógica dos outros porque não há filosofia que melhor te sirva do que aquela que emana de dentro.</h3>
+    <small class="centre">(agora com <a style="color:white;" href="{{ site.url }}/2026/10/platao-nos-limites.html">asterisco</a>)</small>
   </div>
 </article>
