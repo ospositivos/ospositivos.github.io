@@ -171,6 +171,49 @@ html:not(.justcomix):not(.homepage):not(.nocomix) {
             }
         }
 
+        // Colunas do artigo original: a regra genérica do modo justcomix
+        // (article.post > *:not(...) { display: none }) esconde-as por inteiro,
+        // levando consigo as imagens .featured. Aqui voltam a mostrar-se só as
+        // colunas que têm .featured como filho direto (as restantes continuam
+        // escondidas pela regra genérica, incluindo margens como .espaco-topo),
+        // e dentro delas apenas os .featured ficam visíveis.
+        article.post > .coluna:not(.info-ai):has(> .featured) {
+            display: block;
+
+            & > *:not(.featured) {
+                display: none;
+            }
+
+            & > .featured {
+                visibility: visible;
+                opacity: 1;
+                filter: none;
+
+                // neutraliza margens das utilitárias .espaco* (usam !important)
+                &,
+                &.espaco,
+                &.espaco-meio,
+                &.espaco-topo,
+                &.espaco-base {
+                    margin-top: $a !important;
+                    margin-bottom: $a !important;
+                }
+            }
+
+            // blocos .featured normais; as grelhas UIkit (uk-grid*) ficam de fora
+            // para manterem o display:flex e as margens negativas das colunas
+            & > div.featured:not([class*="uk-grid"]) {
+                display: block;
+                width: auto;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            & > img.featured {
+                display: block;
+            }
+        }
+
         #next {
             display: block;
         }
@@ -344,11 +387,15 @@ html.justcomix {
                 }
 
                 div.featured {
-                    width: auto;
-                    margin-left: auto;
-                    margin-right: auto;
                     margin-top: $a !important;
                     margin-bottom: $a !important;
+
+                    // grelhas UIkit (uk-grid*) mantêm as margens negativas das colunas
+                    &:not([class*="uk-grid"]) {
+                        width: auto;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
                 }
 
                 img.featured {
