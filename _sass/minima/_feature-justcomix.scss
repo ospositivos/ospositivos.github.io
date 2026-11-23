@@ -10,23 +10,22 @@ html:not(.justcomix):not(.homepage):not(.nocomix) {
         top: $a*3;
         right: 0;
         display: block;
-        width: $a*2;
-        height: $a*2;
+        width: 40px;
+        height: 40px;
         padding-right: $a-half;
         padding-left: $b-half;
         box-shadow: 0 0 $b rgba(0, 0, 0, 0.2);
         border-radius: 500px 0 0 500px;
         background-color: $cinzaClaro;
         transition: all 500ms;
-
         z-index: 999; // sobrepor aos HEROs
 
         &::after {
             display: inline-block;
             content: "";
-            background: url('/assets/images/ico-book-open.svg') no-repeat;
-            width: $b*2;
-            height: $a;
+            background: url('/assets/images/ico-open-not.svg') no-repeat;
+            width: 30px;
+            height: 30px;
             padding: 2px;
             margin-top: $b-half;
             margin-left: $b-third;
@@ -50,7 +49,7 @@ html:not(.justcomix):not(.homepage):not(.nocomix) {
             box-shadow: 0 0 $b rgba(0, 0, 0, 0.2);
 
             &::after {
-                background: url('/assets/images/ico-book-closed.svg') no-repeat;
+                background: url('/assets/images/ico-book-close.svg') no-repeat;
             }
 
             &:hover {
@@ -233,8 +232,8 @@ html.justcomix {
         top: $a*3;
         right: 0;
         display: block;
-        width: $a*2;
-        height: $a*2;
+        width: 40px;
+        height: 40px;
         padding-right: $a-half;
         padding-left: $b-half;
         box-shadow: 0 0 $b rgba(0, 0, 0, 0.2);
@@ -247,9 +246,9 @@ html.justcomix {
         &::after {
             display: inline-block;
             content: "";
-            background: url('/assets/images/ico-book-open.svg') no-repeat;
-            width: $b*2;
-            height: $a;
+            background: url('/assets/images/ico-open.svg') no-repeat;
+            width: 30px;
+            height: 30px;
             padding: 2px;
             margin-top: $b-half;
             margin-left: $b-third;
@@ -287,7 +286,7 @@ html.justcomix {
             box-shadow: 0 0 $b rgba(0, 0, 0, 0.2);
 
             &::after {
-                background: url('/assets/images/ico-book-closed.svg') no-repeat;
+                background: url('/assets/images/ico-close.svg') no-repeat;
             }
 
             &:hover {

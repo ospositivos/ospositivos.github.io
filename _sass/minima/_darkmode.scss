@@ -10,8 +10,8 @@
     top: $b-half;
     right: 0;
     display: block;
-    width: $a*2;
-    height: $a*2;
+    width: 40px;
+    height: 40px;
     padding-right: $a-half;
     padding-left: $b-half;
     box-shadow: 0 0 $b rgba(0, 0, 0, 0.2);
@@ -25,8 +25,8 @@
         display: inline-block;
         content: "";
         background: url('/assets/images/lamp-off.svg') no-repeat;
-        width: $b*2;
-        height: $a;
+        width: 30px;
+        height: 30px;
         padding: 2px;
         margin-top: $b-half;
         margin-left: $b-third;
@@ -53,7 +53,7 @@ body[data-light-mode=dark] {
         box-shadow: 0 0 $b rgba(255, 255, 255, 0.2);
 
         &::after {
-            background: url('/assets/images/lamp.svg') no-repeat;
+            background: url('/assets/images/lamp-on.svg') no-repeat;
         }
 
         &:hover {
